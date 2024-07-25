@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/fonts/fontello-f114cee2/css/fontello.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/App.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/loginAndRegister.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="container-fluid">
+            <div class="row">
+                <div class="col"><h1>Komputerowo</h1></div>
+                <div id="searchArea" class="col-5">
+                    
+                    <input type="text" id="searchText">
+                    <button id="searchButton">Szukaj</button><br>
+                    <span id="customizeLabel">Dostosuj opcje wyszukiwania</span>
+                </div>
+                <div id="login" class="col-2">
+
+                        <i class="demo-icon icon-user-circle-o" style="font-size:30px;"></i>
+                        <span>Zaloguj sie</span>
+
+                </div>
+                <div id="basket" class="col-2">
+                    <i class="demo-icon icon-basket" style="font-size:30px;"></i>
+                    <span">Koszyk</span>
+                </div>
+            </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

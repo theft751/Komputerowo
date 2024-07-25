@@ -1,0 +1,120 @@
+﻿@page
+@model App.Pages.registerModel
+@{
+    ViewData["Title"] = "Rejestracja";
+    
+}
+<script>
+    function checkPasswordsIdentity() {
+        let passwordInput = document.getElementById("passwordInput");
+        let repeatPasswordInput = document.getElementById("repeatPasswordInput");
+        let conditional = validatePasswords(passwordInput, repeatPasswordInput)
+        let element = document.getElementById("badPasswordInfo")
+        if (conditional) {
+            element.innerHTML = ""
+        }
+        else {
+            element.innerHTML = "Hasla nie są identyczne"
+        }
+    }
+    function checkEmailValidity() { 
+        let emailString = document.getElementById("emailInput").value;
+        let validity = validateEmail(emailString);
+        let element = document.getElementById("badEmailInfo");
+        if (validity || emailString == "") {
+            element.innerHTML = ""
+        }
+        else {
+            element.innerHTML="Niepoprawny adres email"
+        }
+    }
+</script>
+<form method="post" class="container logOrRegForm">
+        <h2 class="text-center">Rejestracja</h2>
+        <div class="row">
+            <div class="col">
+                <h3>Dane logowania</h3>
+                <div class="inputUnit">
+                    <input type="email" id="emailInput" class="loginInput" onchange="checkEmailValidity()" placeholder="" required />
+                        <label for="emailInput" class="loginCaption">E-mail</label>
+                    <label for="emailInput" class="badInputFormatMessage" id="badEmailInfo"></label><br />
+                    </div>
+
+                    <div class="inputUnit">
+                    <input type="password" id="passwordInput" class="loginInput" placeholder="" onchange="checkPasswordsIdentity()" />
+                        <label for="passwordInput" class="loginCaption">Hasło</label><br />
+                    </div>
+
+                    <div class="inputUnit">
+                    <input type="password" id="repeatPasswordInput" class="loginInput" placeholder="" onchange="checkPasswordsIdentity()" />
+                        <label for="repeatPasswordInput" class="loginCaption">Powtórz hasło</label>
+                    <label for="repeatPasswordInput" class="badInputFormatMessage" id="badPasswordInfo"></label><br />
+                    </div>
+            <h3>Miejscowosc</h3>
+            <div class="inputUnit">
+                <select class="loginInput">
+                    <option style="color:gray">-wybierz województwo-</option>
+                    <option>dolnośląskie</option>
+                    <option>kujawsko-pomorskie</option>
+                    <option>lubelskie</option>
+                    <option>lubuskie</option>
+                    <option>łódzkie</option>
+                    <option>małopolskie</option>
+                    <option>mazowieckie</option>
+                    <option>opolskie</option>
+                    <option>podkarpackie</option>
+                    <option>podlaskie</option>
+                    <option>pomorskie</option>
+                    <option>śląskie</option>
+                    <option>świętokrzyskie</option>
+                    <option>warmińsko_mazurskie</option>
+                    <option>wielkopolskie</option>
+                    <option>zachodniopomorski</option>
+                </select>
+            </div>
+            <div class="inputUnit">
+                <input type="text" id="townInput" class="loginInput" placeholder="" />
+                <label for="townInput" class="loginCaption">Miejscowosc</label> <br />
+            </div>
+            <div class="inputUnit">
+                <input type="text" id="postCodeInput" class="loginInput" placeholder="" />
+                <label for="postCodeInput" class="loginCaption">Kod pocztowy</label> <br />
+            </div>
+            </div>
+            <div class="col">
+            <h3>Dane personalne</h3>
+            <div class="inputUnit">
+                <input type="text" id="firstNameInput" class="loginInput" placeholder="" />
+                <label for="firstNameInput" class="loginCaption">Imię</label> <br />
+            </div>
+            <div class="inputUnit">
+                <input type="text" id="lastNameInput" class="loginInput" placeholder="" />
+                <label for="lastNameInput" class="loginCaption">Nazwisko</label> <br />
+            </div>
+            <div class="inputUnit">
+                <input type="number" id="phoneNumberInput" class="loginInput" placeholder="" />
+                <label for="phoneNumberInput" class="loginCaption">Numer telefonu</label> <br />
+            </div>
+                <h3>Ulica i lokal</h3>
+                <div class="inputUnit">
+                    <input type="text" id="streetInput" class="loginInput" placeholder="" />
+                    <label for="streetInput" class="loginCaption">Ulica</label> <br />
+                </div>
+
+                <div class="inputUnit">
+                    <input type="text" id="houseNumberInput" class="loginInput" placeholder="" />
+                    <label for="houseNumber" class="loginCaption">Numer budynku</label> <br />
+                </div>
+
+                <div class="inputUnit">
+                    <input type="text" id="localNumberInput" class="loginInput" placeholder="" />
+                    <label for="localNumber" class="loginCaption">Numer lokalu</label> <br />
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="text-center"><input type="submit" class="loginButton" value="Przejdź dalej" /></div>
+        </div>
+</form>

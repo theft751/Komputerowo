@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Model.ModelsForDatabase.Additional.CaseType" Collapsed="true">
+    <Position X="48.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\CaseType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.GPU" Collapsed="true">
+    <Position X="47" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\GPU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.GPUProducer" Collapsed="true">
+    <Position X="48.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ModelsForDatabase\Additional\GPUProducer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.ProductImage" Collapsed="true">
+    <Position X="52.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\ProductImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.MotherBoardFormat" Collapsed="true">
+    <Position X="47" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\MotherBoardFormat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.ProcessorProducer" Collapsed="true">
+    <Position X="52.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\ProcessorProducer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.ProcessorSocket">
+    <Position X="46.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\ProcessorSocket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.RamType">
+    <Position X="35.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgE=</HashCode>
+      <FileName>ModelsForDatabase\Additional\RamType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.ScreenModule" Collapsed="true">
+    <Position X="48.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAABAAAAAAAAAAAAgEAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\ScreenModule.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.ScreenType" Collapsed="true">
+    <Position X="50.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\ScreenType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.MotherBoardChipset" Collapsed="true">
+    <Position X="45.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\MotherBoardChipset.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Additional.ExternalDevicePort" Collapsed="true">
+    <Position X="31.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAAAAAAAQAAAAIAAAAAQEAAQAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Additional\ExternalDevicePort.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Main.Adres">
+    <Position X="45.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAgAAAAAAgAAAAAAIAEAAAAAAAAIAgAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Main\Adres.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Main.Brand" Collapsed="true">
+    <Position X="47" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Main\Brand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Main.Comment" Collapsed="true">
+    <Position X="50.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Main\Comment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Main.Order" Collapsed="true">
+    <Position X="48.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Main\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Main.Product" Collapsed="true">
+    <Position X="32.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIACAIAAAQAgAAAAAAABAESAAAAAAAAAAAAAgAABIAA=</HashCode>
+      <FileName>ModelsForDatabase\Main\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Main.ProductWithScreen">
+    <Position X="39.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAABAAAAAAAAAAAAgEAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\Main\ProductWithScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.Main.User">
+    <Position X="44.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAACAAAAAAAAAAQAAAAAAACAACAAAAAAAAAAg=</HashCode>
+      <FileName>ModelsForDatabase\Main\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Address" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Case" Collapsed="true">
+    <Position X="22.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABCAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Case.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.DesktopComputer" Collapsed="true">
+    <Position X="52.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\DesktopComputer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Drive">
+    <Position X="24.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAgAAAAAAAgQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Drive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.GraphicCard">
+    <Position X="29.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAgAAAAAAIACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\GraphicCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="devicePorts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.HeadPhones" Collapsed="true">
+    <Position X="50.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\HeadPhones.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Laptop">
+    <Position X="36" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAQAABAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Laptop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.MonitorScreen">
+    <Position X="38.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\MonitorScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.PowerSupply" Collapsed="true">
+    <Position X="50.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\PowerSupply.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Processor" Collapsed="true">
+    <Position X="27" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAEAAIAQAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Processor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Ram">
+    <Position X="31.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Ram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Smartphone" Collapsed="true">
+    <Position X="42.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQBAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAAQA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Smartphone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Speakers" Collapsed="true">
+    <Position X="52.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Speakers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.Televisor" Collapsed="true">
+    <Position X="40.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\Televisor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Model.ModelsForDatabase.ProductCategories.MotherBoard">
+    <Position X="33.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAAAgAAAAAAACwAAAAESAAABCAA=</HashCode>
+      <FileName>ModelsForDatabase\ProductCategories\MotherBoard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="ExternalDevicePorts" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

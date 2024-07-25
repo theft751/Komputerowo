@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2023 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="basket" unicode="&#xe800;" d="M950 715q23 0 39-18t14-42l-53-365q-2-18-17-31t-34-12l-590 0 9-53 528 0q22 0 37-16t16-36-16-37-37-15l-572 0q-20 0-35 13t-16 30l-98 582-72 0q-22 0-37 15t-16 37 16 36 37 16l116 0q19 0 34-12t17-32l11-60 719 0z m-60-105l-200 0 0-103 185 0z m-252 0l-157 0 0-103 157 0 0 103z m0-156l-157 0 0-104 157 0 0 104z m-208 156l-182 0 18-105q3 2 8 2l156 0 0 103z m-156-156l17-104 139 0 0 104-156 0z m416-104l164 0 14 104-178 0 0-104z m-416-390q0 78 77 78 79 0 79-78 0-79-79-79-77 0-77 79z m469 0q0 78 77 78 79 0 79-78 0-79-79-79-77 0-77 79z" horiz-adv-x="1003" />
+
+<glyph glyph-name="facebook" unicode="&#xf09a;" d="M535 843v-147h-87q-48 0-65-20t-17-60v-106h164l-22-165h-142v-424h-171v424h-142v165h142v122q0 104 58 161t155 57q82 0 127-7z" horiz-adv-x="571.4" />
+
+<glyph glyph-name="google" unicode="&#xf1a0;" d="M429 411h404q7-37 7-71 0-121-51-216t-145-149-215-54q-88 0-167 34t-137 91-91 137-34 167 34 167 91 137 137 91 167 34q167 0 287-113l-117-112q-68 67-170 67-72 0-133-37t-97-98-36-136 36-136 97-98 133-37q48 0 89 14t67 33 46 46 28 49 13 43h-243v147z" horiz-adv-x="857.1" />
+
+<glyph glyph-name="user-circle-o" unicode="&#xf2be;" d="M500 850q102 0 194-40t160-106 106-160 40-194q0-101-39-194t-107-159-159-107-195-40-195 40-159 106-106 160-40 194 40 194 106 160 160 106 194 40z m345-754q84 115 84 254 0 87-34 166t-92 137-137 92-166 34-166-34-137-92-91-137-35-166q0-139 84-254 36 183 170 183 73-72 175-72t175 72q134 0 170-183z m-131 361q0 89-62 152t-152 62-151-62-63-152 63-151 151-63 152 63 62 151z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

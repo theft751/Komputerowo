@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+}
+/*Header*/
+header {
+    background-color: #3F526B;
+    color: white;
+    font-size: 20px;
+}
+
+    header h1 {
+        font-size: 60px;
+    }
+
+#searchButton {
+    background-color: #6480AB;
+    font-weight: bold;
+    color: #fff;
+}
+#customizeLabel {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+}
+#basket {
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+#login {
+
+    font-weight: bold;
+    text-decoration: underline;
+
+}

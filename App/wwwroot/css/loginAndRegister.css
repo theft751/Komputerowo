@@ -1,0 +1,83 @@
+﻿/*Login */
+
+.logOrRegForm {
+    font-size: 18px;
+    width: fit-content;
+    padding: 0px;
+    border: 3px solid gray;
+    margin-top: 100px;
+    margin-inline: auto;
+    padding: 50px;
+}
+.logOrRegForm h3
+{
+    font-size: 20px;
+    margin-top: 30px;
+}
+.loginInput {
+    width: 400px; 
+    padding: 7px;
+}
+
+.inputUnit {
+    margin-block: 35px;
+}
+.loginButton {
+    margin-bottom: 10px;
+    width: 400px;
+
+    background-color: #3F526B;
+    color: white;
+
+}
+
+#registerButton {
+    margin-bottom: 60px;
+}
+
+#googleLoginButton {
+    background-color: #CF0020;
+    color: white;
+    width: 400px;
+    margin-bottom: 10px;
+    border: none;
+    padding: 15px;
+    font-size: 25px;
+}
+
+#facebokLoginButton {
+    border: none;
+    background-color: #0b4f9a;
+    color: white;
+    width: 400px;
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 25px;
+}
+
+.loginCaption {
+
+    transition: 0.2s ease;
+    color: gray;
+    position: absolute;
+    transform: translate(-395px,10px);
+    cursor:text;
+}
+
+
+input:focus + .loginCaption,
+input:not(:placeholder-shown)+.loginCaption{
+    transform: translate(-395px, -15px) scale(0.75);
+    color: black;
+    background-color: Background;
+}
+
+
+.badInputFormatMessage {
+    position: absolute;
+    transform: translate(-400px, 45px);
+    font-size: 15px;
+    color: red;
+}
+
+
