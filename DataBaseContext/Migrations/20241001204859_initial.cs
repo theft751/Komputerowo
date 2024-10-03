@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataBaseContext.Migrations
 {
     /// <inheritdoc />
-    public partial class init : Migration
+    public partial class initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,7 +72,28 @@ namespace DataBaseContext.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     MainImageId = table.Column<int>(type: "int", nullable: false),
-                    BrandId = table.Column<int>(type: "int", nullable: false)
+                    ProducerId = table.Column<int>(type: "int", nullable: false),
+                    Discriminator = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
+                    MotherBoardFormats = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PowerSupplyFormat = table.Column<int>(type: "int", nullable: true),
+                    CaseType = table.Column<int>(type: "int", nullable: true),
+                    DiskSize = table.Column<int>(type: "int", nullable: true),
+                    ReadSpeed = table.Column<int>(type: "int", nullable: true),
+                    WriteSpeed = table.Column<int>(type: "int", nullable: true),
+                    DiskDriveType = table.Column<int>(type: "int", nullable: true),
+                    DiskDriveInterface = table.Column<int>(type: "int", nullable: true),
+                    PowerSupplyFormat1 = table.Column<int>(type: "int", nullable: true),
+                    Cores = table.Column<int>(type: "int", nullable: true),
+                    Threads = table.Column<int>(type: "int", nullable: true),
+                    Frequency = table.Column<int>(type: "int", nullable: true),
+                    CacheSize = table.Column<int>(type: "int", nullable: true),
+                    IntegratedGpu = table.Column<bool>(type: "bit", nullable: true),
+                    ProcessorSocket = table.Column<int>(type: "int", nullable: true),
+                    SizePerChips = table.Column<int>(type: "int", nullable: true),
+                    ChipsAmount = table.Column<int>(type: "int", nullable: true),
+                    Ram_Frequency = table.Column<int>(type: "int", nullable: true),
+                    Ligthing = table.Column<bool>(type: "bit", nullable: true),
+                    RamType = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -84,8 +105,8 @@ namespace DataBaseContext.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Products_Producers_BrandId",
-                        column: x => x.BrandId,
+                        name: "FK_Products_Producers_ProducerId",
+                        column: x => x.ProducerId,
                         principalTable: "Producers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -260,15 +281,15 @@ namespace DataBaseContext.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Products_BrandId",
-                table: "Products",
-                column: "BrandId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Products_MainImageId",
                 table: "Products",
                 column: "MainImageId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_ProducerId",
+                table: "Products",
+                column: "ProducerId");
         }
 
         /// <inheritdoc />

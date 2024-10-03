@@ -4,6 +4,7 @@ using DataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseContext.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241001204859_initial")]
+    partial class initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,10 +53,15 @@ namespace DataBaseContext.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Voivodeship")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Adresses");
                 });
@@ -285,9 +293,6 @@ namespace DataBaseContext.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AdressId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -308,12 +313,7 @@ namespace DataBaseContext.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserType")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("AdressId");
 
                     b.ToTable("Users");
                 });
@@ -389,17 +389,11 @@ namespace DataBaseContext.Migrations
                     b.Property<bool>("IntegratedGpu")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ProcessorSerie")
-                        .HasColumnType("int");
-
                     b.Property<int>("ProcessorSocket")
                         .HasColumnType("int");
 
                     b.Property<int>("Threads")
                         .HasColumnType("int");
-
-                    b.Property<bool>("hasCoolerIncluded")
-                        .HasColumnType("bit");
 
                     b.HasDiscriminator().HasValue("Processor");
                 });
@@ -430,6 +424,17 @@ namespace DataBaseContext.Migrations
                         });
 
                     b.HasDiscriminator().HasValue("Ram");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Main.Adress", b =>
+                {
+                    b.HasOne("Model.DataModel.Main.User", "User")
+                        .WithMany("Adresses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.BonusProductImage", b =>
@@ -515,17 +520,6 @@ namespace DataBaseContext.Migrations
                     b.Navigation("Producer");
                 });
 
-            modelBuilder.Entity("Model.DataModel.Main.User", b =>
-                {
-                    b.HasOne("Model.DataModel.Main.Adress", "Adress")
-                        .WithMany()
-                        .HasForeignKey("AdressId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Adress");
-                });
-
             modelBuilder.Entity("Model.DataModel.Main.MainProductImage", b =>
                 {
                     b.Navigation("Product")
@@ -553,6 +547,8 @@ namespace DataBaseContext.Migrations
 
             modelBuilder.Entity("Model.DataModel.Main.User", b =>
                 {
+                    b.Navigation("Adresses");
+
                     b.Navigation("Comments");
 
                     b.Navigation("Orders");

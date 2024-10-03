@@ -1,4 +1,4 @@
-﻿using Model.DataModel.Enums.Main;
+﻿using Model.DataModel.Additional.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -18,11 +18,8 @@ namespace Model.DataModel.Main
         public string PostCode { get; set; }
         public string Town { get; set; }
         public string Street { get; set; }
-        public string HouseNumber { get; set; }
-        public string LocalNumber { get; set; }
+        public string numberOfBuilding { get; set; }
+        public string ApartmentNumber { get; set; }
 
-        //Navigation properties
-        public User User { get; set; }
-        public int UserId { get; set; }
     }
 }

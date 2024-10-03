@@ -10,10 +10,10 @@ namespace Model.DataModel.Main
     public class Producer
     {
         [Key]
-        public int Id { get; set; }
+        public  int Id { get; set; }
         public string Name { get; set; }
 
         //Public navigation properties
-        public ICollection<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }

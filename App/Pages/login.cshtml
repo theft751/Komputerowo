@@ -8,26 +8,17 @@
     <div id="loginFormContent">
         <h2>Logowanie</h2>
         <div class="inputUnit">
-            <input type="email" id="emailField" class="loginInput" placeholder=""/>
+            <input asp-for="email" type="email" id="emailField" class="loginInput" placeholder=""/>
             <label for="emailField" class="loginCaption">E-mail</label><br />
         </div>
 
         <div class="inputUnit">
-            <input type="password" class="loginInput" id="passwordField" placeholder=""  />
+            <input asp-for="password" type="password" class="loginInput" id="passwordField" placeholder=""  />
             <label for="passwordField" class="loginCaption">Hasło </label><br />
         </div>
 
         <input type="submit" id="submitLogin" value="Zaloguj" class="loginButton" /> <br />
         
-        <button id="registerButton" class="loginButton">Zarejestruj się</button> <br />
-        <button id="googleLoginButton">
-            Kontunuuj przez Google
-            <i class="demo-icon icon-google"></i>
-            
-        </button> <br />
-        <button id="facebokLoginButton">
-            Kontunuuj przez Facebook
-            <i class="demo-icon icon-facebook"></i>
-        </button>
+        <button id="registerButton" onclick="location.href='@Url.Page("/register")';" class="loginButton" type="button">Zarejestruj się</button> <br />
     </div>
 </form>

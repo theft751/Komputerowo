@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+using Model.DataModel.Additional.ComputerParts;
 using Model.DataModel.Main;
+using Model.DataModel.Products.ComputerParts;
 using System.Reflection.Emit;
 
 
@@ -18,6 +20,16 @@ namespace DataBaseContext
         public DbSet<Producer> Producers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
+
+        //Products
+        public DbSet<DiskDrive> DiskDrives { get; set; }
+        public DbSet<Ram> Rams { get; set; }
+        public DbSet<Case> Cases { get; set; }
+        public DbSet<PowerSupply> PowerSupplies { get; set; }
+        public DbSet<Processor> Processors { get; set; }
+
+        //Aditional
+
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)

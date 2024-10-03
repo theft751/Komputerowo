@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.DataModel.Enums.Main
+namespace Model.DataModel.Additional.Common
 {
-    public enum UserType
+    public enum OrderStatus
     {
-        NormalUser,
-        Worker,
-        Admin
+        InProgress,
+        Realised
     }
 }

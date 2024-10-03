@@ -14,7 +14,7 @@ namespace Model.DataModel.Main
         public byte[] ImageData { get; set; }
         
         //Navigation properties
-        public Product Product { get; set; }
+        public virtual Product Product { get; set; }
         public int ProductId { get; set; }
     }
 }

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Model.DataModel.Additional.ComputerParts
 {
-    public enum DiskDriveInterface
+    public enum RamType
     {
-        ATA,SATA,M2
+        DDR1, DDR2, DDR3, DDR4, DDR5
     }
 }

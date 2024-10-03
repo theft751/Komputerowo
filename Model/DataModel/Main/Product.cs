@@ -1,4 +1,4 @@
-﻿using Model.DataModel.Enums.Main;
+﻿using Model.DataModel.Additional.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -44,16 +44,16 @@ namespace Model.DataModel.Main
         //Navigation properties
 
         public int MainImageId { get; set; }
-        public MainProductImage MainImage { get; set; }
-        
-        public ICollection<BonusProductImage> BonusImages { get; set; }
+        public virtual MainProductImage MainImage { get; set; }
 
-        public Producer Producer { get; set; }
+        public virtual  ICollection<BonusProductImage> BonusImages { get; set; }
+
+        public virtual Producer Producer { get; set; }
         public int ProducerId { get; set; }
 
-        public ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; }
 
-        public ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }
  

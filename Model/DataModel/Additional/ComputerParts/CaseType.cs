@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Model.DataModel.Additional.ComputerParts
 {
-    public enum DiskDriveInterface
+    public enum CaseType
     {
-        ATA,SATA,M2
+        MiniTower, MidiTower, BigTower, Other
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.DataModel.Enums.Main
+namespace Model.DataModel.Additional.Common
 {
     public enum ProductType
     {

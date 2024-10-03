@@ -29,13 +29,13 @@
         }
     }
 </script>
-<form method="post" class="container logOrRegForm">
+<form method="post" class="container logOrRegForm" asp-action="">
         <h2 class="text-center">Rejestracja</h2>
         <div class="row">
             <div class="col">
                 <h3>Dane logowania</h3>
                 <div class="inputUnit">
-                    <input type="email" id="emailInput" class="loginInput" onchange="checkEmailValidity()" placeholder="" required />
+                    <input asp-for="email" type="email" id="emailInput" class="loginInput" onchange="checkEmailValidity()" placeholder="" required />
                         <label for="emailInput" class="loginCaption">E-mail</label>
                     <label for="emailInput" class="badInputFormatMessage" id="badEmailInfo"></label><br />
                     </div>
@@ -52,24 +52,24 @@
                     </div>
             <h3>Miejscowosc</h3>
             <div class="inputUnit">
-                <select class="loginInput">
+                <select class="loginInput" asp-for="voivodeship">
                     <option style="color:gray">-wybierz województwo-</option>
-                    <option>dolnośląskie</option>
-                    <option>kujawsko-pomorskie</option>
-                    <option>lubelskie</option>
-                    <option>lubuskie</option>
-                    <option>łódzkie</option>
-                    <option>małopolskie</option>
-                    <option>mazowieckie</option>
-                    <option>opolskie</option>
-                    <option>podkarpackie</option>
-                    <option>podlaskie</option>
-                    <option>pomorskie</option>
-                    <option>śląskie</option>
-                    <option>świętokrzyskie</option>
-                    <option>warmińsko_mazurskie</option>
-                    <option>wielkopolskie</option>
-                    <option>zachodniopomorski</option>
+                    <option value="0">dolnośląskie</option>
+                    <option value="1">kujawsko-pomorskie</option>
+                    <option value="2">lubelskie</option>
+                    <option value="3">lubuskie</option>
+                    <option value="4">łódzkie</option>
+                    <option value="5">małopolskie</option>
+                    <option value="6">mazowieckie</option>
+                    <option value="7">opolskie</option>
+                    <option value="8">podkarpackie</option>
+                    <option value="9">podlaskie</option>
+                    <option value="10">pomorskie</option>
+                    <option value="11">śląskie</option>
+                    <option value="12">świętokrzyskie</option>
+                    <option value="13">warmińsko_mazurskie</option>
+                    <option value="14">wielkopolskie</option>
+                    <option value="15">zachodniopomorskie</option>
                 </select>
             </div>
             <div class="inputUnit">

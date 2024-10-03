@@ -1,4 +1,4 @@
-﻿using Model.DataModel.Enums.Main;
+﻿using Model.DataModel.Additional.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -16,9 +16,9 @@ namespace Model.DataModel.Main
 
         //Navigation properties
 
-        public Adress Adress { get; set; }
+        public virtual Adress Adress { get; set; }
         public int AdressId { get; set; }
 
-        public ICollection<OrderItem> Items { get; set; }
+        public virtual ICollection<OrderItem> Items { get; set; }
     }
 }

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Model.DataModel.Additional.ComputerParts
 {
-    public enum DiskDriveInterface
+    public enum MotherBoardFormat
     {
-        ATA,SATA,M2
+        ATX, mATX, mITX, E_ATX
     }
 }

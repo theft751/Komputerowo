@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseContext.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240724140536_init")]
+    [Migration("20241002135651_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -53,15 +53,10 @@ namespace DataBaseContext.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.Property<int>("Voivodeship")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Adresses");
                 });
@@ -238,9 +233,6 @@ namespace DataBaseContext.Migrations
                     b.Property<int>("Availability")
                         .HasColumnType("int");
 
-                    b.Property<int>("BrandId")
-                        .HasColumnType("int");
-
                     b.Property<string>("Color")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -248,6 +240,11 @@ namespace DataBaseContext.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasMaxLength(13)
+                        .HasColumnType("nvarchar(13)");
 
                     b.Property<int>("GuarantyTime")
                         .HasColumnType("int");
@@ -262,18 +259,25 @@ namespace DataBaseContext.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<int>("ProducerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("ProductType")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BrandId");
-
                     b.HasIndex("MainImageId")
                         .IsUnique();
 
+                    b.HasIndex("ProducerId");
+
                     b.ToTable("Products");
+
+                    b.HasDiscriminator().HasValue("Product");
+
+                    b.UseTphMappingStrategy();
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.User", b =>
@@ -283,6 +287,9 @@ namespace DataBaseContext.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AdressId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -304,20 +311,128 @@ namespace DataBaseContext.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("UserType")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("AdressId");
 
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Model.DataModel.Main.Adress", b =>
+            modelBuilder.Entity("Model.DataModel.Products.ComputerParts.Case", b =>
                 {
-                    b.HasOne("Model.DataModel.Main.User", "User")
-                        .WithMany("Adresses")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasBaseType("Model.DataModel.Main.Product");
 
-                    b.Navigation("User");
+                    b.Property<int>("CaseType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MotherBoardFormats")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PowerSupplyFormat")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("Case");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Products.ComputerParts.DiskDrive", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<int>("DiskDriveInterface")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DiskDriveType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DiskSize")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReadSpeed")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WriteSpeed")
+                        .HasColumnType("int");
+
+                    b.HasDiscriminator().HasValue("DiskDrive");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Products.ComputerParts.PowerSupply", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<int>("PowerSupplyFormat")
+                        .HasColumnType("int");
+
+                    b.ToTable("Products", t =>
+                        {
+                            t.Property("PowerSupplyFormat")
+                                .HasColumnName("PowerSupplyFormat1");
+                        });
+
+                    b.HasDiscriminator().HasValue("PowerSupply");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Products.ComputerParts.Processor", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<int>("CacheSize")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Cores")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Frequency")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IntegratedGpu")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProcessorSerie")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProcessorSocket")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Threads")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("hasCoolerIncluded")
+                        .HasColumnType("bit");
+
+                    b.HasDiscriminator().HasValue("Processor");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Products.ComputerParts.Ram", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<int>("ChipsAmount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Frequency")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Ligthing")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("RamType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SizePerChips")
+                        .HasColumnType("int");
+
+                    b.ToTable("Products", t =>
+                        {
+                            t.Property("Frequency")
+                                .HasColumnName("Ram_Frequency");
+                        });
+
+                    b.HasDiscriminator().HasValue("Ram");
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.BonusProductImage", b =>
@@ -386,21 +501,32 @@ namespace DataBaseContext.Migrations
 
             modelBuilder.Entity("Model.DataModel.Main.Product", b =>
                 {
-                    b.HasOne("Model.DataModel.Main.Producer", "Brand")
-                        .WithMany("Products")
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Model.DataModel.Main.MainProductImage", "MainImage")
                         .WithOne("Product")
                         .HasForeignKey("Model.DataModel.Main.Product", "MainImageId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Brand");
+                    b.HasOne("Model.DataModel.Main.Producer", "Producer")
+                        .WithMany("Products")
+                        .HasForeignKey("ProducerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("MainImage");
+
+                    b.Navigation("Producer");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Main.User", b =>
+                {
+                    b.HasOne("Model.DataModel.Main.Adress", "Adress")
+                        .WithMany()
+                        .HasForeignKey("AdressId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Adress");
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.MainProductImage", b =>
@@ -430,8 +556,6 @@ namespace DataBaseContext.Migrations
 
             modelBuilder.Entity("Model.DataModel.Main.User", b =>
                 {
-                    b.Navigation("Adresses");
-
                     b.Navigation("Comments");
 
                     b.Navigation("Orders");

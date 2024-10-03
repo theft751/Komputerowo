@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Model.DataModel.Additional.ComputerParts
 {
-    public enum DiskDriveInterface
+    public enum PowerSupplyFormat
     {
-        ATA,SATA,M2
+        ATX, ATX_3_0, SFX, ATX_3_1, SFX_L, TFX
     }
 }

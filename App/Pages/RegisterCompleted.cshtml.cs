@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace App.Pages
 {
-    public class registerForExternalModel : PageModel
+    public class RegisterCompletedModel : PageModel
     {
         public void OnGet()
         {
