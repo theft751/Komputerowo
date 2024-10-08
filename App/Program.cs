@@ -6,9 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<ApplicationDbContext>(
-    option => option.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddDbContext<AppDbContext>(
+    option => option
+    .UseLazyLoadingProxies()
+    .UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = "Komputerowo_login_session";
@@ -32,6 +35,7 @@ app.UseRouting();
 
 app.UseAuthorization();
 app.UseSession();
+
 
 app.MapRazorPages();
 

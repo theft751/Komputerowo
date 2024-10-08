@@ -1,0 +1,15 @@
+﻿@page
+@model App.Pages.DataUpdatedSuccessfullyModel
+@{
+    ViewData["Title"] = "Aktualizacja danych";
+}
+
+<div class=" logOrRegForm">
+    Dane zostały zmienione pomyślnie pomyślnie
+</div>
+<script>
+    let redircation = "@Url.Page("/UserSettingsPanel")"
+    setTimeout(function () {
+        window.location.href = redircation;
+    }, 5000);
+</script>

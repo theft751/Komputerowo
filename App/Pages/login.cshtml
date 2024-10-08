@@ -11,12 +11,11 @@
             <input asp-for="email" type="email" id="emailField" class="loginInput" placeholder=""/>
             <label for="emailField" class="loginCaption">E-mail</label><br />
         </div>
-
         <div class="inputUnit">
             <input asp-for="password" type="password" class="loginInput" id="passwordField" placeholder=""  />
             <label for="passwordField" class="loginCaption">Hasło </label><br />
         </div>
-
+        <span style="color: red">@TempData["loginMessage"]</span><br />
         <input type="submit" id="submitLogin" value="Zaloguj" class="loginButton" /> <br />
         
         <button id="registerButton" onclick="location.href='@Url.Page("/register")';" class="loginButton" type="button">Zarejestruj się</button> <br />

@@ -1,0 +1,55 @@
+﻿@page
+@using Model.DataModel.Additional
+@using Model.DataModel.Main
+@model App.Pages.EditAdressModel
+@{
+    ViewData["Title"] = "Edytuj adres";
+}
+<form method="post" class="logOrRegForm">
+    <h2>Adres</h2>
+    <h3>Ulica i lokal</h3>
+        <div class="inputUnit">
+            <input asp-for="street" type="text" id="streetInput" class="loginInput" placeholder="" value="@Model.street"/>
+            <label for="streetInput" class="loginCaption">Ulica</label> <br />
+        </div>
+
+    <div class="inputUnit">
+        <input asp-for="numberOfBuilding" type="text" id="houseNumberInput" class="loginInput" placeholder="" value="@Model.numberOfBuilding"/>
+        <label for="houseNumber" class="loginCaption">Numer budynku</label> <br />
+    </div>
+
+    <div class="inputUnit">
+        <input asp-for="apartmentNumber" type="text" id="localNumberInput" class="loginInput" placeholder="" value="@Model.apartmentNumber"/>
+        <label for="localNumber" class="loginCaption">Numer lokalu</label> <br />
+    </div>
+    <h3>Miejscowosc</h3>
+    <div class="inputUnit">
+        <select class="loginInput" asp-for="voivodeship">
+            <option value="0">dolnośląskie</option>
+            <option value="1">kujawsko-pomorskie</option>
+            <option value="2">lubelskie</option>
+            <option value="3">lubuskie</option>
+            <option value="4">łódzkie</option>
+            <option value="5">małopolskie</option>
+            <option value="6">mazowieckie</option>
+            <option value="7">opolskie</option>
+            <option value="8">podkarpackie</option>
+            <option value="9">podlaskie</option>
+            <option value="10">pomorskie</option>
+            <option value="11">śląskie</option>
+            <option value="12">świętokrzyskie</option>
+            <option value="13">warmińsko_mazurskie</option>
+            <option value="14">wielkopolskie</option>
+            <option value="15">zachodniopomorskie</option>
+        </select>
+    </div>
+    <div class="inputUnit">
+        <input asp-for="town" type="text" id="townInput" class="loginInput" placeholder="" value="@Model.town"/>
+        <label for="townInput" class="loginCaption">Miejscowosc</label> <br />
+    </div>
+    <div class="inputUnit">
+        <input asp-for="postCode" type="text" id="postCodeInput" class="loginInput" placeholder="" value="@Model.postCode"/>
+        <label for="postCodeInput" class="loginCaption">Kod pocztowy</label> <br />
+    </div>
+    <input type="submit" class="loginButton" value="Zatwierdź"/>
+</form>

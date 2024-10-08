@@ -9,7 +9,7 @@ namespace App.Pages
 {
     public class loginModel : PageModel
     {
-        private ApplicationDbContext context;
+        private AppDbContext context;
         [BindProperty]
         public string email { get; set; }
 
@@ -33,15 +33,16 @@ namespace App.Pages
                     if (hashedPassword == foundPassword) {
                         HttpContext.Session.SetInt32("isLogged", 1);
                         HttpContext.Session.SetInt32($"LoggedUserId", FoundUser.Id);
-                        return Page();
+                        return new RedirectToPageResult("Index");
                     }
                 }
 
             }
+            TempData["loginMessage"] = "Nieprawid³owe danie logowania";
             return Page();
     
         }
-        public loginModel(ApplicationDbContext _context) 
+        public loginModel(AppDbContext _context) 
         {
                 context = _context;
         }

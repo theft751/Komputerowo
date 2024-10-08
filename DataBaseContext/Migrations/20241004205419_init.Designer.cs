@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace DataBaseContext.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241002135651_init")]
+    [DbContext(typeof(AppDbContext))]
+    [Migration("20241004205419_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -33,11 +33,7 @@ namespace DataBaseContext.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("HouseNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LocalNumber")
+                    b.Property<string>("ApartmentNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -55,6 +51,10 @@ namespace DataBaseContext.Migrations
 
                     b.Property<int>("Voivodeship")
                         .HasColumnType("int");
+
+                    b.Property<string>("numberOfBuilding")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

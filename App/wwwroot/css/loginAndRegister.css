@@ -79,5 +79,12 @@ input:not(:placeholder-shown)+.loginCaption{
     font-size: 15px;
     color: red;
 }
+.voivodeshipInputCaption {
+    position: absolute;
+    background-color: Background;
+    transform: translate(-395px, -15px) scale(0.75);
+    color: black;
+    cursor: text;
+}
 
 

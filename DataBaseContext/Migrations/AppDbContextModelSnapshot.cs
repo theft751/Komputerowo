@@ -4,19 +4,16 @@ using DataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
 namespace DataBaseContext.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241002135639_init1")]
-    partial class init1
+    [DbContext(typeof(AppDbContext))]
+    partial class AppDbContextModelSnapshot : ModelSnapshot
     {
-        /// <inheritdoc />
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -33,11 +30,7 @@ namespace DataBaseContext.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("HouseNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LocalNumber")
+                    b.Property<string>("ApartmentNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -55,6 +48,10 @@ namespace DataBaseContext.Migrations
 
                     b.Property<int>("Voivodeship")
                         .HasColumnType("int");
+
+                    b.Property<string>("numberOfBuilding")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

@@ -9,7 +9,7 @@ using System.Reflection.Emit;
 
 namespace DataBaseContext
 {
-    public class ApplicationDbContext : DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Adress> Adresses { get; set; }
         public DbSet<BonusProductImage> BonusProductImages { get; set; }
@@ -31,7 +31,7 @@ namespace DataBaseContext
         //Aditional
 
 
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
         : base(options)
         {
         }

@@ -6,11 +6,29 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace DataBaseContext.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Adresses",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Voivodeship = table.Column<int>(type: "int", nullable: false),
+                    PostCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Town = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Street = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    numberOfBuilding = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ApartmentNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Adresses", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "MainProductImages",
                 columns: table => new
@@ -49,11 +67,19 @@ namespace DataBaseContext.Migrations
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    UserType = table.Column<int>(type: "int", nullable: false),
+                    AdressId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Users_Adresses_AdressId",
+                        column: x => x.AdressId,
+                        principalTable: "Adresses",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -88,7 +114,9 @@ namespace DataBaseContext.Migrations
                     Frequency = table.Column<int>(type: "int", nullable: true),
                     CacheSize = table.Column<int>(type: "int", nullable: true),
                     IntegratedGpu = table.Column<bool>(type: "bit", nullable: true),
+                    hasCoolerIncluded = table.Column<bool>(type: "bit", nullable: true),
                     ProcessorSocket = table.Column<int>(type: "int", nullable: true),
+                    ProcessorSerie = table.Column<int>(type: "int", nullable: true),
                     SizePerChips = table.Column<int>(type: "int", nullable: true),
                     ChipsAmount = table.Column<int>(type: "int", nullable: true),
                     Ram_Frequency = table.Column<int>(type: "int", nullable: true),
@@ -113,28 +141,29 @@ namespace DataBaseContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Adresses",
+                name: "Orders",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Voivodeship = table.Column<int>(type: "int", nullable: false),
-                    PostCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Town = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Street = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    HouseNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LocalNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    AdressId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Adresses", x => x.Id);
+                    table.PrimaryKey("PK_Orders", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Adresses_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
+                        name: "FK_Orders_Adresses_AdressId",
+                        column: x => x.AdressId,
+                        principalTable: "Adresses",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Orders_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -188,32 +217,6 @@ namespace DataBaseContext.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Orders",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Status = table.Column<int>(type: "int", nullable: false),
-                    AdressId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Orders", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Orders_Adresses_AdressId",
-                        column: x => x.AdressId,
-                        principalTable: "Adresses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Orders_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
                 name: "OrderItem",
                 columns: table => new
                 {
@@ -239,11 +242,6 @@ namespace DataBaseContext.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Adresses_UserId",
-                table: "Adresses",
-                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BonusProductImages_ProductId",
@@ -290,6 +288,11 @@ namespace DataBaseContext.Migrations
                 name: "IX_Products_ProducerId",
                 table: "Products",
                 column: "ProducerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_AdressId",
+                table: "Users",
+                column: "AdressId");
         }
 
         /// <inheritdoc />
@@ -311,7 +314,7 @@ namespace DataBaseContext.Migrations
                 name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Adresses");
+                name: "Users");
 
             migrationBuilder.DropTable(
                 name: "MainProductImages");
@@ -320,7 +323,7 @@ namespace DataBaseContext.Migrations
                 name: "Producers");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Adresses");
         }
     }
 }

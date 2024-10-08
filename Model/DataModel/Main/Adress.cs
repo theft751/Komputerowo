@@ -18,7 +18,7 @@ namespace Model.DataModel.Main
         public string PostCode { get; set; }
         public string Town { get; set; }
         public string Street { get; set; }
-        public string numberOfBuilding { get; set; }
+        public string NumberOfBuilding { get; set; }
         public string ApartmentNumber { get; set; }
 
     }

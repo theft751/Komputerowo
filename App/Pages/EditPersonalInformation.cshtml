@@ -1,0 +1,21 @@
+﻿@page
+@model App.Pages.EditPersonalInformationModel
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm">
+    <div id="loginFormContent">
+        <h2>Logowanie</h2>
+        <div class="inputUnit">
+            <input asp-for="firstName" type="text" class="loginInput" placeholder="" value="@Model.firstName"/>
+            <label class="loginCaption">Imie</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="lastName" type="text" class="loginInput" placeholder="" value="@Model.lastName"/>
+            <label class="loginCaption">Imie</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="phoneNumber" type="number" id="phoneNumberInput" class="loginInput" placeholder="" value="@Model.phoneNumber" />
+            <label class="loginCaption">Imie</label><br />
+        </div>
+    </div>
+</form>

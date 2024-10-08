@@ -2,14 +2,18 @@
 @model App.Pages.registerModel
 @{
     ViewData["Title"] = "Rejestracja";
-    
+
+    if(true)
+    {
+        Redirect("Index");
+    }
 }
 <script>
     function checkPasswordsIdentity() {
+        let element = document.getElementById("badPasswordInfo");
         let passwordInput = document.getElementById("passwordInput");
         let repeatPasswordInput = document.getElementById("repeatPasswordInput");
-        let conditional = validatePasswords(passwordInput, repeatPasswordInput)
-        let element = document.getElementById("badPasswordInfo")
+        let conditional = validatePasswords(passwordInput, repeatPasswordInput);
         if (conditional) {
             element.innerHTML = ""
         }
@@ -20,7 +24,7 @@
     function checkEmailValidity() { 
         let emailString = document.getElementById("emailInput").value;
         let validity = validateEmail(emailString);
-        let element = document.getElementById("badEmailInfo");
+        let element = document.getElementById("");
         if (validity || emailString == "") {
             element.innerHTML = ""
         }
@@ -29,7 +33,7 @@
         }
     }
 </script>
-<form method="post" class="container logOrRegForm" asp-action="">
+<form method="post" class="container logOrRegForm" method="post">
         <h2 class="text-center">Rejestracja</h2>
         <div class="row">
             <div class="col">
@@ -37,23 +41,22 @@
                 <div class="inputUnit">
                     <input asp-for="email" type="email" id="emailInput" class="loginInput" onchange="checkEmailValidity()" placeholder="" required />
                         <label for="emailInput" class="loginCaption">E-mail</label>
-                    <label for="emailInput" class="badInputFormatMessage" id="badEmailInfo"></label><br />
+                <label for="emailInput" class="badInputFormatMessage" id="badEmailInfo">@ViewData["badEmailInfo"]</label><br />
                     </div>
 
                     <div class="inputUnit">
-                    <input type="password" id="passwordInput" class="loginInput" placeholder="" onchange="checkPasswordsIdentity()" />
+                    <input asp-for="password" type="password" id="passwordInput" class="loginInput" placeholder="" onchange="checkPasswordsIdentity()" required/>
                         <label for="passwordInput" class="loginCaption">Hasło</label><br />
                     </div>
 
                     <div class="inputUnit">
-                    <input type="password" id="repeatPasswordInput" class="loginInput" placeholder="" onchange="checkPasswordsIdentity()" />
+                <input asp-for="repeatPassword" type="password" id="repeatPasswordInput" class="loginInput" placeholder="" onchange="checkPasswordsIdentity()" required />
                         <label for="repeatPasswordInput" class="loginCaption">Powtórz hasło</label>
-                    <label for="repeatPasswordInput" class="badInputFormatMessage" id="badPasswordInfo"></label><br />
+                <label for="repeatPasswordInput" class="badInputFormatMessage" id="badPasswordInfo">@ViewData["badPasswordInfo"]</label><br />
                     </div>
             <h3>Miejscowosc</h3>
             <div class="inputUnit">
                 <select class="loginInput" asp-for="voivodeship">
-                    <option style="color:gray">-wybierz województwo-</option>
                     <option value="0">dolnośląskie</option>
                     <option value="1">kujawsko-pomorskie</option>
                     <option value="2">lubelskie</option>
@@ -73,41 +76,41 @@
                 </select>
             </div>
             <div class="inputUnit">
-                <input type="text" id="townInput" class="loginInput" placeholder="" />
+                <input asp-for="town" type="text" id="townInput" class="loginInput" placeholder="" required />
                 <label for="townInput" class="loginCaption">Miejscowosc</label> <br />
             </div>
             <div class="inputUnit">
-                <input type="text" id="postCodeInput" class="loginInput" placeholder="" />
+                <input asp-for="postCode" type="text" id="postCodeInput" class="loginInput" placeholder="" required />
                 <label for="postCodeInput" class="loginCaption">Kod pocztowy</label> <br />
             </div>
             </div>
             <div class="col">
             <h3>Dane personalne</h3>
             <div class="inputUnit">
-                <input type="text" id="firstNameInput" class="loginInput" placeholder="" />
+                <input asp-for="firstName" type="text" id="firstNameInput" class="loginInput" placeholder="" required />
                 <label for="firstNameInput" class="loginCaption">Imię</label> <br />
             </div>
             <div class="inputUnit">
-                <input type="text" id="lastNameInput" class="loginInput" placeholder="" />
+                <input asp-for="lastName" type="text" id="lastNameInput" class="loginInput" placeholder="" required />
                 <label for="lastNameInput" class="loginCaption">Nazwisko</label> <br />
             </div>
             <div class="inputUnit">
-                <input type="number" id="phoneNumberInput" class="loginInput" placeholder="" />
+                <input asp-for="phoneNumber" type="number" id="phoneNumberInput" class="loginInput" placeholder="" required />
                 <label for="phoneNumberInput" class="loginCaption">Numer telefonu</label> <br />
             </div>
                 <h3>Ulica i lokal</h3>
                 <div class="inputUnit">
-                    <input type="text" id="streetInput" class="loginInput" placeholder="" />
+                <input asp-for="street" type="text" id="streetInput" class="loginInput" placeholder="" required />
                     <label for="streetInput" class="loginCaption">Ulica</label> <br />
                 </div>
 
                 <div class="inputUnit">
-                    <input type="text" id="houseNumberInput" class="loginInput" placeholder="" />
+                <input asp-for="numberOfBuilding" type="text" id="houseNumberInput" class="loginInput" placeholder="" required />
                     <label for="houseNumber" class="loginCaption">Numer budynku</label> <br />
                 </div>
 
                 <div class="inputUnit">
-                    <input type="text" id="localNumberInput" class="loginInput" placeholder="" />
+                    <input asp-for="apartmentNumber " type="text" id="localNumberInput" class="loginInput" placeholder="" />
                     <label for="localNumber" class="loginCaption">Numer lokalu</label> <br />
                 </div>
 

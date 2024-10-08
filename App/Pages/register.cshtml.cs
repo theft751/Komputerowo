@@ -11,7 +11,8 @@ namespace App.Pages
 {
     public class registerModel : PageModel
     {
-        private ApplicationDbContext _ApplicationDbContext;
+        private AppDbContext context;
+
         [BindProperty]
         public string email { get; set; }
         
@@ -47,45 +48,79 @@ namespace App.Pages
 
         [BindProperty]
         public string apartmentNumber { get; set; }
-        public void OnGet()
-        {
 
+        public IActionResult OnGet()
+        {
+            ViewData["badPasswordInfo"] = "";
+            ViewData["badEmailInfo"] = "";
+            if (HttpContext.Session.GetInt32("isLogged") == 1)
+                return RedirectToPage("Index");
+            else
+                return Page();
         }
 
-        public void OnPost()
-        { 
-            Adress adress = new Adress();
-            adress.PostCode = postCode; 
-            adress.Voivodeship = voivodeship;
-            adress.Town = town;
-            adress.Street = street;
-            adress.numberOfBuilding = numberOfBuilding;
-            adress.ApartmentNumber = apartmentNumber;
+        public IActionResult OnPost()
+        {
+            var foundEmail = context.Users.Where(x=>x.Email == email).FirstOrDefault();
+            if (foundEmail == null)
+            { 
+                if (password == repeatPassword)
+                {
+                    try
+                    {
+                        Adress adress = new Adress();
+                        adress.PostCode = postCode;
+                        adress.Voivodeship = voivodeship;
+                        adress.Town = town;
+                        adress.Street = street;
+                        adress.NumberOfBuilding = numberOfBuilding;
+                        adress.ApartmentNumber = apartmentNumber != null ? apartmentNumber : "";
 
-            
-            User user = new User();
-            user.Email = email;
-            user.FirstName = firstName;
-            user.LastName = lastName;
-            user.PhoneNumber = phoneNumber;
-            user.UserType = UserType.NormalUser;
-            user.Adress = adress;
+                        User user = new User();
+                        user.Email = email;
+                        user.FirstName = firstName;
+                        user.LastName = lastName;
+                        user.PhoneNumber = phoneNumber;
+                        user.UserType = UserType.NormalUser;
+                        user.Adress = adress;
 
-            //Password hashing
-            using (SHA256 sha256 = SHA256.Create())
-            {
-                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                string hashedPassword = Convert.ToBase64String(hashBytes);
-                user.Password = hashedPassword;
+                        //Password hashing
+                        using (SHA256 sha256 = SHA256.Create())
+                        {
+                            byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
+                            string hashedPassword = Convert.ToBase64String(hashBytes);
+                            user.Password = hashedPassword;
+                        }
+
+
+                        context.Users.Add(user);
+                        context.Adresses.Add(adress);
+                        context.SaveChanges();
+                        return RedirectToPage("/RegisterCompleted");
+                    }
+                    catch (Exception)
+                    {
+                        return new RedirectToPageResult("/Error");
+                    }
+                }
+                else
+                {
+
+                    ViewData["badPasswordInfo"] = "Hasla nie sa identyczne";
+                    return Page();
+                }
             }
-
-
-            _ApplicationDbContext.Users.Add(user);
-            _ApplicationDbContext.Adresses.Add(adress);
+            else
+            {
+                ViewData["badEmailInfo"] = "Ten adres email jest ju¿ zajêty";
+                return Page();
+            }
+            
         }
-        public registerModel(ApplicationDbContext _context)
+        public registerModel(AppDbContext _context)
         {
-            ApplicationDbContext applicationDbContext = _context;
+
+            context = _context;
         }
     }
 }

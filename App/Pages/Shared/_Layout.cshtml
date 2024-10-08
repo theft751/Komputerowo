@@ -1,6 +1,14 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@{
+    if (!Context.Session.Keys.Contains("isLogged"))
+    {
+        Context.Session.SetInt32("isLogged", 0);
+    }
+    Context.Session.SetString("lastPage", Context.Request.Path);
+}
+<!DOCTYPE html>
+<html lang="pl-Pl">
 <head>
+
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
@@ -13,17 +21,48 @@
 <body>
     <header class="container-fluid">
             <div class="row">
-            <a ><div class="col"><h1>Komputerowo</h1></div></a>
-                <div id="searchArea" class="col-5">
+            <a style="all: unset" asp-page="/Index">
+                <div class="col">
+                    <h1 style="cursor: pointer">Komputerowo</h1>
+                </div>
+            </a>
+                <div id="searchArea" class="col-4">
                     
                     <input type="text" id="searchText">
                     <button id="searchButton">Szukaj</button><br>
                     <span id="customizeLabel">Dostosuj opcje wyszukiwania</span>
                 </div>
-                <div id="login" class="col-2">
+                <div id="login" class="col-3">
 
                         <i class="demo-icon icon-user-circle-o" style="font-size:30px;"></i>
-                        <span>Zaloguj sie</span>
+                @if (Context.Session.GetInt32("isLogged") == 0)
+                {
+                    <a asp-page="/Login" style="all: unset">
+                        <span style="cursor: pointer">Zaloguj sie</span>
+                    </a>
+                }
+                else
+                {
+                    // 
+                    <div id="userDropDownMenu" style="position: relative; display: inline-block;">
+                        <span style="cursor: pointer">@await Component.InvokeAsync("LoggedUserEmail")</span>
+                        <div id="userDropDownMenuBody" style="position: absolute; right: 0; background-color: #3F526B; ; padding: 10px; display: none;">
+                            <ul style="list-style-type: none; padding: 0; margin: 0;">
+                                <li style="border-bottom: 1px solid white; cursor: pointer">
+                                    <a style=" all:unset" asp-page="/UserSettingsPanel">Moje konto</a>
+                                 </li>
+                                <li style="border-bottom: 1px solid white; cursor: pointer">
+                                    <a style=" all:unset" href="#">Zamówienia</a>
+                                </li>
+                                <li style="border-bottom: 1px solid white; cursor: pointer">
+                                    <a style=" all:unset" asp-page="/Logout">Wyloguj</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                
+
+                }
 
                 </div>
                 <div id="basket" class="col-2">
@@ -43,7 +82,15 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.getElementById("userDropDownMenu").addEventListener("mouseover", function () {
+            document.getElementById("userDropDownMenuBody").style.display = "block";
+        });
 
+        document.getElementById("userDropDownMenu").addEventListener("mouseout", function () {
+            document.getElementById("userDropDownMenuBody").style.display = "none";
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

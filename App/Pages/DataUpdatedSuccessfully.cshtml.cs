@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace App.Pages
 {
-    public class addOrEdditAddresModel : PageModel
+    public class DataUpdatedSuccessfullyModel : PageModel
     {
         public void OnGet()
         {
