@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Pages\DataUpdatedSuccessfully.cshtml" />
     <Content Remove="Pages\Shared\EditAdress.cshtml" />
   </ItemGroup>
 
@@ -37,17 +36,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Pages\DataUpdatedSuccessfully.cshtml" />
     <_ContentIncludedByDefault Remove="Pages\Shared\EditAdress.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Pages\DataUpdatedSuccessfully.cshtml" />
     <None Include="Pages\EditAdress.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Pages\DataUpdatedSuccessfully.cshtml" />
   </ItemGroup>
 
 </Project>

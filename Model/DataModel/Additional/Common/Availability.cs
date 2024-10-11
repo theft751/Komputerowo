@@ -8,8 +8,7 @@ namespace Model.DataModel.Additional.Common
 {
     public enum Availability
     {
-        CurrentlyNotAvabile,
-        PernamentlyNotAvabile,
-        Avabile
+        Avabile,
+        Unavabile
     }
 }

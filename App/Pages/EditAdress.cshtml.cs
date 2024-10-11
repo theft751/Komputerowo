@@ -54,13 +54,29 @@ namespace App.Pages
                 }
                 else 
                 {
-                    return new RedirectToPageResult("Error");
+                    return new RedirectToPageResult("Index");
                 }
             }
             catch
             {
                 return new RedirectToPageResult("Error");
             }
+        }
+        public IActionResult OnPost()
+        {
+            Adress userAdress =
+                context
+                .Users
+                .Where(x => x.Id == HttpContext.Session.GetInt32("LoggedUserId"))
+                .First().Adress;
+            userAdress.PostCode = postCode;
+            userAdress.Voivodeship = voivodeship;
+            userAdress.Town = town;
+            userAdress.Street = street;
+            userAdress.NumberOfBuilding = numberOfBuilding;
+            userAdress.ApartmentNumber = apartmentNumber == null ?"":apartmentNumber;
+            context.SaveChanges();
+            return new RedirectToPageResult("DataUpdatedSuccessfully");
         }
     }
 }

@@ -18,24 +18,13 @@ namespace Model.DataModel.Main
         public string AdditionalInfo { get; set; }
         public string Color { get; set; }
         public ProductType ProductType { get; set; } //dyscryminator
-        public int Amount 
-        {
-            get =>Amount;
-            set 
-            {
-                if (value == 0 && Availability == Availability.Avabile)
-                { 
-                    
-                    Availability = Availability.CurrentlyNotAvabile;
-                    Amount = value;
-                }
-                else if (value < 0)
-                    Amount = 0;
-                else
-                    Amount = value;
-            }
+        public int Amount { get; set; }
+        public Availability Availability 
+
+        { get =>
+                Amount >= 1 ? Availability.Avabile : Availability.Unavabile; 
         }
-        public Availability Availability { get; set; }
+
         public int GuarantyTime { get; set; } //Months
         public string Name { get; set; }
         public string Description { get; set; }

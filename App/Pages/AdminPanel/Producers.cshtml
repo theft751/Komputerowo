@@ -1,0 +1,46 @@
+﻿@page
+@model App.Pages.AdminPanel.ProducersModel
+@{
+}
+<style>
+    table
+    {
+        border: 3px solid black;
+    }
+
+
+</style>
+<div class="logOrRegForm">
+    <div id="loginFormContent">
+        <h2>Producenci</h2>
+        <table>
+            <tr>
+                <th class="thForCrud">Operacje</th>
+                <th class="tdForName thForCrud">Nazwa</th>
+            </tr>
+            @foreach(var element in Model.Producers)
+            {
+                <tr>
+                    <td class="tdForCrud">
+                        <form style="float:left" asp-page="/AdminPanel/EditProducer" method="get">
+                            <input type="hidden" name="_id" value="@element.Id"/>
+                            <input type="hidden" name="_name" value="@element.Name" />
+                            <input type="submit" class="crudButton" value="Edytuj">
+                        </form>
+                        <form method="post" asp-page-handler="Delete" style="float: left; margin-left: 5px">
+                            <input type="hidden" name="id" value="@element.Id" />
+                            <input type="submit" class="crudButton" value="Usuń">
+                        </form>
+                    </td>
+                    <td class="tdForName tdForCrud">
+                        @element.Name
+                    </td>
+                </tr>
+            }
+        </table>
+        <br/>
+        <div style="text-align: center">
+            <button onclick="location.href='@Url.Page("/AdminPanel/AddProducer")';" class="crudButton">Dodaj nowego producenta</button>
+        </div>
+    </div>
+</div>

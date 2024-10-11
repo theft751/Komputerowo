@@ -1,0 +1,38 @@
+﻿@page
+@model App.Pages.AdminPanel.AddProductModel
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm">
+    <div id="loginFormContent">
+        <h2>Dodaj produkt</h2>
+        <div class="inputUnit">
+            <input asp-for="Name" type="text" class="loginInput" placeholder="" />
+            <label for="Name" class="loginCaption">Nazwa</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="Name" type="text" class="loginInput" placeholder="" />
+            <label for="Name" class="loginCaption">Opis</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="Name" type="text" class="loginInput" placeholder="" />
+            <label for="Name" class="loginCaption">Dodatkowe informacje</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="Name" type="text" class="loginInput" placeholder="" />
+            <label for="Name" class="loginCaption">Kolor</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="Name" type="text" class="loginInput" placeholder="" />
+            <label for="Name" class="loginCaption">Czas gwarancji (w miesiącach)</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="Name" type="text" class="loginInput" placeholder="" />
+            <label for="Name" class="loginCaption">Cena</label><br />
+        </div>
+        <div class="inputUnit">
+            <label for="Name">Dodaj obraz</label><br />
+            <input type="file" />
+        </div>
+        <input type="submit" value="zatwierdź" class="loginButton" />
+        </<div>
+</form>

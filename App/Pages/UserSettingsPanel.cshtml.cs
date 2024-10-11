@@ -8,20 +8,29 @@ namespace App.Pages
     public class UserSettingsPanelModel : PageModel
     {
         AppDbContext context; 
-        public void OnGet()
+        public IActionResult OnGet()
         {
-            try
-            {
-                string userEmail = 
-                    context
-                    .Users
-                    .Where(x=>x.Id==HttpContext.Session.GetInt32("LoggedUserId"))
-                    .First().Email;
-                ViewData["userEmail"] = userEmail;
+            if(HttpContext.Session.GetInt32("isLogged") == 1)
+            { 
+                try
+                {
+                    string userEmail = 
+                        context
+                        .Users
+                        .Where(x=>x.Id==HttpContext.Session.GetInt32("LoggedUserId"))
+                        .First().Email;
+                    ViewData["userEmail"] = userEmail;
+                    return Page();
+                }
+                catch(Exception)
+                {
+                    ViewData["userEmail"] = "NonValidUser";
+                    return Page();
+                }
             }
-            catch(Exception)
+            else
             {
-                ViewData["userEmail"] = "NonValidUser";
+                return new RedirectToPageResult("Index");
             }
         }
         public UserSettingsPanelModel(AppDbContext _context)

@@ -23,11 +23,9 @@ namespace App.Pages
         public IActionResult OnGet()
         {
             @ViewData["BadInputInfo"] = "";
-            /*
             if (HttpContext.Session.GetInt32("isLogged") == 0)
                 return new RedirectToPageResult("Index");
             else
-            */
                 return Page();
         }
         public IActionResult OnPost()
@@ -57,6 +55,7 @@ namespace App.Pages
                 if (hashedNewPassword == hashedRepeatedNewPassword)
                 {
                     user.Password = hashedNewPassword;
+                    context.SaveChanges();
                     return new RedirectToPageResult("PasswordChangedSuccessfully");
                 }
                 else

@@ -33,3 +33,24 @@ header {
     text-decoration: underline;
 
 }
+.crudButton {
+    background-color: #3F526B;
+    color: white;
+}
+.thForCrud {
+    padding: 8px;
+    border: 3px solid black;
+}
+
+.trForCrud {
+    border: 3px solid black;
+}
+
+.tdForCrud {
+    padding: 8px;
+    border: 3px solid black;
+}
+
+.tdForName {
+    min-width: 300px;
+}
