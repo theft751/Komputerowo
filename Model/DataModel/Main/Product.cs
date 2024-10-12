@@ -19,11 +19,7 @@ namespace Model.DataModel.Main
         public string Color { get; set; }
         public ProductType ProductType { get; set; } //dyscryminator
         public int Amount { get; set; }
-        public Availability Availability 
 
-        { get =>
-                Amount >= 1 ? Availability.Avabile : Availability.Unavabile; 
-        }
 
         public int GuarantyTime { get; set; } //Months
         public string Name { get; set; }
@@ -35,14 +31,21 @@ namespace Model.DataModel.Main
         public int MainImageId { get; set; }
         public virtual MainProductImage MainImage { get; set; }
 
-        public virtual  ICollection<BonusProductImage> BonusImages { get; set; }
+        public virtual  ICollection<BonusProductImage> BonusImages { get; set; } = new List<BonusProductImage>();
 
-        public virtual Producer Producer { get; set; }
-        public int ProducerId { get; set; }
+        public string Producer { get; set; }
 
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
-        public virtual ICollection<Comment> Comments { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
+
+        [NotMapped]
+        public Availability Availability
+
+        {
+            get =>
+                Amount >= 1 ? Availability.Avabile : Availability.Unavabile;
+        }
     }
 }
  

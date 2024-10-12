@@ -15,6 +15,12 @@ namespace Model.DataModel.Additional.Common
         POWER_SUPPLY,
         MOTHERBOARD,
         CASE,
-        DISK_DRIVE
+        DISK_DRIVE,
+
+        //
+        DESKTOP_COMPUTER,
+        LAPTOP,
+        TELEVISOR,
+        SMARTPHONE
     }
 }

@@ -10,6 +10,11 @@ namespace Model.DataModel.Products.ComputerParts
 {
     public class PowerSupply:Product
     {
-        public PowerSupplyFormat PowerSupplyFormat {  get; set; } 
+        public int MaximalPower {  get; set; } // In Watts
+        public string Certyficate { get; set; }
+        public string PowerSupplyFormat {  get; set; } 
+        public string Efficiency { get; set; }
+        public string Connectors { get; set; }
+        public string PowerSupplyProtectorsFeatures { get; set; }
     }
 }

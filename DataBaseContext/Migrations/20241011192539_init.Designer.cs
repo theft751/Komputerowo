@@ -4,6 +4,7 @@ using DataBaseContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseContext.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241011192539_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -326,8 +329,9 @@ namespace DataBaseContext.Migrations
                 {
                     b.HasBaseType("Model.DataModel.Main.Product");
 
-                    b.Property<int>("CaseType")
-                        .HasColumnType("int");
+                    b.Property<string>("CaseType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MotherBoardFormats")
                         .IsRequired()
@@ -367,26 +371,7 @@ namespace DataBaseContext.Migrations
                 {
                     b.HasBaseType("Model.DataModel.Main.Product");
 
-                    b.Property<string>("Certyficate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Connectors")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Efficiency")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("MaximalPower")
-                        .HasColumnType("int");
-
                     b.Property<string>("PowerSupplyFormat")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PowerSupplyProtectorsFeatures")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

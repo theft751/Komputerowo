@@ -1,0 +1,43 @@
+﻿@page
+@model App.Pages.AdminPanel.AddPowerSupplyModel
+@{
+}
+<form method="post" id="powerSupplyForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="powerSupplyFormContent">
+        <h2>Dodaj Zasilacz</h2>
+        
+        @await Component.InvokeAsync("AddProduct")
+
+        <div class="inputUnit">
+            <input asp-for="MaximalPower" type="number" class="loginInput" placeholder="" required />
+            <label for="MaximalPower" class="loginCaption">Maksymalna moc (w watach)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Certyficate" type="text" class="loginInput" placeholder="" required />
+            <label for="Certyficate" class="loginCaption">Certyfikat</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="PowerSupplyFormat" type="text" class="loginInput" placeholder="" required />
+            <label for="PowerSupplyFormat" class="loginCaption">Format zasilacza</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Efficiency" type="text" class="loginInput" placeholder="" required />
+            <label for="Efficiency" class="loginCaption">Sprawność</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="Connectors" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;" required></textarea>
+            <label for="Connectors" class="loginCaption">Złącza</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="PowerSupplyProtectorsFeatures" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;" required></textarea>
+            <label for="PowerSupplyProtectorsFeatures" class="loginCaption">Funkcje zabezpieczeń</label><br />
+        </div>
+
+        <input type="submit" value="Zatwierdź" class="loginButton" />
+    </div>
+</form>

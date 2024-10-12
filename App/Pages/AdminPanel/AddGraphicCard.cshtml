@@ -1,0 +1,70 @@
+﻿    @page
+@model App.Pages.AdminPanel.AddGraphicCardModel
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj produkt</h2>
+
+        @await Component.InvokeAsync("AddProduct")
+
+
+        <div class="inputUnit">
+            <input asp-for="Gpu" type="text" class="loginInput" placeholder="" required />
+            <label for="Gpu" class="loginCaption">GPU</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="GraphicCardSerie" type="text" class="loginInput" placeholder="" required />
+            <label for="GraphicCardSerie" class="loginCaption">Seria karty graficznej</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="MemoryType" type="text" class="loginInput" placeholder="" required />
+            <label for="MemoryType" class="loginCaption">Typ pamięci</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ConnectorType" type="text" class="loginInput" placeholder="" required />
+            <label for="ConnectorType" class="loginCaption">Typ złącza</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="OutputTypes" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="OutputTypes" class="loginCaption">Opis</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="MemorySize" type="number" class="loginInput" placeholder="" required />
+            <label for="MemorySize" class="loginCaption">Rozmiar pamięci</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="MemoryBus" type="number" class="loginInput" placeholder="" required />
+            <label for="MemoryBus" class="loginCaption">Szyna pamięci(w bitach)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="CoreColck" type="number" class="loginInput" placeholder="" required />
+            <label for="CoreColck" class="loginCaption">Taktowanie rdzenia</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="MemoryClock" type="number" class="loginInput" placeholder="" required />
+            <label for="MemoryClock" class="loginCaption">Taktowanie pamięci</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <label for="Litghting">Podświetlenie</label>
+            <input asp-for="Litghting" placeholder="" required />
+        </div>
+
+        <div class="inputUnit">
+            <label for="RayTracing">Ray Tracing</label>
+            <input asp-for="RayTracing" placeholder="" required />
+        </div>
+
+        <input type="submit" value="zatwierdź" class="loginButton" />
+     </div>
+</form>

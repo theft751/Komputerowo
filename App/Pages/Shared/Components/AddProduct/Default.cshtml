@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3>Podstawowe dane produktu</h3>
+
+<div class="inputUnit">
+    <input name="Name" type="text" class="loginInput" placeholder="" required />
+    <label for="Name" class="loginCaption">Nazwa</label><br />
+</div>
+
+<div class="inputUnit">
+    <input name="Producer" type="text" class="loginInput" placeholder="" required />
+    <label for="Producer" class="loginCaption">Producent</label><br />
+</div>
+
+<div class="inputUnit">
+    <textarea name="Description" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+    <label for="Description" class="loginCaption">Opis</label><br />
+</div>
+
+<div class="inputUnit">
+    <textarea name="AdditionalInfo" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+    <label for="AdditionalInfo" class="loginCaption">Dodatkowe informacje</label><br />
+</div>
+
+<div class="inputUnit">
+    <input name="Color" type="text" class="loginInput" placeholder="" required />
+    <label for="Color" class="loginCaption">Kolor</label><br />
+</div>
+
+<div class="inputUnit">
+    <input name="GuarantyTime" type="text" class="loginInput" placeholder="" required />
+    <label for="GuarantyTime" class="loginCaption">Czas gwarancji (w miesiącach)</label><br />
+</div>
+
+<div class="inputUnit">
+    <input name="Price" type="text" class="loginInput" placeholder="" required />
+    <label for="Price" class="loginCaption">Cena</label><br />
+</div>
+
+<div class="inputUnit">
+    <label for="MainImage">Zdjęcie główne produktu</label><br required />
+    <input type="file" name="MainImage" />
+</div>
+
+<div class="inputUnit">
+    <label for="file">Dodatkowe zdjęcia(możesz wybrać wiele plików)</label><br />
+    <input type="file" name="BonusImages" multiple />
+</div>
+
+<h3>Dane techniczne</h3>

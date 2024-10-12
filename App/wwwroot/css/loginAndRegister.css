@@ -65,7 +65,9 @@
 
 
 input:focus + .loginCaption,
-input:not(:placeholder-shown)+.loginCaption{
+input:not(:placeholder-shown) + .loginCaption,
+textarea:focus + .loginCaption,
+textarea:not(:placeholder-shown) + .loginCaption {
     transform: translate(-395px, -15px) scale(0.75);
     color: black;
     background-color: Background;

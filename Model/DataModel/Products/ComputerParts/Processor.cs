@@ -17,8 +17,7 @@ namespace Model.DataModel.Products.ComputerParts
         public bool IntegratedGpu {  get; set; }
         public bool hasCoolerIncluded { get; set; }
 
-        //Navigation Property
-        public ProcessorSocket ProcessorSocket{ get; set; }
-        public ProcessorSerie ProcessorSerie{ get; set; }
+        public string ProcessorSocket{ get; set; }
+        public string ProcessorSerie{ get; set; }
     }
 }

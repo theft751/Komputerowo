@@ -16,7 +16,6 @@ namespace App.Pages.AdminPanel
         [BindProperty]
         public string Name { get; set; }
 
-
         public IActionResult OnGet(int _id, string _name)
         {
             /*

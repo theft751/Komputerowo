@@ -12,33 +12,16 @@ namespace Model.DataModel.Products.ComputerParts
 {
     public class GraphicCard : Product
     {
-        public PcGpuSerie GpuSerie { get; set; }
-        public string VideoPorts { get; set; }
-
-        // VideoPort jest typem enum
-        public List<VideoPort> VideoPortsList
-        {
-            // Deserializuje z formatu json zawartość właściwości VideoPorts i zwraca typ List<VideoPort>
-            get
-            {
-                return string.IsNullOrEmpty(VideoPorts)
-                    ? new List<VideoPort>()
-                    : JsonSerializer.Deserialize<List<VideoPort>>(VideoPorts, new JsonSerializerOptions
-                    {
-                        Converters = { new JsonStringEnumConverter() }
-                    });
-            }
-
-            // Serializuje wejście typu List<VideoPort> do formatu json i zapisuje do właściwości VideoPorts
-            set
-            {
-                VideoPorts = value == null
-                    ? string.Empty
-                    : JsonSerializer.Serialize(value, new JsonSerializerOptions
-                    {
-                        Converters = { new JsonStringEnumConverter() }
-                    });
-            }
-        }
+        public string Gpu{ get; set; }
+        public string GraphicCardSerie { get; set; }
+        public string MemoryType {  get; set; }
+        public string ConnectorType { get; set; }
+        public string OutputTypes { get; set; }
+        public int MemorySize { get; set; }
+        public int MemoryBus {  get; set; } //For example 256 bits
+        public int CoreColck { get; set; }
+        public int MemoryClock { get; set; }
+        public bool Litghting { get; set; }
+        public bool RayTracing { get; set; }
     }
 }

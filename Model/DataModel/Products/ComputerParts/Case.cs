@@ -11,11 +11,9 @@ namespace Model.DataModel.Products.ComputerParts
     public class Case:Product
     {
 
+        public string MotherBoardFormats { get; set; }
 
-        //Navigation properties
-        public ICollection<MotherBoardFormat> MotherBoardFormats { get; set; }
-
-        public PowerSupplyFormat PowerSupplyFormat { get; set; }
+        public string PowerSupplyFormat { get; set; }
 
         public CaseType CaseType { get; set; }
     }

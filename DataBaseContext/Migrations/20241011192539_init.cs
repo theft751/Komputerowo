@@ -21,7 +21,7 @@ namespace DataBaseContext.Migrations
                     PostCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Town = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Street = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    numberOfBuilding = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    NumberOfBuilding = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ApartmentNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -92,36 +92,36 @@ namespace DataBaseContext.Migrations
                     Color = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ProductType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Amount = table.Column<int>(type: "int", nullable: false),
-                    Availability = table.Column<int>(type: "int", nullable: false),
                     GuarantyTime = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     MainImageId = table.Column<int>(type: "int", nullable: false),
-                    ProducerId = table.Column<int>(type: "int", nullable: false),
+                    Producer = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Discriminator = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
+                    ProducerId = table.Column<int>(type: "int", nullable: true),
                     MotherBoardFormats = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PowerSupplyFormat = table.Column<int>(type: "int", nullable: true),
-                    CaseType = table.Column<int>(type: "int", nullable: true),
+                    PowerSupplyFormat = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CaseType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DiskSize = table.Column<int>(type: "int", nullable: true),
                     ReadSpeed = table.Column<int>(type: "int", nullable: true),
                     WriteSpeed = table.Column<int>(type: "int", nullable: true),
                     DiskDriveType = table.Column<int>(type: "int", nullable: true),
-                    DiskDriveInterface = table.Column<int>(type: "int", nullable: true),
-                    PowerSupplyFormat1 = table.Column<int>(type: "int", nullable: true),
+                    DiskDriveInterface = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PowerSupplyFormat1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Cores = table.Column<int>(type: "int", nullable: true),
                     Threads = table.Column<int>(type: "int", nullable: true),
                     Frequency = table.Column<int>(type: "int", nullable: true),
                     CacheSize = table.Column<int>(type: "int", nullable: true),
                     IntegratedGpu = table.Column<bool>(type: "bit", nullable: true),
                     hasCoolerIncluded = table.Column<bool>(type: "bit", nullable: true),
-                    ProcessorSocket = table.Column<int>(type: "int", nullable: true),
-                    ProcessorSerie = table.Column<int>(type: "int", nullable: true),
+                    ProcessorSocket = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ProcessorSerie = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SizePerChips = table.Column<int>(type: "int", nullable: true),
                     ChipsAmount = table.Column<int>(type: "int", nullable: true),
                     Ram_Frequency = table.Column<int>(type: "int", nullable: true),
                     Ligthing = table.Column<bool>(type: "bit", nullable: true),
-                    RamType = table.Column<int>(type: "int", nullable: true)
+                    RamType = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -136,8 +136,7 @@ namespace DataBaseContext.Migrations
                         name: "FK_Products_Producers_ProducerId",
                         column: x => x.ProducerId,
                         principalTable: "Producers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(

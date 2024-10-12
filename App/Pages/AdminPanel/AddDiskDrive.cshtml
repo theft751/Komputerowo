@@ -1,0 +1,44 @@
+﻿@page
+@model App.Pages.AdminPanel.AddDiskDriveModel
+@using Model.DataModel.Additional.ComputerParts
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+
+        <h2>Dodaj produkt</h2>
+        
+        @await Component.InvokeAsync("AddProduct")
+
+        <div class="inputUnit">
+            <input asp-for="DiskSize" type="number" class="loginInput" placeholder="" required />
+            <label for="DiskSize" class="loginCaption">Rozmiar dysku (w MB)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ReadSpeed" type="number" class="loginInput" placeholder="" required />
+            <label for="ReadSpeed" class="loginCaption">Prędkość odczytu (w MB/s)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="WriteSpeed" type="text" class="loginInput" placeholder="" required />
+            <label for="WriteSpeed" class="loginCaption" type="number" required>Prędkość zapisu (w MB/s)</label><br />
+        </div>
+
+
+        <div class="inputUnit">
+            <input asp-for="DiskDriveInterface" type="text" class="loginInput" placeholder="" required />
+            <label for="DiskDriveInterface" class="loginCaption">Interfejs dysku twardegu</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <label for="DiskDriveType">Typ dysku twardego</label>
+            <select asp-for="DiskDriveType" placeholder="">
+                <option value="@Convert.ToInt32(DiskDriveType.SSD)">SSD</option>
+                <option value="@Convert.ToInt32(DiskDriveType.HDD)">HDD</option>
+            </select>
+        </div>
+
+        <input type="submit" value="zatwierdź" class="loginButton" />
+        </<div>
+</form>

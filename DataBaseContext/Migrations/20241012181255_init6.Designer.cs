@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataBaseContext.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20241004205419_init")]
-    partial class init
+    [Migration("20241012181255_init6")]
+    partial class init6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,6 +21,9 @@ namespace DataBaseContext.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.7")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -34,6 +37,10 @@ namespace DataBaseContext.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ApartmentNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumberOfBuilding")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -51,10 +58,6 @@ namespace DataBaseContext.Migrations
 
                     b.Property<int>("Voivodeship")
                         .HasColumnType("int");
-
-                    b.Property<string>("numberOfBuilding")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -230,9 +233,6 @@ namespace DataBaseContext.Migrations
                     b.Property<int>("Amount")
                         .HasColumnType("int");
 
-                    b.Property<int>("Availability")
-                        .HasColumnType("int");
-
                     b.Property<string>("Color")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -259,7 +259,11 @@ namespace DataBaseContext.Migrations
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("ProducerId")
+                    b.Property<string>("Producer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ProducerId")
                         .HasColumnType("int");
 
                     b.Property<string>("ProductType")
@@ -332,8 +336,9 @@ namespace DataBaseContext.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PowerSupplyFormat")
-                        .HasColumnType("int");
+                    b.Property<string>("PowerSupplyFormat")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasDiscriminator().HasValue("Case");
                 });
@@ -342,8 +347,9 @@ namespace DataBaseContext.Migrations
                 {
                     b.HasBaseType("Model.DataModel.Main.Product");
 
-                    b.Property<int>("DiskDriveInterface")
-                        .HasColumnType("int");
+                    b.Property<string>("DiskDriveInterface")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("DiskDriveType")
                         .HasColumnType("int");
@@ -364,8 +370,28 @@ namespace DataBaseContext.Migrations
                 {
                     b.HasBaseType("Model.DataModel.Main.Product");
 
-                    b.Property<int>("PowerSupplyFormat")
+                    b.Property<string>("Certyficate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Connectors")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Efficiency")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MaximalPower")
                         .HasColumnType("int");
+
+                    b.Property<string>("PowerSupplyFormat")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PowerSupplyProtectorsFeatures")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Products", t =>
                         {
@@ -392,11 +418,13 @@ namespace DataBaseContext.Migrations
                     b.Property<bool>("IntegratedGpu")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ProcessorSerie")
-                        .HasColumnType("int");
+                    b.Property<string>("ProcessorSerie")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProcessorSocket")
-                        .HasColumnType("int");
+                    b.Property<string>("ProcessorSocket")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Threads")
                         .HasColumnType("int");
@@ -420,8 +448,9 @@ namespace DataBaseContext.Migrations
                     b.Property<bool>("Ligthing")
                         .HasColumnType("bit");
 
-                    b.Property<int>("RamType")
-                        .HasColumnType("int");
+                    b.Property<string>("RamType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SizePerChips")
                         .HasColumnType("int");
@@ -507,15 +536,11 @@ namespace DataBaseContext.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Model.DataModel.Main.Producer", "Producer")
+                    b.HasOne("Model.DataModel.Main.Producer", null)
                         .WithMany("Products")
-                        .HasForeignKey("ProducerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProducerId");
 
                     b.Navigation("MainImage");
-
-                    b.Navigation("Producer");
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.User", b =>

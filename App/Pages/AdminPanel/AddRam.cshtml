@@ -1,0 +1,37 @@
+﻿@page
+@model App.Pages.AdminPanel.AddRamModel
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj Ram</h2>
+        
+        @await Component.InvokeAsync("AddProduct")
+
+        <div  class="inputUnit">
+            <input asp-for="SizePerChips" type="number" class="loginInput" placeholder="" required />
+            <label for="SizePerChips" class="loginCaption">Rozmiar pojedyńczej kości (w MB)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ChipsAmount" type="number" class="loginInput" placeholder="" required />
+            <label for="ChipsAmount" class="loginCaption">Liczba kości</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Frequency" type="number" class="loginInput" placeholder="" required />
+            <label for="Frequency" class="loginCaption">Częstotliwość (w mhz)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="RamType" type="text" class="loginInput" placeholder="" style="" required />
+            <label for="RamType" class="loginCaption">Rozmiar pojedyńczej kości</label><br />
+        </div  class="inputUnit">
+                
+        <div class="inputUnit">
+            <label for="Name">Podświetlenie</label>
+            <input asp-for="Ligthing" placeholder="" />
+        </div>
+            <input type="submit" value="zatwierdź" class="loginButton" />
+        </<div>
+</form>

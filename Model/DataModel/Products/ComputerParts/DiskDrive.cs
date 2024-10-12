@@ -14,8 +14,6 @@ namespace Model.DataModel.Products.ComputerParts
         public int ReadSpeed { get; set; } = 0; //In Mb/s
         public int WriteSpeed { get; set; } = 0; //In Mb/s
         public DiskDriveType DiskDriveType { get; set; }   
-
-        //Navigation properties
-        public DiskDriveInterface DiskDriveInterface { get; set; }
+        public string DiskDriveInterface { get; set; }
     }
 }
