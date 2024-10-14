@@ -1,11 +1,12 @@
 ﻿@page
 @model App.Pages.AdminPanel.AddCaseModel
 @{
+    ViewData["Title"] = "Dodaj obudowę";
 }
 @using Model.DataModel.Additional.ComputerParts;
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
-        <h2>Dodaj Obudowe</h2>
+        <h2>Dodaj obudowe</h2>
         @await Component.InvokeAsync("AddProduct")
         <div class="inputUnit">
             <input asp-for="MotherBoardFormats" type="text" class="loginInput" placeholder="" required />
@@ -13,7 +14,7 @@
         </div>
 
         <div class="inputUnit">
-            <input asp-for="PowerSupplyFormat" type="text" class="loginInput" placeholder="" required />
+            <input asp-for="PowerSupplyFormat" type="text" class="loginInput"  placeholder="" required />
             <label for="PowerSupplyFormat" class="loginCaption">Formaty zasilaczy</label><br />
         </div>
 
@@ -29,3 +30,4 @@
         <input type="submit" value="zatwierdź" class="loginButton" />
         </<div>
 </form>
+  

@@ -1,10 +1,11 @@
 ﻿@page
 @model App.Pages.AdminPanel.AddRamModel
 @{
+        ViewData["Title"] = "Dodaj RAM";
 }
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
-        <h2>Dodaj Ram</h2>
+        <h2>Dodaj RAM</h2>
         
         @await Component.InvokeAsync("AddProduct")
 

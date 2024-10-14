@@ -1,47 +1,47 @@
-﻿using DataBaseContext;
+using DataBaseContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.DataModel.Additional.Common;
 using Model.DataModel.Main;
-using System.Drawing;
+using Model.DataModel.Products.ComputerParts;
 
 namespace App.Pages.AdminPanel
 {
-    public abstract class AddProductModel : AdminPanelPageModel
+    public class AddMotherBoardModel : AddProductModel
     {
         [BindProperty]
-        public string Name { get; set; } = "";
+        public string Format { get; set; }
 
         [BindProperty]
-        public string Producer { get; set; } = "";
+        public string ProcessorSocket { get; set; }
 
         [BindProperty]
-        public string Description { get; set; } = "";
+        public string Chipset { get; set; }
 
         [BindProperty]
-        public string AdditionalInfo { get; set; } = "";
+        public string InternalSockets { get; set; }
 
         [BindProperty]
-        public string Color { get; set; } = "";
+        public string ExternalSockets { get; set; }
 
         [BindProperty]
-        public int Amount { get; set; } = 0;
+        public string SupportedMemoryTypes { get; set; }
 
         [BindProperty]
-        public int GuarantyTime { get; set; } = 0; //Months
+        public string SupportedMemoryTypesOC { get; set; }
 
         [BindProperty]
-        public decimal Price { get; set; } = 0;
+        public int RamSlots { get; set; }
 
         [BindProperty]
-        public IFormFile MainImage { get; set; }
+        public string ProcesorArchitecture { get; set; }
 
         [BindProperty]
-        public ICollection<IFormFile> BonusImages { get; set; }
-        
-        public virtual IActionResult OnPost()
-        {
-            Product product = new Product();
+        public string SupportedProcessorFamilies { get; set; }
+
+        public IActionResult OnPost()
+        {      
+            //product properties
+            MotherBoard product = new MotherBoard();
             product.Name = Name;
             product.Producer = Producer;
             product.Description = Description;
@@ -51,6 +51,17 @@ namespace App.Pages.AdminPanel
             product.GuarantyTime = GuarantyTime;
             product.Price = Price;
 
+            //motherboard properties
+            product.Format=Format;
+            product.ProcessorSocket = ProcessorSocket;
+            product.Chipset = Chipset;
+            product.InternalSockets = InternalSockets;  
+            product.ExternalSockets = ExternalSockets;
+            product.SupportedMemoryTypes = SupportedMemoryTypes; 
+            product.SupportedMemoryTypesOC = SupportedMemoryTypesOC;
+            product.RamSlots = RamSlots;
+            product.ProcesorArchitecture = ProcesorArchitecture;
+            product.SupportedProcessorFamilies = SupportedProcessorFamilies;    
 
             MainProductImage MainProductImage = new MainProductImage();
             product.MainImage = MainProductImage;
@@ -86,7 +97,7 @@ namespace App.Pages.AdminPanel
             return Page();
         }
 
-        public AddProductModel(AppDbContext _context)
-            :base(_context) { }
+        public AddMotherBoardModel(AppDbContext _context)
+            : base(_context) { }
     }
 }

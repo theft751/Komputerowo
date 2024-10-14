@@ -2,11 +2,12 @@
 @model App.Pages.AdminPanel.AddDiskDriveModel
 @using Model.DataModel.Additional.ComputerParts
 @{
+    ViewData["Title"] = "Dodaj dysk twardy";
 }
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
 
-        <h2>Dodaj produkt</h2>
+        <h2>Dodaj dysk twardy</h2>
         
         @await Component.InvokeAsync("AddProduct")
 

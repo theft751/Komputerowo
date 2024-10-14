@@ -1,0 +1,70 @@
+﻿@page
+@model App.Pages.AdminPanel.AddMotherBoardModel
+@{
+    ViewData["Title"] = "Dodaj płytę główną";
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj płytę główną</h2>
+
+        @await Component.InvokeAsync("AddProduct")
+
+        <div class="inputUnit">
+            <input asp-for="Format" type="text" class="loginInput" placeholder="" required />
+            <label for="Format" class="loginCaption">Format płyty głównej</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ProcessorSocket" type="text" class="loginInput" placeholder="" required />
+            <label for="ProcessorSocket" class="loginCaption">Gniazdo procesora</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Chipset" type="text" class="loginInput" placeholder="" required />
+            <label for="Chipset" class="loginCaption">Chipset</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="InternalSockets" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="InternalSockets" class="loginCaption">Wewnętrzna złącza</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="ExternalSockets" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="ExternalSockets" class="loginCaption">Zewnętrzne złącza</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="SupportedMemoryTypes" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="SupportedMemoryTypes" class="loginCaption">Wspierane typy pamięci</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="SupportedMemoryTypesOC" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="SupportedMemoryTypesOC" class="loginCaption">Wspierane typy pamięci OC (Overclocking)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="RamSlots" type="number" class="loginInput" placeholder="" required />
+            <label for="RamSlots" class="loginCaption">Liczba slotów pamięci RAM</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="ProcesorArchitecture" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="ProcesorArchitecture" class="loginCaption">Wspierana architektura procesora</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="SupportedProcessorFamilies" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="SupportedProcessorFamilies" class="loginCaption">Wspierane rodziny procesorów</label><br />
+        </div>
+
+        <input type="submit" value="zatwierdź" class="loginButton" />
+    </div>
+</form>

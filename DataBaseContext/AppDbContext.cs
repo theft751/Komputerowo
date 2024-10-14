@@ -27,8 +27,7 @@ namespace DataBaseContext
         public DbSet<Case> Cases { get; set; }
         public DbSet<PowerSupply> PowerSupplies { get; set; }
         public DbSet<Processor> Processors { get; set; }
-
-        //Aditional
+        public DbSet<MotherBoard> MotherBoards { get; set; }
 
 
         public AppDbContext(DbContextOptions<AppDbContext> options)

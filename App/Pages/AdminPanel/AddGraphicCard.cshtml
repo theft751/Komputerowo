@@ -1,10 +1,11 @@
 ﻿    @page
 @model App.Pages.AdminPanel.AddGraphicCardModel
 @{
+    ViewData["Title"] = "Dodaj kartę graficzną";
 }
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
-        <h2>Dodaj produkt</h2>
+        <h2>Dodaj kartę graficzną</h2>
 
         @await Component.InvokeAsync("AddProduct")
 
