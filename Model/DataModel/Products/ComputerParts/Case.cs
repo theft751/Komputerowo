@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Model.DataModel.Products.ComputerParts
 {
+
     public class Case:Product
     {
-
         public string MotherBoardFormats { get; set; }
 
         public string PowerSupplyFormat { get; set; }

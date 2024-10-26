@@ -1,0 +1,38 @@
+﻿@page
+@model App.Pages.AdminPanel.AddTelevisorModel
+@{
+    ViewData["Title"] = "Dodaj telewizor";
+}
+@using Model.DataModel.Additional.ComputerParts;
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj telewizor</h2>
+        @await Component.InvokeAsync("AddProduct")
+        <div class="inputUnit">
+            <input asp-for="Resolution" type="text" class="loginInput" placeholder="" required />
+            <label for="Resolution" class="loginCaption">Rozdzielczość</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="ScreenDiagonal" type="number" class="loginInput" placeholder="" required />
+            <label for="ScreenDiagonal" class="loginCaption">Przekątna ekranu (w calach)</label><br />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="ScreenRefreshRate" type="number" class="loginInput" placeholder="" required />
+            <label for="ScreenRefreshRate" class="loginCaption">Częstotliwość odświerzania (w Hz)</label><br />
+        </div>
+        <div class="inputUnit">
+            <textarea asp-for="ExternalPorts" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="ExternalPorts" class="loginCaption">Porty zewnętrzne</label><br />
+        </div>
+        <div class="inputUnit">
+            <label for="hasSmartTv">Smart TV</label>
+            <input asp-for="hasSmartTv" placeholder="" required />
+        </div>
+        <div class="inputUnit">
+            <input asp-for="OperatingSystem" type="text" class="loginInput" placeholder="" required />
+            <label for="OperatingSystem " class="loginCaption">System operacyjny</label><br />
+        </div>
+        <input type="submit" value="zatwierdź" class="loginButton" />
+    </div>
+</form>

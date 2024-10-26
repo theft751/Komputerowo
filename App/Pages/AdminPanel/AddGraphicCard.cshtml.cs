@@ -40,19 +40,12 @@ namespace App.Pages.AdminPanel
 
         [BindProperty]
         public bool RayTracing { get; set; }
-        public IActionResult OnPost()
+        public override IActionResult OnPost()
         {
             GraphicCard product = new GraphicCard();
 
-            //Product properties
-            product.Name = Name;
-            product.Producer = Producer;
-            product.Description = Description;
-            product.AdditionalInfo = AdditionalInfo;
-            product.Color = Color;
-            product.Amount = Amount;
-            product.GuarantyTime = GuarantyTime;
-            product.Price = Price;
+            //set properties inherited from product 
+            setProductEssentialProperties(product); ;
 
 
             //GraphicCard properties
@@ -68,36 +61,6 @@ namespace App.Pages.AdminPanel
             product.Litghting = Litghting;
             product.RayTracing = RayTracing;
 
-
-            MainProductImage MainProductImage = new MainProductImage();
-            product.MainImage = MainProductImage;
-
-            MainProductImage.ImageTitle = MainImage.FileName;
-            MainProductImage.ImageType = MainImage.ContentType;
-            using (var memoryStream = new MemoryStream())
-            {
-                MainImage.CopyTo(memoryStream);
-                MainProductImage.ImageData = memoryStream.ToArray();
-            }
-
-
-            foreach (var image in BonusImages)
-            {
-                BonusProductImage productImage = new BonusProductImage();
-                productImage.ImageTitle = image.Name;
-                productImage.ImageType = image.ContentType;
-
-                using (var memoryStream = new MemoryStream())
-                {
-                    image.CopyTo(memoryStream);
-                    productImage.ImageData = memoryStream.ToArray();
-                }
-                product.BonusImages.Add(productImage);
-                context.BonusProductImages.Add(productImage);
-
-            }
-
-            context.MainProductImages.Add(MainProductImage);
             context.Products.Add(product);
             context.SaveChanges();
             return Page();

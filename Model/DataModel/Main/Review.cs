@@ -8,12 +8,15 @@ using System.Threading.Tasks;
 
 namespace Model.DataModel.Main
 {
-    public class Comment
+    public class Review
     {
         [Key]
         public int Id { get; set; }
         public string Text { get; set; }
         public DateTime ReleaseDate { get; set; }
+
+        [Range(1, 10, ErrorMessage = "This rate must be value between 1 and 10")]
+        public int Rate { get; set; }
 
         //Navigation properties
         public virtual User User { get; set; }

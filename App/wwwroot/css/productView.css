@@ -1,0 +1,145 @@
+﻿body {
+}
+.imagesArea {
+    width: 600px;
+    height: 150px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border: 2px solid LightGray;
+    border-radius: 8px;
+}
+
+imagesArea::-webkit-scrollbar {
+    width: 20px;
+}
+
+.displayImageArea {
+    padding: 5px;
+    width: 600px;
+    height: 600px;
+    border: 2px solid LightGray;
+    border-radius: 8px;
+}
+
+.narrowButton {
+    background-color: #3F526B;
+    color: white;
+}
+
+.priceLabel {
+    font-size: 50px;
+}
+
+.productUnavailable {
+    color: gray;
+    font-size: 30px;
+}
+
+.productImage {
+    cursor: pointer;
+}
+
+.fullProductTable {
+    border-collapse: separate;
+    border-spacing: 0px;
+    width: 100%;
+}
+
+    .fullProductTable tr td:last-child {
+        width: 70%;
+    }
+
+    .fullProductTable tr td:first-child {
+        width: 30%;
+    }
+
+    .fullProductTable th:last-child,
+    .fullProductTable td:last-child {
+        border-bottom: 2px solid WhiteSmoke;
+        border-right: 2px solid WhiteSmoke;
+        padding: 0.8rem;
+    }
+    .fullProductTable th:first-child,
+    .fullProductTable td:first-child {
+        border-bottom: 2px solid white;
+        padding: 0.8rem;
+    }
+
+    .fullProductTable tr td:first-child,
+    .fullProductTable tr th:first-child {
+        border-left: 2px solid WhiteSmoke;
+    }
+
+    .fullProductTable tr:first-child th,
+    .fullProductTable tr:first-child td {
+        border-top: 2px solid WhiteSmoke;
+    }
+
+        .fullProductTable tr:first-child th:first-child,
+        .fullProductTable tr:first-child td:first-child {
+            border-top-left-radius: 20px;
+        }
+
+        .fullProductTable tr:first-child th:last-child,
+        .fullProductTable tr:first-child td:last-child {
+            border-top-right-radius: 20px;
+        }
+
+    .fullProductTable tr:last-child td:first-child {
+        border-bottom-left-radius: 20px;
+    }
+
+    .fullProductTable tr:last-child td:last-child {
+        border-bottom-right-radius: 20px;
+    }
+
+    .fullProductTable tr td:first-child {
+        background-color: WhiteSmoke;
+    }
+
+    .fullProductTable tr td:last-child {
+        background-color: white;
+    }
+
+
+
+.shortProductTable {
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+
+    .shortProductTable th,
+    .shortProductTable td {
+        border-bottom: 1px solid Gray;
+        border-right: 1px solid Gray;
+        padding: 0.5rem;
+    }
+
+    .shortProductTable tr td:first-child,
+    .shortProductTable tr th:first-child {
+        border-left: 1px solid Gray;
+    }
+
+    .shortProductTable tr:first-child th,
+    .shortProductTable tr:first-child td {
+        border-top: 1px solid Gray;
+    }
+
+        .shortProductTable tr:first-child th:first-child,
+        .shortProductTable tr:first-child td:first-child {
+            border-top-left-radius: 0.5rem;
+        }
+
+        .shortProductTable tr:first-child th:last-child,
+        .shortProductTable tr:first-child td:last-child {
+            border-top-right-radius: 0.5rem;
+        }
+
+    .shortProductTable tr:last-child td:first-child {
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .shortProductTable tr:last-child td:last-child {
+        border-bottom-right-radius: 0.5rem;
+    }

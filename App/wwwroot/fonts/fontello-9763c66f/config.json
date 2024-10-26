@@ -7,12 +7,6 @@
   "ascent": 850,
   "glyphs": [
     {
-      "uid": "f06fe7ff18d1c591bc1183cb3ab105e9",
-      "css": "google",
-      "code": 61856,
-      "src": "fontawesome"
-    },
-    {
       "uid": "3fce1eca43f917c8f23e532749abae5d",
       "css": "user-circle-o",
       "code": 62142,
@@ -25,9 +19,21 @@
       "src": "typicons"
     },
     {
-      "uid": "8e04c98c8f5ca0a035776e3001ad2638",
-      "css": "facebook",
-      "code": 61594,
+      "uid": "474656633f79ea2f1dad59ff63f6bf07",
+      "css": "star",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d17030afaecc1e1c22349b99f3c4992a",
+      "css": "star-empty",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "84cf1fcc3fec556e7eaeb19679ca2dc9",
+      "css": "star-half-alt",
+      "code": 61731,
       "src": "fontawesome"
     }
   ]

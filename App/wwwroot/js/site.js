@@ -43,3 +43,9 @@ function validatePasswordsStrings(password, repeatedPassword) {
         return true;
     }
 }
+
+//hides first element and show second
+function hideFirstShowSecond(firstId, secondId) {
+    document.getElementById(firstId).hidden = true;
+    document.getElementById(secondId).hidden = false;
+}

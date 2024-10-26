@@ -25,6 +25,7 @@ namespace Model.DataModel.Main
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
+        public string Producer { get; set; }
 
         //Navigation properties
 
@@ -33,11 +34,9 @@ namespace Model.DataModel.Main
 
         public virtual  ICollection<BonusProductImage> BonusImages { get; set; } = new List<BonusProductImage>();
 
-        public string Producer { get; set; }
-
         public virtual ICollection<OrderItem> OrderItems { get; set; } = new List<OrderItem>();
 
-        public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
+        public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 
         [NotMapped]
         public Availability Availability
@@ -46,6 +45,8 @@ namespace Model.DataModel.Main
             get =>
                 Amount >= 1 ? Availability.Avabile : Availability.Unavabile;
         }
+        [NotMapped]
+        public int AverageRate { get => Reviews.Count == 0 ? 0 : Reviews.Sum(x => x.Rate) / Reviews.Count; }
     }
 }
  

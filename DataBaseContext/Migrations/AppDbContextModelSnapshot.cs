@@ -91,36 +91,6 @@ namespace DataBaseContext.Migrations
                     b.ToTable("BonusProductImages");
                 });
 
-            modelBuilder.Entity("Model.DataModel.Main.Comment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("ReleaseDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Comments");
-                });
-
             modelBuilder.Entity("Model.DataModel.Main.MainProductImage", b =>
                 {
                     b.Property<int>("Id")
@@ -240,8 +210,8 @@ namespace DataBaseContext.Migrations
 
                     b.Property<string>("Discriminator")
                         .IsRequired()
-                        .HasMaxLength(13)
-                        .HasColumnType("nvarchar(13)");
+                        .HasMaxLength(21)
+                        .HasColumnType("nvarchar(21)");
 
                     b.Property<int>("GuarantyTime")
                         .HasColumnType("int");
@@ -279,6 +249,39 @@ namespace DataBaseContext.Migrations
                     b.HasDiscriminator().HasValue("Product");
 
                     b.UseTphMappingStrategy();
+                });
+
+            modelBuilder.Entity("Model.DataModel.Main.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rate")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.User", b =>
@@ -513,6 +516,274 @@ namespace DataBaseContext.Migrations
                     b.HasDiscriminator().HasValue("Ram");
                 });
 
+            modelBuilder.Entity("Model.DataModel.Products.OtherDevices.DesktopComputer", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<string>("Chipset")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DiskSize")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DiskType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExternalPorts")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gpu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GpuMemorySize")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GpuMemoryType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InternalPorts")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OperatingSystem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PowerSupply")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Processor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RamSize")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RamType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("Products", t =>
+                        {
+                            t.Property("Chipset")
+                                .HasColumnName("DesktopComputer_Chipset");
+
+                            t.Property("DiskSize")
+                                .HasColumnName("DesktopComputer_DiskSize");
+
+                            t.Property("RamType")
+                                .HasColumnName("DesktopComputer_RamType");
+                        });
+
+                    b.HasDiscriminator().HasValue("DesktopComputer");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Products.OtherDevices.Laptop", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<string>("BatteryCapacity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("DiskSize")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DiskType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ExternalPorts")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Gpu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OperatingSystem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Processor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RamSize")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RamType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Resolution")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ScreenDiagonal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("ScreenType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.ToTable("Products", t =>
+                        {
+                            t.Property("DiskSize")
+                                .HasColumnName("Laptop_DiskSize");
+
+                            t.Property("DiskType")
+                                .HasColumnName("Laptop_DiskType");
+
+                            t.Property("ExternalPorts")
+                                .HasColumnName("Laptop_ExternalPorts");
+
+                            t.Property("Gpu")
+                                .HasColumnName("Laptop_Gpu");
+
+                            t.Property("OperatingSystem")
+                                .HasColumnName("Laptop_OperatingSystem");
+
+                            t.Property("Processor")
+                                .HasColumnName("Laptop_Processor");
+
+                            t.Property("RamSize")
+                                .HasColumnName("Laptop_RamSize");
+
+                            t.Property("RamType")
+                                .HasColumnName("Laptop_RamType");
+                        });
+
+                    b.HasDiscriminator().HasValue("Laptop");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Products.OtherDevices.Smartphone", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<string>("BackCamera")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BatteryCapacity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmbeddedMemorySize")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ExternalPorts")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("FingPrinterReader")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FrontCamera")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Nfc")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("OperatingSystem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Processor")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RamSize")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Resolution")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ScreenDiagonal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ScreenRefreshRate")
+                        .HasColumnType("int");
+
+                    b.ToTable("Products", t =>
+                        {
+                            t.Property("BatteryCapacity")
+                                .HasColumnName("Smartphone_BatteryCapacity");
+
+                            t.Property("ExternalPorts")
+                                .HasColumnName("Smartphone_ExternalPorts");
+
+                            t.Property("OperatingSystem")
+                                .HasColumnName("Smartphone_OperatingSystem");
+
+                            t.Property("Processor")
+                                .HasColumnName("Smartphone_Processor");
+
+                            t.Property("RamSize")
+                                .HasColumnName("Smartphone_RamSize");
+
+                            t.Property("Resolution")
+                                .HasColumnName("Smartphone_Resolution");
+
+                            t.Property("ScreenDiagonal")
+                                .HasColumnName("Smartphone_ScreenDiagonal");
+                        });
+
+                    b.HasDiscriminator().HasValue("Smartphone");
+                });
+
+            modelBuilder.Entity("Model.DataModel.Products.OtherDevices.Televisor", b =>
+                {
+                    b.HasBaseType("Model.DataModel.Main.Product");
+
+                    b.Property<string>("ExternalPorts")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("OperatingSystem")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Resolution")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("ScreenDiagonal")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("ScreenRefreshRate")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("hasSmartTv")
+                        .HasColumnType("bit");
+
+                    b.ToTable("Products", t =>
+                        {
+                            t.Property("ExternalPorts")
+                                .HasColumnName("Televisor_ExternalPorts");
+
+                            t.Property("OperatingSystem")
+                                .HasColumnName("Televisor_OperatingSystem");
+
+                            t.Property("Resolution")
+                                .HasColumnName("Televisor_Resolution");
+
+                            t.Property("ScreenDiagonal")
+                                .HasColumnName("Televisor_ScreenDiagonal");
+
+                            t.Property("ScreenRefreshRate")
+                                .HasColumnName("Televisor_ScreenRefreshRate");
+                        });
+
+                    b.HasDiscriminator().HasValue("Televisor");
+                });
+
             modelBuilder.Entity("Model.DataModel.Main.BonusProductImage", b =>
                 {
                     b.HasOne("Model.DataModel.Main.Product", "Product")
@@ -522,25 +793,6 @@ namespace DataBaseContext.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Model.DataModel.Main.Comment", b =>
-                {
-                    b.HasOne("Model.DataModel.Main.Product", "Product")
-                        .WithMany("Comments")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Model.DataModel.Main.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.Order", b =>
@@ -592,6 +844,25 @@ namespace DataBaseContext.Migrations
                     b.Navigation("MainImage");
                 });
 
+            modelBuilder.Entity("Model.DataModel.Main.Review", b =>
+                {
+                    b.HasOne("Model.DataModel.Main.Product", "Product")
+                        .WithMany("Reviews")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Model.DataModel.Main.User", "User")
+                        .WithMany("Comments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Model.DataModel.Main.User", b =>
                 {
                     b.HasOne("Model.DataModel.Main.Adress", "Adress")
@@ -623,9 +894,9 @@ namespace DataBaseContext.Migrations
                 {
                     b.Navigation("BonusImages");
 
-                    b.Navigation("Comments");
-
                     b.Navigation("OrderItems");
+
+                    b.Navigation("Reviews");
                 });
 
             modelBuilder.Entity("Model.DataModel.Main.User", b =>

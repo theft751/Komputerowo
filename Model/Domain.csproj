@@ -8,8 +8,7 @@
 
   <ItemGroup>
     <Folder Include="DataModel\Additional\Main\" />
-    <Folder Include="DataModel\Products\OtherDevices\" />
-    <Folder Include="ModelsForApp\" />
+    <Folder Include="AppModel\" />
   </ItemGroup>
 
   <ItemGroup>

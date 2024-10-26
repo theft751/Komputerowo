@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Model.DataModel.Additional.ComputerParts;
 using Model.DataModel.Main;
 using Model.DataModel.Products.ComputerParts;
+using Model.DataModel.Products.OtherDevices;
 using System.Reflection.Emit;
 
 
@@ -11,9 +12,12 @@ namespace DataBaseContext
 {
     public class AppDbContext : DbContext
     {
+        //*************
+        // Essenstials
+        //*************
         public DbSet<Adress> Adresses { get; set; }
         public DbSet<BonusProductImage> BonusProductImages { get; set; }
-        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Review> Reviews { get; set; }
         public DbSet<MainProductImage> MainProductImages { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItem { get; set; }
@@ -21,13 +25,23 @@ namespace DataBaseContext
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
 
-        //Products
+        //*************
+        //  Products
+        //*************
+        
+        //Computer Parts
         public DbSet<DiskDrive> DiskDrives { get; set; }
         public DbSet<Ram> Rams { get; set; }
         public DbSet<Case> Cases { get; set; }
         public DbSet<PowerSupply> PowerSupplies { get; set; }
         public DbSet<Processor> Processors { get; set; }
         public DbSet<MotherBoard> MotherBoards { get; set; }
+
+        //Other devices
+        public DbSet<DesktopComputer> DesktopComputers { get; set; }
+        public DbSet<Laptop> Laptops { get; set; }
+        public DbSet<Smartphone> Smartphones { get; set; }
+        public DbSet<Televisor> Televisors { get; set; }
 
 
         public AppDbContext(DbContextOptions<AppDbContext> options)

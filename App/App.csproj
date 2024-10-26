@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\fonts\fontello-f114cee2\**" />
+    <Content Remove="wwwroot\fonts\fontello-f114cee2\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\fontello-f114cee2\**" />
+    <None Remove="wwwroot\fonts\fontello-f114cee2\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="Pages\Shared\EditAdress.cshtml" />
   </ItemGroup>
 
@@ -24,11 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataBaseContext\DataBaseContext.csproj" />
-    <ProjectReference Include="..\Model\Model.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\Shared\AddComputerPart\" />
+    <ProjectReference Include="..\Model\Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

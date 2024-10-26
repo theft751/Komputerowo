@@ -39,9 +39,8 @@ namespace App.Pages.AdminPanel
         [BindProperty]
         public ICollection<IFormFile> BonusImages { get; set; }
         
-        public virtual IActionResult OnPost()
+        protected void setProductEssentialProperties(Product product)
         {
-            Product product = new Product();
             product.Name = Name;
             product.Producer = Producer;
             product.Description = Description;
@@ -81,6 +80,14 @@ namespace App.Pages.AdminPanel
             }
 
             context.MainProductImages.Add(MainProductImage);
+        }
+
+        public virtual IActionResult OnPost()
+        {
+            Product product = new Product();
+
+            setProductEssentialProperties(product);
+
             context.Products.Add(product);
             context.SaveChanges();
             return Page();
