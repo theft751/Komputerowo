@@ -1,0 +1,79 @@
+﻿@model ProductDataRecord
+<div class="d-flex justify-content-center align-items-center mb-5">
+    <div>
+        <h2 class="mb-0 mx-0 fs-1">@Model.Product</h2>
+        <div>
+            <span class="text-muted">Ocena:</span>
+            <span style="color: darkgoldenrod">
+                @if (Model.Rate >= 2)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.Rate == 1)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.Rate >= 4)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.Rate == 3)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.Rate >= 6)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.Rate == 5)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.Rate >= 8)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.Rate == 7)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.Rate == 10)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.Rate == 9)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+            </span>
+
+            <span class="text-muted">(@Model.ReviewsAmount)</span>
+        </div>
+        <div class="text-muted">
+            Kategoria: @Model.Category
+        </div>
+        <div class="text-muted">
+            Producent: @Model.Producer
+        </div>
+    </div>
+</div>

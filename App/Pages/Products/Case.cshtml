@@ -3,51 +3,34 @@
 @model App.Pages.Products.CaseModel
 @{
 }
+<!--This script is absolutely required in this place. Don't move it to the end of view!!!' -->
+<script src="~/js/productView.js"></script>
 
-<div class="d-flex justify-content-center align-items-center mb-5">
-    <div>
-        <h2 class="mb-0 mx-0 fs-1">@Model.Name</h2>
-        <div>
-            <span class="text-muted">Ocena</span>
-            <span style="color: darkgoldenrod">
-                @if(Model.AverageRate >= 2) {<i style="cursor: pointer" class="icon-star"></i>}
-                else if (Model.AverageRate == 1) {<i style="cursor: pointer" class="icon-star-half-alt"></i>}
-                else {<i style="cursor: pointer" class="icon-star-empty"></i>}
-                @if (Model.AverageRate >= 4){<i style="cursor: pointer" class="icon-star"></i>}
-                else if (Model.AverageRate == 3){<i style="cursor: pointer" class="icon-star-half-alt"></i>}
-                else{<i style="cursor: pointer" class="icon-star-empty"></i>}
-                @if (Model.AverageRate >= 6){<i style="cursor: pointer" class="icon-star"></i>}
-                else if (Model.AverageRate == 5){<i style="cursor: pointer" class="icon-star-half-alt"></i>}
-                else{<i style="cursor: pointer" class="icon-star-empty"></i>}
-                @if (Model.AverageRate >= 8){<i style="cursor: pointer" class="icon-star"></i>}
-                else if (Model.AverageRate == 7){<i style="cursor: pointer" class="icon-star-half-alt"></i>}
-                else{<i style="cursor: pointer" class="icon-star-empty"></i>}
-                @if (Model.AverageRate == 10){<i style="cursor: pointer" class="icon-star"></i>}
-                else if (Model.AverageRate == 9){<i style="cursor: pointer" class="icon-star-half-alt"></i>}
-                else{<i style="cursor: pointer" class="icon-star-empty"></i>}
-            </span>
-            <span class="text-muted">(@Model.ReviewsAmount)</span>
-        </div>
-        <div class="text-muted">
-            Kategoria: Obudowa komputera
-        </div>
-        <div class="text-muted">
-            Producent: @Model.Producer
-        </div>
-     </div>
-</div>
+<!--Display header of page-->
+@await Component.InvokeAsync(
+    "ProductHeader",
+        new
+        {
+            product = Model.Name,
+            producer = Model.Producer,
+            category = "Obudowa komputerowa", 
+            rate = Model.AverageRate, 
+            reviewsAmount = Model.ReviewsAmount
+        })
+
 <div class="container">
     <div class="row">
         <div class="col">
-            <div class="displayImageArea mx-auto"> <img src="@Url.Page($"{HttpContext.Request.Path}", "MainImage",new {productId = Model.ProductId})" width="585" height="585" id="SelectedImageDisplay" />  </div>
-            <div class="imagesArea mx-auto mt-3 d-flex">
-                <img src="@Url.Page($"{HttpContext.Request.Path}", "MainImage",new {productId = Model.ProductId})" width="130" height="130" class="mx-1 productImage" id="MainImage" onclick="setDisplayImage('MainImage')" />
-                @foreach(int imageId in Model.BonusProductImagesId)
-                {
-                    <img src="@Url.Page($"{HttpContext.Request.Path}", "BonusImage", new {imageId = imageId })" width="130" height="130" class="mx-1 productImage" id="BonusImage-@imageId" onclick="setDisplayImage('BonusImage-@imageId')" />
-                }
-            </div>
 
+            <!--Display images of pruduct-->
+            @await Component.InvokeAsync(
+                "ImagesArea", 
+                new 
+                { 
+                    bonusProductImagesId = Model.BonusProductImagesId, 
+                    productId=Model.ProductId 
+                })
+        
         </div>
         <div class="col">
             <div class="fs-1">
@@ -223,118 +206,7 @@
     }
     else
     {
-        @foreach (var reviewDTO in Model.ReviewDTOs)
-        {
-            <div class="row mb-3">
-                <div class="col">
-                    <div id="review-@reviewDTO.Id" style="width: 100%; border: 1px solid lightgray; border-radius: 20px; padding: 10px">
-                        <div>
-                            <span class="fs-3">
-                                <i class="icon-user-circle-o"></i>
-                            </span>
-                            <span class="fs-4 fw-bold">
-                                @reviewDTO.Username
-                            </span>
-                            <span style="color: gray" class="fst-italic">
-                                @reviewDTO.ReleaseDate.ToShortDateString()
-                            </span>
-                        </div>
-                        <div class="mb-2" style="color: darkgoldenrod">
-                            @if (reviewDTO.Rate >= 2)
-                            {
-                                <i style="cursor: pointer" class="icon-star"></i>
-                            }
-                            else
-                            {
-                                <i style="cursor: pointer" class="icon-star-empty"></i>
-                            }
-                            @if (reviewDTO.Rate >= 4)
-                            {
-                                <i style="cursor: pointer" class="icon-star"></i>
-                            }
-                            else
-                            {
-                                <i style="cursor: pointer" class="icon-star-empty"></i>
-                            }
-                            @if (reviewDTO.Rate >= 6)
-                            {
-                                <i style="cursor: pointer" class="icon-star"></i>
-                            }
-                            else
-                            {
-                                <i style="cursor: pointer" class="icon-star-empty"></i>
-                            }
-                            @if (reviewDTO.Rate >= 8)
-                            {
-                                <i style="cursor: pointer" class="icon-star"></i>
-                            }
-                            else
-                            {
-                                <i style="cursor: pointer" class="icon-star-empty"></i>
-                            }
-                            @if (reviewDTO.Rate >= 10)
-                            {
-                                <i style="cursor: pointer" class="icon-star"></i>
-                            }
-                            else
-                            {
-                                <i style="cursor: pointer" class="icon-star-empty"></i>
-                            }
-
-                        </div>
-                        <div class="fs-6 mb-2">
-                            @reviewDTO.Content
-                        </div>
-                        <div>
-                            <span>
-                                
-                                    <a role="button" class="fs-6 link-secondary" onclick="document.getElementById('dialog-For-Review-@reviewDTO.Id').showModal()">Usuń</a>
-                            </span>
-                            <span>&nbsp;</span>
-                            <span>
-                                <a role="button" class="fs-6 link-secondary" onclick="hideFirstShowSecond('review-@reviewDTO.Id','edit-reviev-form-@reviewDTO.Id')">Edytuj</a>
-
-                            </span>
-                            <span>&nbsp;</span>
-                            <span>
-                                <a class="fs-6 link-secondary">Odpowiedz</a>
-                            </span>
-                        </div>
-                        <dialog id="dialog-For-Review-@reviewDTO.Id">
-                            Czy napewno chcesz usunąć opinię?<br />
-                            <div style="text-align: center">                           
-                                <span>&nbsp;</span>
-                                <form method="post">
-                                    <button asp-page-handler="ReviewDelete" asp-route-pageNumber="@Model.PageNumber" asp-route-productId="@Model.ProductId" asp-route-reviewId="@reviewDTO.Id" class="narrowButton">Tak</button>
-                                    <button type="button" class="narrowButton" onclick="document.getElementById('dialog-For-Review-@reviewDTO.Id').close()">Nie</button>
-                                </form>
-                            </div>
-                        </dialog>
-                    </div>
-                    <form asp-page-handler="EditReview" method="post" id="edit-reviev-form-@reviewDTO.Id" hidden>
-                        <input type="hidden" value="@Model.ProductId" name="productId" />
-                        <input type="hidden" value="@Model.PageNumber" name="pageNumber" />
-                        <input type="hidden" name="rate" id="rateInAddReviewForm" value="2" />
-                        <div style="float: left; width: 100%;" class="mb-0">
-                            
-
-                            <div style="display: inline-block; float: left; width: 100%;" class="mt-4">
-                                <textarea id="review-textare-@reviewDTO.Id" style="resize: none; height: 80px; width: 100%;" placeholder="Twoja opinia o produkcie" name="reviewContent">@reviewDTO.Content</textarea>
-                            </div>
-
-                        </div>
-                        <div class="fs-3" style="margin-top: -8px; display: inline-block; float: left; color: darkgoldenrod;">
-                            <i style="cursor: pointer" class="demo-icon icon-star" id="firstStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="secondStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="thirdStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fourthStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fifthStarInAddReviewForm"></i>
-                        </div>
-                        <div style="display: inline-block; float: left;">
-                            <input type="submit" class="narrowButton" value="Edytuj opinie">
-                            <span>&nbsp;</span>
-                            <button type="button" class="narrowButton" onclick="hideFirstShowSecond('edit-reviev-form-@reviewDTO.Id','review-@reviewDTO.Id')">Anuluj edycję</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        }
+        @await Component.InvokeAsync("ReviewsArea", new { reviewDTOs = Model.ReviewDTOs, productId = Model.ProductId, pageNumber= Model.PageNumber})
     }
     <div class="row">
         <div class="col">
@@ -344,7 +216,7 @@
                     <form asp-page-handler="AddReview" method="post">
                         <input type="hidden" value="@Model.ProductId" name="productId" />
                         <input type="hidden" value="@Model.PageNumber" name="pageNumber" />
-                        <input type="hidden" name="rate" id="rateInAddReviewForm" value="2"/>
+                        <input type="hidden" name="rate" id="rateInAddReviewForm-AddReview" value="2"/>
                         <div style="float: left; width: 100%;" class="mb-0">
                             <div style="display: inline-block; float: left"><i class="demo-icon icon-user-circle-o" style="font-size:80px;"></i></div>
 
@@ -354,7 +226,7 @@
 
                         </div>
                         <div class="fs-3" style="margin-top: -8px; display: inline-block; float: left;  margin-left: 110px; color: darkgoldenrod;">
-                            <i style="cursor: pointer" class="demo-icon icon-star" id="firstStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="secondStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="thirdStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fourthStarInAddReviewForm"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fifthStarInAddReviewForm"></i>
+                            <i style="cursor: pointer" class="demo-icon icon-star" id="firstStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="secondStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="thirdStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fourthStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fifthStarInAddReviewForm-AddReview"></i>
                         </div>
                         <div style="display: inline-block; float: left;"><input type="submit" class="narrowButton" value="Dodaj opinie"></div>
                     </form>
@@ -507,4 +379,3 @@
         </div>
     </div>
 </div>
-<script src="~/js/productView.js"></script>

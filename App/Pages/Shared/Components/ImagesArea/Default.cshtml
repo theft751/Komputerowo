@@ -1,0 +1,10 @@
+﻿@model ICollection<(string Url, int Id)>
+
+<div class="displayImageArea mx-auto"> <img src="@ViewData["MainImageUrl"]" width="585" height="585" id="SelectedImageDisplay" />  </div>
+<div class="imagesArea mx-auto mt-3 d-flex">
+    <img src="@ViewData["MainImageUrl"]" width="130" height="130" class="mx-1 productImage" id="MainImage" onclick="setDisplayImage('MainImage')" />
+    @foreach (var image in Model)
+    {
+        <img src="@image.Url" width="130" height="130" class="mx-1 productImage" id="BonusImage-@image.Id" onclick="setDisplayImage('BonusImage-@image.Id')" />
+    }
+</div>

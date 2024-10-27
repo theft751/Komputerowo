@@ -9,7 +9,6 @@ namespace App.Pages.Shared.Components
     public class LoggedUserEmailViewComponent : ViewComponent
     {
         private readonly AppDbContext _context;
-
         public LoggedUserEmailViewComponent(AppDbContext context)
         {
             _context = context;

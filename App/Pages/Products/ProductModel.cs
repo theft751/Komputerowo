@@ -1,5 +1,6 @@
 ﻿using Azure.Identity;
 using DataBaseContext;
+using Domain.DTO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.CodeAnalysis;
@@ -13,7 +14,6 @@ using System.Dynamic;
 
 namespace App.Pages.Products
 {
-    public record ReviewDTO(int Id, string Username, string Content, int Rate, DateTime ReleaseDate);
 
     public abstract class ProductModel : PageModel
     {
@@ -58,7 +58,10 @@ namespace App.Pages.Products
         protected virtual void initializeEssentialProductProperties(int id)
         {
             Product p = context.Products.Where(x => x.Id == id).First();
-
+            
+            //Setting title of page
+            ViewData["Title"] = p.Name;
+            
             //seting public properties
             ProductId = id;
             AdditionalInfo = p.AdditionalInfo;
@@ -148,6 +151,7 @@ namespace App.Pages.Products
                             new ReviewDTO(
                                 Id: review.Id,
                                 Username: review.User.FirstName,
+                                UserId: review.UserId,
                                 Content: review.Text,
                                 Rate: review.Rate,
                                 ReleaseDate: review.ReleaseDate
@@ -156,9 +160,35 @@ namespace App.Pages.Products
                 );
         }
 
+        public IActionResult OnPostEditReview(int productId, int reviewId, int pageNumber, string reviewContent, int rate)
+        {
+            
+            try
+            {
+                Review? review = context.Reviews.Find(reviewId);
+                if(HttpContext.Session.GetInt32("isLogged") == 1)
+                {
+                    if (HttpContext.Session.GetInt32("LoggedUserId") == review.UserId)
+                    {
+                        review.Text = reviewContent;
+                        review.Rate = rate;
+                        context.SaveChanges();
+                    }
+                }
+                return OnGet(productId, pageNumber);
+            }
+            catch 
+            {
+                return new RedirectToPageResult("/Error"); 
+            }
+
+            
+        }
+
         public ProductModel (AppDbContext _context)
         {
             context = _context;
+            
             BonusProductImagesId = new List<int>();            
         }
     }
