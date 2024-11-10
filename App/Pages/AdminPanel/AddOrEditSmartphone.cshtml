@@ -1,0 +1,82 @@
+﻿@page
+@model App.Pages.AdminPanel.AddOrEditSmartphoneModel
+@{
+    ViewData["Title"] = "Dodaj smartfona";
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj smartfona</h2>
+        @await Component.InvokeAsync("AddProduct")
+
+        <div class="inputUnit">
+            <textarea asp-for="BackCamera" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="BackCamera" class="loginCaption">Tylna kamera</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="FrontCamera" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="FrontCamera" class="loginCaption">Przednia kamera</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Resolution" type="text" class="loginInput" placeholder="" required />
+            <label for="Resolution" class="loginCaption">Rozdzielczość</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ScreenDiagonal" type="number" class="loginInput" placeholder="" required />
+            <label for="ScreenDiagonal" class="loginCaption">Przkątna ekranu (w calach)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ScreenRefreshRate" type="number" class="loginInput" placeholder="" required />
+            <label for="ScreenRefreshRate" class="loginCaption">Częstotliwość odświerzania ekranu</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Processor" type="text" class="loginInput" placeholder="" required />
+            <label for="Processor" class="loginCaption">Procesor</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="RamSize" type="number" class="loginInput" placeholder="" required />
+            <label for="RamSize" class="loginCaption">Rozmiar pamięci RAM (w GB)</label><br />
+        </div>
+
+
+        <div class="inputUnit">
+            <input asp-for="EmbeddedMemorySize" type="number" class="loginInput" placeholder="" required />
+            <label for="EmbeddedMemorySize" class="loginCaption">Wbudowana pamięć(w GB)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="OperatingSystem" type="tex" class="loginInput" placeholder="" required />
+            <label for="OperatingSystem" class="loginCaption">System operacyjny</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <textarea asp-for="ExternalPorts" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">
+            </textarea>
+            <label for="ExternalPorts" class="loginCaption">Porty zewnętrzne</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="BatteryCapacity" type="number" class="loginInput" placeholder="" required />
+            <label for="BatteryCapacity" class="loginCaption">Pojemność baterii (w mAh)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <label for="Nfc">NFC</label>
+            <input asp-for="Nfc"required />
+        </div>
+
+        <div class="inputUnit">
+            <label for="FingPrinterReader">Czytnik linii papilarnych</label>
+            <input asp-for="FingPrinterReader" required />
+        </div>
+
+        <input type="submit" value="zatwierdź" class="loginButton" />
+    </div>
+</form>

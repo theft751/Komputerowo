@@ -1,7 +1,10 @@
-﻿@model ProductDataRecord
+﻿@using Model.EntityModels.Additional.Common
+@using Domain.ViewModels
+@model ProductHeaderVm
 <div class="d-flex justify-content-center align-items-center mb-5">
     <div>
-        <h2 class="mb-0 mx-0 fs-1">@Model.Product</h2>
+        <h2 class="mb-0 mx-0 fs-1">@Model.Product
+        </h2>
         <div>
             <span class="text-muted">Ocena:</span>
             <span style="color: darkgoldenrod">
@@ -68,12 +71,56 @@
             </span>
 
             <span class="text-muted">(@Model.ReviewsAmount)</span>
+            <br/>
         </div>
         <div class="text-muted">
-            Kategoria: @Model.Category
+            Kategoria: 
+            @switch (Model.ProductType)
+            {
+                case ProductType.CASE:
+                    <span>Obudowy komputera</span>
+                    break;
+                case ProductType.DESKTOP_COMPUTER:
+                    <span>Komputery stacjonarne</span>
+                    break;
+                case ProductType.DISK_DRIVE:
+                    <span>Dyski</span>
+                    break;
+                case ProductType.GRAPHIC_CARD:
+                    <span>Karty graficzne</span>
+                    break;
+                case ProductType.LAPTOP:
+                    <span>Laptopy</span>
+                    break;
+                case ProductType.MOTHERBOARD:
+                    <span>Płyty główne</span>
+                    break;
+                case ProductType.POWER_SUPPLY:
+                    <span>Zasilacze</span>
+                    break;
+                case ProductType.PROCESSOR:
+                    <span>Procesory</span>
+                    break;
+                case ProductType.RAM:
+                    <span>Pamięci RAM</span>
+                    break;
+                case ProductType.SMARTPHONE:
+                    <span>Smartfony</span>
+                    break;
+                case ProductType.TELEVISOR:
+                    <span>Pamięci RAM</span>
+                    break;
+            }
         </div>
         <div class="text-muted">
-            Producent: @Model.Producer
+            Producent: 
+            @Model.Producer
+        </div>
+        <div>
+            <form method="get">
+                <button type="submit" class="narrowButton">Edytuj</button>
+            </form>
         </div>
     </div>
+
 </div>

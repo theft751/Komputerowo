@@ -1,0 +1,35 @@
+﻿@model Domain.ViewModels.BuyProductInProductPageVm
+
+<div class="fs-1">
+    @Model.Price zł
+</div>
+
+<div>
+    <div class="mb-5">
+        @if (true /*Model.Availability == Availability.Avabile */)
+        {
+            <form method="post">
+                <select class="fs-4">
+                    <option value="1">1 szt</option>
+                    <option value="2">2 szt</option>
+                    <option value="3">3 szt</option>
+                    <option value="4">4 szt</option>
+                    <option value="5">5 szt</option>
+                    <option value="6">6 szt</option>
+                    <option value="7">7 szt</option>
+                    <option value="8">8 szt</option>
+                    <option value="9">9 szt</option>
+                </select>
+                <button class="narrowButton fs-4">
+                    Dodaj do koszyka
+                </button>
+            </form>
+        }
+        else
+        {
+            <span class="productUnavailable">ViewComponent
+                Produkt niedostępny
+            </span>
+        }
+    </div>
+</div>

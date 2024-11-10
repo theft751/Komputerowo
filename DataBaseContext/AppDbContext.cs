@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Model.DataModel.Additional.ComputerParts;
-using Model.DataModel.Main;
-using Model.DataModel.Products.ComputerParts;
-using Model.DataModel.Products.OtherDevices;
+using Model.EntityModels.Additional.Common;
+using Model.EntityModels.Additional.ComputerParts;
+using Model.EntityModels.Main;
+using Model.EntityModels.Products.ComputerParts;
+using Model.EntityModels.Products.OtherDevices;
 using System.Reflection.Emit;
 
 
@@ -31,6 +32,7 @@ namespace DataBaseContext
         
         //Computer Parts
         public DbSet<DiskDrive> DiskDrives { get; set; }
+        public DbSet<GraphicCard> GraphicCards { get; set; }
         public DbSet<Ram> Rams { get; set; }
         public DbSet<Case> Cases { get; set; }
         public DbSet<PowerSupply> PowerSupplies { get; set; }
@@ -74,6 +76,22 @@ namespace DataBaseContext
             modelBuilder.Entity<Product>()
                 .Property(p => p.ProductType)
                 .HasConversion<string>();
+
+            //Setting Discriminator values
+            modelBuilder.Entity<Product>()
+                .ToTable("Products")
+                .HasDiscriminator<ProductType>("ProductType")
+                .HasValue<DiskDrive>(ProductType.DISK_DRIVE)
+                .HasValue<Ram>(ProductType.RAM)
+                .HasValue<Case>(ProductType.CASE)
+                .HasValue<PowerSupply>(ProductType.POWER_SUPPLY)
+                .HasValue<Processor>(ProductType.PROCESSOR)
+                .HasValue<MotherBoard>(ProductType.MOTHERBOARD)
+                .HasValue<DesktopComputer>(ProductType.DESKTOP_COMPUTER)
+                .HasValue<Laptop>(ProductType.LAPTOP)
+                .HasValue<Smartphone>(ProductType.SMARTPHONE)
+                .HasValue<Televisor>(ProductType.TELEVISOR)
+                ;
 
             /****************************************
             Order and OrderItem entity configuration

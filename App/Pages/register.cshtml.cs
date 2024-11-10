@@ -2,8 +2,8 @@ using DataBaseContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Identity.Client;
-using Model.DataModel.Additional.Common;
-using Model.DataModel.Main;
+using Model.EntityModels.Additional.Common;
+using Model.EntityModels.Main;
 using System.Security.Cryptography;
 using System.Text;
 

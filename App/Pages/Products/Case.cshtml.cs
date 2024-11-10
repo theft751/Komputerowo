@@ -3,9 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.CodeAnalysis;
 using Microsoft.Identity.Client;
-using Model.DataModel.Additional.ComputerParts;
-using Model.DataModel.Main;
-using Model.DataModel.Products.ComputerParts;
+using Model.EntityModels.Additional.ComputerParts;
+using Model.EntityModels.Main;
+using Model.EntityModels.Products.ComputerParts;
 
 namespace App.Pages.Products
 {

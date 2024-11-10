@@ -1,13 +1,13 @@
 ﻿using Azure.Identity;
 using DataBaseContext;
-using Domain.DTO;
+using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
-using Model.DataModel.Additional.Common;
-using Model.DataModel.Main;
+using Model.EntityModels.Additional.Common;
+using Model.EntityModels.Main;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Dynamic;
@@ -18,6 +18,10 @@ namespace App.Pages.Products
     public abstract class ProductModel : PageModel
     {
         protected AppDbContext context { get; set; }
+
+        public int ProductAmount { get; set; }
+
+        public UserType UserType { get; set; }
 
         public const int ReviewsPerPage = 10;
 
@@ -53,7 +57,7 @@ namespace App.Pages.Products
         public int PageNumber { get; set; }
 
         public ICollection<int> BonusProductImagesId { get; set; }
-        public ICollection<ReviewDTO> ReviewDTOs { get; set; } = new List<ReviewDTO>();
+        public ICollection<ReviewData> ReviewsData { get; set; } = new List<ReviewData>();
 
         protected virtual void initializeEssentialProductProperties(int id)
         {
@@ -73,6 +77,15 @@ namespace App.Pages.Products
             Price = p.Price;
             Producer = p.Producer;
             Availability = p.Availability;
+            ProductAmount = p.Amount;
+
+            if (HttpContext.Session.GetInt32("isLogged") == 1)
+            {
+                UserType = context.Users.Find(HttpContext.Session.GetInt32("LoggedUserId")).UserType;
+            }   
+            else
+                UserType = UserType.NormalUser;
+
             initializeReviewDTOs();
 
             foreach (var image in p.BonusImages)
@@ -147,8 +160,8 @@ namespace App.Pages.Products
                 .ToList()
                 .ForEach(
                     review =>
-                        ReviewDTOs.Add(
-                            new ReviewDTO(
+                        ReviewsData.Add(
+                            new ReviewData(
                                 Id: review.Id,
                                 Username: review.User.FirstName,
                                 UserId: review.UserId,

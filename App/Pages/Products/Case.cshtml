@@ -1,5 +1,5 @@
 ﻿@page
-@using Model.DataModel.Additional.Common
+@using Model.EntityModels.Additional.Common
 @model App.Pages.Products.CaseModel
 @{
 }
@@ -13,9 +13,10 @@
         {
             product = Model.Name,
             producer = Model.Producer,
-            category = "Obudowa komputerowa", 
             rate = Model.AverageRate, 
-            reviewsAmount = Model.ReviewsAmount
+            reviewsAmount = Model.ReviewsAmount,
+            productId = Model.ProductId,
+            productType = Model.ProductType
         })
 
 <div class="container">
@@ -33,37 +34,18 @@
         
         </div>
         <div class="col">
-            <div class="fs-1">
-                @Model.Price zł
-            </div>
-            <div>
-                <div class="mb-5">
-                    @if ( true /*Model.Availability == Availability.Avabile */)
-                    {
-                        <form method="post">
-                        <select class="fs-4">
-                            <option value="1">1 szt</option>
-                            <option value="2">2 szt</option>
-                            <option value="3">3 szt</option>
-                            <option value="4">4 szt</option>
-                            <option value="5">5 szt</option>
-                            <option value="6">6 szt</option>
-                            <option value="7">7 szt</option>
-                            <option value="8">8 szt</option>
-                            <option value="9">9 szt</option>
-                        </select>
-                            <button class="narrowButton fs-4">
-                            Dodaj do koszyka
-                        </button>
-                    </form>
-                    }
-                    else
-                    {
-                        <span class="productUnavailable">
-                        Produkt niedostępny
-                    </span>               
-                    }
-                </div>
+
+                
+                @await Component.InvokeAsync(
+                "BuyProductInProductPage",
+                new
+                {
+                    availability = Model.Availability,
+                    productAmount = Model.ProductAmount,
+                    userType = Model.UserType,
+                    price = Model.Price
+                })
+
                 <table class="mt-5 shortProductTable">
                     <tr>
                         <td>
@@ -124,7 +106,6 @@
                 </table>
             </div>
         </div>
-
 
         </div>
     <div class="row mt-5 mb-5">
@@ -187,195 +168,17 @@
                 </td>
             </tr>
         </table>
-    </div>
-    <div class="row mt-5 mb-3">
-        <div class="col">
-            <h2>Opinie (@Model.ReviewsAmount)</h2>
+    </div> 
 
-        </div>
-    </div>
-    @if (Model.ReviewsAmount == 0)
-    {
-        <div class="row">
-            <div class="col">
-                <div class="fs-5" style="color: gray; text-align: center">
-                    Nikt nie dodał jeszcze żadnych opinii do tego produktu. Możesz być pierwszy
-                </div>
-            </div>
-        </div>
-    }
-    else
-    {
-        @await Component.InvokeAsync("ReviewsArea", new { reviewDTOs = Model.ReviewDTOs, productId = Model.ProductId, pageNumber= Model.PageNumber})
-    }
-    <div class="row">
-        <div class="col">
-            <div>
-                @if (HttpContext.Session.GetInt32("isLogged") == 1)
-                {
-                    <form asp-page-handler="AddReview" method="post">
-                        <input type="hidden" value="@Model.ProductId" name="productId" />
-                        <input type="hidden" value="@Model.PageNumber" name="pageNumber" />
-                        <input type="hidden" name="rate" id="rateInAddReviewForm-AddReview" value="2"/>
-                        <div style="float: left; width: 100%;" class="mb-0">
-                            <div style="display: inline-block; float: left"><i class="demo-icon icon-user-circle-o" style="font-size:80px;"></i></div>
-
-                            <div style="display: inline-block; width: calc(100% - 130px); float: left;" class="mt-4">
-                                <textarea style="resize: none; height: 80px; width: 100%;" placeholder="Twoja opinia o produkcie" name="reviewContent"></textarea>
-                            </div>
-
-                        </div>
-                        <div class="fs-3" style="margin-top: -8px; display: inline-block; float: left;  margin-left: 110px; color: darkgoldenrod;">
-                            <i style="cursor: pointer" class="demo-icon icon-star" id="firstStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="secondStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="thirdStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fourthStarInAddReviewForm-AddReview"></i><i style="cursor: pointer" class="demo-icon icon-star-empty" id="fifthStarInAddReviewForm-AddReview"></i>
-                        </div>
-                        <div style="display: inline-block; float: left;"><input type="submit" class="narrowButton" value="Dodaj opinie"></div>
-                    </form>
-                }
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div style="text-align: center">
-                @if (Model.ReviewsPageAmount<=9)
-                {
-                    @if (Model.ReviewsPageAmount >= 2)
-                    {
-                        
-                        if (Model.PageNumber == 1)
-                        {
-                            <a class="link-dark fs-5" style="font-weight: bold">1</a>                        
-                        }
-                        else 
-                        {
-                            <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="1" asp-route-productId="@Model.ProductId" class="link-dark fs-5">1</a>
-                        }
-                        <span>&nbsp;</span>
-                     
-                    }
-                    for (int i = 2; i <= Model.ReviewsPageAmount; i++)
-                    {
-                        if (Model.PageNumber == i)
-                        {
-                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>                 
-                        }
-                        else
-                        {
-                            <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                        }
-                        <span>&nbsp;</span>
-                    }
-                }
-                else
-                {
-                    if (Model.PageNumber <= 5)
-                    {
-                        for (int i = 1; i <= 6; i++)
-                        {
-                            if (Model.PageNumber == i)
-                            {
-                                <a class="link-dark fs-5" style="font-weight: bold">@i</a>
-                            }
-                            else
-                            {
-                                <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                            }                           
-                            <span>&nbsp;</span>
-                        }
-                        <span>...</span>
-                        <span>&nbsp;</span>
-                        for (int i = Model.ReviewsPageAmount - 2; i <= Model.ReviewsPageAmount; i++)
-                        {
-                            if (Model.PageNumber == i)
-                            {
-                                <a class="link-dark fs-5" style="font-weight: bold">@i</a>
-                            }
-                            else
-                            {
-                                <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                            }
-                            <span>&nbsp;</span>
-                        }
-                        
-                    }
-                    else if (Model.PageNumber >= 4 && Model.PageNumber<Model.ReviewsPageAmount-4)
-                    {
-                        for (int i = 1; i <= 3; i++)
-                        {
-                            if (Model.PageNumber == i)
-                            {
-                                <a class="link-dark fs-5" style="font-weight: bold">@i</a>
-                            }
-                            else
-                            {
-                                <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                            }
-                            <span>&nbsp;</span>
-                        }
-
-                        <span>...</span>
-                        <span>&nbsp;</span>
-
-                        for (int i = Model.PageNumber - 1; i <= Model.PageNumber + 1; i++)
-                        {
-                            if (Model.PageNumber == i)
-                            {
-                                <a class="link-dark fs-5" style="font-weight: bold">@i</a>
-                            }
-                            else
-                            {
-                                <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                            }
-                            <span>&nbsp;</span>
-                        }
-
-                        <span>...</span>
-                        <span>&nbsp;</span>
-
-                        for (int i = Model.ReviewsPageAmount-2; i <= Model.ReviewsPageAmount; i++)
-                        {
-                            if (Model.PageNumber == i)
-                            {
-                                <a class="link-dark fs-5" style="font-weight: bold">@i</a>
-                            }
-                            else
-                            {
-                                <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                            }
-                            <span>&nbsp;</span>
-                        }   
-                    }
-                    else if (Model.PageNumber > 5 && Model.PageNumber >= Model.ReviewsPageAmount - 4)
-                    {
-                        for (int i = 1; i <= 3; i++)
-                        {
-                            if (Model.PageNumber == i)
-                            {
-                                <a class="link-dark fs-5" style="font-weight: bold">@i</a>
-                            }
-                            else
-                            {
-                                <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                            }
-                            <span>&nbsp;</span>
-                        }
-                        <span>...</span>
-                        <span>&nbsp;</span>
-                        for (int i = Model.ReviewsPageAmount - 5; i <= Model.ReviewsPageAmount; i++)
-                        {
-                            if (Model.PageNumber == i)
-                            {
-                                <a class="link-dark fs-5" style="font-weight: bold">@i</a>
-                            }
-                            else
-                            {
-                                <a asp-page="@HttpContext.Request.Path" asp-route-pageNumber="@i" asp-route-productId="@Model.ProductId" class="link-dark fs-5">@i</a>
-                            }
-                            <span>&nbsp;</span>
-                        }
-                    }
-                }
-            </div>
-        </div>
-    </div>
+    <!---Display reviews-->
+    @await Component.InvokeAsync(
+        "ReviewsArea", 
+        new{    
+            reviewsData = Model.ReviewsData, 
+            productId = Model.ProductId, 
+            pageNumber = Model.PageNumber,
+            reviewsAmount = Model.ReviewsAmount,
+            reviewsPageAmount = Model.ReviewsPageAmount
+        }
+    )
 </div>

@@ -1,29 +1,24 @@
-﻿using Domain.DTO;
-using Microsoft.AspNetCore.Mvc;
-using Domain.DTO;
-
+﻿using Microsoft.AspNetCore.Mvc;
+using Model.EntityModels.Additional.Common;
+using Domain.ViewModels; 
 namespace App.Pages.Shared.Components
 {
-    record ProductDataRecord (string Product, string Category, string Producer, int Rate, int ReviewsAmount);
     public class ProductHeaderViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync(string product, string category, string producer, int rate, int reviewsAmount)
+        public async Task<IViewComponentResult> InvokeAsync(string product, 
+            string producer, int rate, int reviewsAmount, int productId, ProductType productType)
         {
-            ViewBag.Product = product;
-            ViewBag.Category = category;
-            ViewBag.Producer = producer;
-            ViewBag.Rate = rate;
-            ViewBag.RatesCount = reviewsAmount;
             return View(
-                new ProductDataRecord
+                new ProductHeaderVm
                 (
-                    product, 
-                    category,
+                    product,
                     producer, 
                     rate,
-                    reviewsAmount
+                    reviewsAmount,
+                    productId,
+                    productType
                 )
-                );
+            );
         }
     }
 }

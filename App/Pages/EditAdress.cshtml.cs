@@ -1,8 +1,8 @@
 using DataBaseContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.DataModel.Additional.Common;
-using Model.DataModel.Main;
+using Model.EntityModels.Additional.Common;
+using Model.EntityModels.Main;
 
 namespace App.Pages
 {
