@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Domain.EntityModels.Main;
 using Domain.EntityModels.Products.ComputerParts;
-using NuGet.ProjectModel;
 using System.Threading;
 
 namespace App.Pages.AdminPanel

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Domain.EntityModels.Products.ComputerParts;
 using Domain.EntityModels.Products.OtherDevices;
-using NuGet.ProjectModel;
 using System.Threading;
 
 namespace App.Pages.Products

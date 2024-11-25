@@ -1,7 +1,6 @@
 ﻿using Domain.AppModel;
 using Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 using System.Threading.Tasks;
 
 namespace App.Pages.Shared.Components
