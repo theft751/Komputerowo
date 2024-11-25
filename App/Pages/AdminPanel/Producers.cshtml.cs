@@ -1,8 +1,8 @@
 using DataBaseContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Additional.Common;
-using Model.EntityModels.Main;
+using Domain.EntityModels.Additional.Common;
+using Domain.EntityModels.Main;
 
 namespace App.Pages.AdminPanel
 {

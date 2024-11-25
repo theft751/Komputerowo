@@ -1,11 +1,11 @@
-﻿using Model.EntityModels.Main;
+﻿using Domain.EntityModels.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Products.OtherDevices
+namespace Domain.EntityModels.Products.OtherDevices
 {
     public class Smartphone :Product
     {
@@ -17,7 +17,7 @@ namespace Model.EntityModels.Products.OtherDevices
         public int ScreenRefreshRate { get; set; } //Hz
 
         public string Processor {  get; set; }
-        public int RamSize { get; set; }
+        public int RamSize { get; set; } //GB
         public int EmbeddedMemorySize { get; set; }
         public string OperatingSystem { get; set; }
         public string ExternalPorts { get; set; }

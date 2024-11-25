@@ -6,7 +6,7 @@
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
         <h2>Dodaj smartfona</h2>
-        @await Component.InvokeAsync("AddProduct")
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
 
         <div class="inputUnit">
             <textarea asp-for="BackCamera" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">

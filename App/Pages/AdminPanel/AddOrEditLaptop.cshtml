@@ -6,7 +6,7 @@
     <div id="loginFormContent">
         <h2>Dodaj Laptopa</h2>
         
-        @await Component.InvokeAsync("AddProduct")
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
 
         <div  class="inputUnit">
             <input asp-for="Processor" type="text" class="loginInput" placeholder="" required />

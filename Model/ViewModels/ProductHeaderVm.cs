@@ -1,6 +1,6 @@
-﻿using Model.EntityModels.Additional.Common;
+﻿using Domain.EntityModels.Additional.Common;
 
 namespace Domain.ViewModels;
 
 public record ProductHeaderVm(string Product, string Producer,
-    int Rate, int ReviewsAmount, int productId, ProductType ProductType);
+    int Rate, int ReviewsAmount, int ProductId, ProductType ProductType);

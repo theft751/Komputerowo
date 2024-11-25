@@ -1,8 +1,12 @@
 using DataBaseContext;
+using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
+using Microsoft.SqlServer.Server;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace App.Pages.AdminPanel
 {
@@ -29,7 +33,7 @@ namespace App.Pages.AdminPanel
         public override IActionResult OnPost()
         {
 
-            PowerSupply product = new PowerSupply();
+            PowerSupply product = OperationMode == OperationMode.Add ? new PowerSupply() : context.PowerSupplies.Find(Id);
 
             //set properties inherited from product 
             setProductEssentialProperties(product); ;
@@ -43,8 +47,24 @@ namespace App.Pages.AdminPanel
             product.PowerSupplyProtectorsFeatures = PowerSupplyProtectorsFeatures;
 
 
-            context.PowerSupplies.Add(product);
+            if (OperationMode == OperationMode.Add)context.PowerSupplies.Add(product);
             context.SaveChanges();
+            return Page();
+        }
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            PowerSupply product = context.PowerSupplies.Find(id);
+
+            //power supply properties
+            MaximalPower = product.MaximalPower;
+            Certyficate = product.Certyficate;
+            PowerSupplyFormat = product.PowerSupplyFormat;
+            Efficiency = product.Efficiency;
+            Connectors = product.Connectors;
+            PowerSupplyProtectorsFeatures = product.PowerSupplyProtectorsFeatures;
+
+            setProductEssentialPropertiesOnEdit(id);
             return Page();
         }
         public AddOrEditPowerSupplyModel(AppDbContext _context)

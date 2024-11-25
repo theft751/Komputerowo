@@ -5,7 +5,7 @@
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
         <h2>Dodaj obudowe</h2>
-        @await Component.InvokeAsync("AddProduct")
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
         <div class="inputUnit">
             <input asp-for="Processor" type="text" class="loginInput" placeholder="" required />
             <label for="Processor" class="loginCaption">Procesor</label><br />

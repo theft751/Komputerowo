@@ -1,4 +1,5 @@
-﻿@model Domain.ViewModels.BuyProductInProductPageVm
+﻿@using Domain.EntityModels.Additional.Common
+@model Domain.ViewModels.BuyProductInProductPageVm
 
 <div class="fs-1">
     @Model.Price zł
@@ -6,19 +7,46 @@
 
 <div>
     <div class="mb-5">
-        @if (true /*Model.Availability == Availability.Avabile */)
+        @if (Model.Availability == Availability.Avabile)
         {
             <form method="post">
                 <select class="fs-4">
-                    <option value="1">1 szt</option>
-                    <option value="2">2 szt</option>
-                    <option value="3">3 szt</option>
-                    <option value="4">4 szt</option>
-                    <option value="5">5 szt</option>
-                    <option value="6">6 szt</option>
-                    <option value="7">7 szt</option>
-                    <option value="8">8 szt</option>
-                    <option value="9">9 szt</option>
+                    @if (Model.ProductAmount >= 1)
+                    {
+                        <option value="1">1 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 2)
+                    {
+                        <option value="2">2 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 3)
+                    {
+                        <option value="3">3 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 4)
+                    {
+                        <option value="4">4 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 5)
+                    {
+                        <option value="5">5 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 6)
+                    {
+                        <option value="6">6 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 7)
+                    {
+                        <option value="7">7 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 8)
+                    {
+                        <option value="8">8 szt</option>
+                    }
+                    @if (Model.ProductAmount >= 9)
+                    {
+                        <option value="9">9 szt</option>
+                    }
                 </select>
                 <button class="narrowButton fs-4">
                     Dodaj do koszyka
@@ -30,6 +58,27 @@
             <span class="productUnavailable">ViewComponent
                 Produkt niedostępny
             </span>
+        }
+        <dialog id="EditProductAmountDialog">
+            <div style="text-align: center">
+                <span>&nbsp;</span>
+                Wprowadź aktualną ilość produku
+                <form method="post">
+                    <input type="hidden" name="productId" value="@Model.ProductId" />
+                    <input type="number" value="@Model.ProductAmount" name="amount" />
+                    <input type="hidden" name="pageNumber" value="@Model.PageNumber" />
+                    <button asp-page-handler="EditAmount" class="narrowButton" type="submit">Zatwierdź</button>
+                    <button type="button" class="narrowButton" onclick="document.getElementById('EditProductAmountDialog').close()">Wróć</button>
+
+                </form>
+            </div>
+        </dialog>
+        @if (Context.Session.GetInt32("isUserAdmin") == 1)
+        {
+            <div class="mt-1">
+                <span>Stan Magazynowy: @Model.ProductAmount</span>
+                <button class="narrowButton" onclick="document.getElementById('EditProductAmountDialog').showModal()">Edytuj</button>
+            </div>
         }
     </div>
 </div>

@@ -1,16 +1,16 @@
-﻿using Model.EntityModels.Main;
+﻿using Domain.EntityModels.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Products.OtherDevices
+namespace Domain.EntityModels.Products.OtherDevices
 {
     public class Laptop :Product
     {
         public string Processor {  get; set; }
-        public int RamSize {  get; set; }
+        public int RamSize {  get; set; } //GB
         public string RamType { get; set; }
         public int DiskSize { get; set; }
         public string DiskType { get; set; }

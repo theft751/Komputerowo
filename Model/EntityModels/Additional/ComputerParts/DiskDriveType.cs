@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Additional.ComputerParts
+namespace Domain.EntityModels.Additional.ComputerParts
 {
     public enum DiskDriveType
     {

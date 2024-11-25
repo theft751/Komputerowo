@@ -6,16 +6,18 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.EntityFrameworkCore;
-using Model.EntityModels.Additional.Common;
-using Model.EntityModels.Main;
+using Domain.EntityModels.Additional.Common;
+using Domain.EntityModels.Main;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Dynamic;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace App.Pages.Products
 {
 
-    public abstract class ProductModel : PageModel
+    public abstract class ProductPageModel : PageModel
     {
         protected AppDbContext context { get; set; }
 
@@ -25,7 +27,22 @@ namespace App.Pages.Products
 
         public const int ReviewsPerPage = 10;
 
-        public int AverageRate { get => context.Products.Where(x => x.Id == ProductId).FirstOrDefault().AverageRate; }
+        public int AverageRate
+        {
+            get
+            {
+                try
+                { 
+                    return context.Products.Find(ProductId).AverageRate;
+                }
+                catch
+                {
+                    return 0;
+                }
+            }
+
+        }
+
 
         public int ReviewsPageAmount
         {
@@ -98,13 +115,52 @@ namespace App.Pages.Products
         {
             int mainProductImageId = context.Products.Where(x=>x.Id==productId).First().MainImageId;
             MainProductImage mainImage = context.MainProductImages.Where(x=>x.Id==mainProductImageId).First();
-            return File(mainImage.ImageData, mainImage.ImageType);
+            return File(mainImage.Data, mainImage.Type);
         }
         public IActionResult OnGetBonusImage(int imageId)
         {
             BonusProductImage bonusProductImage = context.BonusProductImages.Where(x=>x.Id== imageId).First();
 
-            return File(bonusProductImage.ImageData, bonusProductImage.ImageType);
+            return File(bonusProductImage.Data, bonusProductImage.Type);
+        }
+        public IActionResult OnPostProductDelete(int productId)
+        {
+            if (HttpContext.Session.GetInt32("isUserAdmin") == 1)
+            {
+                try
+                {
+                    Product p = context.Products.Find(productId);
+                    context.Products.Remove(p);
+                    context.SaveChanges();
+                    return Page();
+                }
+                catch
+                {
+                    return new RedirectToPageResult("/Error");
+                }
+            }
+            else
+                return new RedirectToPageResult("/Error");
+        }
+        public IActionResult OnPostEditAmount(int productId, int amount, int pageNumber)
+        {
+            if (HttpContext.Session.GetInt32("isUserAdmin") == 1)
+            {
+                try
+                {
+                    Product p = context.Products.Find(productId);
+                    p.Amount = amount;
+                    context.SaveChanges();
+                    return OnGet(productId, pageNumber);
+                }
+                catch
+                {
+                    return new RedirectToPageResult("/Error");
+                }
+            }
+            else
+                return new RedirectToPageResult("/Error");
+
         }
 
         //Interactive http requests
@@ -147,7 +203,21 @@ namespace App.Pages.Products
         }
 
 
-        public abstract IActionResult OnGet(int productId, int pageNumber);
+        public  IActionResult OnGet(int productId = 1, int pageNumber = 1)
+        {
+            try
+            {
+                PageNumber = pageNumber;
+
+                //Initialize inherited properties from ProductModel
+                initializeEssentialProductProperties(productId);
+                return Page();
+            }
+            catch
+            {
+                return new RedirectToPageResult("/Error");
+            }
+        }
 
         private void initializeReviewDTOs()
         {
@@ -198,7 +268,7 @@ namespace App.Pages.Products
             
         }
 
-        public ProductModel (AppDbContext _context)
+        public ProductPageModel (AppDbContext _context)
         {
             context = _context;
             

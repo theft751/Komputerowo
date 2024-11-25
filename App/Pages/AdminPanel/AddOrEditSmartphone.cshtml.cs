@@ -1,8 +1,10 @@
 using DataBaseContext;
+using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.OtherDevices;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.AdminPanel
 {
@@ -69,11 +71,35 @@ namespace App.Pages.AdminPanel
             product.FingPrinterReader = FingPrinterReader;
 
 
-            context.Smartphones.Add(product);
+            if(OperationMode == OperationMode.Add)context.Smartphones.Add(product);
             context.SaveChanges();
             return Page();
         }
         public AddOrEditSmartphoneModel(AppDbContext _context)
             :base(_context){}
+
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            Smartphone product = context.Smartphones.Find(id);
+
+            //Smartphone properties
+            BackCamera = product.BackCamera;
+            FrontCamera = product.FrontCamera;
+            Resolution = product.Resolution;
+            ScreenDiagonal = product.ScreenDiagonal;
+            ScreenRefreshRate = product.ScreenRefreshRate;
+            Processor = product.Processor;
+            RamSize = product.RamSize;
+            EmbeddedMemorySize = product.EmbeddedMemorySize;
+            OperatingSystem = product.OperatingSystem;
+            ExternalPorts = product.ExternalPorts;
+            BatteryCapacity = product.BatteryCapacity;
+            Nfc = product.Nfc;
+            FingPrinterReader = product.FingPrinterReader;
+
+            setProductEssentialPropertiesOnEdit(id);
+            return Page();
+        }
     }
 }

@@ -7,7 +7,7 @@
     <div id="loginFormContent">
         <h2>Dodaj RAM</h2>
         
-        @await Component.InvokeAsync("AddProduct")
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
 
         <div  class="inputUnit">
             <input asp-for="SizePerChips" type="number" class="loginInput" placeholder="" required />
@@ -26,7 +26,7 @@
 
         <div class="inputUnit">
             <input asp-for="RamType" type="text" class="loginInput" placeholder="" style="" required />
-            <label for="RamType" class="loginCaption">Rozmiar pojedyńczej kości</label><br />
+            <label for="RamType" class="loginCaption">Rozmiar pojedyńczej kości(w GB)</label><br />
         </div  class="inputUnit">
                 
         <div class="inputUnit">

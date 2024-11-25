@@ -1,11 +1,11 @@
-﻿using Model.EntityModels.Main;
+﻿using Domain.EntityModels.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Products.OtherDevices
+namespace Domain.EntityModels.Products.OtherDevices
 {
     public class DesktopComputer : Product
     {

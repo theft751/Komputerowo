@@ -3,8 +3,10 @@ using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Identity.Client;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.OtherDevices;
+using Domain.EntityModels.Additional.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.AdminPanel
 {
@@ -74,7 +76,28 @@ namespace App.Pages.AdminPanel
             context.SaveChanges();
             return Page();
         }
+        public override IActionResult OnGetEdit(int id)
+        {
+            DesktopComputer product = context.DesktopComputers.Find(id);
 
+            Processor = product.Processor;
+            Chipset = product.Chipset;
+            Gpu = product.Gpu;
+            GpuMemoryType = product.GpuMemoryType;
+            GpuMemorySize = product.GpuMemorySize;
+            RamType = product.RamType;
+            RamSize = product.RamSize;
+            DiskSize = product.DiskSize;
+            ExternalPorts = product.ExternalPorts;
+            InternalPorts = product.InternalPorts;
+            PowerSupply = product.PowerSupply;
+            OperatingSystem = product.OperatingSystem;
+
+            setProductEssentialPropertiesOnEdit(id);
+            
+
+            return Page();
+        }
         public AddOrEditDesktopComputerModel(AppDbContext _context)
             : base(_context) { }
     }

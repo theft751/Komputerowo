@@ -2,8 +2,9 @@ using DataBaseContext;
 using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.OtherDevices;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.AdminPanel
 {
@@ -48,6 +49,22 @@ namespace App.Pages.AdminPanel
             if(OperationMode == OperationMode.Add) context.Products.Add(product);
             
             context.SaveChanges();
+            return Page();
+        }
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            Televisor product = context.Televisors.Find(id);
+
+            //Televisor properties
+            Resolution = product.Resolution;
+            ScreenDiagonal = product.ScreenDiagonal;
+            ScreenRefreshRate = product.ScreenRefreshRate;
+            ExternalPorts = product.ExternalPorts;
+            hasSmartTv = product.hasSmartTv;
+            OperatingSystem = product.OperatingSystem;
+
+            setProductEssentialPropertiesOnEdit(id);
             return Page();
         }
     }

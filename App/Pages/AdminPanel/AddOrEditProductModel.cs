@@ -2,8 +2,8 @@
 using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Additional.Common;
-using Model.EntityModels.Main;
+using Domain.EntityModels.Additional.Common;
+using Domain.EntityModels.Main;
 using System.Drawing;
 
 namespace App.Pages.AdminPanel
@@ -17,7 +17,7 @@ namespace App.Pages.AdminPanel
         public int Id { get; set; }
 
         [BindProperty]
-        ProductPassData ProductPassData { get; set; }
+        public ProductPassData ProductPassData { get; set; }
 
         [BindProperty]
         public string Name { get; set; } = "";
@@ -48,7 +48,7 @@ namespace App.Pages.AdminPanel
 
         [BindProperty]
         public ICollection<IFormFile> BonusImages { get; set; }
-        
+
         protected void setProductEssentialProperties(Product product)
         {
             product.Name = Name;
@@ -64,25 +64,25 @@ namespace App.Pages.AdminPanel
             MainProductImage MainProductImage = new MainProductImage();
             product.MainImage = MainProductImage;
 
-            MainProductImage.ImageTitle = MainImage.FileName;
-            MainProductImage.ImageType = MainImage.ContentType;
+            MainProductImage.Title = MainImage.FileName;
+            MainProductImage.Type = MainImage.ContentType;
             using (var memoryStream = new MemoryStream())
             {
                 MainImage.CopyTo(memoryStream);
-                MainProductImage.ImageData = memoryStream.ToArray();
+                MainProductImage.Data = memoryStream.ToArray();
             }
 
 
             foreach (var image in BonusImages)
             {
                 BonusProductImage productImage = new BonusProductImage();
-                productImage.ImageTitle = image.Name;
-                productImage.ImageType = image.ContentType;
+                productImage.Title = image.Name;
+                productImage.Type = image.ContentType;
 
                 using (var memoryStream = new MemoryStream())
                 {
                     image.CopyTo(memoryStream);
-                    productImage.ImageData = memoryStream.ToArray();
+                    productImage.Data = memoryStream.ToArray();
                 }
                 product.BonusImages.Add(productImage);
                 context.BonusProductImages.Add(productImage);
@@ -94,32 +94,60 @@ namespace App.Pages.AdminPanel
 
         public abstract IActionResult OnPost();
 
-       
 
-        private void onEditInitializePassData()
+
+        protected void setProductEssentialPropertiesOnEdit(int productId)
         {
+            Product p = context.Products.Find(productId);
+
+            Id = p.Id;
+            Name = p.Name;
+            Producer = p.Producer;
+            Description = p.Description;
+            AdditionalInfo = p.AdditionalInfo;
+            Color = p.Color;
+            Amount = p.Amount;
+            GuarantyTime = p.GuarantyTime; //Months
+            Price = p.Price;
+
             OperationMode = OperationMode.Edit;
-            ProductPassData productData = new(
-                Id,
+
+            ProductPassData = new(
+                p.Id,
                 OperationMode.Edit,
-                AdditionalInfo,
-                Color,
-                Amount,
-                GuarantyTime,
-                Name,
-                Description,
-                Price,
-                Producer);
-            
+                p.AdditionalInfo,
+                p.Color,
+                p.Amount,
+                p.GuarantyTime,
+                p.Name,
+                p.Description,
+                p.Price,
+                p.Producer);
+        }
+        protected void setProductEssentialPropertiesOnAdd()
+        {
+            ProductPassData = new(
+                0,
+                OperationMode.Add,
+                "",
+                "",
+                1,
+                0,
+                "",
+                "",
+                0,
+                "");
+
         }
         public IActionResult OnGetAdd()
         {
-            OperationMode operationMode = OperationMode.Add;
-            
-            return Page();
+            OperationMode = OperationMode.Add;
+            setProductEssentialPropertiesOnAdd();
+            return AdminPage();
         }
+        public abstract IActionResult OnGetEdit(int id);
 
         public AddOrEditProductModel(AppDbContext _context)
-            :base(_context) { }
+         :base(_context){}
     }
 }

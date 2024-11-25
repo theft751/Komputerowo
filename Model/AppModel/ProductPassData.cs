@@ -1,4 +1,4 @@
-﻿using Model.EntityModels.Additional.Common;
+﻿using Domain.EntityModels.Additional.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,8 +1,12 @@
 using DataBaseContext;
+using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
+using Microsoft.CodeAnalysis;
+using Microsoft.SqlServer.Server;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.AdminPanel
 {
@@ -40,7 +44,7 @@ namespace App.Pages.AdminPanel
 
         public override IActionResult OnPost()
         {      
-            MotherBoard product = new MotherBoard();
+            MotherBoard product = OperationMode == OperationMode.Add ? new MotherBoard() : context.MotherBoards.Find(Id);
 
             //set properties inherited from product 
             setProductEssentialProperties(product); ;
@@ -57,8 +61,30 @@ namespace App.Pages.AdminPanel
             product.ProcesorArchitecture = ProcesorArchitecture;
             product.SupportedProcessorFamilies = SupportedProcessorFamilies;    
 
-            context.Products.Add(product);
+            if (OperationMode == OperationMode.Add) context.MotherBoards.Add(product);
             context.SaveChanges();
+            return Page();
+        }
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            MotherBoard product = context.MotherBoards.Find(id);
+
+            //motherboard properties
+            Format = product.Format;
+            ProcessorSocket = product.ProcessorSocket;
+            Chipset = product.Chipset;
+            InternalSockets = product.InternalSockets;
+            ExternalSockets = product.ExternalSockets;
+            SupportedMemoryTypes = product.SupportedMemoryTypes;
+            SupportedMemoryTypesOC = product.SupportedMemoryTypesOC;
+            RamSlots = product.RamSlots;
+            ProcesorArchitecture = product.ProcesorArchitecture;
+            SupportedProcessorFamilies = product.SupportedProcessorFamilies;
+
+            setProductEssentialPropertiesOnEdit(id);
+            IFormFile a;
+            
             return Page();
         }
 

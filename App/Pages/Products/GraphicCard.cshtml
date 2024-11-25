@@ -1,0 +1,275 @@
+﻿@page
+@using Domain.EntityModels.Additional.Common
+@model App.Pages.Products.GraphicCardModel;
+@{
+}
+<!--This script is absolutely required in this place. Don't move it to the end of view!!!' -->
+<script src="~/js/productView.js"></script>
+
+<!--Display header of page-->
+@await Component.InvokeAsync(
+        "ProductHeader",
+            new
+            {
+                product = Model.Name,
+                producer = Model.Producer,
+                rate = Model.AverageRate,
+                reviewsAmount = Model.ReviewsAmount,
+                productId = Model.ProductId,
+                productType = Model.ProductType
+            })
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <!--Display images of pruduct-->
+            @await Component.InvokeAsync(
+                     "ImagesArea",
+                     new
+                     {
+                         bonusProductImagesId = Model.BonusProductImagesId,
+                         productId = Model.ProductId
+                     })
+
+        </div>
+        <div class="col">
+
+
+            @await Component.InvokeAsync(
+                     "BuyProductInProductPage",
+                     new
+                     {
+                         productId = Model.ProductId,
+                         availability = Model.Availability,
+                         productAmount = Model.ProductAmount,
+                         userType = Model.UserType,
+                         price = Model.Price,
+                         pageNumber = Model.PageNumber
+                     })
+
+            <table class="mt-5 shortProductTable">
+                <tr>
+                    <td>
+                        Producent
+                    </td>
+                    <td>
+                        @Model.Producer
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        GPU
+                    </td>
+                    <td>
+                        @Model.Gpu
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Seria kart graficznych
+                    </td>
+                    <td>
+                        @Model.GraphicCardSerie
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Typ pamięci
+                    </td>
+                    <td>
+                        @Model.MemoryType
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rozmiar Pamięci
+                    </td>
+                    <td>
+                        @Model.MemorySize
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Taktowanie rdzenia
+                    </td>
+                    <td>
+                        @Model.CoreColck
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Taktowanie pamięci
+                    </td>
+                    <td>
+                        @Model.MemoryClock
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        RayTracing
+                    </td>
+                    <td>
+                        @(Model.RayTracing == true ? "Tak" : "Nie")
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+<div class="row mt-5 mb-5">
+    <div class="col">
+        <h2 class=" mb-2">Opis Produktu</h2>
+        <div>
+            @Model.Description
+        </div>
+    </div>
+</div>
+<div row mt-5>
+    <h2 class="mb-2">Pełna specyfikacja</h2>
+    <table class="fullProductTable">
+        <tr>
+            <td>
+                Producent
+            </td>
+            <td>
+                @Model.Producer
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kategoria
+            </td>
+            <td>
+                Karta graficzna
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Czas gwarancji
+            </td>
+            <td>
+                @Model.GuarantyTime miesięcy
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kolor
+            </td>
+            <td>
+                @Model.Color
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dodatkowe informacje
+            </td>
+            <td>
+                @Model.AdditionalInfo
+            </td>
+        </tr>
+        <tr>
+            <td>
+                GPU
+            </td>
+            <td>
+                @Model.Gpu
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Seria kart graficznych
+            </td>
+            <td>
+                @Model.GraphicCardSerie
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Typ pamięci
+            </td>
+            <td>
+                @Model.MemoryType
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Typ złącza
+            </td>
+            <td>
+                @Model.ConnectorType
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Złącza wyjściowe
+            </td>
+            <td>
+                @Model.OutputTypes
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rozmiar Pamięci
+            </td>
+            <td>
+                @Model.MemorySize
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Szyna pamięci
+            </td>
+            <td>
+                @Model.MemoryBus bit
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Taktowanie rdzenia
+            </td>
+            <td>
+                @Model.CoreColck
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Taktowanie pamięci
+            </td>
+            <td>
+                @Model.MemoryClock
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Podświetlenie (RGB lub inne)
+            </td>
+            <td>
+                @(Model.Litghting == true ? "Tak" : "Nie")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                RayTracing
+            </td>
+            <td>
+                @(Model.RayTracing == true ? "Tak" : "Nie")
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!---Display reviews-->
+@await Component.InvokeAsync(
+            "ReviewsArea",
+            new
+            {
+                reviewsData = Model.ReviewsData,
+                productId = Model.ProductId,
+                pageNumber = Model.PageNumber,
+                reviewsAmount = Model.ReviewsAmount,
+                reviewsPageAmount = Model.ReviewsPageAmount
+            }
+        )
+</div>

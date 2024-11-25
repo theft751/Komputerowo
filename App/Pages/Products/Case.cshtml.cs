@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.CodeAnalysis;
 using Microsoft.Identity.Client;
-using Model.EntityModels.Additional.ComputerParts;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Additional.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
 
 namespace App.Pages.Products
 {
-    public class CaseModel : ProductModel
+    public class CaseModel : ProductPageModel
     {
 
         public string MotherBoardFormats { get; set; }
@@ -25,7 +25,7 @@ namespace App.Pages.Products
             //Initialize inherited properties from ProductModel
             base.initializeEssentialProductProperties (productId);
             
-            Case Case = context.Cases.Where(x => x.Id == productId).First();
+            Case Case = context.Cases.Find(productId);
 
             //Initialize properties specific for CaseModel
             MotherBoardFormats = Case.MotherBoardFormats;
@@ -34,21 +34,8 @@ namespace App.Pages.Products
             
         }
 
-        public override IActionResult OnGet(int productId=1, int pageNumber=1)
-        {
-            try
-             {
-                PageNumber = pageNumber;
 
-                //Initialize inherited properties from ProductModel
-                initializeEssentialProductProperties(productId);
-                return Page();
-            }
-            catch
-            {
-                return new RedirectToPageResult("/Error");
-            }
-        }
+
         public CaseModel(AppDbContext _context)
             : base(_context) { }
         

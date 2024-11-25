@@ -1,16 +1,16 @@
 ﻿using Domain.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Model.EntityModels.Additional.Common;
+using Domain.EntityModels.Additional.Common;
 
 namespace App.Pages.Shared.Components
 {
     public class BuyProductInProductPageViewComponent : ViewComponent
     {
-        public async Task<IViewComponentResult> InvokeAsync(Availability availability, 
-            int productAmount, UserType userType, decimal price)
+        public async Task<IViewComponentResult> InvokeAsync(int productId,Availability availability, 
+            int productAmount, UserType userType, decimal price, int pageNumber)
         {
             BuyProductInProductPageVm buyProductInProductPageVm = 
-                new BuyProductInProductPageVm(availability, productAmount, userType, price);
+                new BuyProductInProductPageVm(productId,availability, productAmount, userType, price, pageNumber);
            
             return View(buyProductInProductPageVm);
         }

@@ -1,6 +1,6 @@
-﻿using Model.EntityModels.Additional.Common;
+﻿using Domain.EntityModels.Additional.Common;
 using System.ComponentModel.DataAnnotations;
-namespace Model.EntityModels.Main
+namespace Domain.EntityModels.Main
 {
     public class User
     {
@@ -15,7 +15,7 @@ namespace Model.EntityModels.Main
         //Navigation properties
         public virtual ICollection<Review> Comments { get; set; } = new List<Review>();
         public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
-        public int AdressId { get; set; }
-        public virtual Adress Adress { get; set; }
+        public int? AdressId { get; set; }
+        public virtual Adress? Adress { get; set; }
     }
 }

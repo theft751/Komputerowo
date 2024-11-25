@@ -1,8 +1,9 @@
 using DataBaseContext;
+using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
 
 namespace App.Pages.AdminPanel
 {
@@ -35,7 +36,7 @@ namespace App.Pages.AdminPanel
 
         public override IActionResult OnPost()
         {
-            Processor product = new Processor();
+            Processor product = OperationMode == OperationMode.Add ? new Processor():context.Processors.Find(Id);
 
             //set properties inherited from product 
             setProductEssentialProperties(product); ;
@@ -51,11 +52,28 @@ namespace App.Pages.AdminPanel
             product.hasCoolerIncluded = hasCoolerIncluded;
 
 
-            context.Processors.Add(product);
+            if (OperationMode == OperationMode.Add) context.Processors.Add(product);
             context.SaveChanges();
             return Page();
         }
 
+        public override IActionResult OnGetEdit(int id)
+        {
+            Processor product = context.Processors.Find(id);
+
+            //Procesor properties
+            Cores = product.Cores;
+            Threads = product.Threads;
+            Frequency = product.Frequency;
+            CacheSize = product.CacheSize;
+            ProcessorSocket = product.ProcessorSocket;
+            ProcessorSerie = product.ProcessorSerie;
+            IntegratedGpu = product.IntegratedGpu;
+            hasCoolerIncluded = product.hasCoolerIncluded;
+
+            setProductEssentialPropertiesOnEdit(id);
+            return Page();
+        }
         public AddOrEditProcessorModel(AppDbContext _context)
             : base(_context) { }
     }

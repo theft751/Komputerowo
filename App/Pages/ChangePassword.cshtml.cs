@@ -1,7 +1,7 @@
 using DataBaseContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
+using Domain.EntityModels.Main;
 using System.Security.Cryptography;
 using System.Text;
 

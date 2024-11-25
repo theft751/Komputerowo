@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Model.EntityModels.Additional.Common;
-using Model.EntityModels.Additional.ComputerParts;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
-using Model.EntityModels.Products.OtherDevices;
+using Domain.EntityModels.Additional.Common;
+using Domain.EntityModels.Additional.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
 using System.Reflection.Emit;
+using System.Security.Cryptography;
+using System.Text;
 
 
 
@@ -13,6 +15,8 @@ namespace DataBaseContext
 {
     public class AppDbContext : DbContext
     {
+        
+
         //*************
         // Essenstials
         //*************
@@ -45,9 +49,8 @@ namespace DataBaseContext
         public DbSet<Smartphone> Smartphones { get; set; }
         public DbSet<Televisor> Televisors { get; set; }
 
-
         public AppDbContext(DbContextOptions<AppDbContext> options)
-        : base(options)
+:        base(options)
         {
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -82,6 +85,7 @@ namespace DataBaseContext
                 .ToTable("Products")
                 .HasDiscriminator<ProductType>("ProductType")
                 .HasValue<DiskDrive>(ProductType.DISK_DRIVE)
+                .HasValue<GraphicCard>(ProductType.GRAPHIC_CARD)
                 .HasValue<Ram>(ProductType.RAM)
                 .HasValue<Case>(ProductType.CASE)
                 .HasValue<PowerSupply>(ProductType.POWER_SUPPLY)
@@ -102,8 +106,38 @@ namespace DataBaseContext
                 .WithOne(p=>p.Order)
                 .HasForeignKey(p=>p.OrderId)
                 .IsRequired().OnDelete(DeleteBehavior.Cascade);
-                
 
+
+            /****************************************
+            Model managed data
+            *****************************************/
+
+            //Admin account login: admin, password: admin
+            using (SHA256 sha256 = SHA256.Create())
+            {
+                //hashing password
+                byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes("admin"));
+                string hashedAdminPassword = Convert.ToBase64String(hashBytes);
+                modelBuilder.Entity<User>()
+                .HasData
+                (
+                    new User
+                    {
+                        Id = 1,
+                        Email = "admin",
+                        FirstName = "Admin",
+                        LastName = "Admin",
+                        PhoneNumber = "000000000",
+                        Password = hashedAdminPassword,
+                        UserType = UserType.Admin,
+                        //Navigation properties
+                        AdressId = null
+                    }
+                );
+
+                //
+            }
+            //
         }
     }
 }

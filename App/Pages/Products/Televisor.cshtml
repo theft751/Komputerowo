@@ -1,0 +1,249 @@
+﻿@page
+@using Domain.EntityModels.Additional.Common
+@model App.Pages.Products.TelevisorModel
+@{
+}
+<!--This script is absolutely required in this place. Don't move it to the end of view!!!' -->
+<script src="~/js/productView.js"></script>
+
+<!--Display header of page-->
+@await Component.InvokeAsync(
+        "ProductHeader",
+            new
+            {
+                product = Model.Name,
+                producer = Model.Producer,
+                rate = Model.AverageRate,
+                reviewsAmount = Model.ReviewsAmount,
+                productId = Model.ProductId,
+                productType = Model.ProductType
+            })
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <!--Display images of pruduct-->
+            @await Component.InvokeAsync(
+                     "ImagesArea",
+                     new
+                     {
+                         bonusProductImagesId = Model.BonusProductImagesId,
+                         productId = Model.ProductId
+                     })
+
+        </div>
+        <div class="col">
+
+
+            @await Component.InvokeAsync(
+                     "BuyProductInProductPage",
+                     new
+                     {
+                         productId = Model.ProductId,
+                         availability = Model.Availability,
+                         productAmount = Model.ProductAmount,
+                         userType = Model.UserType,
+                         price = Model.Price,
+                         pageNumber = Model.PageNumber
+                     })
+
+            <table class="mt-5 shortProductTable">
+                <tr>
+                    <td>
+                        Producent
+                    </td>
+                    <td>
+                        @Model.Producer
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Czas gwarancji
+                    </td>
+                    <td>
+                        @Model.GuarantyTime miesięcy
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Kolor
+                    </td>
+                    <td>
+                        @Model.Color
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rozdzielczość ekranu
+                    </td>
+                    <td>
+                        @Model.Resolution
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Przekątna ekranu
+                    </td>
+                    <td>
+                        @Model.ScreenDiagonal
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Złącza zewnętrzne
+                    </td>
+                    <td>
+                        @Model.ExternalPorts
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Złącza zewnętrzne
+                    </td>
+                    <td>
+                        @Model.ExternalPorts
+                    </td>
+                </tr>hasSmartTv
+                @if(Model.hasSmartTv)
+                {
+                    <tr>
+                        <td>
+                            Smart tv
+                        </td>
+                        <td>
+                            @Model.OperatingSystem
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</div>
+<div class="row mt-5 mb-5">
+    <div class="col">
+        <h2 class=" mb-2">Opis Produktu</h2>
+        <div>
+            @Model.Description
+        </div>
+    </div>
+</div>
+<div row mt-5>
+    <h2 class="mb-2">Pełna specyfikacja</h2>
+    <table class="fullProductTable">
+        <tr>
+            <td>
+                Producent
+            </td>
+            <td>
+                @Model.Producer
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kategoria
+            </td>
+            <td>
+                Obudowa komputera
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Czas gwarancji
+            </td>
+            <td>
+                @Model.GuarantyTime miesięcy
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kolor
+            </td>
+            <td>
+                @Model.Color
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dodatkowe informacje
+            </td>
+            <td>
+                @Model.AdditionalInfo
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rozdzielczość ekranu
+            </td>
+            <td>
+                @Model.Resolution
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Przekątna ekranu
+            </td>
+            <td>
+                @Model.ScreenDiagonal
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Częstotliwość odświerzania ekranu
+            </td>
+            <td>
+                @Model.ScreenRefreshRate
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Złącza zewnętrzne
+            </td>
+            <td>
+                @Model.ExternalPorts
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Złącza zewnętrzne
+            </td>
+            <td>
+                @Model.ExternalPorts
+            </td>
+        </tr>hasSmartTv
+        <tr>
+            <td>
+                Smart tv
+            </td>
+            <td>
+                @(Model.hasSmartTv ? "Brak" : "Wbudowane")
+            </td>
+        </tr>
+        @if (Model.hasSmartTv)
+        {
+            <tr>
+                <td>
+                    Smart tv
+                </td>
+                <td>
+                    @Model.OperatingSystem
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
+<!---Display reviews-->
+@await Component.InvokeAsync(
+            "ReviewsArea",
+            new
+            {
+                reviewsData = Model.ReviewsData,
+                productId = Model.ProductId,
+                pageNumber = Model.PageNumber,
+                reviewsAmount = Model.ReviewsAmount,
+                reviewsPageAmount = Model.ReviewsPageAmount
+            }
+        )
+</div>

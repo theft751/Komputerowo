@@ -2,8 +2,9 @@ using DataBaseContext;
 using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.OtherDevices;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
 using System.Drawing;
 
 namespace App.Pages.AdminPanel
@@ -67,10 +68,34 @@ namespace App.Pages.AdminPanel
             product.ScreenType = ScreenType;
             product.OperatingSystem = OperatingSystem;
 
-            (OperationMode == OperationMode.Add) context.Laptops.Add(product);
+            if (OperationMode == OperationMode.Add) context.Laptops.Add(product);
             context.SaveChanges();
             return Page();
         }
+
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            Laptop product = context.Laptops.Find(id);
+
+            //laptop properties
+            Processor = product.Processor;
+            RamSize = product.RamSize;
+            RamType = product.RamType;
+            DiskSize = product.DiskSize;
+            DiskType = product.DiskType;
+            Gpu = product.Gpu;
+            BatteryCapacity = product.BatteryCapacity;
+            ExternalPorts = product.ExternalPorts;
+            Resolution = product.Resolution;
+            ScreenDiagonal = product.ScreenDiagonal;
+            ScreenType = product.ScreenType;
+            OperatingSystem = product.OperatingSystem;
+
+            setProductEssentialPropertiesOnEdit(id);
+            return Page();
+        }
+
         public AddOrEditLaptopModel(AppDbContext _context) 
             :base(_context){ }
     }

@@ -1,8 +1,11 @@
 using DataBaseContext;
+using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using NuGet.ProjectModel;
+using System.Threading;
 
 namespace App.Pages.AdminPanel
 {
@@ -26,23 +29,34 @@ namespace App.Pages.AdminPanel
 
         public override IActionResult OnPost()
         {
-            Ram product = new Ram();
+            Ram product = OperationMode == OperationMode.Add ? new Ram(): context.Rams.Find(Id);
 
             //set properties inherited from product 
             setProductEssentialProperties(product); ;
 
-            //Ram properties
-            product.SizePerChips = SizePerChips;
-            product.ChipsAmount = ChipsAmount;
-            product.Frequency = Frequency;
-            product.Ligthing = Ligthing;
-            product.RamType = RamType;
 
-            context.Rams.Add(product);
+
+            if(OperationMode == OperationMode.Add) context.Rams.Add(product);
             context.SaveChanges();
             return Page();
         }
         public AddOrEditRamModel(AppDbContext _context)
             : base(_context) { }
+
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            Ram product = context.Rams.Find(id);
+
+            //Ram properties
+            SizePerChips = product.SizePerChips;
+            ChipsAmount = product.ChipsAmount;
+            Frequency = product.Frequency;
+            Ligthing = product.Ligthing;
+            RamType = product.RamType;
+
+            setProductEssentialPropertiesOnEdit(id);
+            return Page();
+        }
     }
 }

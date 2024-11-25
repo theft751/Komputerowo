@@ -2,8 +2,9 @@ using DataBaseContext;
 using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Additional.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
 
 namespace App.Pages.AdminPanel
 {
@@ -69,5 +70,25 @@ namespace App.Pages.AdminPanel
         
         public AddOrEditGraphicCardModel(AppDbContext _context)
             :base(_context){}
+
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            GraphicCard product = context.GraphicCards.Find(id);
+
+            Gpu = product.Gpu;
+            GraphicCardSerie = product.GraphicCardSerie;
+            MemoryType = product.MemoryType;
+            ConnectorType = product.ConnectorType;
+            OutputTypes = product.OutputTypes;
+            MemoryBus = product.MemoryBus;
+            CoreColck = product.CoreColck;
+            MemoryClock = product.MemoryClock;
+            Litghting = product.Litghting;
+            RayTracing = product.RayTracing;
+
+            setProductEssentialPropertiesOnEdit(id);
+            return Page();
+        }
     }
 }

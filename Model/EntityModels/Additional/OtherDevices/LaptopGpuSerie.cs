@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Additional.OtherDevices
+namespace Domain.EntityModels.Additional.OtherDevices
 {
     public enum LaptopGpuSerie
     {

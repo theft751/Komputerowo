@@ -7,7 +7,7 @@
     <div id="powerSupplyFormContent">
         <h2>Dodaj Zasilacz</h2>
         
-        @await Component.InvokeAsync("AddProduct")
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
 
         <div class="inputUnit">
             <input asp-for="MaximalPower" type="number" class="loginInput" placeholder="" required />

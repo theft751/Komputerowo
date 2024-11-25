@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Main
+namespace Domain.EntityModels.Main
 {
     public class MainProductImage
     {
         public int Id { get; set; }
-        public string ImageTitle { get; set; }
-        public string ImageType { get; set; }
-        public byte[] ImageData { get; set; }
+        public string Title { get; set; }
+        public string Type { get; set; }
+        public byte[] Data { get; set; }
 
         //Navigation property
         public virtual Product Product { get; set; }

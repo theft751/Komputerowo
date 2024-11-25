@@ -2,7 +2,7 @@ using DataBaseContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Identity.Client;
-using Model.EntityModels.Main;
+using Domain.EntityModels.Main;
 
 namespace App.Pages
 {

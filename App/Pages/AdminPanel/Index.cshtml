@@ -1,0 +1,53 @@
+﻿@page
+@model App.Pages.AdminPanel.IndexModel
+@{
+}
+<div id="logOrRegForm">
+    <div id="loginFormContent">
+        <h2>Dodawanie produktów</h2>
+        <form method="get" id="logOrRegForm" action="@Url.Page("/AdminPanel/AddOrEditCase")">
+            <input type="hidden" name="handler" value="Add"/>
+            <button type="submit" class="loginButton">Dodaj obudowę</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj komputer stacjonarny</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj dysk</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj kartę graficzną</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj Laptopa</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj płytę główną</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj zasilacz</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj procesor</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj RAM</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj Smartfon</button>
+        </form>
+        <form method="get">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj telewizor</button>
+        </form>
+    </div>
+</div>

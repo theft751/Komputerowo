@@ -1,7 +1,8 @@
 using DataBaseContext;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Main;
+using Domain.EntityModels.Additional.Common;
+using Domain.EntityModels.Main;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -18,7 +19,7 @@ namespace App.Pages
 
         public IActionResult OnPost()
         {
-            User FoundUser = context.Users.Where(x => x.Email == email).FirstOrDefault();
+            User FoundUser = context.Users.FirstOrDefault(x => x.Email == email);
             string foundPassword = "";
             string foundEmail = "";
 
@@ -32,6 +33,7 @@ namespace App.Pages
                     string hashedPassword = Convert.ToBase64String(hashBytes);
                     if (hashedPassword == foundPassword) {
                         HttpContext.Session.SetInt32("isLogged", 1);
+                        HttpContext.Session.SetInt32("isUserAdmin", FoundUser.UserType == UserType.Admin ? 1:0);
                         HttpContext.Session.SetInt32($"LoggedUserId", FoundUser.Id);
                         return new RedirectToPageResult("Index");
                     }

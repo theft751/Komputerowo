@@ -1,0 +1,251 @@
+﻿@page
+@using Domain.EntityModels.Additional.Common
+@model App.Pages.Products.MotherBoardModel
+@{
+}
+<!--This script is absolutely required in this place. Don't move it to the end of view!!!' -->
+<script src="~/js/productView.js"></script>
+
+<!--Display header of page-->
+@await Component.InvokeAsync(
+        "ProductHeader",
+            new
+            {
+                product = Model.Name,
+                producer = Model.Producer,
+                rate = Model.AverageRate,
+                reviewsAmount = Model.ReviewsAmount,
+                productId = Model.ProductId,
+                productType = Model.ProductType
+            })
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <!--Display images of pruduct-->
+            @await Component.InvokeAsync(
+                     "ImagesArea",
+                     new
+                     {
+                         bonusProductImagesId = Model.BonusProductImagesId,
+                         productId = Model.ProductId
+                     })
+
+        </div>
+        <div class="col">
+
+
+            @await Component.InvokeAsync(
+                     "BuyProductInProductPage",
+                     new
+                     {
+                         productId = Model.ProductId,
+                         availability = Model.Availability,
+                         productAmount = Model.ProductAmount,
+                         userType = Model.UserType,
+                         price = Model.Price,
+                         pageNumber = Model.PageNumber
+                     })
+
+            <table class="mt-5 shortProductTable">
+                <tr>
+                    <td>
+                        Producent
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.Producer</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Format płyty głównej
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.Format</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Gniazdo procesora
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.ProcessorSocket</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Chipset
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.Chipset</div>
+                    </td>
+                </tr>
+                <tr>
+                <tr>
+                    <td>
+                        Wspierane typy pamięci
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.SupportedMemoryTypes</div>
+                    </td>
+                </tr>
+                <tr>
+                <td>
+                    Architektura procesora
+                </td>
+                <td>
+                    <div style="margin-left: 45%">@Model.ProcesorArchitecture</div>
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        Wspierane rodziny procesorów
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.SupportedProcessorFamilies</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ilość slotów pamięci RAM
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.RamSlots</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+<div class="row mt-5 mb-5">
+    <div class="col">
+        <h2 class=" mb-2">Opis Produktu</h2>
+        <div>
+            @Model.Description
+        </div>
+    </div>
+</div>
+<div row mt-5>
+    <h2 class="mb-2">Pełna specyfikacja</h2>
+    <table class="fullProductTable">
+        <tr>
+            <td>
+                Producent
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Producer</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kolor
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Color</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dodatkowe informacje
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.AdditionalInfo</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Format płyty głównej
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Format</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Gniazdo procesora
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.ProcessorSocket</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Chipset
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Chipset</div>
+            </td>
+        </tr>
+        <td>
+            Wewnętrzne złącza
+        </td>
+        <td>
+            <div style="margin-left: 45%">@Model.InternalSockets</div>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                Zewnętrzne złącza
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.ExternalSockets</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Wspierane typy pamięci
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.SupportedMemoryTypes</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Wspierane typy pamięci OC
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.SupportedMemoryTypesOC</div>
+            </td>
+        </tr>
+        <td>
+            Architektura procesora
+        </td>
+        <td>
+            <div style="margin-left: 45%">@Model.ProcesorArchitecture</div>
+        </td>
+        </tr>
+        <tr>
+            <td>
+                Wspierane rodziny procesorów
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.SupportedProcessorFamilies</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Ilość slotów pamięci RAM
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.RamSlots</div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!---Display reviews-->
+@await Component.InvokeAsync(
+            "ReviewsArea",
+            new
+            {
+                reviewsData = Model.ReviewsData,
+                productId = Model.ProductId,
+                pageNumber = Model.PageNumber,
+                reviewsAmount = Model.ReviewsAmount,
+                reviewsPageAmount = Model.ReviewsPageAmount
+            }
+        )
+</div>
+ 

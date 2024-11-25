@@ -1,11 +1,11 @@
-﻿using Model.EntityModels.Main;
+﻿using Domain.EntityModels.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Products.ComputerParts
+namespace Domain.EntityModels.Products.ComputerParts
 {
     public class MotherBoard: Product
     {

@@ -3,10 +3,11 @@ using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Identity.Client;
-using Model.EntityModels.Additional.ComputerParts;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
-using Model.EntityModels.Products.OtherDevices;
+using Domain.EntityModels.Additional.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
+using System.Runtime.InteropServices;
 
 namespace App.Pages.AdminPanel
 {
@@ -46,9 +47,22 @@ namespace App.Pages.AdminPanel
             context.SaveChanges();
             return Page();
         }
+        public override IActionResult OnGetEdit(int id)
+        {
+            
+                DiskDrive product = context.DiskDrives.Find(id);
 
+                DiskSize = product.DiskSize;
+                ReadSpeed = product.ReadSpeed;
+                WriteSpeed = product.WriteSpeed;
+                DiskDriveInterface = product.DiskDriveInterface;
+                DiskDriveType = product.DiskDriveType;
 
-        public AddOrEditDiskDriveModel(AppDbContext _context)
+                setProductEssentialPropertiesOnEdit(id);
+                return Page();
+        }
+
+            public AddOrEditDiskDriveModel(AppDbContext _context)
             : base(_context) { }
     }
 }

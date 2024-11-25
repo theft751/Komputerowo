@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Additional.Common
+namespace Domain.EntityModels.Additional.Common
 {
     public enum Availability
     {

@@ -2,10 +2,10 @@ using DataBaseContext;
 using Domain.AppModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Model.EntityModels.Additional.ComputerParts;
-using Model.EntityModels.Main;
-using Model.EntityModels.Products.ComputerParts;
-using Model.EntityModels.Products.OtherDevices;
+using Domain.EntityModels.Additional.ComputerParts;
+using Domain.EntityModels.Main;
+using Domain.EntityModels.Products.ComputerParts;
+using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.AdminPanel
 {
@@ -35,7 +35,18 @@ namespace App.Pages.AdminPanel
             if (OperationMode == OperationMode.Add)context.Cases.Add(product);
             context.SaveChanges();
 
-            return Page();
+            return AdminPage();
+        }
+
+        public override IActionResult OnGetEdit(int id)
+        {
+            Case product = context.Cases.Find(id);
+            MotherBoardFormats = product.MotherBoardFormats;
+            PowerSupplyFormat = product.PowerSupplyFormat;
+            CaseType = product.CaseType;
+            setProductEssentialPropertiesOnEdit(id);
+            
+            return AdminPage();
         }
         public AddOrEditCaseModel(AppDbContext _context)
             :base(_context){}

@@ -3,11 +3,11 @@
 @{
     ViewData["Title"] = "Dodaj telewizor";
 }
-@using Model.EntityModels.Additional.ComputerParts;
+@using Domain.EntityModels.Additional.ComputerParts;
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
         <h2>Dodaj telewizor</h2>
-        @await Component.InvokeAsync("AddProduct")
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
         <div class="inputUnit">
             <input asp-for="Resolution" type="text" class="loginInput" placeholder="" required />
             <label for="Resolution" class="loginCaption">Rozdzielczość</label><br />

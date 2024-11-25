@@ -1,4 +1,4 @@
-﻿using Model.EntityModels.Additional.Common;
+﻿using Domain.EntityModels.Additional.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Main
+namespace Domain.EntityModels.Main
 {
     public class Adress
     {
@@ -20,6 +20,5 @@ namespace Model.EntityModels.Main
         public string Street { get; set; }
         public string NumberOfBuilding { get; set; }
         public string ApartmentNumber { get; set; }
-
     }
 }

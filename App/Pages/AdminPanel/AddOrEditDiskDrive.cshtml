@@ -1,6 +1,6 @@
 ﻿@page
 @model App.Pages.AdminPanel.AddOrEditDiskDriveModel
-@using Model.EntityModels.Additional.ComputerParts
+@using Domain.EntityModels.Additional.ComputerParts
 @{
     ViewData["Title"] = "Dodaj dysk twardy";
 }
@@ -9,7 +9,7 @@
 
         <h2>Dodaj dysk twardy</h2>
         
-        @await Component.InvokeAsync("AddProduct")
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
 
         <div class="inputUnit">
             <input asp-for="DiskSize" type="number" class="loginInput" placeholder="" required />

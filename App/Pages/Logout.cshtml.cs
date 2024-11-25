@@ -8,6 +8,7 @@ namespace App.Pages
         public IActionResult OnGet()
         {
             HttpContext.Session.SetInt32("isLogged", 0);
+            HttpContext.Session.SetInt32("isUserAdmin", 1);
             HttpContext.Session.Remove("LoggedUserId");
             return new RedirectToPageResult("Index");
         }

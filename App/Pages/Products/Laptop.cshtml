@@ -1,0 +1,268 @@
+﻿@page
+@using Domain.EntityModels.Additional.Common
+@model App.Pages.Products.LaptopModel
+@{
+}
+<!--This script is absolutely required in this place. Don't move it to the end of view!!!' -->
+<script src="~/js/productView.js"></script>
+
+<!--Display header of page-->
+@await Component.InvokeAsync(
+        "ProductHeader",
+            new
+            {
+                product = Model.Name,
+                producer = Model.Producer,
+                rate = Model.AverageRate,
+                reviewsAmount = Model.ReviewsAmount,
+                productId = Model.ProductId,
+                productType = Model.ProductType
+            })
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <!--Display images of pruduct-->
+            @await Component.InvokeAsync(
+                     "ImagesArea",
+                     new
+                     {
+                         bonusProductImagesId = Model.BonusProductImagesId,
+                         productId = Model.ProductId
+                     })
+
+        </div>
+        <div class="col">
+
+
+            @await Component.InvokeAsync(
+                     "BuyProductInProductPage",
+                     new
+                     {
+                         productId = Model.ProductId,
+                         availability = Model.Availability,
+                         productAmount = Model.ProductAmount,
+                         userType = Model.UserType,
+                         price = Model.Price,
+                         pageNumber = Model.PageNumber
+                     })
+
+            <table class="mt-5 shortProductTable">
+                <tr>
+                    <td>
+                        Procesor
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.Processor</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rozmiar pamięci RAM
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.RamSize GB</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rozmiar dysku
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.DiskSize</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        GPU
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.Gpu</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Pojemność baterii
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.BatteryCapacity mAh</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Rozdzielczość
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.Resolution</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Przekątna ekranu
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.ScreenDiagonal</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        System operacyjny
+                    </td>
+                    <td>
+                        <div style="margin-left: 45%">@Model.OperatingSystem</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+<div class="row mt-5 mb-5">
+    <div class="col">
+        <h2 class=" mb-2">Opis Produktu</h2>
+        <div>
+            @Model.Description
+        </div>
+    </div>
+</div>
+<div row mt-5>
+    <h2 class="mb-2">Pełna specyfikacja</h2>
+    <table class="fullProductTable">
+        <tr>
+            <td>
+                Producent
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Producer</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kolor
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Color</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Dodatkowe informacje
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.AdditionalInfo</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Procesor
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Processor</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rozmiar pamięci RAM
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.RamSize GB</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Typ pamięci RAM
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.RamType</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rozmiar dysku
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.DiskSize</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Typ dysku
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.DiskType</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                GPU
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Gpu</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Pojemność baterii
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.BatteryCapacity mAh</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Porty zewnętrzne
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.ExternalPorts</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Rozdzielczość
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.Resolution</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Przekątna ekranu
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.ScreenDiagonal</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Typ matrycy ekranu
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.ScreenType</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                System operacyjny
+            </td>
+            <td>
+                <div style="margin-left: 45%">@Model.OperatingSystem</div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!---Display reviews-->
+@await Component.InvokeAsync(
+            "ReviewsArea",
+            new
+            {
+                reviewsData = Model.ReviewsData,
+                productId = Model.ProductId,
+                pageNumber = Model.PageNumber,
+                reviewsAmount = Model.ReviewsAmount,
+                reviewsPageAmount = Model.ReviewsPageAmount
+            }
+        )
+</div>

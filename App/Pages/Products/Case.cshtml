@@ -1,5 +1,5 @@
 ﻿@page
-@using Model.EntityModels.Additional.Common
+@using Domain.EntityModels.Additional.Common
 @model App.Pages.Products.CaseModel
 @{
 }
@@ -40,10 +40,12 @@
                 "BuyProductInProductPage",
                 new
                 {
+                    productId = Model.ProductId,
                     availability = Model.Availability,
                     productAmount = Model.ProductAmount,
                     userType = Model.UserType,
-                    price = Model.Price
+                    price = Model.Price,
+                    pageNumber = Model.PageNumber
                 })
 
                 <table class="mt-5 shortProductTable">
@@ -57,10 +59,10 @@
                     </tr>
                     <tr>
                         <td>
-                            Kategoria
+                            Czas gwarancji
                         </td>
                         <td>
-                            Obudowa komputera
+                            @Model.GuarantyTime miesięcy
                         </td>
                     </tr>
                     <tr>

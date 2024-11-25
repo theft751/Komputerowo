@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Model.EntityModels.Additional.Common;
+using Domain.EntityModels.Additional.Common;
 using Domain.ViewModels; 
 namespace App.Pages.Shared.Components
 {

@@ -1,4 +1,4 @@
-﻿using Model.EntityModels.Additional.Common;
+﻿using Domain.EntityModels.Additional.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -9,7 +9,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.EntityModels.Main
+namespace Domain.EntityModels.Main
 {
     public abstract class Product
     {
@@ -46,7 +46,7 @@ namespace Model.EntityModels.Main
                 Amount >= 1 ? Availability.Avabile : Availability.Unavabile;
         }
         [NotMapped]
-        public int AverageRate { get => Reviews.Count == 0 ? 0 : Reviews.Sum(x => x.Rate) / Reviews.Count; }
+        public int AverageRate { get => Reviews.Count == 0 || Reviews == null ? 0 : Reviews.Sum(x => x.Rate) / Reviews.Count; }
     }
 }
  

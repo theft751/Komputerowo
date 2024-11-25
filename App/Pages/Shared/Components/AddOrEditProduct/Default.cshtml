@@ -10,34 +10,37 @@
 {
     <input type="hidden" name="Id" value="@Model.Id"/>
 }
+<input type="hidden" name="OperationMode" value="@Model.OperationMode"/>
+<input type="hidden" name="Amount" value="@Model.Amount" />
+
 
 <div class="inputUnit">
-    <input name="Name" type="text" class="loginInput" placeholder="" value="@Model.OperationMode==OperationMode.Edit?Model.Name:""" required />
+    <input name="Name" type="text" class="loginInput" placeholder="" value="@Model.Name" required />
     <label for="Name" class="loginCaption">Nazwa</label><br />
 </div>
 
 <div class="inputUnit">
-    <input name="Producer" type="text" class="loginInput" placeholder="" value="@Model.Producer" required />
+    <input name="Producer" type="text" class="loginInput" placeholder="" value="@Model.Producer"" required />
     <label for="Producer" class="loginCaption">Producent</label><br />
 </div>
 
 <div class="inputUnit">
-    <textarea name="Description" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;"></textarea>
+    <textarea name="Description" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">@Model.Description</textarea>
     <label for="Description" class="loginCaption">Opis</label><br />
 </div>
 
 <div class="inputUnit">
-    <textarea name="AdditionalInfo" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;"></textarea>
+    <textarea name="AdditionalInfo" class="loginInput" placeholder="" style="resize: none; width: 100%; height: 100px;">@Model.AdditionalInfo</textarea>
     <label for="AdditionalInfo" class="loginCaption">Dodatkowe informacje</label><br />
 </div>
 
 <div class="inputUnit">
-    <input name="Color" type="text" class="loginInput" placeholder="" required />
+    <input name="Color" type="text" class="loginInput" placeholder="" value="@Model.Color" required />
     <label for="Color" class="loginCaption">Kolor</label><br />
 </div>
 
 <div class="inputUnit">
-    <input name="GuarantyTime" type="text" class="loginInput" placeholder="" required />
+    <input name="GuarantyTime" type="text" class="loginInput" placeholder="" value="@Model.GuarantyTime" required />
     <label for="GuarantyTime" class="loginCaption">Czas gwarancji (w miesiącach)</label><br />
 </div>
 
