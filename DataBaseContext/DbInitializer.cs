@@ -45,11 +45,11 @@ namespace DataBaseContext
                 }
                 catch (FileNotFoundException)
                 {
-                    throw new FileNotFoundException("Image file cannot be found");
+                    throw new FileNotFoundException("Json file cannot be found");
                 }
                 catch (FileLoadException)
                 {
-                    throw new FileLoadException("Image file cannot be loaded");
+                    throw new FileLoadException("Json file cannot be loaded");
                 }
                 catch (Exception)
                 {
@@ -67,9 +67,14 @@ namespace DataBaseContext
                 {
                     throw new Exception("Json deserialization failed");
                 }
+
+                //Converting bonusImageSeedingModels to BonusProductImages and mainImageSeedingModels to MainImages
+                ICollection <BonusProductImage> bonusProductImages = convertToBonusImage(bonusImageSeedingModels);
+
                 try
                 {
                     context.Cases.AddRange(cases);
+                    context.BonusProductImages.AddRange(bonusProductImages);
                     context.SaveChanges();
                 }
                 catch
@@ -86,7 +91,15 @@ namespace DataBaseContext
             {
                 try
                 {
-                    byte[] imageContent = File.ReadAllBytes($"{casesPath}\\{element.Path}");
+                    byte[] imageData = File.ReadAllBytes($"{casesPath}\\{element.Path}");
+                    bonusProductImages.Add(new BonusProductImage()
+                    {
+                        Id = element.Id,
+                        ProductId = element.ProductId,
+                        Data = imageData,
+                        Title = element.Title,
+                        Type = element.Type
+                    });
                 }
                 catch (FileNotFoundException) 
                 {
