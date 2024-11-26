@@ -69,12 +69,14 @@ namespace DataBaseContext
                 }
 
                 //Converting bonusImageSeedingModels to BonusProductImages and mainImageSeedingModels to MainImages
-                ICollection <BonusProductImage> bonusProductImages = convertToBonusImage(bonusImageSeedingModels);
+                ICollection <BonusProductImage> bonusProductImages = convertToBonusImages(bonusImageSeedingModels);
+                ICollection <MainProductImage> mainProductImages = convertToMainImages(mainImageSeedingModels);
 
                 try
                 {
                     context.Cases.AddRange(cases);
                     context.BonusProductImages.AddRange(bonusProductImages);
+                    context.MainProductImages.AddRange(mainProductImages);
                     context.SaveChanges();
                 }
                 catch
@@ -84,7 +86,7 @@ namespace DataBaseContext
             }
         }
 
-       static ICollection<BonusProductImage> convertToBonusImage(ICollection<BonusImageSeedingModel> bonusImageSeedingModels)
+       static ICollection<BonusProductImage> convertToBonusImages(ICollection<BonusImageSeedingModel> bonusImageSeedingModels)
         {
             ICollection<BonusProductImage> bonusProductImages = new List<BonusProductImage>();
             foreach(var element in bonusImageSeedingModels)
@@ -117,6 +119,40 @@ namespace DataBaseContext
             return bonusProductImages;
 
        }
+        static ICollection<MainProductImage> convertToMainImages(ICollection<MainImageSeedingModel> bonusImageSeedingModels)
+        {
+            ICollection<MainProductImage> mainProductImages = new List<MainProductImage>();
+            foreach (var element in bonusImageSeedingModels)
+            {
+                try
+                {
+                    byte[] imageData = File.ReadAllBytes($"{casesPath}\\{element.Path}");
+                    mainProductImages.Add(new MainProductImage()
+                    {
+                        Id = element.Id,
+                        Data = imageData,
+                        Title = element.Title,
+                        Type = element.Type
+                    });
+                }
+                catch (FileNotFoundException)
+                {
+                    throw new FileNotFoundException("Image file cannot be found");
+                }
+                catch (FileLoadException)
+                {
+                    throw new FileLoadException("Image file cannot be loaded");
+                }
+                catch (Exception)
+                {
+                    throw new FileLoadException("An unidentified problem has occurred");
+                }
+            }
+            return mainProductImages;
+
+        }
     }
 
 }
+
+
