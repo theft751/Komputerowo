@@ -1,4 +1,5 @@
-﻿using Domain.EntityModels.Main;
+﻿using Domain.AppModel;
+using Domain.EntityModels.Main;
 using Domain.EntityModels.Products.ComputerParts;
 using System;
 using System.Collections.Generic;
@@ -14,38 +15,95 @@ namespace DataBaseContext
     //This object initialize database with test data from json files
     public static class DbInitializer
     {
-        /*
-        const string casesPath = "/Testdata/json/Cases.json";
-        const string bonusImagesPath = "/Testdata/json/BonusImages.json"; 
-        const string mainImagesPath = "/Testdata/json/MainImage.json";
-            
+        //Path to Testdata folder
+        const string TestDataDirectoryPath = "C:\\Users\\Miłosz\\source\\repos\\PracaInzynierska\\DataBaseContext\\Testdata";
+        
+        const string casesPath = "json\\Cases.json";
+        const string bonusImagesPath = "json\\BonusImages.json"; 
+        const string mainImagesPath = "json\\MainImage.json";
+        
         public static void Seed(AppDbContext context)
         {
-            string casesJson;
-            string bonusImagesJson;
-            string mainImagesJson;
-
-            try
-            { 
-                casesJson = File.ReadAllText(casesPath);
-                bonusImagesJson = File.ReadAllText(bonusImagesPath);
-                mainImagesJson = File.ReadAllText(mainImagesPath);
-            }
-            catch {
-                throw new Exception("Cannot read file");
-            }
-
-            try
-            { 
-                ICollection<Case> cases = JsonSerializer.Deserialize<ICollection<Case>>(casesJson);
-            }
-            catch
+            if (context.Database.EnsureCreated())
             {
-                throw new Exception("Json deserialization failed");
-            }
+                //json strings
+                string casesJson;
+                string bonusImagesJson;
+                string mainImagesJson;
 
+                //Deserialized collections from json file declaration
+                ICollection<Case> cases;
+                ICollection<BonusImageSeedingModel> bonusImageSeedingModels;
+                ICollection<MainImageSeedingModel> mainImageSeedingModels;
+
+                //Reading data from json files
+                try
+                {
+                    casesJson = File.ReadAllText($"{TestDataDirectoryPath }\\{casesPath}");
+                    bonusImagesJson = File.ReadAllText(bonusImagesPath);
+                    mainImagesJson = File.ReadAllText(mainImagesPath);
+                }
+                catch (FileNotFoundException)
+                {
+                    throw new FileNotFoundException("Image file cannot be found");
+                }
+                catch (FileLoadException)
+                {
+                    throw new FileLoadException("Image file cannot be loaded");
+                }
+                catch (Exception)
+                {
+                    throw new FileLoadException("An unidentified problem has occurred");
+                }
+
+                //Deserializing json data
+                try
+                {
+                    cases = JsonSerializer.Deserialize<ICollection<Case>>(casesJson);
+                    bonusImageSeedingModels = JsonSerializer.Deserialize<ICollection<BonusImageSeedingModel>>(bonusImagesJson);
+                    mainImageSeedingModels = JsonSerializer.Deserialize<ICollection<MainImageSeedingModel>>(mainImagesJson);
+                }
+                catch
+                {
+                    throw new Exception("Json deserialization failed");
+                }
+                try
+                {
+                    context.Cases.AddRange(cases);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    throw new Exception("Adding test data to Database failed");
+                }
+            }
         }
-        */
+
+       static ICollection<BonusProductImage> convertToBonusImage(ICollection<BonusImageSeedingModel> bonusImageSeedingModels)
+        {
+            ICollection<BonusProductImage> bonusProductImages = new List<BonusProductImage>();
+            foreach(var element in bonusImageSeedingModels)
+            {
+                try
+                {
+                    byte[] imageContent = File.ReadAllBytes($"{casesPath}\\{element.Path}");
+                }
+                catch (FileNotFoundException) 
+                {
+                    throw new FileNotFoundException("Image file cannot be found");
+                }
+                catch (FileLoadException)
+                {
+                    throw new FileLoadException("Image file cannot be loaded");
+                }
+                catch (Exception)
+                {
+                    throw new FileLoadException("An unidentified problem has occurred");
+                }
+            }
+            return bonusProductImages;
+
+       }
     }
 
 }

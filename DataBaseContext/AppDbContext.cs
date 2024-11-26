@@ -115,6 +115,7 @@ namespace DataBaseContext
             //Admin account login: admin, password: admin
             using (SHA256 sha256 = SHA256.Create())
             {
+
                 //hashing password
                 byte[] hashBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes("admin"));
                 string hashedAdminPassword = Convert.ToBase64String(hashBytes);

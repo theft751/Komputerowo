@@ -28,19 +28,10 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-//using (var scope = app.Services.CreateScope())
-//{
-    //  try
-    //{
-    //var scopedContext = app.Services.GetRequiredService<AppDbContext>();
-    //scopedContext.Database.EnsureCreated();
-    //DbInitializer.Seed(scopedContext);
-    //    }
-    //catch
-    // {
-    //throw new Exception("Unable to initialize database");
-    //}
-//}
+AppDbContext appDbContext = app.Services.CreateScope().ServiceProvider.GetRequiredService<AppDbContext>();
+DbInitializer.Seed(appDbContext);
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
