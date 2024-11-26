@@ -20,7 +20,7 @@ namespace DataBaseContext
         
         const string casesPath = "json\\Cases.json";
         const string bonusImagesPath = "json\\BonusImages.json"; 
-        const string mainImagesPath = "json\\MainImage.json";
+        const string mainImagesPath = "json\\MainImages.json";
         
         public static void Seed(AppDbContext context)
         {
