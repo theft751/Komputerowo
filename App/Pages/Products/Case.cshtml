@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "/products/case/{productId?}/{pageNumber?}"
 @using Domain.EntityModels.Additional.Common
 @model App.Pages.Products.CaseModel
 @{
@@ -22,12 +22,13 @@
 <div class="container">
     <div class="row">
         <div class="col">
-
+            @HttpContext.Request.Path;
             <!--Display images of pruduct-->
             @await Component.InvokeAsync(
                 "ImagesArea", 
                 new 
-                { 
+                {
+                    requestPath = "/products/case",
                     bonusProductImagesId = Model.BonusProductImagesId, 
                     productId=Model.ProductId 
                 })

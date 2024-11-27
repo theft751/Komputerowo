@@ -9,13 +9,13 @@ using Domain.EntityModels.Products.ComputerParts;
 
 namespace App.Pages.Products
 {
-    public class CaseModel : ProductPageModel
+    public class CaseModel : ProductTemplatePageModel
     {
 
         public string MotherBoardFormats { get; set; }
 
         public string PowerSupplyFormat { get; set; }
-
+        public string RequestPath { get; set; }
 
 
         public CaseType CaseType { get; set; }
@@ -31,9 +31,14 @@ namespace App.Pages.Products
             MotherBoardFormats = Case.MotherBoardFormats;
             PowerSupplyFormat = Case.PowerSupplyFormat;
             CaseType = Case.CaseType;
-            
+
+
         }
 
+        public override IActionResult OnGet([FromRoute] int productId = 1, [FromRoute] int pageNumber = 1)
+        {
+            return base.OnGet(productId, pageNumber);
+        }
 
 
         public CaseModel(AppDbContext _context)

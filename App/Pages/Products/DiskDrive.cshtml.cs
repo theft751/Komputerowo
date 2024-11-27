@@ -8,7 +8,7 @@ using Domain.EntityModels.Additional.ComputerParts;
 
 namespace App.Pages.Products
 {
-    public class DiskDriveModel : ProductPageModel
+    public class DiskDriveModel : ProductTemplatePageModel
     {
         public int DiskSize { get; set; } = 0; //In GB
         public int ReadSpeed { get; set; } = 0; //In Mb/s
@@ -32,7 +32,7 @@ namespace App.Pages.Products
         }
 
 
-        DiskDriveModel(AppDbContext _context)
+        public DiskDriveModel(AppDbContext _context)
             : base(_context)
         {
         }

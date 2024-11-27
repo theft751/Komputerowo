@@ -6,7 +6,7 @@ using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.Products
 {
-    public class PowerSupplyModel : ProductPageModel
+    public class PowerSupplyModel : ProductTemplatePageModel
     {
         public int MaximalPower { get; set; } // In Watts
         public string Certyficate { get; set; }
@@ -14,7 +14,7 @@ namespace App.Pages.Products
         public string Efficiency { get; set; }
         public string Connectors { get; set; }
         public string PowerSupplyProtectorsFeatures { get; set; }
-        PowerSupplyModel(AppDbContext _context)
+        public PowerSupplyModel(AppDbContext _context)
             : base(_context)
         {
         }

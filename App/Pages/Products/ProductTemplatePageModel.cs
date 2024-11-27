@@ -16,7 +16,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace App.Pages.Products
 {
 
-    public abstract class ProductPageModel : PageModel
+    public abstract class ProductTemplatePageModel : PageModel
     {
         protected AppDbContext context { get; set; }
 
@@ -202,7 +202,7 @@ namespace App.Pages.Products
         }
 
 
-        public  IActionResult OnGet(int productId = 1, int pageNumber = 1)
+        public virtual IActionResult OnGet([FromRoute] int productId = 1, [FromRoute] int pageNumber = 1)
         {
             try
             {
@@ -267,7 +267,7 @@ namespace App.Pages.Products
             
         }
 
-        public ProductPageModel (AppDbContext _context)
+        public ProductTemplatePageModel (AppDbContext _context)
         {
             context = _context;
             

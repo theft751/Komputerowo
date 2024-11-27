@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace App.Pages.Products
 {
-    public class SmartphoneModel : ProductPageModel
+    public class SmartphoneModel : ProductTemplatePageModel
     {
         public string BackCamera { get; set; }
         public string FrontCamera { get; set; }
@@ -50,7 +50,7 @@ namespace App.Pages.Products
             FingPrinterReader = smartphone.FingPrinterReader;
         }
 
-        SmartphoneModel(AppDbContext _context)
+        public SmartphoneModel(AppDbContext _context)
             : base(_context)
         {
         }

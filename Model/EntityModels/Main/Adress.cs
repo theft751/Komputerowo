@@ -11,7 +11,6 @@ namespace Domain.EntityModels.Main
 {
     public class Adress
     {
-        [Key]
         public int Id { get; set; }
 
         public Voivodeship Voivodeship { get; set; }

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Domain.EntityModels.Main
@@ -17,7 +18,10 @@ namespace Domain.EntityModels.Main
         public int Id { get; set; }
         public string AdditionalInfo { get; set; }
         public string Color { get; set; }
+
+        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ProductType ProductType { get; set; } //dyscryminator
+
         public int Amount { get; set; }
 
 

@@ -10,7 +10,6 @@ namespace Domain.EntityModels.Main
 {
     public class Order
     {
-        [Key]
         public int Id { get; set; }
         public OrderStatus Status { get; set; }
 

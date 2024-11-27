@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 namespace App.Pages.Products
 {
-    public class ProcessorModel : ProductPageModel
+    public class ProcessorModel : ProductTemplatePageModel
     {
         public int Cores { get; set; } //Amount of cores
         public int Threads { get; set; }
@@ -39,7 +39,7 @@ namespace App.Pages.Products
             ProcessorSerie = processor.ProcessorSerie;
         }
 
-        ProcessorModel(AppDbContext _context)
+        public ProcessorModel(AppDbContext _context)
             : base(_context)
         {
         }

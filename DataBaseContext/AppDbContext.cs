@@ -26,7 +26,6 @@ namespace DataBaseContext
         public DbSet<MainProductImage> MainProductImages { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItem { get; set; }
-        public DbSet<Producer> Producers { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
 
@@ -52,6 +51,7 @@ namespace DataBaseContext
         public AppDbContext(DbContextOptions<AppDbContext> options)
 :        base(options)
         {
+
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -68,17 +68,22 @@ namespace DataBaseContext
                 .IsRequired().OnDelete(DeleteBehavior.Cascade);
 
             //Bonus Images Relation configuration
+
+
             modelBuilder
                 .Entity<Product>()
                 .HasMany(p=>p.BonusImages)
                 .WithOne(p=>p.Product)
-                .HasForeignKey(p=>p.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             //ProductType Dyscryminator to string Conversion
             modelBuilder.Entity<Product>()
                 .Property(p => p.ProductType)
                 .HasConversion<string>();
+
+            modelBuilder.Entity<Case>()
+            .Property(p => p.CaseType)
+            .HasConversion<string>();
 
             //Setting Discriminator values
             modelBuilder.Entity<Product>()

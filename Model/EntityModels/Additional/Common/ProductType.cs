@@ -8,6 +8,7 @@ namespace Domain.EntityModels.Additional.Common
 {
     public enum ProductType
     {
+
         //Computer parts
         PROCESSOR,
         GRAPHIC_CARD,

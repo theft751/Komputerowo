@@ -7,7 +7,7 @@ using Microsoft.CodeAnalysis;
 
 namespace App.Pages.Products
 {
-    public class MotherBoardModel : ProductPageModel
+    public class MotherBoardModel : ProductTemplatePageModel
     {
         public string Format { get; set; }
         public string ProcessorSocket { get; set; }
@@ -38,7 +38,7 @@ namespace App.Pages.Products
             SupportedProcessorFamilies = motherBoard.SupportedProcessorFamilies;
             RamSlots = motherBoard.RamSlots;
         }
-        MotherBoardModel(AppDbContext _context)
+        public MotherBoardModel(AppDbContext _context)
             : base(_context)
         {
         }

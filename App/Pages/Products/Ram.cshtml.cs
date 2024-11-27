@@ -6,7 +6,7 @@ using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.Products
 {
-    public class RamModel : ProductPageModel
+    public class RamModel : ProductTemplatePageModel
     {
         public int TotalSize { get => SizePerChips * ChipsAmount; }
         public int SizePerChips { get; set; } //Gb
@@ -14,7 +14,7 @@ namespace App.Pages.Products
         public int Frequency { get; set; }// MHz
         public bool Ligthing { get; set; }
         public string RamType { get; set; }
-        RamModel(AppDbContext _context)
+        public RamModel(AppDbContext _context)
             : base(_context)
         {
         }

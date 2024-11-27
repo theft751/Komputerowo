@@ -10,7 +10,6 @@ namespace Domain.EntityModels.Main
 {
     public class Review
     {
-        [Key]
         public int Id { get; set; }
         public string Text { get; set; }
         public DateTime ReleaseDate { get; set; }

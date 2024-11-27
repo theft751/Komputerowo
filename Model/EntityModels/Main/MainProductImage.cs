@@ -15,7 +15,7 @@ namespace Domain.EntityModels.Main
         public byte[] Data { get; set; }
 
         //Navigation property
-        public virtual Product Product { get; set; }
+        public virtual Product? Product { get; set; }
 
     }
 }

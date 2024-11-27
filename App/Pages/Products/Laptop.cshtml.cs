@@ -6,7 +6,7 @@ using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.Products
 {
-    public class LaptopModel : ProductPageModel
+    public class LaptopModel : ProductTemplatePageModel
     {
         public string Processor { get; set; }
         public int RamSize { get; set; }
@@ -42,7 +42,7 @@ namespace App.Pages.Products
             ScreenType = laptop.ScreenType;
             OperatingSystem = laptop.OperatingSystem;
         }
-        LaptopModel(AppDbContext _context)
+        public LaptopModel(AppDbContext _context)
             : base(_context)
         {
         }

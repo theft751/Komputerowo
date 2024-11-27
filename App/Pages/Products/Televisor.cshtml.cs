@@ -6,7 +6,7 @@ using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.Products
 {
-    public class TelevisorModel : ProductPageModel
+    public class TelevisorModel : ProductTemplatePageModel
     {
         public string Resolution { get; set; }
         public decimal ScreenDiagonal { get; set; } //inches
@@ -31,7 +31,7 @@ namespace App.Pages.Products
             hasSmartTv = telvisor.hasSmartTv;
             OperatingSystem = telvisor.OperatingSystem;
         }
-        TelevisorModel(AppDbContext _context)
+        public TelevisorModel(AppDbContext _context)
             : base(_context)
         {
         }

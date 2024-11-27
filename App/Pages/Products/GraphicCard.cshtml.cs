@@ -7,7 +7,7 @@ using Domain.EntityModels.Additional.ComputerParts;
 
 namespace App.Pages.Products
 {
-    public class GraphicCardModel : ProductPageModel
+    public class GraphicCardModel : ProductTemplatePageModel
     {
         public string Gpu { get; set; }
         public string GraphicCardSerie { get; set; }
@@ -36,12 +36,13 @@ namespace App.Pages.Products
             OutputTypes = graphicCard.OutputTypes;
             MemorySize = graphicCard.MemorySize;
             MemoryBus = graphicCard.MemoryBus;
+            MemoryBus = graphicCard.MemoryBus;
             CoreColck = graphicCard.CoreColck;
             MemoryClock = graphicCard.MemoryClock;
             Litghting = graphicCard.Litghting;
             RayTracing = graphicCard.RayTracing;
         }
-        GraphicCardModel(AppDbContext _context)
+        public GraphicCardModel(AppDbContext _context)
             : base(_context)
         {
         }

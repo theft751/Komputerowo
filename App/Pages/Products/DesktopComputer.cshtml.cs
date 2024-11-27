@@ -7,7 +7,7 @@ using Domain.EntityModels.Products.OtherDevices;
 
 namespace App.Pages.Products
 {
-    public class DesktopComputerModel : ProductPageModel
+    public class DesktopComputerModel : ProductTemplatePageModel
     {
         public string Processor { get; set; }
         public string Chipset { get; set; }
@@ -46,7 +46,7 @@ namespace App.Pages.Products
             OperatingSystem = desktopComuputer.OperatingSystem;
         }
 
-        DesktopComputerModel(AppDbContext _context)
+        public DesktopComputerModel(AppDbContext _context)
             : base(_context) { }
     }
 }
