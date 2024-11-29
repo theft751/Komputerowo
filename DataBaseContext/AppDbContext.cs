@@ -51,8 +51,8 @@ namespace DataBaseContext
         public AppDbContext(DbContextOptions<AppDbContext> options)
 :        base(options)
         {
-
         }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             /******************************
@@ -68,7 +68,7 @@ namespace DataBaseContext
                 .IsRequired().OnDelete(DeleteBehavior.Cascade);
 
             //Bonus Images Relation configuration
-
+            
 
             modelBuilder
                 .Entity<Product>()

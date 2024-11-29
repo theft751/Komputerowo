@@ -9,7 +9,7 @@ namespace Domain.EntityModels.Main
     public class BonusProductImage
     {
         public int Id { get; set; }
-        public string Title { get; set; }
+        public string Caption { get; set; }
         public string Type { get; set; }
         public byte[] Data { get; set; }
         

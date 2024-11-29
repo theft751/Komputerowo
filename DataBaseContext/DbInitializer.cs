@@ -18,16 +18,21 @@ namespace DataBaseContext
     public static class DbInitializer
     {
         //Path to Testdata folder
-        const string TestDataDirectoryPath = "C:\\Users\\Miłosz\\source\\repos\\PracaInzynierska\\DataBaseContext\\Testdata";
+        const string testDataDirectoryPath = "C:\\Users\\Miłosz\\source\\repos\\PracaInzynierska\\DataBaseContext\\Testdata";
         
         const string casesPath = "json\\Cases.json";
         const string desktopComputersPath = "json\\DesktopComputers.json";
         const string graphicCardsPath = "json\\GraphicCards.json";
         const string processorsPath = "json\\Processors.json";
+        const string motherboardsPath = "json\\MotherBoards.json";
+        const string ramsPath = "json\\Rams.json";
 
-        const string bonusImagesPath = "json\\BonusImages.json"; 
-        const string mainImagesPath = "json\\MainImages.json";
-        
+        const string caseImagesPath = "Images\\Case";
+        const string desktopComputerImagesPath = "Images\\DesktopComputer";
+        const string graphicCardImagesPath = "Images\\GraphicCard";
+        const string motherboardImagesPath = "Images\\Motherboard";
+        const string processorImagesPath = "Images\\Processor";
+        const string ramImagesPath = "Images\\Ram";
         
         public static void Seed(AppDbContext context)
         {
@@ -38,6 +43,8 @@ namespace DataBaseContext
                 string desktopComputersJson;
                 string processorsJson;
                 string graphicCardsJson;
+                string motherboardJson;
+                string ramsJson;
 
                 string bonusImagesJson;
                 string mainImagesJson;
@@ -49,94 +56,60 @@ namespace DataBaseContext
                 ICollection<DesktopComputer> desktopComputers;
                 ICollection<GraphicCard> graphicCards;
                 ICollection<Processor> processors;
+                ICollection<MotherBoard> motherboards;
+                ICollection<Ram> rams;
 
                 ICollection<BonusImageSeedingModel> bonusImageSeedingModels;
                 ICollection<MainImageSeedingModel> mainImageSeedingModels;
 
                 //Reading data from json files
-                try
-                {
-                    casesJson = File.ReadAllText($"{TestDataDirectoryPath }\\{casesPath}");
-                    desktopComputersJson = File.ReadAllText($"{TestDataDirectoryPath}\\{desktopComputersPath}");
-                    graphicCardsJson = File.ReadAllText($"{TestDataDirectoryPath}\\{graphicCardsPath}"); 
-                    processorsJson = File.ReadAllText($"{TestDataDirectoryPath}\\{processorsPath}"); 
 
-                    bonusImagesJson = File.ReadAllText($"{TestDataDirectoryPath}\\{bonusImagesPath}");
-                    mainImagesJson = File.ReadAllText($"{TestDataDirectoryPath}\\{mainImagesPath}");
+                casesJson = File.ReadAllText($"{testDataDirectoryPath}\\{casesPath}");
+                desktopComputersJson = File.ReadAllText($"{testDataDirectoryPath}\\{desktopComputersPath}");
+                graphicCardsJson = File.ReadAllText($"{testDataDirectoryPath}\\{graphicCardsPath}");
+                processorsJson = File.ReadAllText($"{testDataDirectoryPath}\\{processorsPath}");
+                motherboardJson = File.ReadAllText($"{testDataDirectoryPath}\\{motherboardsPath}");
+                ramsJson = File.ReadAllText($"{testDataDirectoryPath}\\{ramsPath}");
 
-                }
-                catch (FileNotFoundException)
-                {
-                    throw new FileNotFoundException("Json file cannot be found");
-                }
-                catch (FileLoadException)
-                {
-                    throw new FileLoadException("Json file cannot be loaded");
-                }
-                catch (Exception)
-                {
-                    throw new FileLoadException("An unidentified problem has occurred");
-                }
+                cases = JsonSerializer.Deserialize<ICollection<Case>>(casesJson);
+                desktopComputers = JsonSerializer.Deserialize<ICollection<DesktopComputer>>(desktopComputersJson);
+                graphicCards = JsonSerializer.Deserialize<ICollection<GraphicCard>>(graphicCardsJson);
+                processors = JsonSerializer.Deserialize<ICollection<Processor>>(processorsJson);
+                motherboards = JsonSerializer.Deserialize<ICollection<MotherBoard>>(motherboardJson);
+                rams = JsonSerializer.Deserialize<ICollection<Ram>>(ramsJson);
 
-                //Deserializing json data
-                //try
-                //{
-                    cases = JsonSerializer.Deserialize<ICollection<Case>>(casesJson);
-                    desktopComputers = JsonSerializer.Deserialize<ICollection<DesktopComputer>>(desktopComputersJson);
-                    graphicCards = JsonSerializer.Deserialize<ICollection<GraphicCard>>(graphicCardsJson);
-                    processors = JsonSerializer.Deserialize<ICollection<Processor>>(processorsJson);
-
-                bonusImageSeedingModels = JsonSerializer.Deserialize<ICollection<BonusImageSeedingModel>>(bonusImagesJson);
-                    mainImageSeedingModels = JsonSerializer.Deserialize<ICollection<MainImageSeedingModel>>(mainImagesJson);
-                //}
-                //catch
-                //{
-                    //throw new Exception("Json deserialization failed");
-                //}
-
-                //Converting bonusImageSeedingModels to BonusProductImages and mainImageSeedingModels to MainImages
-                ICollection <BonusProductImage> bonusProductImages = convertToBonusImages(bonusImageSeedingModels);
-                ICollection<MainProductImage> mainProductImages = convertToMainImages(mainImageSeedingModels);
 
                 //Open database connection for sql queries
                 context.Database.OpenConnection();
-                
-                //Adding MainProductsImages
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [MainProductImages] ON");
-                context.MainProductImages.AddRange(mainProductImages);
-                context.SaveChanges();
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [MainProductImages] OFF");
 
-                //Adding Rams
+                //Adding MainProductsImages
+                addMainImages(cases, caseImagesPath, context);
+                addMainImages(desktopComputers, desktopComputerImagesPath, context);
+                addMainImages(graphicCards, graphicCardImagesPath, context);
+                addMainImages(motherboards, motherboardImagesPath, context);
+                addMainImages(processors, processorImagesPath, context);
+                addMainImages(rams, ramImagesPath, context);
+
                 context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] ON");
-                context.Cases.AddRange(cases);
-                context.SaveChanges();
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] OFF");
 
                 //Adding DesktopComputers
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] ON");
+                context.Cases.AddRange(cases);
                 context.DesktopComputers.AddRange(desktopComputers);
-                context.SaveChanges();
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] OFF");
-
-                //Adding GraphicCards
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] ON");
                 context.GraphicCards.AddRange(graphicCards);
-                context.SaveChanges();
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] OFF");
-
-                //Adding Processors
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] ON");
                 context.Processors.AddRange(processors);
+                context.MotherBoards.AddRange(motherboards);
+                context.Rams.AddRange(rams);
                 context.SaveChanges();
 
                 context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] OFF");
 
                 //Adding BonusProductsImages
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [BonusProductImages] ON");
-                context.BonusProductImages.AddRange(bonusProductImages);
-                context.SaveChanges();
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [BonusProductImages] OFF");
+                addBonusImages(context.Cases, caseImagesPath, context);
+                addBonusImages(context.DesktopComputers, desktopComputerImagesPath, context); 
+                addBonusImages(context.GraphicCards, graphicCardImagesPath, context);
+                addBonusImages(context.MotherBoards, motherboardImagesPath, context);
+                addBonusImages(context.Processors, processorImagesPath, context);
+                addBonusImages(context.Rams, ramImagesPath, context);
 
                 //Close database connection for sql queries
                 context.Database.CloseConnection();
@@ -145,70 +118,55 @@ namespace DataBaseContext
             }
         }
 
-       static ICollection<BonusProductImage> convertToBonusImages(ICollection<BonusImageSeedingModel> bonusImageSeedingModels)
+        static void addBonusImages(IEnumerable<Product> products, string productImagePath, AppDbContext context)
         {
-            ICollection<BonusProductImage> bonusProductImages = new List<BonusProductImage>();
-            foreach(var element in bonusImageSeedingModels)
+            byte[] bonusImage1Data = File.ReadAllBytes($"{testDataDirectoryPath}\\{productImagePath}\\BonusImage1.png");
+            byte[] bonusImage2Data = File.ReadAllBytes($"{testDataDirectoryPath}\\{productImagePath}\\BonusImage2.png");
+            byte[] bonusImage3Data = File.ReadAllBytes($"{testDataDirectoryPath}\\{productImagePath}\\BonusImage3.png");
+            foreach (var product in products)
             {
-                try
+                BonusProductImage bonusProductImage1 = new()
                 {
-                    byte[] imageData = File.ReadAllBytes($"{TestDataDirectoryPath}\\{element.Path}");
-                    bonusProductImages.Add(new BonusProductImage()
-                    {
-                        Id = element.Id,
-                        ProductId = element.ProductId,
-                        Data = imageData,
-                        Title = element.Title,
-                        Type = element.Type
-                    });
-                }
-                catch (FileNotFoundException) 
+                    ProductId = product.Id,
+                    Data = bonusImage1Data,
+                    Caption = "BonusImage1",
+                    Type = "image/png"
+                };
+                BonusProductImage bonusProductImage2 = new()
                 {
-                    throw new FileNotFoundException("Image file cannot be found");
-                }
-                catch (FileLoadException)
+                    ProductId = product.Id,
+                    Data = bonusImage2Data,
+                    Caption = "BonusImage2",
+                    Type = "image/png"
+                };
+                BonusProductImage bonusProductImage3 = new()
                 {
-                    throw new FileLoadException("Image file cannot be loaded");
-                }
-                catch (Exception)
-                {
-                    throw new FileLoadException("An unidentified problem has occurred");
-                }
+                    ProductId = product.Id,
+                    Data = bonusImage3Data,
+                    Caption = "BonusImage2",
+                    Type = "image/png"
+                };
+                context.BonusProductImages.Add(bonusProductImage1);
+                context.BonusProductImages.Add(bonusProductImage2);
+                context.BonusProductImages.Add(bonusProductImage3);
             }
-            return bonusProductImages;
-
-       }
-        static ICollection<MainProductImage> convertToMainImages(ICollection<MainImageSeedingModel> bonusImageSeedingModels)
+            context.SaveChanges();
+        }
+        static void addMainImages (IEnumerable<Product> products, string productImagePath, AppDbContext context)
         {
-            ICollection<MainProductImage> mainProductImages = new List<MainProductImage>();
-            foreach (var element in bonusImageSeedingModels)
+            byte[] mainImageData = File.ReadAllBytes($"{testDataDirectoryPath}\\{productImagePath}\\MainImage.png");
+            foreach (var product in products)
             {
-                try
+                MainProductImage mainProductImage = new()
                 {
-                    byte[] imageData = File.ReadAllBytes($"{TestDataDirectoryPath}\\{element.Path}");
-                    mainProductImages.Add(new MainProductImage()
-                    {
-                        Id = element.Id,
-                        Data = imageData,
-                        Title = element.Title,
-                        Type = element.Type
-                    });
-                }
-                catch (FileNotFoundException)
-                {
-                    throw new FileNotFoundException("Image file cannot be found");
-                }
-                catch (FileLoadException)
-                {
-                    throw new FileLoadException("Image file cannot be loaded");
-                }
-                catch (Exception)
-                {
-                    throw new FileLoadException("An unidentified problem has occurred");
-                }
+                    Data = mainImageData,
+                    Caption = "MainImage",
+                    Type = "image/png"
+                };
+                context.Add(mainProductImage);
+                context.SaveChanges();
+                product.MainImageId = mainProductImage.Id;
             }
-            return mainProductImages;
-
         }
     }
 

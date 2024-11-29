@@ -64,7 +64,7 @@ namespace App.Pages.AdminPanel
             MainProductImage MainProductImage = new MainProductImage();
             product.MainImage = MainProductImage;
 
-            MainProductImage.Title = MainImage.FileName;
+            MainProductImage.Caption = MainImage.FileName;
             MainProductImage.Type = MainImage.ContentType;
             using (var memoryStream = new MemoryStream())
             {
@@ -76,7 +76,7 @@ namespace App.Pages.AdminPanel
             foreach (var image in BonusImages)
             {
                 BonusProductImage productImage = new BonusProductImage();
-                productImage.Title = image.Name;
+                productImage.Caption = image.Name;
                 productImage.Type = image.ContentType;
 
                 using (var memoryStream = new MemoryStream())

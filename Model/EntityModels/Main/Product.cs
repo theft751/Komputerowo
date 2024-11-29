@@ -19,7 +19,6 @@ namespace Domain.EntityModels.Main
         public string AdditionalInfo { get; set; }
         public string Color { get; set; }
 
-        [JsonConverter(typeof(JsonStringEnumConverter))]
         public ProductType ProductType { get; set; } //dyscryminator
 
         public int Amount { get; set; }

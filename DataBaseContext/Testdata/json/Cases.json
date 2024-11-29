@@ -6,17 +6,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Compact and durable case for gaming setups",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 24,
     "Name": "Phantom GX200",
     "Description": "High-performance gaming case with RGB lighting.",
     "Price": 99.99,
-    "Producer": "CoolerTech",
-    "MainImageId": 1,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolerTech"
   },
   {
     "Id": 2,
@@ -25,17 +20,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Ideal for small builds and compact spaces",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 8,
     "GuarantyTime": 12,
     "Name": "NanoBox 500",
     "Description": "Small form-factor case with great airflow.",
     "Price": 79.99,
-    "Producer": "NanoTech",
-    "MainImageId": 2,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "NanoTech"
   },
   {
     "Id": 3,
@@ -44,17 +34,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Spacious case for high-end setups",
     "Color": "Black and Red",
-    "ProductType": "Case",
     "Amount": 5,
     "GuarantyTime": 36,
     "Name": "MegaFrame X99",
     "Description": "Premium full tower case with tempered glass.",
     "Price": 149.99,
-    "Producer": "FrameX",
-    "MainImageId": 3,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "FrameX"
   },
   {
     "Id": 4,
@@ -63,17 +48,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Optimized for silent operation",
     "Color": "Gray",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 24,
     "Name": "SilentShield M1",
     "Description": "Mid-tower case with noise-dampening panels.",
     "Price": 89.99,
-    "Producer": "Silencio",
-    "MainImageId": 4,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "Silencio"
   },
   {
     "Id": 5,
@@ -82,17 +62,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Affordable and reliable",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 25,
     "GuarantyTime": 12,
     "Name": "BudgetBox T100",
     "Description": "Simple and effective tower case for home use.",
     "Price": 49.99,
-    "Producer": "BudgetBuilds",
-    "MainImageId": 5,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "BudgetBuilds"
   },
   {
     "Id": 6,
@@ -101,17 +76,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Designed for enthusiasts",
     "Color": "Black and Blue",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 36,
     "Name": "ProGamer XT",
     "Description": "Customizable full tower case with modular design.",
     "Price": 199.99,
-    "Producer": "GamerTech",
-    "MainImageId": 6,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GamerTech"
   },
   {
     "Id": 7,
@@ -120,17 +90,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Perfect for compact setups and portability",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 18,
     "Name": "CubeMini S7",
     "Description": "Compact cube case with excellent cooling.",
     "Price": 69.99,
-    "Producer": "CompactPC",
-    "MainImageId": 7,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CompactPC"
   },
   {
     "Id": 8,
@@ -139,17 +104,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Stylish design with tempered glass panel",
     "Color": "White and RGB",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "CrystalLite T200",
     "Description": "Elegant tower case with RGB lighting.",
     "Price": 119.99,
-    "Producer": "LumiTech",
-    "MainImageId": 8,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "LumiTech"
   },
   {
     "Id": 9,
@@ -158,17 +118,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Compact and versatile with great airflow",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 14,
     "GuarantyTime": 24,
     "Name": "AirFlow X300",
     "Description": "Mid tower case designed for maximum cooling.",
     "Price": 89.99,
-    "Producer": "CoolMaster",
-    "MainImageId": 9,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolMaster"
   },
   {
     "Id": 10,
@@ -177,17 +132,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Minimalistic design for small setups",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 12,
     "Name": "CubeLite C500",
     "Description": "Compact cube case with easy assembly.",
     "Price": 59.99,
-    "Producer": "LiteBuild",
-    "MainImageId": 10,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "LiteBuild"
   },
   {
     "Id": 11,
@@ -196,17 +146,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Maximum space for high-performance components",
     "Color": "Black and Green",
-    "ProductType": "Case",
     "Amount": 7,
     "GuarantyTime": 36,
     "Name": "Beast XL900",
     "Description": "Robust full tower case with high airflow.",
     "Price": 179.99,
-    "Producer": "MonsterGear",
-    "MainImageId": 11,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "MonsterGear"
   },
   {
     "Id": 12,
@@ -215,17 +160,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Quiet and efficient for office builds",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 25,
     "GuarantyTime": 12,
     "Name": "OfficeBox M2",
     "Description": "Elegant mini tower with noise-cancelling panels.",
     "Price": 69.99,
-    "Producer": "SilentPC",
-    "MainImageId": 12,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SilentPC"
   },
   {
     "Id": 13,
@@ -234,17 +174,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Durable and lightweight design",
     "Color": "Black and White",
-    "ProductType": "Case",
     "Amount": 30,
     "GuarantyTime": 24,
     "Name": "FlexiFrame T700",
     "Description": "Flexible and durable tower case for any setup.",
     "Price": 99.99,
-    "Producer": "FlexBuild",
-    "MainImageId": 13,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "FlexBuild"
   },
   {
     "Id": 14,
@@ -253,17 +188,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Premium build quality with RGB accents",
     "Color": "Black and Gold",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 24,
     "Name": "EliteFrame T900",
     "Description": "Stylish and robust tower case for professional builds.",
     "Price": 129.99,
-    "Producer": "ProBuild",
-    "MainImageId": 14,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "ProBuild"
   },
   {
     "Id": 15,
@@ -272,17 +202,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Compact yet powerful for gaming enthusiasts",
     "Color": "Red",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 18,
     "Name": "GameBox M3",
     "Description": "Mini tower case optimized for small form-factor gaming rigs.",
     "Price": 99.99,
-    "Producer": "GameMaster",
-    "MainImageId": 15,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GameMaster"
   },
   {
     "Id": 16,
@@ -291,17 +216,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Designed for water cooling setups",
     "Color": "White and Black",
-    "ProductType": "Case",
     "Amount": 6,
     "GuarantyTime": 36,
     "Name": "HydroTower F1",
     "Description": "Spacious full tower case with advanced cooling support.",
     "Price": 199.99,
-    "Producer": "CoolFlow",
-    "MainImageId": 16,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolFlow"
   },
   {
     "Id": 17,
@@ -310,17 +230,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Affordable option for everyday use",
     "Color": "Gray",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 12,
     "Name": "BasicTower X2",
     "Description": "Simple and practical mid tower case.",
     "Price": 49.99,
-    "Producer": "ValuePC",
-    "MainImageId": 17,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "ValuePC"
   },
   {
     "Id": 18,
@@ -329,17 +244,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Gaming-oriented with tempered glass side panel",
     "Color": "Blue and Black",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 24,
     "Name": "CrystalX T450",
     "Description": "Aesthetic tower case with customizable RGB lighting.",
     "Price": 109.99,
-    "Producer": "LightGear",
-    "MainImageId": 18,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "LightGear"
   },
   {
     "Id": 19,
@@ -348,17 +258,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Optimized for quiet operation with airflow control",
     "Color": "Black and Silver",
-    "ProductType": "Case",
     "Amount": 22,
     "GuarantyTime": 24,
     "Name": "SilentAir MT500",
     "Description": "Mid tower case with silent cooling technology.",
     "Price": 89.99,
-    "Producer": "QuietBuild",
-    "MainImageId": 19,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "QuietBuild"
   },
   {
     "Id": 20,
@@ -367,17 +272,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Portable and versatile design",
     "Color": "White and Blue",
-    "ProductType": "Case",
     "Amount": 16,
     "GuarantyTime": 18,
     "Name": "MiniCube C7",
     "Description": "Cube case perfect for compact setups.",
     "Price": 74.99,
-    "Producer": "MiniTech",
-    "MainImageId": 20,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "MiniTech"
   },
   {
     "Id": 21,
@@ -386,17 +286,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Spacious case for high-end components",
     "Color": "Black and Green",
-    "ProductType": "Case",
     "Amount": 9,
     "GuarantyTime": 36,
     "Name": "ExtremeTower X10",
     "Description": "High-performance full tower case with modular design.",
     "Price": 189.99,
-    "Producer": "ExtremeGear",
-    "MainImageId": 21,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "ExtremeGear"
   },
   {
     "Id": 22,
@@ -405,17 +300,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Compact case with efficient cable management",
     "Color": "Gray and Black",
-    "ProductType": "Case",
     "Amount": 14,
     "GuarantyTime": 12,
     "Name": "CablePro MT200",
     "Description": "Mini tower case with optimized cable routing.",
     "Price": 64.99,
-    "Producer": "CableTech",
-    "MainImageId": 22,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CableTech"
   },
   {
     "Id": 23,
@@ -424,17 +314,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Stylish design with tempered glass side panel",
     "Color": "Black with RGB",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "RGBGamer T600",
     "Description": "Gaming tower case with customizable lighting.",
     "Price": 119.99,
-    "Producer": "RGBMasters",
-    "MainImageId": 23,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "RGBMasters"
   },
   {
     "Id": 24,
@@ -443,17 +328,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Efficient cooling with mesh front panel",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 24,
     "Name": "AirMax MT300",
     "Description": "Mid tower case designed for optimal airflow.",
     "Price": 84.99,
-    "Producer": "AirCool",
-    "MainImageId": 24,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "AirCool"
   },
   {
     "Id": 25,
@@ -462,17 +342,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Small and lightweight for portable builds",
     "Color": "Silver and White",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 18,
     "Name": "CompactCube C300",
     "Description": "Minimalistic cube case with great functionality.",
     "Price": 69.99,
-    "Producer": "CubeCraft",
-    "MainImageId": 25,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CubeCraft"
   },
   {
     "Id": 26,
@@ -481,17 +356,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Premium design for water cooling systems",
     "Color": "Black and Blue",
-    "ProductType": "Case",
     "Amount": 8,
     "GuarantyTime": 36,
     "Name": "AquaTower F700",
     "Description": "Advanced full tower case for custom cooling.",
     "Price": 209.99,
-    "Producer": "AquaBuild",
-    "MainImageId": 26,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "AquaBuild"
   },
   {
     "Id": 27,
@@ -500,17 +370,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Compact and quiet for home or office",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 12,
     "Name": "QuietHome MT250",
     "Description": "Mini tower case with silent operation.",
     "Price": 54.99,
-    "Producer": "SilentWorks",
-    "MainImageId": 27,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SilentWorks"
   },
   {
     "Id": 28,
@@ -519,17 +384,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Stylish design with RGB fans included",
     "Color": "Black and Red",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "VisionRGB T800",
     "Description": "Tower case with customizable RGB lighting effects.",
     "Price": 129.99,
-    "Producer": "VisionTech",
-    "MainImageId": 28,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "VisionTech"
   },
   {
     "Id": 29,
@@ -538,17 +398,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Durable steel frame with tempered glass",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 25,
     "GuarantyTime": 24,
     "Name": "SteelGuard MT400",
     "Description": "Mid tower case with sleek design and durability.",
     "Price": 94.99,
-    "Producer": "SteelCore",
-    "MainImageId": 29,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SteelCore"
   },
   {
     "Id": 30,
@@ -557,17 +412,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Space-efficient and stylish for media centers",
     "Color": "White and Gray",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 18,
     "Name": "MediaCube C2",
     "Description": "Cube case optimized for small form-factor setups.",
     "Price": 64.99,
-    "Producer": "CubePro",
-    "MainImageId": 30,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CubePro"
   },
   {
     "Id": 31,
@@ -576,17 +426,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Designed for workstation builds",
     "Color": "Black and Silver",
-    "ProductType": "Case",
     "Amount": 5,
     "GuarantyTime": 36,
     "Name": "WorkStation F900",
     "Description": "Spacious full tower for professional builds.",
     "Price": 239.99,
-    "Producer": "WorkGear",
-    "MainImageId": 31,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "WorkGear"
   },
   {
     "Id": 32,
@@ -595,17 +440,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Perfect for quiet home PCs",
     "Color": "Matte Black",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 12,
     "Name": "HomeQuiet MT100",
     "Description": "Compact and quiet mini tower for everyday use.",
     "Price": 59.99,
-    "Producer": "SilentCore",
-    "MainImageId": 32,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SilentCore"
   },
   {
     "Id": 33,
@@ -614,17 +454,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Gaming-focused with RGB lighting",
     "Color": "Black and Green",
-    "ProductType": "Case",
     "Amount": 16,
     "GuarantyTime": 24,
     "Name": "GameTower T600",
     "Description": "Tower case with RGB fans for gaming builds.",
     "Price": 134.99,
-    "Producer": "GamerTech",
-    "MainImageId": 33,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GamerTech"
   },
   {
     "Id": 34,
@@ -633,17 +468,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "High airflow with front mesh panel",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 30,
     "GuarantyTime": 24,
     "Name": "AirFlow MT600",
     "Description": "Mid tower case with excellent cooling options.",
     "Price": 89.99,
-    "Producer": "CoolAir",
-    "MainImageId": 34,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolAir"
   },
   {
     "Id": 35,
@@ -652,17 +482,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Ultra-compact and easy to assemble",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 18,
     "Name": "NanoCube C500",
     "Description": "Compact cube case for minimalist builds.",
     "Price": 59.99,
-    "Producer": "NanoTech",
-    "MainImageId": 35,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "NanoTech"
   },
   {
     "Id": 36,
@@ -671,17 +496,13 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Best-in-class cable management system",
     "Color": "Black and Red",
-    "ProductType": "Case",
     "Amount": 8,
     "GuarantyTime": 36,
     "Name": "ProTower F1200",
     "Description": "Full tower case for high-end workstation setups.",
     "Price": 249.99,
     "Producer": "ProGear",
-    "MainImageId": 36,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 36
   },
   {
     "Id": 37,
@@ -690,17 +511,13 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Compact design with tempered glass side panel",
     "Color": "Black and White",
-    "ProductType": "Case",
     "Amount": 22,
     "GuarantyTime": 12,
     "Name": "GlassMini MT350",
     "Description": "Mini tower case for stylish small builds.",
     "Price": 79.99,
     "Producer": "GlassTech",
-    "MainImageId": 37,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 37
   },
   {
     "Id": 38,
@@ -709,17 +526,13 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "RGB pre-installed fans with remote control",
     "Color": "Black with RGB accents",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "RGBTower T900",
     "Description": "Tower case with vibrant RGB lighting options.",
     "Price": 139.99,
     "Producer": "RGBSystems",
-    "MainImageId": 38,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 38
   },
   {
     "Id": 39,
@@ -728,17 +541,13 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Efficient airflow with dual front intake",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 24,
     "Name": "Breeze MT700",
     "Description": "Mid tower case designed for optimized cooling.",
     "Price": 89.99,
     "Producer": "CoolerWorld",
-    "MainImageId": 39,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 39
   },
   {
     "Id": 40,
@@ -747,17 +556,13 @@
     "CaseType": "Other",
     "AdditionalInfo": "Compact case with integrated handles",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 18,
     "Name": "CarryCube C300",
     "Description": "Portable cube case for on-the-go systems.",
     "Price": 74.99,
     "Producer": "PortableTech",
-    "MainImageId": 40,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 40
   },
   {
     "Id": 41,
@@ -766,17 +571,13 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "High-end design with advanced cooling support",
     "Color": "Matte Black",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 36,
     "Name": "EliteTower F1100",
     "Description": "Premium full tower case for enthusiasts.",
     "Price": 259.99,
     "Producer": "EliteBuilds",
-    "MainImageId": 41,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 41
   },
   {
     "Id": 42,
@@ -785,17 +586,13 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Compact, stylish, and affordable",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 25,
     "GuarantyTime": 12,
     "Name": "BudgetMini MT150",
     "Description": "Mini tower case perfect for budget builds.",
     "Price": 49.99,
     "Producer": "ValueGear",
-    "MainImageId": 42,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 42
   },
   {
     "Id": 43,
@@ -804,17 +601,13 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Tempered glass with RGB lighting included",
     "Color": "Black with Blue Highlights",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "BlueEdge T800",
     "Description": "Stylish tower case for gaming builds.",
     "Price": 129.99,
     "Producer": "EdgeTech",
-    "MainImageId": 43,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "MainImageId": 43
   },
   {
     "Id": 44,
@@ -823,17 +616,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Ideal for compact and quiet setups",
     "Color": "Black and White",
-    "ProductType": "Case",
     "Amount": 14,
     "GuarantyTime": 18,
     "Name": "SilentCube C200",
     "Description": "Cube case with noise-dampening panels.",
     "Price": 84.99,
-    "Producer": "SilentTech",
-    "MainImageId": 44,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SilentTech"
   },
   {
     "Id": 45,
@@ -842,17 +630,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Optimized for multi-GPU setups",
     "Color": "Black and Gold",
-    "ProductType": "Case",
     "Amount": 5,
     "GuarantyTime": 36,
     "Name": "GoldTower F1000",
     "Description": "Luxurious full tower case for professionals.",
     "Price": 299.99,
-    "Producer": "GoldGear",
-    "MainImageId": 45,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GoldGear"
   },
   {
     "Id": 46,
@@ -861,17 +644,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Simple and efficient design",
     "Color": "Gray",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 12,
     "Name": "ClassicMini MT200",
     "Description": "Mini tower case with clean aesthetics.",
     "Price": 59.99,
-    "Producer": "SimpleTech",
-    "MainImageId": 46,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SimpleTech"
   },
   {
     "Id": 47,
@@ -880,17 +658,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Advanced airflow control with customizable fans",
     "Color": "Black and Red",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "RedAir MT750",
     "Description": "Mid tower case with vibrant cooling options.",
     "Price": 94.99,
-    "Producer": "AirFlowPro",
-    "MainImageId": 47,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "AirFlowPro"
   },
   {
     "Id": 48,
@@ -899,17 +672,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Tempered glass panel with RGB fans included",
     "Color": "White and Black",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 24,
     "Name": "Vision T900",
     "Description": "Stylish tower case with RGB integration.",
     "Price": 139.99,
-    "Producer": "VisionBuilds",
-    "MainImageId": 48,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "VisionBuilds"
   },
   {
     "Id": 49,
@@ -918,17 +686,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Minimalist design with premium materials",
     "Color": "Silver and Black",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 18,
     "Name": "PremiumCube C400",
     "Description": "Cube case for high-end compact builds.",
     "Price": 99.99,
-    "Producer": "PremiumTech",
-    "MainImageId": 49,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "PremiumTech"
   },
   {
     "Id": 50,
@@ -937,17 +700,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Designed for extreme overclocking setups",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 6,
     "GuarantyTime": 36,
     "Name": "OverClock F1500",
     "Description": "Full tower case for extreme performance builds.",
     "Price": 349.99,
-    "Producer": "ExtremeGear",
-    "MainImageId": 50,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "ExtremeGear"
   },
   {
     "Id": 51,
@@ -956,17 +714,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Tool-less design for easy assembly",
     "Color": "Matte Black",
-    "ProductType": "Case",
     "Amount": 25,
     "GuarantyTime": 24,
     "Name": "EasyBuild MT850",
     "Description": "Mid tower case with user-friendly assembly features.",
     "Price": 99.99,
-    "Producer": "EasyBuilds",
-    "MainImageId": 51,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "EasyBuilds"
   },
   {
     "Id": 52,
@@ -975,17 +728,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Ultra-compact design for portable setups",
     "Color": "Black and Red",
-    "ProductType": "Case",
     "Amount": 14,
     "GuarantyTime": 18,
     "Name": "NanoCube C600",
     "Description": "Portable cube case with premium cooling.",
     "Price": 69.99,
-    "Producer": "NanoGear",
-    "MainImageId": 52,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "NanoGear"
   },
   {
     "Id": 53,
@@ -994,17 +742,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Supports multiple liquid cooling systems",
     "Color": "Black and Blue",
-    "ProductType": "Case",
     "Amount": 7,
     "GuarantyTime": 36,
     "Name": "LiquidCool F2000",
     "Description": "Advanced full tower case for water-cooled setups.",
     "Price": 289.99,
-    "Producer": "LiquidPro",
-    "MainImageId": 53,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "LiquidPro"
   },
   {
     "Id": 54,
@@ -1013,17 +756,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Compact size with premium finish",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 22,
     "GuarantyTime": 12,
     "Name": "CompactMini MT300",
     "Description": "Stylish mini tower for home and office builds.",
     "Price": 54.99,
-    "Producer": "CompactTech",
-    "MainImageId": 54,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CompactTech"
   },
   {
     "Id": 55,
@@ -1032,17 +770,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Silent operation with sound-dampening panels",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "SilentTower T700",
     "Description": "Tower case designed for quiet performance.",
     "Price": 119.99,
-    "Producer": "SilenceCore",
-    "MainImageId": 55,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SilenceCore"
   },
   {
     "Id": 56,
@@ -1051,17 +784,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "RGB lighting with compact design",
     "Color": "White and RGB",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 18,
     "Name": "RGBNano C750",
     "Description": "Cube case with vibrant RGB integration.",
     "Price": 74.99,
-    "Producer": "RGBWorld",
-    "MainImageId": 56,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "RGBWorld"
   },
   {
     "Id": 57,
@@ -1070,17 +798,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Optimized for extreme gaming builds",
     "Color": "Black with Red Accents",
-    "ProductType": "Case",
     "Amount": 5,
     "GuarantyTime": 36,
     "Name": "GamingPro F3000",
     "Description": "High-performance full tower case.",
     "Price": 319.99,
-    "Producer": "GamePro",
-    "MainImageId": 57,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GamePro"
   },
   {
     "Id": 58,
@@ -1089,17 +812,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Elegant design with tempered glass",
     "Color": "Black and Silver",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 12,
     "Name": "GlassEdge MT400",
     "Description": "Mini tower case for modern builds.",
     "Price": 69.99,
-    "Producer": "GlassTech",
-    "MainImageId": 58,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GlassTech"
   },
   {
     "Id": 59,
@@ -1108,17 +826,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "High airflow and RGB lighting included",
     "Color": "Black with RGB Fans",
-    "ProductType": "Case",
     "Amount": 16,
     "GuarantyTime": 24,
     "Name": "RGBAirFlow MT800",
     "Description": "Stylish mid tower with airflow optimization.",
     "Price": 114.99,
-    "Producer": "CoolerCore",
-    "MainImageId": 59,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolerCore"
   },
   {
     "Id": 60,
@@ -1127,17 +840,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Premium materials with excellent cooling support",
     "Color": "Black and White",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 24,
     "Name": "ProTower T950",
     "Description": "High-end tower case for professional builds.",
     "Price": 139.99,
-    "Producer": "ProBuilds",
-    "MainImageId": 60,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "ProBuilds"
   },
   {
     "Id": 61,
@@ -1146,17 +854,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Supports liquid cooling with advanced cable management",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 36,
     "Name": "EliteCool F2500",
     "Description": "Full tower case for high-performance and cooling systems.",
     "Price": 399.99,
-    "Producer": "EliteCooling",
-    "MainImageId": 61,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "EliteCooling"
   },
   {
     "Id": 62,
@@ -1165,17 +868,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Compact design for space-saving builds",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 22,
     "GuarantyTime": 18,
     "Name": "SpaceSaver C800",
     "Description": "Compact and efficient cube case with clean aesthetics.",
     "Price": 84.99,
-    "Producer": "CompactLabs",
-    "MainImageId": 62,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CompactLabs"
   },
   {
     "Id": 63,
@@ -1184,17 +882,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Integrated fan controller and LED lighting",
     "Color": "Black and Blue",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 24,
     "Name": "BlueCore MT550",
     "Description": "Mid tower with LED lighting for gaming setups.",
     "Price": 109.99,
-    "Producer": "CoreTech",
-    "MainImageId": 63,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoreTech"
   },
   {
     "Id": 64,
@@ -1203,17 +896,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Perfect for small form factor gaming rigs",
     "Color": "Black and Green",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 18,
     "Name": "GreenCube C500",
     "Description": "Compact case with modern design and cooling features.",
     "Price": 69.99,
-    "Producer": "GreenTech",
-    "MainImageId": 64,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GreenTech"
   },
   {
     "Id": 65,
@@ -1222,17 +910,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Water-cooling support and superior airflow design",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 8,
     "GuarantyTime": 36,
     "Name": "AirMax F3500",
     "Description": "High-performance full tower with liquid cooling support.",
     "Price": 429.99,
-    "Producer": "MaxTech",
-    "MainImageId": 65,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "MaxTech"
   },
   {
     "Id": 66,
@@ -1241,17 +924,12 @@
     "CaseType": "MiniTower",
     "AdditionalInfo": "Efficient design for budget-conscious builds",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 25,
     "GuarantyTime": 12,
     "Name": "BudgetCore MT150",
     "Description": "Affordable mini tower case for compact builds.",
     "Price": 49.99,
-    "Producer": "BudgetLabs",
-    "MainImageId": 66,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "BudgetLabs"
   },
   {
     "Id": 67,
@@ -1260,17 +938,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Elegant design with tempered glass panel",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 17,
     "GuarantyTime": 24,
     "Name": "PureWhite T600",
     "Description": "Elegant tower case with premium features.",
     "Price": 119.99,
-    "Producer": "PureTech",
-    "MainImageId": 67,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "PureTech"
   },
   {
     "Id": 68,
@@ -1279,17 +952,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Large internal space for high-end builds",
     "Color": "Black and White",
-    "ProductType": "Case",
     "Amount": 9,
     "GuarantyTime": 36,
     "Name": "BigBuild F4000",
     "Description": "Spacious full tower case with plenty of room for expansion.",
     "Price": 359.99,
-    "Producer": "BigGear",
-    "MainImageId": 68,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "BigGear"
   },
   {
     "Id": 69,
@@ -1298,17 +966,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Compact design with high airflow",
     "Color": "Black and RGB",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 18,
     "Name": "RGBBox C900",
     "Description": "Small form-factor case with vibrant RGB integration.",
     "Price": 79.99,
-    "Producer": "RGBTech",
-    "MainImageId": 69,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "RGBTech"
   },
   {
     "Id": 70,
@@ -1317,17 +980,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Tempered glass with a sleek RGB front panel",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 24,
     "Name": "SleekRGB MT400",
     "Description": "Stylish mid tower case with cutting-edge RGB technology.",
     "Price": 139.99,
-    "Producer": "SleekDesign",
-    "MainImageId": 70,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "SleekDesign"
   },
   {
     "Id": 71,
@@ -1336,17 +994,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Optimized airflow and customizable cooling",
     "Color": "Black with Red Accents",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 36,
     "Name": "AirMax F4000 Pro",
     "Description": "Full tower with customizable airflow and cooling options.",
     "Price": 459.99,
-    "Producer": "CoolTech",
-    "MainImageId": 71,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolTech"
   },
   {
     "Id": 72,
@@ -1355,17 +1008,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Top-mounted I/O panel and USB 3.0 support",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 30,
     "GuarantyTime": 24,
     "Name": "TechMaster MT500",
     "Description": "Mid tower case with modern connectivity features.",
     "Price": 89.99,
-    "Producer": "TechMaster",
-    "MainImageId": 72,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "TechMaster"
   },
   {
     "Id": 73,
@@ -1374,17 +1022,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Compact design for mini-PCs and HTPCs",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 18,
     "Name": "MiniBox C350",
     "Description": "Space-saving cube case for compact computing setups.",
     "Price": 64.99,
-    "Producer": "MiniTech",
-    "MainImageId": 73,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "MiniTech"
   },
   {
     "Id": 74,
@@ -1393,17 +1036,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Advanced cable management and RGB support",
     "Color": "Black with RGB",
-    "ProductType": "Case",
     "Amount": 11,
     "GuarantyTime": 36,
     "Name": "RGBBuild F3000",
     "Description": "Full tower case for enthusiasts with RGB features.",
     "Price": 359.99,
-    "Producer": "RGBInnovations",
-    "MainImageId": 74,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "RGBInnovations"
   },
   {
     "Id": 75,
@@ -1412,17 +1050,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Compact with space for high-end graphics cards",
     "Color": "Gunmetal Gray",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 24,
     "Name": "CompactPower MT600",
     "Description": "Mid tower with space-saving design and expansion options.",
     "Price": 129.99,
-    "Producer": "CompactLabs",
-    "MainImageId": 75,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CompactLabs"
   },
   {
     "Id": 76,
@@ -1431,17 +1064,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Tool-less design for easy setup",
     "Color": "Red",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 12,
     "Name": "ToolBox C200",
     "Description": "Compact and tool-less cube case for simple builds.",
     "Price": 54.99,
-    "Producer": "BoxTech",
-    "MainImageId": 76,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "BoxTech"
   },
   {
     "Id": 77,
@@ -1450,17 +1078,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Integrated cable management system for neat builds",
     "Color": "Matte Black",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 24,
     "Name": "NeatBuild MT400",
     "Description": "Mid tower with cable management for clean builds.",
     "Price": 99.99,
-    "Producer": "NeatSystems",
-    "MainImageId": 77,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "NeatSystems"
   },
   {
     "Id": 78,
@@ -1469,17 +1092,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Optimized airflow with pre-installed fans",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 36,
     "Name": "AirForce F5500",
     "Description": "Full tower designed for maximum airflow and cooling.",
     "Price": 499.99,
-    "Producer": "CoolingForce",
-    "MainImageId": 78,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolingForce"
   },
   {
     "Id": 79,
@@ -1488,17 +1106,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Tempered glass with RGB fans",
     "Color": "Black with RGB Fans",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 24,
     "Name": "RGBCore MT450",
     "Description": "Mid tower case with beautiful RGB lighting.",
     "Price": 139.99,
-    "Producer": "CoreTech",
-    "MainImageId": 79,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoreTech"
   },
   {
     "Id": 80,
@@ -1507,17 +1120,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Designed for mini gaming setups",
     "Color": "Black with Blue",
-    "ProductType": "Case",
     "Amount": 16,
     "GuarantyTime": 18,
     "Name": "GamingCube C300",
     "Description": "Compact cube case with ample space for gaming components.",
     "Price": 79.99,
-    "Producer": "GamingLabs",
-    "MainImageId": 80,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "GamingLabs"
   },
   {
     "Id": 81,
@@ -1526,17 +1134,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Extreme cooling capabilities with modular design",
     "Color": "Black with Silver",
-    "ProductType": "Case",
     "Amount": 9,
     "GuarantyTime": 36,
     "Name": "ExtremeCooling F6000",
     "Description": "Full tower with modular cooling features and supreme airflow.",
     "Price": 599.99,
-    "Producer": "XtremeTech",
-    "MainImageId": 81,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "XtremeTech"
   },
   {
     "Id": 82,
@@ -1545,17 +1148,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Spacious interior with tempered glass side panel",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 15,
     "GuarantyTime": 24,
     "Name": "TempGlass MT750",
     "Description": "Mid tower with premium tempered glass panel and efficient airflow.",
     "Price": 139.99,
-    "Producer": "TempSystems",
-    "MainImageId": 82,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "TempSystems"
   },
   {
     "Id": 83,
@@ -1564,17 +1162,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Compact with versatile storage options",
     "Color": "Red and Black",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 12,
     "Name": "RedBox C100",
     "Description": "Space-efficient cube case with excellent storage and cooling options.",
     "Price": 69.99,
-    "Producer": "BoxTech",
-    "MainImageId": 83,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "BoxTech"
   },
   {
     "Id": 84,
@@ -1583,17 +1176,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Airflow-optimized with side mesh panels",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 13,
     "GuarantyTime": 24,
     "Name": "AirflowPro MT300",
     "Description": "Mid tower optimized for airflow with side mesh panels and pre-installed fans.",
     "Price": 119.99,
-    "Producer": "AirTech",
-    "MainImageId": 84,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "AirTech"
   },
   {
     "Id": 85,
@@ -1602,17 +1190,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Extensive cooling support for high-end components",
     "Color": "Black and Red",
-    "ProductType": "Case",
     "Amount": 10,
     "GuarantyTime": 36,
     "Name": "TurboFrost F7000",
     "Description": "Full tower case with top-tier cooling support and sleek design.",
     "Price": 499.99,
-    "Producer": "TurboSystems",
-    "MainImageId": 85,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "TurboSystems"
   },
   {
     "Id": 86,
@@ -1621,17 +1204,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Optimized for extreme overclocking setups",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 8,
     "GuarantyTime": 36,
     "Name": "OverclockMaster F8500",
     "Description": "Designed for extreme cooling and overclocking performance.",
     "Price": 799.99,
-    "Producer": "OverclockSystems",
-    "MainImageId": 86,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "OverclockSystems"
   },
   {
     "Id": 87,
@@ -1640,17 +1218,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Mini case with customizable RGB lighting",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 20,
     "GuarantyTime": 18,
     "Name": "MiniLight C200",
     "Description": "Mini case with RGB lighting to suit small gaming builds.",
     "Price": 79.99,
-    "Producer": "LightTech",
-    "MainImageId": 87,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "LightTech"
   },
   {
     "Id": 88,
@@ -1659,17 +1232,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Excellent cable management options and cooling",
     "Color": "Black and White",
-    "ProductType": "Case",
     "Amount": 9,
     "GuarantyTime": 24,
     "Name": "CableMaster F9000",
     "Description": "Full tower with optimized cable management and cooling.",
     "Price": 399.99,
-    "Producer": "MasterSystems",
-    "MainImageId": 88,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "MasterSystems"
   },
   {
     "Id": 89,
@@ -1678,17 +1246,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Mesh front panel for maximum airflow",
     "Color": "Silver",
-    "ProductType": "Case",
     "Amount": 25,
     "GuarantyTime": 12,
     "Name": "MaxAir MT200",
     "Description": "Mid tower with mesh front panel for airflow optimization.",
     "Price": 89.99,
-    "Producer": "MaxSystems",
-    "MainImageId": 89,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "MaxSystems"
   },
   {
     "Id": 90,
@@ -1697,17 +1260,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Sleek and compact design with great ventilation",
     "Color": "Black and Red",
-    "ProductType": "Case",
     "Amount": 18,
     "GuarantyTime": 18,
     "Name": "CompactAir C150",
     "Description": "Sleek cube case designed for airflow and compact gaming setups.",
     "Price": 69.99,
-    "Producer": "AirTech",
-    "MainImageId": 90,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "AirTech"
   },
   {
     "Id": 91,
@@ -1716,17 +1274,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Modular design with advanced cooling solutions",
     "Color": "Black with Green",
-    "ProductType": "Case",
     "Amount": 5,
     "GuarantyTime": 36,
     "Name": "ModCooler F1000",
     "Description": "Full tower with modular design and premium cooling system.",
     "Price": 699.99,
-    "Producer": "ModTech",
-    "MainImageId": 91,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "ModTech"
   },
   {
     "Id": 92,
@@ -1735,17 +1288,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Tool-less installation and cable management",
     "Color": "Gray",
-    "ProductType": "Case",
     "Amount": 16,
     "GuarantyTime": 24,
     "Name": "EasyBuild MT300",
     "Description": "Mid tower with tool-less design and great cable management.",
     "Price": 99.99,
-    "Producer": "EasyTech",
-    "MainImageId": 92,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "EasyTech"
   },
   {
     "Id": 93,
@@ -1754,17 +1302,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Compact case with great cooling and airflow",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 14,
     "GuarantyTime": 18,
     "Name": "WhiteBox C150",
     "Description": "Compact cube case with efficient cooling and airflow.",
     "Price": 69.99,
-    "Producer": "BoxSystems",
-    "MainImageId": 93,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "BoxSystems"
   },
   {
     "Id": 94,
@@ -1773,17 +1316,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Optimal airflow with large front mesh panel",
     "Color": "Black with White",
-    "ProductType": "Case",
     "Amount": 22,
     "GuarantyTime": 24,
     "Name": "FlowMaster MT450",
     "Description": "Mid tower optimized for airflow with large front mesh panel.",
     "Price": 129.99,
-    "Producer": "FlowSystems",
-    "MainImageId": 94,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "FlowSystems"
   },
   {
     "Id": 95,
@@ -1792,17 +1330,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Superior cable management and expanded cooling capacity",
     "Color": "Gunmetal",
-    "ProductType": "Case",
     "Amount": 6,
     "GuarantyTime": 36,
     "Name": "CoolMaster F9500",
     "Description": "Full tower with exceptional cable management and cooling capacity.",
     "Price": 749.99,
-    "Producer": "CoolTech",
-    "MainImageId": 95,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CoolTech"
   },
   {
     "Id": 96,
@@ -1811,17 +1344,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Modern design with tempered glass panels and RGB fans",
     "Color": "Black",
-    "ProductType": "Case",
     "Amount": 17,
     "GuarantyTime": 24,
     "Name": "RGBPro MT550",
     "Description": "Mid tower with sleek tempered glass panels and RGB fans.",
     "Price": 159.99,
-    "Producer": "ProSystems",
-    "MainImageId": 96,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "ProSystems"
   },
   {
     "Id": 97,
@@ -1830,17 +1358,12 @@
     "CaseType": "Other",
     "AdditionalInfo": "Ultra-compact with great expansion options",
     "Color": "Black with Red",
-    "ProductType": "Case",
     "Amount": 19,
     "GuarantyTime": 12,
     "Name": "CompactMaster C500",
     "Description": "Compact cube case with great expansion and cooling potential.",
     "Price": 79.99,
-    "Producer": "CompactPro",
-    "MainImageId": 97,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CompactPro"
   },
   {
     "Id": 98,
@@ -1849,17 +1372,12 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Optimized airflow with removable dust filters",
     "Color": "White",
-    "ProductType": "Case",
     "Amount": 12,
     "GuarantyTime": 24,
     "Name": "CleanAir MT200",
     "Description": "Mid tower with optimal airflow and removable dust filters.",
     "Price": 119.99,
-    "Producer": "CleanTech",
-    "MainImageId": 98,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "CleanTech"
   },
   {
     "Id": 99,
@@ -1868,17 +1386,12 @@
     "CaseType": "BigTower",
     "AdditionalInfo": "Massive cooling support with triple radiator mounting",
     "Color": "Black with Silver",
-    "ProductType": "Case",
     "Amount": 7,
     "GuarantyTime": 36,
     "Name": "XtremeFlow F11000",
     "Description": "Full tower designed for massive cooling with triple radiator support.",
     "Price": 899.99,
-    "Producer": "XtremeSystems",
-    "MainImageId": 99,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "XtremeSystems"
   },
   {
     "Id": 100,
@@ -1887,16 +1400,11 @@
     "CaseType": "MidiTower",
     "AdditionalInfo": "Sleek design with tempered glass and RGB lighting",
     "Color": "Black and Blue",
-    "ProductType": "Case",
     "Amount": 30,
     "GuarantyTime": 24,
     "Name": "RGBElite MT800",
     "Description": "Mid tower with sleek design, tempered glass, and RGB lighting.",
     "Price": 169.99,
-    "Producer": "EliteTech",
-    "MainImageId": 100,
-    "BonusImages": [],
-    "OrderItems": [],
-    "Reviews": []
+    "Producer": "EliteTech"
   }
 ]

@@ -10,7 +10,7 @@ namespace Domain.EntityModels.Main
     public class MainProductImage
     {
         public int Id { get; set; }
-        public string Title { get; set; }
+        public string Caption { get; set; }
         public string Type { get; set; }
         public byte[] Data { get; set; }
 
