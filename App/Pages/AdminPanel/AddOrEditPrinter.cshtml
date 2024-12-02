@@ -1,0 +1,52 @@
+﻿@page
+@model App.Pages.AdminPanel.AddOrEditPrinterModel
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj drukarkę</h2>
+
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
+
+        <div class="inputUnit">
+            <input asp-for="Destination" type="text" class="loginInput" placeholder="" required />
+            <label for="Destination" class="loginCaption">Przeznaczenie</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="MonochromaticPrintingSpeed" type="number" class="loginInput" placeholder="" required />
+            <label for="MonochromaticPrintingSpeed" class="loginCaption">Prdkosc drukowania w trybie monochromatycznym(stron na sekunde)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="PrintTechnology" type="text" class="loginInput" placeholder="" required />
+            <label for="PrintTechnology" class="loginCaption">Technologia drukowania(laserowa, atramentowa itp.)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="MaxPrintingResolution" type="text" class="loginInput" placeholder="" required />
+            <label for="MaxPrintingResolution" class="loginCaption">Maksymalna rozdzielczosc druku</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="SupportedMediaTypes" type="text" class="loginInput" placeholder="" required />
+            <label for="SupportedMediaTypes" class="loginCaption">Obslugiwane typy nosnika</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="SupportedMediaFormats" type="text" class="loginInput" placeholder="" required />
+            <label for="SupportedMediaFormats" class="loginCaption">Obslugiwane formaty nosnika(A4, A5 itp.)</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Connectivity" type="text" class="loginInput" placeholder="" required />
+            <label for="Connectivity" class="loginCaption">Łączność</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <label for="DuplexPrinting">Drukowanie obustronne/label><br />
+            <input asp-for="DuplexPrinting" />
+        </div>
+
+    </div>
+</form>

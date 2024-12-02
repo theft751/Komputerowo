@@ -26,6 +26,15 @@ namespace DataBaseContext
         const string processorsPath = "json\\Processors.json";
         const string motherboardsPath = "json\\MotherBoards.json";
         const string ramsPath = "json\\Rams.json";
+        const string laptopsPath = "json\\Laptops.json";
+        const string powerSuppliesPath = "json\\PowerSupplies.json";
+        const string diskDrivesPath = "json\\DiskDrives.json";
+        const string smartphonesPath = "json\\Smartphones.json";
+        const string televisorsPath = "json\\Televisors.json";
+        const string monitorsPath = "json\\Monitors.json";
+        const string mousesPath = "json\\Mouses.json";
+        const string keyboardsPath = "json\\Keyboards.json";
+        const string printersPath = "json\\Printers.json";
 
         const string caseImagesPath = "Images\\Case";
         const string desktopComputerImagesPath = "Images\\DesktopComputer";
@@ -33,54 +42,53 @@ namespace DataBaseContext
         const string motherboardImagesPath = "Images\\Motherboard";
         const string processorImagesPath = "Images\\Processor";
         const string ramImagesPath = "Images\\Ram";
-        
+        const string laptopImagesPath = "Images\\Laptop";
+        const string powerSupplyImagesPath = "Images\\PowerSupply";
+        const string diskDrivesImagesPath = "Images\\DiskDrive";
+        const string smartphoneImagesPath = "Images\\Smartphone";
+        const string televisorImagesPath = "Images\\Televisor";
+        const string monitorImagesPath = "Images\\Monitor";
+        const string mouseImagesPath = "Images\\Mouse";
+        const string keyboardImagesPath = "Images\\Keyboard";
+        const string printerImagesPath = "Images\\Printer";
+
         public static void Seed(AppDbContext context)
         {
             if (context.Database.EnsureCreated())
             {
                 //json strings
-                string casesJson;
-                string desktopComputersJson;
-                string processorsJson;
-                string graphicCardsJson;
-                string motherboardJson;
-                string ramsJson;
+                string casesJson = File.ReadAllText($"{testDataDirectoryPath}\\{casesPath}"); ;
+                string desktopComputersJson = File.ReadAllText($"{testDataDirectoryPath}\\{desktopComputersPath}"); ;
+                string processorsJson = File.ReadAllText($"{testDataDirectoryPath}\\{graphicCardsPath}");
+                string graphicCardsJson = File.ReadAllText($"{testDataDirectoryPath}\\{processorsPath}");
+                string motherboardJson = File.ReadAllText($"{testDataDirectoryPath}\\{motherboardsPath}");
+                string ramsJson = File.ReadAllText($"{testDataDirectoryPath}\\{ramsPath}");
+                string laptopsJson = File.ReadAllText($"{testDataDirectoryPath}\\{laptopsPath}");
+                string powerSuppliesJson = File.ReadAllText($"{testDataDirectoryPath}\\{powerSuppliesPath}");
+                string diskDrivesJson = File.ReadAllText($"{testDataDirectoryPath}\\{diskDrivesPath}");
+                string smartphonesJson = File.ReadAllText($"{testDataDirectoryPath}\\{smartphonesPath}");
+                string televisorsJson = File.ReadAllText($"{testDataDirectoryPath}\\{televisorsPath}");
+                string monitorsJson = File.ReadAllText($"{testDataDirectoryPath}\\{monitorsPath}");
+                string mousesJson = File.ReadAllText($"{testDataDirectoryPath}\\{mousesPath}");
+                string keyboardsJson = File.ReadAllText($"{testDataDirectoryPath}\\{keyboardsPath}");
+                string printersJson = File.ReadAllText($"{testDataDirectoryPath}\\{printersPath}");
 
-                string bonusImagesJson;
-                string mainImagesJson;
-                
-
-
-                //Deserialized collections from json file declaration
-                ICollection<Case> cases;
-                ICollection<DesktopComputer> desktopComputers;
-                ICollection<GraphicCard> graphicCards;
-                ICollection<Processor> processors;
-                ICollection<MotherBoard> motherboards;
-                ICollection<Ram> rams;
-
-                ICollection<BonusImageSeedingModel> bonusImageSeedingModels;
-                ICollection<MainImageSeedingModel> mainImageSeedingModels;
-
-                //Reading data from json files
-
-                casesJson = File.ReadAllText($"{testDataDirectoryPath}\\{casesPath}");
-                desktopComputersJson = File.ReadAllText($"{testDataDirectoryPath}\\{desktopComputersPath}");
-                graphicCardsJson = File.ReadAllText($"{testDataDirectoryPath}\\{graphicCardsPath}");
-                processorsJson = File.ReadAllText($"{testDataDirectoryPath}\\{processorsPath}");
-                motherboardJson = File.ReadAllText($"{testDataDirectoryPath}\\{motherboardsPath}");
-                ramsJson = File.ReadAllText($"{testDataDirectoryPath}\\{ramsPath}");
-
-                cases = JsonSerializer.Deserialize<ICollection<Case>>(casesJson);
-                desktopComputers = JsonSerializer.Deserialize<ICollection<DesktopComputer>>(desktopComputersJson);
-                graphicCards = JsonSerializer.Deserialize<ICollection<GraphicCard>>(graphicCardsJson);
-                processors = JsonSerializer.Deserialize<ICollection<Processor>>(processorsJson);
-                motherboards = JsonSerializer.Deserialize<ICollection<MotherBoard>>(motherboardJson);
-                rams = JsonSerializer.Deserialize<ICollection<Ram>>(ramsJson);
-
-
-                //Open database connection for sql queries
-                context.Database.OpenConnection();
+                //Deserialized collections from json files
+                ICollection<Case> cases = JsonSerializer.Deserialize<ICollection<Case>>(casesJson);
+                ICollection<DesktopComputer> desktopComputers = JsonSerializer.Deserialize<ICollection<DesktopComputer>>(desktopComputersJson);
+                ICollection<GraphicCard> graphicCards = JsonSerializer.Deserialize<ICollection<GraphicCard>>(graphicCardsJson);
+                ICollection<Processor> processors = JsonSerializer.Deserialize<ICollection<Processor>>(processorsJson);
+                ICollection<MotherBoard> motherboards = JsonSerializer.Deserialize<ICollection<MotherBoard>>(motherboardJson);
+                ICollection<Ram> rams = JsonSerializer.Deserialize<ICollection<Ram>>(ramsJson);
+                ICollection<Laptop> laptops = JsonSerializer.Deserialize<ICollection<Laptop>>(laptopsJson);
+                ICollection<PowerSupply> powerSupplies = JsonSerializer.Deserialize<ICollection<PowerSupply>>(powerSuppliesJson);
+                ICollection<DiskDrive> diskDrives = JsonSerializer.Deserialize<ICollection<DiskDrive>>(diskDrivesJson);
+                ICollection<Smartphone> smartphones = JsonSerializer.Deserialize<ICollection<Smartphone>>(smartphonesJson);
+                ICollection<Televisor> televisors = JsonSerializer.Deserialize<ICollection<Televisor>>(televisorsJson);
+                ICollection<MonitorScreen> monitors = JsonSerializer.Deserialize<ICollection<MonitorScreen>>(monitorsJson);
+                ICollection<Mouse> mouses = JsonSerializer.Deserialize<ICollection<Mouse>>(mousesJson);
+                ICollection<Keyboard> keyboards = JsonSerializer.Deserialize<ICollection<Keyboard>>(keyboardsJson);
+                ICollection<Printer> printers = JsonSerializer.Deserialize<ICollection<Printer>>(printersJson);
 
                 //Adding MainProductsImages
                 addMainImages(cases, caseImagesPath, context);
@@ -89,19 +97,34 @@ namespace DataBaseContext
                 addMainImages(motherboards, motherboardImagesPath, context);
                 addMainImages(processors, processorImagesPath, context);
                 addMainImages(rams, ramImagesPath, context);
+                addMainImages(laptops, laptopImagesPath, context);
+                addMainImages(powerSupplies, powerSupplyImagesPath, context);
+                addMainImages(diskDrives, diskDrivesImagesPath, context);
+                addMainImages(smartphones, smartphoneImagesPath, context);
+                addMainImages(televisors, televisorImagesPath, context);
+                addMainImages(monitors, monitorImagesPath, context);
+                addMainImages(mouses, mouseImagesPath, context);
+                addMainImages(keyboards, keyboardImagesPath, context);
+                addMainImages(printers, printerImagesPath, context);
 
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] ON");
-
-                //Adding DesktopComputers
+                //Adding Products
                 context.Cases.AddRange(cases);
                 context.DesktopComputers.AddRange(desktopComputers);
                 context.GraphicCards.AddRange(graphicCards);
                 context.Processors.AddRange(processors);
                 context.MotherBoards.AddRange(motherboards);
                 context.Rams.AddRange(rams);
+                context.Laptops.AddRange(laptops);
+                context.PowerSupplies.AddRange(powerSupplies);
+                context.DiskDrives.AddRange(diskDrives);
+                context.Smartphones.AddRange(smartphones);
+                context.Televisors.AddRange(televisors);
+                context.Monitors.AddRange(monitors);
+                context.Mouses.AddRange(mouses);
+                context.Keyboards.AddRange(keyboards);
+                context.Printers.AddRange(printers);  
                 context.SaveChanges();
 
-                context.Database.ExecuteSqlRaw($"SET IDENTITY_INSERT [Products] OFF");
 
                 //Adding BonusProductsImages
                 addBonusImages(context.Cases, caseImagesPath, context);
@@ -110,11 +133,15 @@ namespace DataBaseContext
                 addBonusImages(context.MotherBoards, motherboardImagesPath, context);
                 addBonusImages(context.Processors, processorImagesPath, context);
                 addBonusImages(context.Rams, ramImagesPath, context);
-
-                //Close database connection for sql queries
-                context.Database.CloseConnection();
-
-
+                addBonusImages(context.Laptops, laptopImagesPath, context);
+                addBonusImages(context.PowerSupplies, powerSupplyImagesPath, context);
+                addBonusImages(context.DiskDrives, diskDrivesImagesPath, context);
+                addBonusImages(context.Smartphones, smartphoneImagesPath, context);
+                addBonusImages(context.Televisors, televisorImagesPath, context);
+                addBonusImages(context.Monitors, monitorImagesPath, context);
+                addBonusImages(context.Mouses, mouseImagesPath, context);
+                addBonusImages(context.Keyboards, keyboardImagesPath, context);
+                addBonusImages(context.Printers, printerImagesPath, context);
             }
         }
 
@@ -143,7 +170,7 @@ namespace DataBaseContext
                 {
                     ProductId = product.Id,
                     Data = bonusImage3Data,
-                    Caption = "BonusImage2",
+                    Caption = "BonusImage3",
                     Type = "image/png"
                 };
                 context.BonusProductImages.Add(bonusProductImage1);

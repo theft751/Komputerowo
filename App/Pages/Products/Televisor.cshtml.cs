@@ -13,7 +13,7 @@ namespace App.Pages.Products
         public int ScreenRefreshRate { get; set; } //Hz
 
         public string ExternalPorts { get; set; }
-        public bool hasSmartTv { get; set; }
+        public bool HasSmartTv { get; set; }
         public string OperatingSystem { get; set; }
         protected override void initializeEssentialProductProperties(int productId)
         {
@@ -28,7 +28,7 @@ namespace App.Pages.Products
             ScreenRefreshRate = telvisor.ScreenRefreshRate;
 
             ExternalPorts = telvisor.ExternalPorts;
-            hasSmartTv = telvisor.hasSmartTv;
+            HasSmartTv = telvisor.HasSmartTv;
             OperatingSystem = telvisor.OperatingSystem;
         }
         public TelevisorModel(AppDbContext _context)

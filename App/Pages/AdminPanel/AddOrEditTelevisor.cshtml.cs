@@ -43,7 +43,7 @@ namespace App.Pages.AdminPanel
             product.ScreenDiagonal = ScreenDiagonal;
             product.ScreenRefreshRate = ScreenRefreshRate;
             product.ExternalPorts = ExternalPorts;
-            product.hasSmartTv = hasSmartTv; 
+            product.HasSmartTv = hasSmartTv; 
             product.OperatingSystem = OperatingSystem;
             
             if(OperationMode == OperationMode.Add) context.Products.Add(product);
@@ -61,7 +61,7 @@ namespace App.Pages.AdminPanel
             ScreenDiagonal = product.ScreenDiagonal;
             ScreenRefreshRate = product.ScreenRefreshRate;
             ExternalPorts = product.ExternalPorts;
-            hasSmartTv = product.hasSmartTv;
+            hasSmartTv = product.HasSmartTv;
             OperatingSystem = product.OperatingSystem;
 
             setProductEssentialPropertiesOnEdit(id);

@@ -68,7 +68,7 @@ namespace App.Pages
                 {
                     try
                     {
-                        Adress adress = new Adress();
+                        UserAdress adress = new UserAdress();
                         adress.PostCode = postCode;
                         adress.Voivodeship = voivodeship;
                         adress.Town = town;

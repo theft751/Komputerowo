@@ -1,6 +1,5 @@
 [
   {
-    "Id": 134,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 10,
@@ -22,7 +21,6 @@
     "RayTracing": true
   },
   {
-    "Id": 135,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 5,
@@ -44,7 +42,6 @@
     "RayTracing": true
   },
   {
-    "Id": 136,
     "AdditionalInfo": "",
     "Color": "Silver",
     "Amount": 8,
@@ -66,7 +63,6 @@
     "RayTracing": true
   },
   {
-    "Id": 137,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 15,
@@ -88,7 +84,6 @@
     "RayTracing": true
   },
   {
-    "Id": 138,
     "AdditionalInfo": "",
     "Color": "White",
     "Amount": 3,
@@ -110,7 +105,6 @@
     "RayTracing": true
   },
   {
-    "Id": 139,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 10,
@@ -132,7 +126,6 @@
     "RayTracing": false
   },
   {
-    "Id": 140,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 4,
@@ -154,7 +147,6 @@
     "RayTracing": false
   },
   {
-    "Id": 141,
     "AdditionalInfo": "",
     "Color": "Silver",
     "Amount": 2,
@@ -176,7 +168,6 @@
     "RayTracing": true
   },
   {
-    "Id": 142,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 12,
@@ -198,7 +189,6 @@
     "RayTracing": false
   },
   {
-    "Id": 143,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 9,
@@ -220,7 +210,6 @@
     "RayTracing": true
   },
   {
-    "Id": 144,
     "AdditionalInfo": "",
     "Color": "Silver",
     "Amount": 6,
@@ -242,7 +231,6 @@
     "RayTracing": true
   },
   {
-    "Id": 145,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 7,
@@ -264,7 +252,6 @@
     "RayTracing": false
   },
   {
-    "Id": 146,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 12,
@@ -286,7 +273,6 @@
     "RayTracing": true
   },
   {
-    "Id": 147,
     "AdditionalInfo": "",
     "Color": "Silver",
     "Amount": 10,
@@ -308,7 +294,6 @@
     "RayTracing": false
   },
   {
-    "Id": 148,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 4,
@@ -330,7 +315,6 @@
     "RayTracing": true
   },
   {
-    "Id": 149,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 8,
@@ -352,7 +336,6 @@
     "RayTracing": true
   },
   {
-    "Id": 150,
     "AdditionalInfo": "",
     "Color": "White",
     "Amount": 5,
@@ -374,7 +357,6 @@
     "RayTracing": true
   },
   {
-    "Id": 151,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 10,
@@ -396,7 +378,6 @@
     "RayTracing": true
   },
   {
-    "Id": 152,
     "AdditionalInfo": "",
     "Color": "Silver",
     "Amount": 15,
@@ -418,7 +399,6 @@
     "RayTracing": false
   },
   {
-    "Id": 153,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 18,
@@ -440,7 +420,6 @@
     "RayTracing": true
   },
   {
-    "Id": 154,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 8,
@@ -462,7 +441,6 @@
     "RayTracing": true
   },
   {
-    "Id": 155,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 5,
@@ -484,7 +462,6 @@
     "RayTracing": true
   },
   {
-    "Id": 156,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 4,
@@ -506,7 +483,6 @@
     "RayTracing": false
   },
   {
-    "Id": 157,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 6,
@@ -528,7 +504,6 @@
     "RayTracing": false
   },
   {
-    "Id": 158,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 9,
@@ -550,7 +525,6 @@
     "RayTracing": true
   },
   {
-    "Id": 159,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 12,
@@ -572,7 +546,6 @@
     "RayTracing": false
   },
   {
-    "Id": 160,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 7,
@@ -594,7 +567,6 @@
     "RayTracing": true
   },
   {
-    "Id": 161,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 10,
@@ -616,7 +588,6 @@
     "RayTracing": true
   },
   {
-    "Id": 162,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 12,
@@ -638,7 +609,6 @@
     "RayTracing": false
   },
   {
-    "Id": 163,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 9,
@@ -660,7 +630,6 @@
     "RayTracing": true
   },
   {
-    "Id": 164,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 11,
@@ -682,7 +651,6 @@
     "RayTracing": false
   },
   {
-    "Id": 165,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 6,
@@ -704,7 +672,6 @@
     "RayTracing": true
   },
   {
-    "Id": 166,
     "AdditionalInfo": "",
     "Color": "Silver",
     "Amount": 13,
@@ -726,7 +693,6 @@
     "RayTracing": true
   },
   {
-    "Id": 167,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 8,
@@ -748,7 +714,6 @@
     "RayTracing": true
   },
   {
-    "Id": 168,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 15,
@@ -770,7 +735,6 @@
     "RayTracing": true
   },
   {
-    "Id": 169,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 6,
@@ -792,7 +756,6 @@
     "RayTracing": false
   },
   {
-    "Id": 170,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 8,
@@ -814,7 +777,6 @@
     "RayTracing": true
   },
   {
-    "Id": 171,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 5,
@@ -836,7 +798,6 @@
     "RayTracing": false
   },
   {
-    "Id": 172,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 4,
@@ -858,7 +819,6 @@
     "RayTracing": false
   },
   {
-    "Id": 173,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 7,
@@ -880,7 +840,6 @@
     "RayTracing": true
   },
   {
-    "Id": 174,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 9,
@@ -902,7 +861,6 @@
     "RayTracing": true
   },
   {
-    "Id": 175,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 12,
@@ -924,7 +882,6 @@
     "RayTracing": true
   },
   {
-    "Id": 176,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 10,
@@ -946,7 +903,6 @@
     "RayTracing": true
   },
   {
-    "Id": 177,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 14,
@@ -968,7 +924,6 @@
     "RayTracing": true
   },
   {
-    "Id": 178,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 18,
@@ -990,7 +945,6 @@
     "RayTracing": true
   },
   {
-    "Id": 179,
     "AdditionalInfo": "",
     "Color": "Black",
     "Amount": 11,

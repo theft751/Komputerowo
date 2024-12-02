@@ -15,7 +15,7 @@ namespace Domain.EntityModels.Main
 
         //Navigation properties
 
-        public virtual Adress Adress { get; set; }
+        public virtual OrderAdress Adress { get; set; }
         public int AdressId { get; set; }
 
         public virtual ICollection<OrderItem> Items { get; set; }

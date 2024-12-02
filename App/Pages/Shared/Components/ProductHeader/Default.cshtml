@@ -6,18 +6,21 @@
     string editLink = "/AdminPanel/";
     switch (Model.ProductType)
     {
-        case ProductType.CASE: editLink += $"AddOrEditCase?id={Model.ProductId}"; break;
-        case ProductType.DESKTOP_COMPUTER: editLink += $"AddOrEditDesktopComputer?id={Model.ProductId}"; break;
-        case ProductType.DISK_DRIVE: editLink += $"AddOrEditDiskDrive?id={Model.ProductId}"; break;
-        case ProductType.GRAPHIC_CARD: editLink += $"AddOrEditGraphicCard?id={Model.ProductId}"; break;
-        case ProductType.LAPTOP: editLink += $"AddOrEditLaptop?id={Model.ProductId}"; break;
-        case ProductType.MOTHERBOARD: editLink += $"AddOrEditMotherboard?id={Model.ProductId}"; break;
-        case ProductType.POWER_SUPPLY: editLink += $"AddOrEditPowerSupply?id={Model.ProductId}"; break;
-        case ProductType.PROCESSOR: editLink += $"AddOrEditProcessor?id={Model.ProductId}"; break;
-        case ProductType.RAM: editLink += $"AddOrEditRam?id={Model.ProductId}"; break;
-        case ProductType.SMARTPHONE: editLink += $"AddOrEditSmartphone?id={Model.ProductId}"; break;
-        case ProductType.TELEVISOR: editLink += $"AddOrEditTelevisor?id={Model.ProductId}"; break;
-
+        case ProductType.Case: editLink += "AddOrEditCase"; break;
+        case ProductType.DesktopComputer: editLink += "AddOrEditDesktopComputer"; break;
+        case ProductType.DiskDrive: editLink += "AddOrEditDiskDrive"; break;
+        case ProductType.GraphicCard: editLink += "AddOrEditGraphicCard"; break;
+        case ProductType.Laptop: editLink += "AddOrEditLaptop"; break;
+        case ProductType.Motherboard: editLink += "AddOrEditMotherboard"; break;
+        case ProductType.PowerSupply: editLink += "AddOrEditPowerSupply"; break;
+        case ProductType.Processor: editLink += "AddOrEditProcessor"; break;
+        case ProductType.Ram: editLink += "AddOrEditRam"; break;
+        case ProductType.Smartphone: editLink += "AddOrEditSmartphone"; break;
+        case ProductType.Televisor: editLink += "AddOrEditTelevisor"; break;
+        case ProductType.Monitor: editLink += "AddOrEditMonitor"; break;
+        case ProductType.Mouse: editLink += "AddOrEditMouse"; break;
+        case ProductType.Keyboard: editLink += "AddOrEditKeyboard"; break;
+        case ProductType.Printer: editLink += "AddOrEditPrinter"; break;
     }
 }
 <div class="d-flex justify-content-center align-items-center mb-5">
@@ -95,38 +98,50 @@
             Kategoria: 
             @switch (Model.ProductType)
             {
-                case ProductType.CASE:
+                case ProductType.Case:
                     <span>Obudowy komputera</span>
                     break;
-                case ProductType.DESKTOP_COMPUTER:
+                case ProductType.DesktopComputer:
                     <span>Komputery stacjonarne</span>
                     break;
-                case ProductType.DISK_DRIVE:
+                case ProductType.DiskDrive:
                     <span>Dyski</span>
                     break;
-                case ProductType.GRAPHIC_CARD:
+                case ProductType.GraphicCard:
                     <span>Karty graficzne</span>
                     break;
-                case ProductType.LAPTOP:
+                case ProductType.Laptop:
                     <span>Laptopy</span>
                     break;
-                case ProductType.MOTHERBOARD:
+                case ProductType.Motherboard:
                     <span>Płyty główne</span>
                     break;
-                case ProductType.POWER_SUPPLY:
+                case ProductType.PowerSupply:
                     <span>Zasilacze</span>
                     break;
-                case ProductType.PROCESSOR:
+                case ProductType.Processor:
                     <span>Procesory</span>
                     break;
-                case ProductType.RAM:
+                case ProductType.Ram:
                     <span>Pamięci RAM</span>
                     break;
-                case ProductType.SMARTPHONE:
+                case ProductType.Smartphone:
                     <span>Smartfony</span>
                     break;
-                case ProductType.TELEVISOR:
+                case ProductType.Televisor:
                     <span>Pamięci RAM</span>
+                    break;
+                case ProductType.Monitor:
+                    <span>Monitory</span>
+                    break;
+                case ProductType.Mouse:
+                    <span>Myszki</span>
+                    break;
+                case ProductType.Keyboard:
+                    <span>Klawiatury</span>
+                    break;
+                case ProductType.Printer:
+                    <span>Drukarki</span>
                     break;
             }
         </div>
@@ -137,16 +152,12 @@
         <div>
             @if (Context.Session.GetInt32("isUserAdmin") == 1)
             {
-                switch(Model.ProductType)
-                {
-                    case ProductType.CASE:
-                        <form method="get" action="/AdminPanel/AddOrEditCase">
-                            <input type="hidden" value="Edit" name="handler"/>
-                            <input type="hidden" value="@Model.ProductId" name="id" />
-                            <button type="submit" class="narrowButton">Edytuj</button>
-                        </form>
-                    break;
-                }
+                <form method="get" action="@editLink">
+                    <input type="hidden" value="Edit" name="handler" />
+                    <input type="hidden" value="@Model.ProductId" name="id" />
+                    <button type="submit" class="narrowButton">Edytuj</button>
+                </form>
+
             }
         </div>
     </div>

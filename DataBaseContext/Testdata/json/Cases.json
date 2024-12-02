@@ -1,6 +1,5 @@
 [
   {
-    "Id": 1,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -14,7 +13,6 @@
     "Producer": "CoolerTech"
   },
   {
-    "Id": 2,
     "MotherBoardFormats": "Mini-ITX, ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "MiniTower",
@@ -28,7 +26,6 @@
     "Producer": "NanoTech"
   },
   {
-    "Id": 3,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -42,7 +39,6 @@
     "Producer": "FrameX"
   },
   {
-    "Id": 4,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -56,7 +52,6 @@
     "Producer": "Silencio"
   },
   {
-    "Id": 5,
     "MotherBoardFormats": "ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -70,7 +65,6 @@
     "Producer": "BudgetBuilds"
   },
   {
-    "Id": 6,
     "MotherBoardFormats": "E-ATX, ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -84,7 +78,6 @@
     "Producer": "GamerTech"
   },
   {
-    "Id": 7,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -98,7 +91,6 @@
     "Producer": "CompactPC"
   },
   {
-    "Id": 8,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -112,7 +104,6 @@
     "Producer": "LumiTech"
   },
   {
-    "Id": 9,
     "MotherBoardFormats": "ATX, Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -126,7 +117,6 @@
     "Producer": "CoolMaster"
   },
   {
-    "Id": 10,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -140,7 +130,6 @@
     "Producer": "LiteBuild"
   },
   {
-    "Id": 11,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -154,7 +143,6 @@
     "Producer": "MonsterGear"
   },
   {
-    "Id": 12,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "MiniTower",
@@ -168,7 +156,6 @@
     "Producer": "SilentPC"
   },
   {
-    "Id": 13,
     "MotherBoardFormats": "ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -182,7 +169,6 @@
     "Producer": "FlexBuild"
   },
   {
-    "Id": 14,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -196,7 +182,6 @@
     "Producer": "ProBuild"
   },
   {
-    "Id": 15,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "MiniTower",
@@ -210,7 +195,6 @@
     "Producer": "GameMaster"
   },
   {
-    "Id": 16,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -224,7 +208,6 @@
     "Producer": "CoolFlow"
   },
   {
-    "Id": 17,
     "MotherBoardFormats": "Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -238,7 +221,6 @@
     "Producer": "ValuePC"
   },
   {
-    "Id": 18,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -252,7 +234,6 @@
     "Producer": "LightGear"
   },
   {
-    "Id": 19,
     "MotherBoardFormats": "ATX, Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -266,7 +247,6 @@
     "Producer": "QuietBuild"
   },
   {
-    "Id": 20,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -280,7 +260,6 @@
     "Producer": "MiniTech"
   },
   {
-    "Id": 21,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -294,7 +273,6 @@
     "Producer": "ExtremeGear"
   },
   {
-    "Id": 22,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -308,7 +286,6 @@
     "Producer": "CableTech"
   },
   {
-    "Id": 23,
     "MotherBoardFormats": "ATX, Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "Other",
@@ -322,7 +299,6 @@
     "Producer": "RGBMasters"
   },
   {
-    "Id": 24,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -336,7 +312,6 @@
     "Producer": "AirCool"
   },
   {
-    "Id": 25,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -350,7 +325,6 @@
     "Producer": "CubeCraft"
   },
   {
-    "Id": 26,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -364,7 +338,6 @@
     "Producer": "AquaBuild"
   },
   {
-    "Id": 27,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -378,7 +351,6 @@
     "Producer": "SilentWorks"
   },
   {
-    "Id": 28,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -392,7 +364,6 @@
     "Producer": "VisionTech"
   },
   {
-    "Id": 29,
     "MotherBoardFormats": "ATX, Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -406,7 +377,6 @@
     "Producer": "SteelCore"
   },
   {
-    "Id": 30,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -420,7 +390,6 @@
     "Producer": "CubePro"
   },
   {
-    "Id": 31,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -434,7 +403,6 @@
     "Producer": "WorkGear"
   },
   {
-    "Id": 32,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -448,7 +416,6 @@
     "Producer": "SilentCore"
   },
   {
-    "Id": 33,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -462,7 +429,6 @@
     "Producer": "GamerTech"
   },
   {
-    "Id": 34,
     "MotherBoardFormats": "ATX, Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -476,7 +442,6 @@
     "Producer": "CoolAir"
   },
   {
-    "Id": 35,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -490,7 +455,6 @@
     "Producer": "NanoTech"
   },
   {
-    "Id": 36,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -505,7 +469,6 @@
     "MainImageId": 36
   },
   {
-    "Id": 37,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -520,7 +483,6 @@
     "MainImageId": 37
   },
   {
-    "Id": 38,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -535,7 +497,6 @@
     "MainImageId": 38
   },
   {
-    "Id": 39,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -550,7 +511,6 @@
     "MainImageId": 39
   },
   {
-    "Id": 40,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -565,7 +525,6 @@
     "MainImageId": 40
   },
   {
-    "Id": 41,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -580,7 +539,6 @@
     "MainImageId": 41
   },
   {
-    "Id": 42,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -595,7 +553,6 @@
     "MainImageId": 42
   },
   {
-    "Id": 43,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -610,7 +567,6 @@
     "MainImageId": 43
   },
   {
-    "Id": 44,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -624,7 +580,6 @@
     "Producer": "SilentTech"
   },
   {
-    "Id": 45,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -638,7 +593,6 @@
     "Producer": "GoldGear"
   },
   {
-    "Id": 46,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -652,7 +606,6 @@
     "Producer": "SimpleTech"
   },
   {
-    "Id": 47,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -666,7 +619,6 @@
     "Producer": "AirFlowPro"
   },
   {
-    "Id": 48,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -680,7 +632,6 @@
     "Producer": "VisionBuilds"
   },
   {
-    "Id": 49,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -694,7 +645,6 @@
     "Producer": "PremiumTech"
   },
   {
-    "Id": 50,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -708,7 +658,6 @@
     "Producer": "ExtremeGear"
   },
   {
-    "Id": 51,
     "MotherBoardFormats": "ATX, Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -722,7 +671,6 @@
     "Producer": "EasyBuilds"
   },
   {
-    "Id": 52,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -736,7 +684,6 @@
     "Producer": "NanoGear"
   },
   {
-    "Id": 53,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -750,7 +697,6 @@
     "Producer": "LiquidPro"
   },
   {
-    "Id": 54,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -764,7 +710,6 @@
     "Producer": "CompactTech"
   },
   {
-    "Id": 55,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -778,7 +723,6 @@
     "Producer": "SilenceCore"
   },
   {
-    "Id": 56,
     "MotherBoardFormats": "Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -792,7 +736,6 @@
     "Producer": "RGBWorld"
   },
   {
-    "Id": 57,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -806,7 +749,6 @@
     "Producer": "GamePro"
   },
   {
-    "Id": 58,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -820,7 +762,6 @@
     "Producer": "GlassTech"
   },
   {
-    "Id": 59,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -834,7 +775,6 @@
     "Producer": "CoolerCore"
   },
   {
-    "Id": 60,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -848,7 +788,6 @@
     "Producer": "ProBuilds"
   },
   {
-    "Id": 61,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -862,7 +801,6 @@
     "Producer": "EliteCooling"
   },
   {
-    "Id": 62,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -876,7 +814,6 @@
     "Producer": "CompactLabs"
   },
   {
-    "Id": 63,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -890,7 +827,6 @@
     "Producer": "CoreTech"
   },
   {
-    "Id": 64,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -904,7 +840,6 @@
     "Producer": "GreenTech"
   },
   {
-    "Id": 65,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -918,7 +853,6 @@
     "Producer": "MaxTech"
   },
   {
-    "Id": 66,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MiniTower",
@@ -932,7 +866,6 @@
     "Producer": "BudgetLabs"
   },
   {
-    "Id": 67,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -946,7 +879,6 @@
     "Producer": "PureTech"
   },
   {
-    "Id": 68,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -960,7 +892,6 @@
     "Producer": "BigGear"
   },
   {
-    "Id": 69,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -974,7 +905,6 @@
     "Producer": "RGBTech"
   },
   {
-    "Id": 70,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -988,7 +918,6 @@
     "Producer": "SleekDesign"
   },
   {
-    "Id": 71,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1002,7 +931,6 @@
     "Producer": "CoolTech"
   },
   {
-    "Id": 72,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1016,7 +944,6 @@
     "Producer": "TechMaster"
   },
   {
-    "Id": 73,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1030,7 +957,6 @@
     "Producer": "MiniTech"
   },
   {
-    "Id": 74,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1044,7 +970,6 @@
     "Producer": "RGBInnovations"
   },
   {
-    "Id": 75,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1058,7 +983,6 @@
     "Producer": "CompactLabs"
   },
   {
-    "Id": 76,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1072,7 +996,6 @@
     "Producer": "BoxTech"
   },
   {
-    "Id": 77,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1086,7 +1009,6 @@
     "Producer": "NeatSystems"
   },
   {
-    "Id": 78,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1100,7 +1022,6 @@
     "Producer": "CoolingForce"
   },
   {
-    "Id": 79,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1114,7 +1035,6 @@
     "Producer": "CoreTech"
   },
   {
-    "Id": 80,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1128,7 +1048,6 @@
     "Producer": "GamingLabs"
   },
   {
-    "Id": 81,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1142,7 +1061,6 @@
     "Producer": "XtremeTech"
   },
   {
-    "Id": 82,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1156,7 +1074,6 @@
     "Producer": "TempSystems"
   },
   {
-    "Id": 83,
     "MotherBoardFormats": "Mini-ITX, Micro-ATX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1170,7 +1087,6 @@
     "Producer": "BoxTech"
   },
   {
-    "Id": 84,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1184,7 +1100,6 @@
     "Producer": "AirTech"
   },
   {
-    "Id": 85,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1198,7 +1113,6 @@
     "Producer": "TurboSystems"
   },
   {
-    "Id": 86,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1212,7 +1126,6 @@
     "Producer": "OverclockSystems"
   },
   {
-    "Id": 87,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1226,7 +1139,6 @@
     "Producer": "LightTech"
   },
   {
-    "Id": 88,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1240,7 +1152,6 @@
     "Producer": "MasterSystems"
   },
   {
-    "Id": 89,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1254,7 +1165,6 @@
     "Producer": "MaxSystems"
   },
   {
-    "Id": 90,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1268,7 +1178,6 @@
     "Producer": "AirTech"
   },
   {
-    "Id": 91,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1282,7 +1191,6 @@
     "Producer": "ModTech"
   },
   {
-    "Id": 92,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1296,7 +1204,6 @@
     "Producer": "EasyTech"
   },
   {
-    "Id": 93,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1310,7 +1217,6 @@
     "Producer": "BoxSystems"
   },
   {
-    "Id": 94,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1324,7 +1230,6 @@
     "Producer": "FlowSystems"
   },
   {
-    "Id": 95,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1338,7 +1243,6 @@
     "Producer": "CoolTech"
   },
   {
-    "Id": 96,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1352,7 +1256,6 @@
     "Producer": "ProSystems"
   },
   {
-    "Id": 97,
     "MotherBoardFormats": "Micro-ATX, Mini-ITX",
     "PowerSupplyFormat": "SFX",
     "CaseType": "Other",
@@ -1366,7 +1269,6 @@
     "Producer": "CompactPro"
   },
   {
-    "Id": 98,
     "MotherBoardFormats": "ATX, Mini-ITX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",
@@ -1380,7 +1282,6 @@
     "Producer": "CleanTech"
   },
   {
-    "Id": 99,
     "MotherBoardFormats": "E-ATX, ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "BigTower",
@@ -1394,7 +1295,6 @@
     "Producer": "XtremeSystems"
   },
   {
-    "Id": 100,
     "MotherBoardFormats": "ATX, Micro-ATX",
     "PowerSupplyFormat": "ATX",
     "CaseType": "MidiTower",

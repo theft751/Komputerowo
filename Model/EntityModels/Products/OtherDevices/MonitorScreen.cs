@@ -1,0 +1,20 @@
+﻿using Domain.EntityModels.Main;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Domain.EntityModels.Products.OtherDevices
+{
+    public class MonitorScreen: Product
+    {
+        public string Resolution { get; set; }
+        public decimal ScreenDiagonal { get; set; } //inches
+        public int ScreenRefreshRate { get; set; } //Hz
+        public string ExternalPorts { get; set; }
+        public string ScreenType { get; set; } // for example ips
+        public bool BuiltInSpeakers { get; set; }
+        public decimal Latency { get; set; } // in miliseconds
+    }
+}

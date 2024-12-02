@@ -4,7 +4,7 @@
 }
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
-        <h2>Dodaj Laptopa</h2>
+        <h2>Dodaj laptopa</h2>
         
         @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
 
@@ -39,8 +39,8 @@
         </div>
 
         <div class="inputUnit">
-            <input asp-for="BatteryCapacity" type="text" class="loginInput" placeholder="" required />
-            <label for="BatteryCapacity" class="loginCaption">Pojemnosc baterii</label><br />
+            <input asp-for="BatteryCapacity" type="number" class="loginInput" placeholder="" required />
+            <label for="BatteryCapacity" class="loginCaption">Pojemnosc baterii (w mAh)</label><br />
         </div>
 
         <div class="inputUnit">

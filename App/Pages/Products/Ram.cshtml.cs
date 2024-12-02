@@ -18,5 +18,16 @@ namespace App.Pages.Products
             : base(_context)
         {
         }
+        protected override void initializeEssentialProductProperties(int productId)
+        {
+            base.initializeEssentialProductProperties(productId);
+            Ram ram = context.Rams.Find(productId);
+
+            SizePerChips = ram.SizePerChips;
+            ChipsAmount = ram.ChipsAmount;
+            Frequency = ram.Frequency;
+            Ligthing = ram.Ligthing;
+            RamType = ram.RamType;
+        }
     }
 }

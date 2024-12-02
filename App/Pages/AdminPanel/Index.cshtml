@@ -5,49 +5,65 @@
 <div id="logOrRegForm">
     <div id="loginFormContent">
         <h2>Dodawanie produktów</h2>
-        <form method="get" id="logOrRegForm" action="@Url.Page("/AdminPanel/AddOrEditCase")">
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditCase")">
             <input type="hidden" name="handler" value="Add"/>
             <button type="submit" class="loginButton">Dodaj obudowę</button>
         </form>
-        <form method="get">
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditDesktopComputer")">
             <input type="hidden" name="handler" value="Add" />
             <button type="submit" class="loginButton">Dodaj komputer stacjonarny</button>
         </form>
-        <form method="get">
+        <form method="get" action="@Url.Page("/AdminPanel/DiskDrive")">
             <input type="hidden" name="handler" value="Add" />
             <button type="submit" class="loginButton">Dodaj dysk</button>
         </form>
-        <form method="get">
+        <form method="get" action="@Url.Page("/AdminPanel/GraphicCard")">
             <input type="hidden" name="handler" value="Add" />
             <button type="submit" class="loginButton">Dodaj kartę graficzną</button>
         </form>
-        <form method="get">
-            <input type="hidden" name="handler" value="Add" />
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditLaptop")">
+            <input type="hidden" name="handler" value="Add"/>
             <button type="submit" class="loginButton">Dodaj Laptopa</button>
         </form>
-        <form method="get">
-            <input type="hidden" name="handler" value="Add" />
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditMotherBoard")">
+            <input type="hidden" name="handler" value="Add"/>
             <button type="submit" class="loginButton">Dodaj płytę główną</button>
         </form>
-        <form method="get">
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditPowerSupply")">
             <input type="hidden" name="handler" value="Add" />
             <button type="submit" class="loginButton">Dodaj zasilacz</button>
         </form>
-        <form method="get">
-            <input type="hidden" name="handler" value="Add" />
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditProcessor")">
+            <input type="hidden" name="handler" value="Add"  />
             <button type="submit" class="loginButton">Dodaj procesor</button>
         </form>
-        <form method="get">
-            <input type="hidden" name="handler" value="Add" />
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditRam")">
+            <input type="hidden" name="handler" value="Add"/>
             <button type="submit" class="loginButton">Dodaj RAM</button>
         </form>
-        <form method="get">
-            <input type="hidden" name="handler" value="Add" />
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditSmartphone")">
+            <input type="hidden" name="handler" value="Add"/>
             <button type="submit" class="loginButton">Dodaj Smartfon</button>
         </form>
-        <form method="get">
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditTelevisor")">
             <input type="hidden" name="handler" value="Add" />
             <button type="submit" class="loginButton">Dodaj telewizor</button>
+        </form>
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditMouse")">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj myszkę</button>
+        </form>
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditKeyboard")">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj klawiaturę</button>
+        </form>
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditMonitor")">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj monitor</button>
+        </form>
+        <form method="get" action="@Url.Page("/AdminPanel/AddOrEditPrinter")">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Dodaj drukarkę</button>
         </form>
     </div>
 </div>

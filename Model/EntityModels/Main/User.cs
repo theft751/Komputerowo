@@ -15,6 +15,6 @@ namespace Domain.EntityModels.Main
         public virtual ICollection<Review> Comments { get; set; } = new List<Review>();
         public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
         public int? AdressId { get; set; }
-        public virtual Adress? Adress { get; set; }
+        public virtual UserAdress? Adress { get; set; }
     }
 }

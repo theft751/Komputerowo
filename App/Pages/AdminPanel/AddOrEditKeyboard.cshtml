@@ -1,0 +1,42 @@
+﻿@page
+@model App.Pages.AdminPanel.AddOrEditKeyboardModel
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj klawiaturę</h2>
+
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
+
+        <div class="inputUnit">
+            <input asp-for="SwitchType" type="text" class="loginInput" placeholder="" required />
+            <label for="SwitchType" class="loginCaption">Typ przełączników</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Connectivity" type="text" class="loginInput" placeholder="" required />
+            <label for="Connectivity" class="loginCaption">Łączność</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Destination" type="text" class="loginInput" placeholder="" required />
+            <label for="Destination" class="loginCaption">Przeznaczenie</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Profile" type="text" class="loginInput" placeholder="" required />
+            <label for="Profile" class="loginCaption">Profil</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <label for="Lighting" class="loginCaption">Podświetlenie</label><br />
+            <input asp-for="Lighting"/>
+        </div>
+
+        <div class="inputUnit">
+            <label for="NumericKeypad">Klawiatura numeryczna</label><br />
+            <input asp-for="NumericKeypad"/>
+        </div>
+
+    </div>
+</form>

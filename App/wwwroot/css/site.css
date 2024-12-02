@@ -3,6 +3,7 @@ body {
 }
 /*Header*/
 header {
+    padding-block: 12px;
     background-color: #3F526B;
     color: white;
     font-size: 20px;
@@ -53,4 +54,45 @@ header {
 
 .tdForName {
     min-width: 300px;
+}
+.nav-bar {
+    border: 1px solid #465C7B;
+    background-color: #465C7B;
+    color: white;
+}
+
+.nav-link {
+    margin-left: 0px;
+    margin-right: 25px;
+    color: white;
+}
+
+.dropdown-menu {
+    display: none; /* Ukrywanie menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #405A7E;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dropdown-item {
+    color: white;
+    border-bottom: 1px solid Silver;
+    padding: 6px;
+}
+.dropdown:hover .dropdown-menu {
+    display: block; /* Wyœwietlanie menu po najechaniu */
+}
+
+.dropdown:hover .nav-link {
+    color: white; /* Zmiana koloru linku przy najechaniu */
+}
+
+.navbar-nav {
+    position: relative; /* Ustawienie pozycji do menu */
+}
+#searchArea
+{
+    margin-top: 24px;
 }

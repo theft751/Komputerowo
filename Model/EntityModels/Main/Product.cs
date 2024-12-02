@@ -41,6 +41,7 @@ namespace Domain.EntityModels.Main
 
         public virtual ICollection<Review> Reviews { get; set; } = new List<Review>();
 
+
         [NotMapped]
         public Availability Availability
 

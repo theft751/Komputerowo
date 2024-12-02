@@ -30,7 +30,7 @@ namespace App.Pages.AdminPanel
         public string Gpu { get; set; }
 
         [BindProperty]
-        public string BatteryCapacity { get; set; }
+        public int BatteryCapacity { get; set; } //mAh
 
         [BindProperty]
         public string ExternalPorts { get; set; }

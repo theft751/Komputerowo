@@ -14,7 +14,7 @@ namespace Domain.EntityModels.Products.OtherDevices
         public int ScreenRefreshRate { get; set; } //Hz
         
         public string ExternalPorts { get; set; }
-        public bool hasSmartTv { get; set; }
+        public bool HasSmartTv { get; set; }
         public string OperatingSystem { get; set; }
     }
 }

@@ -17,38 +17,41 @@ namespace App.Pages.Products
                 Product p = context.Products.Find(id);
                 switch (p.ProductType)
                 {
-                    case ProductType.CASE:
+                    case ProductType.Case:
                         return new RedirectToPageResult($"/Products/Case", new {productId = id});
                         break;
-                    case ProductType.DESKTOP_COMPUTER:
+                    case ProductType.DesktopComputer:
                         return new RedirectToPageResult($"/Products/DesktopComputer", new { productId = id });
                         break;
-                    case ProductType.DISK_DRIVE:
+                    case ProductType.DiskDrive:
                         return new RedirectToPageResult($"/Products/DiskDrive", new { productId = id });
                         break;
-                    case ProductType.GRAPHIC_CARD:
+                    case ProductType.GraphicCard:
                         return new RedirectToPageResult($"/Products/GraphicCard", new { productId = id });
                         break;
-                    case ProductType.LAPTOP:
+                    case ProductType.Laptop:
                         return new RedirectToPageResult($"/Products/Laptop", new { productId = id });
                         break;
-                    case ProductType.MOTHERBOARD:
+                    case ProductType.Motherboard:
                         return new RedirectToPageResult($"/Products/MotherBoard", new { productId = id });
                         break;
-                    case ProductType.POWER_SUPPLY:
+                    case ProductType.PowerSupply:
                         return new RedirectToPageResult($"/Products/PowerSupply", new { productId = id });
                         break;
-                    case ProductType.PROCESSOR:
+                    case ProductType.Processor:
                         return new RedirectToPageResult($"/Products/Processor", new { productId = id });
                         break;
-                    case ProductType.RAM:
+                    case ProductType.Ram:
                         return new RedirectToPageResult($"/Products/Ram", new { productId = id });
                         break;
-                    case ProductType.SMARTPHONE:
+                    case ProductType.Smartphone:
                         return new RedirectToPageResult($"/Products/Smartphone", new { productId = id });
                         break;
-                    case ProductType.TELEVISOR:
+                    case ProductType.Televisor:
                         return new RedirectToPageResult($"/Products/Televisor", new { productId = id });
+                        break;
+                    case ProductType.Monitor:
+                        return new RedirectToPageResult($"/Products/Monitor", new { productId = id });
                         break;
                     default:
                         return new RedirectToPageResult("/Error");

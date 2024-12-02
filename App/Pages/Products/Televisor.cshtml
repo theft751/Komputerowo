@@ -60,18 +60,10 @@
                 </tr>
                 <tr>
                     <td>
-                        Czas gwarancji
+                        Częstotliwość odświerzania ekranu
                     </td>
                     <td>
-                        @Model.GuarantyTime miesięcy
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        Kolor
-                    </td>
-                    <td>
-                        @Model.Color
+                        @Model.ScreenRefreshRate
                     </td>
                 </tr>
                 <tr>
@@ -98,15 +90,7 @@
                         @Model.ExternalPorts
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        Złącza zewnętrzne
-                    </td>
-                    <td>
-                        @Model.ExternalPorts
-                    </td>
-                </tr>hasSmartTv
-                @if(Model.hasSmartTv)
+                @if(Model.HasSmartTv)
                 {
                     <tr>
                         <td>
@@ -117,6 +101,14 @@
                         </td>
                     </tr>
                 }
+                <tr>
+                    <td>
+                        Czas gwarancji
+                    </td>
+                    <td>
+                        @Model.GuarantyTime miesięcy
+                    </td>
+                </tr>
             </table>
         </div>
     </div>
@@ -218,10 +210,10 @@
                 Smart tv
             </td>
             <td>
-                @(Model.hasSmartTv ? "Brak" : "Wbudowane")
+                @(Model.HasSmartTv ? "Brak" : "Wbudowane")
             </td>
         </tr>
-        @if (Model.hasSmartTv)
+        @if (Model.HasSmartTv)
         {
             <tr>
                 <td>

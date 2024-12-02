@@ -14,7 +14,7 @@ namespace App.Pages.Products
         public int DiskSize { get; set; }
         public string DiskType { get; set; }
         public string Gpu { get; set; }
-        public string BatteryCapacity { get; set; }
+        public int BatteryCapacity { get; set; } // mAh
         public string ExternalPorts { get; set; }
         public string Resolution { get; set; }
         public decimal ScreenDiagonal { get; set; } //inches

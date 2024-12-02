@@ -1,0 +1,131 @@
+﻿@using Domain.ViewModels
+@using Domain.EntityModels.Additional.Common
+@model ProductVm
+
+<div border border-secondary rounded p-3 w-100>
+    <div class="proudctListElement mb-2">
+        <div style="text-align: center">
+        <h2>@Model.Name</h2>
+            <span style="color: darkgoldenrod">
+                @if (Model.AverageRate >= 2)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.AverageRate == 1)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.AverageRate >= 4)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.AverageRate == 3)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.AverageRate >= 6)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.AverageRate == 5)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.AverageRate >= 8)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.AverageRate == 7)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+                @if (Model.AverageRate == 10)
+                {
+                    <i style="cursor: pointer" class="icon-star"></i>
+                }
+                else if (Model.AverageRate == 9)
+                {
+                    <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                }
+                else
+                {
+                    <i style="cursor: pointer" class="icon-star-empty"></i>
+                }
+            </span>
+
+            <span class="text-muted">(@Model.ReviewsCounter)</span>
+            <br />
+        </div>
+        <div>
+            <div style="display: inline-block">
+                <div style="display: inline-block; float: left">
+                    <img height="200" width="200" src="@Model.MainImageUrl" style="float: right"/>
+                </div>
+                <div style="display: inline-block" class="mt-2">
+                    <table>
+                        @switch(Model.ProductType)
+                        {
+                            case ProductType.Case:
+                            <tr>
+                                <td>Producent</td>
+                                <td>@Model.Producer</td>
+                            </tr>
+                            <tr>
+                                <td>Czas gwarancji</td>
+                                <td>@Model.GuarantyTime</td>
+                            </tr>
+                            <tr>
+                                <td>Kolor</td>
+                                <td>@Model.Color</td>
+                            </tr>
+                            <tr>
+                                <td>Formaty płyty głównej</td>
+                                <td>@Model.MotherBoardsFormats</td>
+                            </tr>
+                            <tr>
+                                <td>Formaty zasilacza</td>
+                                <td>@Model.PowerSupplyFormat</td>
+                            </tr>
+                            <tr>
+                                <td>Typ obudowy</td>
+                                <td>@Model.CaseType</td>
+                            </tr>
+
+                            break;
+                        }
+                    </table>
+                </div>
+            </div>
+            <div style="float: right">
+                <form method="get" style="float: left">
+                    <button type="submit" class="narrowButton">Dodaj do koszyka</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .proudctListElement
+    {
+        padding: 10px;
+        border: 3px solid silver;
+        border-radius: 20px;
+    }
+
+</style>

@@ -20,7 +20,8 @@ namespace DataBaseContext
         //*************
         // Essenstials
         //*************
-        public DbSet<Adress> Adresses { get; set; }
+        public DbSet<UserAdress> Adresses { get; set; }
+        public DbSet<OrderAdress> OrderAdresses { get; set; }
         public DbSet<BonusProductImage> BonusProductImages { get; set; }
         public DbSet<Review> Reviews { get; set; }
         public DbSet<MainProductImage> MainProductImages { get; set; }
@@ -28,7 +29,7 @@ namespace DataBaseContext
         public DbSet<OrderItem> OrderItem { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
-
+        
         //*************
         //  Products
         //*************
@@ -47,6 +48,10 @@ namespace DataBaseContext
         public DbSet<Laptop> Laptops { get; set; }
         public DbSet<Smartphone> Smartphones { get; set; }
         public DbSet<Televisor> Televisors { get; set; }
+        public DbSet<MonitorScreen> Monitors { get; set; }
+        public DbSet<Mouse> Mouses { get; set; }
+        public DbSet<Keyboard> Keyboards { get; set; }
+        public DbSet<Printer> Printers { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options)
 :        base(options)
@@ -55,6 +60,22 @@ namespace DataBaseContext
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            /******************************
+             Essential entities configuration
+            *****************************/
+
+            modelBuilder.Entity<User>()
+                .HasOne(u => u.Adress)
+                .WithOne(a => a.User)
+                .HasForeignKey<User>(u => u.AdressId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Adress)
+                .WithOne(a => a.Order)
+                .HasForeignKey<Order>(o => o.AdressId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             /******************************
              Product entity configuration
             *****************************/
@@ -89,17 +110,21 @@ namespace DataBaseContext
             modelBuilder.Entity<Product>()
                 .ToTable("Products")
                 .HasDiscriminator<ProductType>("ProductType")
-                .HasValue<DiskDrive>(ProductType.DISK_DRIVE)
-                .HasValue<GraphicCard>(ProductType.GRAPHIC_CARD)
-                .HasValue<Ram>(ProductType.RAM)
-                .HasValue<Case>(ProductType.CASE)
-                .HasValue<PowerSupply>(ProductType.POWER_SUPPLY)
-                .HasValue<Processor>(ProductType.PROCESSOR)
-                .HasValue<MotherBoard>(ProductType.MOTHERBOARD)
-                .HasValue<DesktopComputer>(ProductType.DESKTOP_COMPUTER)
-                .HasValue<Laptop>(ProductType.LAPTOP)
-                .HasValue<Smartphone>(ProductType.SMARTPHONE)
-                .HasValue<Televisor>(ProductType.TELEVISOR)
+                .HasValue<DiskDrive>(ProductType.DiskDrive)
+                .HasValue<GraphicCard>(ProductType.GraphicCard)
+                .HasValue<Ram>(ProductType.Ram)
+                .HasValue<Case>(ProductType.Case)
+                .HasValue<PowerSupply>(ProductType.PowerSupply)
+                .HasValue<Processor>(ProductType.Processor)
+                .HasValue<MotherBoard>(ProductType.Motherboard)
+                .HasValue<DesktopComputer>(ProductType.DesktopComputer)
+                .HasValue<Laptop>(ProductType.Laptop)
+                .HasValue<Smartphone>(ProductType.Smartphone)
+                .HasValue<Televisor>(ProductType.Televisor)
+                .HasValue<MonitorScreen>(ProductType.Monitor)
+                .HasValue<Mouse>(ProductType.Mouse)
+                .HasValue<Keyboard>(ProductType.Keyboard)
+                .HasValue<Printer>(ProductType.Printer)
                 ;
 
             /****************************************

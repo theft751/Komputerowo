@@ -31,7 +31,6 @@
                     
                     <input type="text" id="searchText">
                     <button id="searchButton">Szukaj</button><br>
-                    <span id="customizeLabel">Dostosuj opcje wyszukiwania</span>
                 </div>
                 <div id="login" class="col-3">
 
@@ -72,6 +71,53 @@
                 </div>
             </div>
     </header>
+    <nav class="navbar navbar-expand-lg nav-bar p-2">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <!-- Części komputerowe -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Części komputerowe</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Płyty główne</a></li>
+                            <li><a class="dropdown-item" href="#">Pamięci RAM</a></li>
+                            <li><a class="dropdown-item" href="#">Dyski</a></li>
+                            <li><a class="dropdown-item" href="#">Karty graficzne</a></li>
+                            <li><a class="dropdown-item" href="#">Procesory</a></li>
+                            <li><a class="dropdown-item" href="#">Zasilacze</a></li>
+                            <li><a class="dropdown-item" href="#">Obudowy</a></li>
+                        </ul>
+                    </li>
+                    <!-- Komputery -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Komputery</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Komputery stacjonarne</a></li>
+                            <li><a class="dropdown-item" href="#">Laptopy</a></li>
+                        </ul>
+                    </li>
+                    <!-- Urządzenia peryferyjne -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Urządzenia peryferyjne</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Monitory</a></li>
+                            <li><a class="dropdown-item" href="#">Myszki</a></li>
+                            <li><a class="dropdown-item" href="#">Klawiatury</a></li>
+                            <li><a class="dropdown-item" href="#">Drukarki</a></li>
+                        </ul>
+                    </li>
+                    <!-- Inne urządzenia -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#">Inne urządzenia</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Smartfony</a></li>
+                            <li><a class="dropdown-item" href="#">Telewizory</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="container">
         <main role="main" class="pb-3" style="margin-top: 30px;">
             @RenderBody()

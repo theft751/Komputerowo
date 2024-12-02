@@ -10,18 +10,22 @@ namespace Domain.EntityModels.Additional.Common
     {
 
         //Computer parts
-        PROCESSOR,
-        GRAPHIC_CARD,
-        RAM,
-        POWER_SUPPLY,
-        MOTHERBOARD,
-        CASE,
-        DISK_DRIVE,
+        Processor,
+        GraphicCard,
+        Ram,
+        PowerSupply,
+        Motherboard,
+        Case,
+        DiskDrive,
 
-        //
-        DESKTOP_COMPUTER,
-        LAPTOP,
-        TELEVISOR,
-        SMARTPHONE
+        //Other devices
+        DesktopComputer,
+        Laptop,
+        Televisor,
+        Smartphone,
+        Monitor,
+        Mouse,
+        Keyboard,
+        Printer
     }
 }

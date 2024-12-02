@@ -1,0 +1,48 @@
+﻿@page
+@model App.Pages.AdminPanel.AddOrEditMonitorModel
+@{
+}
+<form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
+    <div id="loginFormContent">
+        <h2>Dodaj monitor</h2>
+
+        @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
+
+        <div class="inputUnit">
+            <input asp-for="Resolution" type="text" class="loginInput" placeholder="" required />
+            <label for="Resolution" class="loginCaption">Rozdzielczość</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ScreenDiagonal" type="text" class="loginInput" placeholder="" required />
+            <label for="ScreenDiagonal" class="loginCaption">Przekątna ekranu</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ScreenRefreshRate" type="text" class="loginInput" placeholder="" required />
+            <label for="ScreenRefreshRate" class="loginCaption">Częstotliwość </label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ExternalPorts" type="text" class="loginInput" placeholder="" required />
+            <label for="ExternalPorts" class="loginCaption">Porty zewnętrzne</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="ScreenType" type="text" class="loginInput" placeholder="" required />
+            <label for="ScreenType" class="loginCaption">Typ ekranu</label><br />
+        </div>
+
+        <div class="inputUnit">
+            <label for="BuiltInSpeakers">Wbudowane głośniki:</label><br />
+            <input asp-for="BuiltInSpeakers" class="loginInput" placeholder="" required />
+        </div>
+
+        <div class="inputUnit">
+            <input asp-for="Latency" type="text" class="loginInput" placeholder="" required />
+            <label for="Processor" class="loginCaption">Opóźnienie</label><br />
+        </div>
+        
+        <input type="submit" value="zatwierdź" class="loginButton" />
+    </div>
+</form>

@@ -1,6 +1,5 @@
 [
   {
-    "Id": 101,
     "AdditionalInfo": "High-performance desktop",
     "Color": "Black",
     "Amount": 10,
@@ -24,7 +23,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 102,
     "AdditionalInfo": "Compact and silent desktop",
     "Color": "White",
     "Amount": 5,
@@ -48,7 +46,6 @@
     "OperatingSystem": "Windows 10 Pro"
   },
   {
-    "Id": 103,
     "AdditionalInfo": "Affordable and efficient",
     "Color": "Silver",
     "Amount": 15,
@@ -72,7 +69,6 @@
     "OperatingSystem": "Linux Ubuntu"
   },
   {
-    "Id": 104,
     "AdditionalInfo": "Perfect for creative professionals",
     "Color": "Black",
     "Amount": 8,
@@ -96,7 +92,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 105,
     "AdditionalInfo": "Gaming beast with RGB lighting",
     "Color": "Black",
     "Amount": 12,
@@ -120,7 +115,6 @@
     "OperatingSystem": "Windows 11 Home"
   },
   {
-    "Id": 106,
     "AdditionalInfo": "Compact business desktop",
     "Color": "Gray",
     "Amount": 20,
@@ -144,7 +138,6 @@
     "OperatingSystem": "Windows 10 Pro"
   },
   {
-    "Id": 107,
     "AdditionalInfo": "High-end workstation",
     "Color": "Black",
     "Amount": 6,
@@ -168,7 +161,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 108,
     "AdditionalInfo": "Entry-level gaming desktop",
     "Color": "Blue",
     "Amount": 18,
@@ -192,7 +184,6 @@
     "OperatingSystem": "Windows 10 Home"
   },
   {
-    "Id": 109,
     "AdditionalInfo": "Compact gaming desktop",
     "Color": "Red",
     "Amount": 10,
@@ -216,7 +207,6 @@
     "OperatingSystem": "Windows 11 Home"
   },
   {
-    "Id": 110,
     "AdditionalInfo": "High-performance desktop for multitasking",
     "Color": "Black",
     "Amount": 14,
@@ -240,7 +230,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 111,
     "AdditionalInfo": "Minimalistic design, powerful performance",
     "Color": "Silver",
     "Amount": 9,
@@ -264,7 +253,6 @@
     "OperatingSystem": "Windows 11 Home"
   },
   {
-    "Id": 112,
     "AdditionalInfo": "Silent and energy-efficient",
     "Color": "White",
     "Amount": 12,
@@ -288,7 +276,6 @@
     "OperatingSystem": "Linux Mint"
   },
   {
-    "Id": 113,
     "AdditionalInfo": "Ultimate gaming desktop",
     "Color": "Black",
     "Amount": 7,
@@ -312,7 +299,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 114,
     "AdditionalInfo": "Entry-level desktop for education",
     "Color": "Gray",
     "Amount": 25,
@@ -336,7 +322,6 @@
     "OperatingSystem": "Linux Ubuntu"
   },
   {
-    "Id": 115,
     "AdditionalInfo": "Compact powerhouse",
     "Color": "Black",
     "Amount": 10,
@@ -360,7 +345,6 @@
     "OperatingSystem": "Windows 10 Pro"
   },
   {
-    "Id": 116,
     "AdditionalInfo": "High-end gaming and streaming PC",
     "Color": "RGB",
     "Amount": 8,
@@ -384,7 +368,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 117,
     "AdditionalInfo": "Desktop for basic office tasks",
     "Color": "Black",
     "Amount": 30,
@@ -408,7 +391,6 @@
     "OperatingSystem": "Windows 10 Home"
   },
   {
-    "Id": 118,
     "AdditionalInfo": "All-purpose desktop for home and office",
     "Color": "Silver",
     "Amount": 15,
@@ -432,7 +414,6 @@
     "OperatingSystem": "Linux Ubuntu"
   },
   {
-    "Id": 119,
     "AdditionalInfo": "Powerful desktop for 4K gaming",
     "Color": "Black",
     "Amount": 10,
@@ -456,7 +437,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 120,
     "AdditionalInfo": "Workstation for AI and data science",
     "Color": "Gray",
     "Amount": 5,
@@ -480,7 +460,6 @@
     "OperatingSystem": "Linux Ubuntu"
   },
   {
-    "Id": 121,
     "AdditionalInfo": "Silent desktop for home use",
     "Color": "White",
     "Amount": 20,
@@ -504,7 +483,6 @@
     "OperatingSystem": "Windows 10 Home"
   },
   {
-    "Id": 122,
     "AdditionalInfo": "Gaming desktop with water cooling",
     "Color": "Black",
     "Amount": 8,
@@ -528,7 +506,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 123,
     "AdditionalInfo": "Eco-friendly energy-efficient desktop",
     "Color": "Green",
     "Amount": 12,
@@ -552,7 +529,6 @@
     "OperatingSystem": "Linux Ubuntu"
   },
   {
-    "Id": 124,
     "AdditionalInfo": "Performance desktop for graphic designers",
     "Color": "Silver",
     "Amount": 10,
@@ -576,7 +552,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 125,
     "AdditionalInfo": "Entry-level gaming desktop",
     "Color": "Black",
     "Amount": 20,
@@ -600,7 +575,6 @@
     "OperatingSystem": "Windows 10 Home"
   },
   {
-    "Id": 126,
     "AdditionalInfo": "Advanced workstation for CAD and rendering",
     "Color": "Gray",
     "Amount": 5,
@@ -624,7 +598,6 @@
     "OperatingSystem": "Linux CentOS"
   },
   {
-    "Id": 127,
     "AdditionalInfo": "Compact all-in-one desktop",
     "Color": "White",
     "Amount": 15,
@@ -648,7 +621,6 @@
     "OperatingSystem": "Windows 11 Home"
   },
   {
-    "Id": 128,
     "AdditionalInfo": "Advanced desktop for VR applications",
     "Color": "Black",
     "Amount": 7,
@@ -672,7 +644,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 129,
     "AdditionalInfo": "Desktop for photo and video editing",
     "Color": "Gray",
     "Amount": 12,
@@ -696,7 +667,6 @@
     "OperatingSystem": "Windows 11 Pro"
   },
   {
-    "Id": 130,
     "AdditionalInfo": "Entry-level workstation for engineers",
     "Color": "Black",
     "Amount": 18,
@@ -720,7 +690,6 @@
     "OperatingSystem": "Windows 10 Pro"
   },
   {
-    "Id": 131,
     "AdditionalInfo": "Silent desktop for music production",
     "Color": "Black",
     "Amount": 10,
@@ -744,7 +713,6 @@
     "OperatingSystem": "Windows 10 Pro"
   },
   {
-    "Id": 132,
     "AdditionalInfo": "Ultra-compact mini desktop",
     "Color": "Silver",
     "Amount": 25,
@@ -768,7 +736,6 @@
     "OperatingSystem": "Linux Ubuntu"
   },
   {
-    "Id": 133,
     "AdditionalInfo": "Desktop optimized for multi-tasking",
     "Color": "Black",
     "Amount": 30,

@@ -34,7 +34,7 @@ namespace App.Pages.Products
             Frequency = processor.Frequency;
             CacheSize = processor.CacheSize;
             IntegratedGpu = processor.IntegratedGpu;
-            hasCoolerIncluded = processor.hasCoolerIncluded;
+            hasCoolerIncluded = processor.HasCoolerIncluded;
             ProcessorSocket = processor.ProcessorSocket;
             ProcessorSerie = processor.ProcessorSerie;
         }

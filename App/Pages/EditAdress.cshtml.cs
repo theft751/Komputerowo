@@ -39,7 +39,7 @@ namespace App.Pages
             {
                 if (HttpContext.Session.GetInt32("isLogged") == 1)
                 {
-                    Adress userAdress =
+                    UserAdress userAdress =
                         context
                         .Users
                         .Where(x => x.Id == HttpContext.Session.GetInt32("LoggedUserId"))
@@ -64,7 +64,7 @@ namespace App.Pages
         }
         public IActionResult OnPost()
         {
-            Adress userAdress =
+            UserAdress userAdress =
                 context
                 .Users
                 .Where(x => x.Id == HttpContext.Session.GetInt32("LoggedUserId"))

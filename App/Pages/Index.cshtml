@@ -1,10 +1,14 @@
 ﻿@page
+@using Domain.AppModel
 @model IndexModel
-@{
-    ViewData["Title"] = "Home page";
-}
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@await Component.InvokeAsync("Product", new{id = 1, viewMode = ViewMode.List})
+@await Component.InvokeAsync("Product", new { id = 2, viewMode = ViewMode.List })
+@await Component.InvokeAsync("Product", new { id = 3, viewMode = ViewMode.List })
+@await Component.InvokeAsync("Product", new { id = 4, viewMode = ViewMode.List })
+@await Component.InvokeAsync("Product", new{id = 5, viewMode = ViewMode.List})
+@await Component.InvokeAsync("Product", new { id = 6, viewMode = ViewMode.List })
+@await Component.InvokeAsync("Product", new { id = 7, viewMode = ViewMode.List })
+@await Component.InvokeAsync("Product", new { id = 8, viewMode = ViewMode.List })
+@await Component.InvokeAsync("Product", new { id = 9, viewMode = ViewMode.List })
+@await Component.InvokeAsync("Product", new { id = 10, viewMode = ViewMode.List })
