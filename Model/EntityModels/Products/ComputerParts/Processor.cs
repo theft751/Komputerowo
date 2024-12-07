@@ -15,7 +15,7 @@ namespace Domain.EntityModels.Products.ComputerParts
         public int Frequency { get; set; } //Frequency per Core
         public int CacheSize { get; set; } //Mb
         public bool IntegratedGpu {  get; set; }
-        public bool HasCoolerIncluded { get; set; }
+        public bool CoolerIncluded { get; set; }
 
         public string ProcessorSocket{ get; set; }
         public string ProcessorSerie{ get; set; }

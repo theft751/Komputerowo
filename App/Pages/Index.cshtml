@@ -2,13 +2,122 @@
 @using Domain.AppModel
 @model IndexModel
 
-@await Component.InvokeAsync("Product", new{id = 1, viewMode = ViewMode.List})
-@await Component.InvokeAsync("Product", new { id = 2, viewMode = ViewMode.List })
-@await Component.InvokeAsync("Product", new { id = 3, viewMode = ViewMode.List })
-@await Component.InvokeAsync("Product", new { id = 4, viewMode = ViewMode.List })
-@await Component.InvokeAsync("Product", new{id = 5, viewMode = ViewMode.List})
-@await Component.InvokeAsync("Product", new { id = 6, viewMode = ViewMode.List })
-@await Component.InvokeAsync("Product", new { id = 7, viewMode = ViewMode.List })
-@await Component.InvokeAsync("Product", new { id = 8, viewMode = ViewMode.List })
-@await Component.InvokeAsync("Product", new { id = 9, viewMode = ViewMode.List })
-@await Component.InvokeAsync("Product", new { id = 10, viewMode = ViewMode.List })
+@Model.testString
+<!--Computers-->
+
+<div class="row mb-5">
+    <h2 class="fw-bold">Komputery stacjonarne(@Model.DesktopComputersAmount)</h2>
+    <div class="container">
+        <div class="row">
+            @foreach (int id in Model.DesktopComputerIds)
+            {
+                <div class="col">
+                    @await Component.InvokeAsync("Product", new { id = id, viewMode = ViewMode.Tiles })
+                </div>
+            }
+        </div>
+        <div class="row mt-2">
+            <div class="col mx-auto text-center">
+                <a href="/products/list/desktopcomputer" class=" fs-5 text-black">Pokaż więcej</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <h2 class="fw-bold">Komputery stacjonarne(@Model.LaptopsAmount)</h2>
+    <div class="container">
+        <div class="row">
+            @foreach (int id in Model.LaptopIds)
+            {
+                <div class="col">
+                    @await Component.InvokeAsync("Product", new { id = id, viewMode = ViewMode.Tiles })
+                </div>
+            }
+        </div>
+        <div class="row mt-2">
+            <div class="col mx-auto text-center">
+                <a href="/products/list/laptop" class=" fs-5 text-black">Pokaż więcej</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Peripherals-->
+
+
+<div class="row mt-5">
+    <h2 class="fw-bold">Monitory(@Model.MonitorsAmount)</h2>
+    <div class="container">
+        <div class="row">
+            @foreach (int id in Model.MonitorIds)
+            {
+                <div class="col">
+                    @await Component.InvokeAsync("Product", new { id = id, viewMode = ViewMode.Tiles })
+                </div>
+            }
+        </div>
+        <div class="row mt-2">
+            <div class="col mx-auto text-center">
+                <a href="/products/list/laptop" class=" fs-5 text-black">Pokaż więcej</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <h2 class="fw-bold">Myszki(@Model.MousesAmount)</h2>
+    <div class="container">
+        <div class="row">
+            @foreach (int id in Model.MouseIds)
+            {
+                <div class="col">
+                    @await Component.InvokeAsync("Product", new { id = id, viewMode = ViewMode.Tiles })
+                </div>
+            }
+        </div>
+        <div class="row mt-2">
+            <div class="col mx-auto text-center">
+                <a href="/products/list/laptop" class=" fs-5 text-black">Pokaż więcej</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <h2 class="fw-bold">Klawiatury(@Model.KeyboardsAmount)</h2>
+    <div class="container">
+        <div class="row">
+            @foreach (int id in Model.KeyboardIds)
+            {
+                <div class="col">
+                    @await Component.InvokeAsync("Product", new { id = id, viewMode = ViewMode.Tiles })
+                </div>
+            }
+        </div>
+        <div class="row mt-2">
+            <div class="col mx-auto text-center">
+                <a href="/products/list/laptop" class=" fs-5 text-black">Pokaż więcej</a>
+            </div>
+        </div>
+    </div>
+</div>  
+
+<div class="row mt-5">
+    <h2 class="fw-bold">Klawiatury(@Model.PrintersAmount)</h2>
+    <div class="container">
+        <div class="row">
+            @foreach (int id in Model.PrinterIds)
+            {
+                <div class="col">
+                    @await Component.InvokeAsync("Product", new { id = id, viewMode = ViewMode.Tiles })
+                </div>
+            }
+        </div>
+        <div class="row mt-2">
+            <div class="col mx-auto text-center">
+                <a href="/products/list/laptop" class=" fs-5 text-black">Pokaż więcej</a>
+            </div>
+        </div>
+    </div>
+</div>

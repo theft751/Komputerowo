@@ -1,0 +1,194 @@
+﻿@page "/products/list/{typeOfProduct}/{pageNumber?}"
+@using Domain.AppModel
+@using Domain.EntityModels.Additional.Common
+@model App.Pages.Products.ListModel
+
+@{
+    ViewData["Title"] = "Produkty";
+
+    string headerText = "";
+    switch (Model.ProductType)
+    {
+        case ProductType.Case: headerText = "Obudowy"; break;
+        case ProductType.DiskDrive: headerText = "Dyski HDD i SSD"; break;
+        case ProductType.GraphicCard: headerText = "Karty graficzne"; break;
+        case ProductType.Motherboard: headerText = "Płyty główne"; break;
+        case ProductType.PowerSupply: headerText = "Zasilacze"; break;
+        case ProductType.Processor: headerText = "Procesory"; break;
+        case ProductType.Ram: headerText = "Pamięci RAM"; break;
+        case ProductType.DesktopComputer: headerText = "Komputery stacjonarne"; break;
+        case ProductType.Keyboard: headerText = "Klawiatury"; break;
+        case ProductType.Laptop: headerText = "Laptopy"; break;
+        case ProductType.Monitor: headerText = "Monitory"; break;
+        case ProductType.Mouse: headerText = "Myszki"; break;
+        case ProductType.Printer: headerText = "Drukarki"; break;
+        case ProductType.Smartphone: headerText = "Smartfony"; break;
+        case ProductType.Televisor: headerText = "Telewizory"; break;
+    }
+}
+
+<h2 class="mb-4 fw-bold">@headerText (@Model.ProductsInCategoryAmount)</h2>
+
+<form class="mb-4" method="get">
+    <input type="hidden" name="handler" value="sort" />
+    <span class="fw-bold">Sortowanie: </span><br />
+    <select name="sortMode">
+        <option value="@nameof(SortMode.SortByPriceAsc)">według ceny rosnąco</option>
+        <option value="@nameof(SortMode.SortByPriceDesc)">według ceny malejąco</option>
+        <option value="@nameof(SortMode.SortByRateDesc)">według ocen malejąc</option>
+        <option value="@nameof(SortMode.SortByRateAsc)">według ocen rosnąco</option>
+    </select>
+    <button type="submit" class="narrowButton">Sortuj</button>
+</form>
+
+@foreach (int id in Model.ProductIds)
+{
+    @await Component.InvokeAsync("Product", new { id = id, viewMode = ViewMode.List })
+}
+
+
+
+<!---Pagination-->
+<div class="row">
+    <div class="col">
+        <div style="text-align: center">
+            @if (Model.PagesAmount <= 9)
+            {
+
+
+                    if (Model.ActualPageNumber == 1)
+                    {
+                        <a class="link-dark fs-5" style="font-weight: bold">1</a>
+                    }
+                    else
+                    {
+                        <a asp-page="/products/list" asp-route-pageNumber="1" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">1</a>
+                    }
+                    <span>&nbsp;</span>
+
+
+                for (int i = 2; i <= Model.PagesAmount; i++)
+                {
+                    if (Model.ActualPageNumber == i)
+                    {
+                        <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                    }
+                    else
+                    {
+                        <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                    }
+                    <span>&nbsp;</span>
+                }
+            }
+            else
+            {
+                if (Model.ActualPageNumber <= 5)
+                {
+                    for (int i = 1; i <= 6; i++)
+                    {
+                        if (Model.ActualPageNumber == i)
+                        {
+                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                        }
+                        <span>&nbsp;</span>
+                    }
+                    <span>...</span>
+                    <span>&nbsp;</span>
+                    for (int i = Model.PagesAmount - 2; i <= Model.PagesAmount; i++)
+                    {
+                        if (Model.ActualPageNumber == i)
+                        {
+                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                        }
+                        <span>&nbsp;</span>
+                    }
+
+                }
+                else if (Model.ActualPageNumber >= 4 && Model.ActualPageNumber < Model.PagesAmount - 4)
+                {
+                    for (int i = 1; i <= 3; i++)
+                    {
+                        if (Model.ActualPageNumber == i)
+                        {
+                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                        }
+                        <span>&nbsp;</span>
+                    }
+
+                    <span>...</span>
+                    <span>&nbsp;</span>
+
+                    for (int i = Model.ActualPageNumber - 1; i <= Model.ActualPageNumber + 1; i++)
+                    {
+                        if (Model.ActualPageNumber == i)
+                        {
+                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                        }
+                        <span>&nbsp;</span>
+                    }
+
+                    <span>...</span>
+                    <span>&nbsp;</span>
+
+                    for (int i = Model.PagesAmount - 2; i <= Model.PagesAmount; i++)
+                    {
+                        if (Model.ActualPageNumber == i)
+                        {
+                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                        }
+                        <span>&nbsp;</span>
+                    }
+                }
+                else if (Model.ActualPageNumber > 5 && Model.ActualPageNumber >= Model.PagesAmount - 4)
+                {
+                    for (int i = 1; i <= 3; i++)
+                    {
+                        if (Model.ActualPageNumber == i)
+                        {
+                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                        }
+                        <span>&nbsp;</span>
+                    }
+                    <span>...</span>
+                    <span>&nbsp;</span>
+                    for (int i = Model.PagesAmount - 5; i <= Model.PagesAmount; i++)
+                    {
+                        if (Model.ActualPageNumber == i)
+                        {
+                            <a class="link-dark fs-5" style="font-weight: bold">@i</a>
+                        }
+                        else
+                        {
+                            <a asp-page="/products/list" asp-route-pageNumber="@i" asp-route-typeOfProduct="@Model.ProductType" class="link-dark fs-5">@i</a>
+                        }
+                        <span>&nbsp;</span>
+                    }
+                }
+            }
+        </div>
+    </div>
+</div>

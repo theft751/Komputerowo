@@ -10,7 +10,7 @@ namespace App.Pages.Products
     public class ProductPageModel : PageModel
     {
         AppDbContext context;
-        public IActionResult OnGet(int id)
+        public IActionResult OnGet([FromRoute]int id)
         {
             try
             { 

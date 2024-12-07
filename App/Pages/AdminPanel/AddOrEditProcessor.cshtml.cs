@@ -49,7 +49,7 @@ namespace App.Pages.AdminPanel
             product.ProcessorSocket = ProcessorSocket;
             product.ProcessorSerie = ProcessorSerie;
             product.IntegratedGpu = IntegratedGpu;
-            product.HasCoolerIncluded = hasCoolerIncluded;
+            product.CoolerIncluded = hasCoolerIncluded;
 
 
             if (OperationMode == OperationMode.Add) context.Processors.Add(product);
@@ -69,7 +69,7 @@ namespace App.Pages.AdminPanel
             ProcessorSocket = product.ProcessorSocket;
             ProcessorSerie = product.ProcessorSerie;
             IntegratedGpu = product.IntegratedGpu;
-            hasCoolerIncluded = product.HasCoolerIncluded;
+            hasCoolerIncluded = product.CoolerIncluded;
 
             setProductEssentialPropertiesOnEdit(id);
             return Page();

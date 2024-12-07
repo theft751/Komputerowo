@@ -13,19 +13,25 @@ using System.Resources;
 using Domain.EntityModels.Additional.ComputerParts;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Xml.Linq;
 namespace Domain.ViewModels
 {
     public class ProductVm
     {
         //Non product fields
+        public readonly int Id;
         public readonly string MainImageUrl;
+        public readonly string ProductUrl;
         public readonly ViewMode ViewMode;
         public readonly ProductType ProductType;
         public readonly int AverageRate;
         public readonly int ReviewsCounter;
+        public readonly int Amount;
+        public readonly Availability Availability;
 
         //Shared fields
-        public readonly string? Name; // All
+        public readonly decimal Price; 
+        public readonly string Name; // All
         public readonly string? Producer; //Case
         public readonly int? GuarantyTime; //Case
         public readonly string? Color; // Case
@@ -33,7 +39,7 @@ namespace Domain.ViewModels
         public readonly bool? Lighting;
         public readonly int? DiskSize; //Laptop, DesktopComputer, DiskDrive
         public readonly string? DiskType; //Laptop, DesktopComputer, DiskDrive   
-        public readonly string? Gpu; //Desktop, laptop, GraphicCard
+        public readonly string? Gpu; //Desktop, laptop
         public readonly string? PowerSupplyFormat; //PowerSupply and Cas
         public readonly int? Frequency; //Processor and Ram
         public readonly string? RamType; // Desktop computer, laptops and Ram
@@ -44,6 +50,7 @@ namespace Domain.ViewModels
         public readonly int? RamSize; //DesktopComputer, laptop, smartphone
         public readonly string? OperatingSystem; //DesktopComputer, laptop, smartphone
         public readonly int? BatteryCapacity; //Laptop, smartphone
+        public readonly string FrontCamera;
 
         //Case
         public readonly string? MotherBoardsFormats;
@@ -54,7 +61,7 @@ namespace Domain.ViewModels
         public readonly string? Resolution; //Laptop, smartphone
 
         //Disk 
-        int? ReadSpeed;
+        public readonly int? ReadSpeed;
         public readonly int? WriteSpeed;
         public readonly string DiskDriveInterface;
 
@@ -88,7 +95,7 @@ namespace Domain.ViewModels
         public readonly int? Threads;
         public readonly int? CacheSize;
         public readonly bool? IntegratedGpu;
-        public readonly bool? hasCoolerIncluded;
+        public readonly bool? CoolerIncluded;
 
         //Ram
         public readonly int? TotalSize;
@@ -125,47 +132,34 @@ namespace Domain.ViewModels
         public readonly string? ExternalPorts;
         public readonly bool? HasSmartTv;
 
-        public ProductVm(Case product, string mainImageUrl)
+        public ProductVm(Case product, string mainImageUrl, ViewMode viewMode)
+            :this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             GuarantyTime = product.GuarantyTime;
             Color = product.Color;
             MotherBoardsFormats = product.MotherBoardFormats;
             PowerSupplyFormat = product.PowerSupplyFormat;
             CaseType = product.CaseType.ToString();
         }
-        public ProductVm(DiskDrive product, string mainImageUrl)
+        public ProductVm(DiskDrive product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             GuarantyTime = product.GuarantyTime;
             DiskSize = product.DiskSize;
             ReadSpeed = product.ReadSpeed;
             WriteSpeed = product.WriteSpeed;
             DiskType = product.DiskDriveType.ToString();  
-            DiskDriveInterface = product.DiskDriveInterface.ToString();
+            DiskDriveInterface = product.DiskDriveInterface;
         }
-        public ProductVm(GraphicCard product, string mainImageUrl)
+        public ProductVm(GraphicCard product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
-            Gpu = product.Gpu;
             GraphicCardSerie = product.GraphicCardSerie;
             MemoryType = product.MemoryType;
             MemorySize = product.MemorySize;
@@ -173,13 +167,10 @@ namespace Domain.ViewModels
             MemoryClock = product.MemoryClock;
             RayTracing = product.RayTracing;
         }
-        public ProductVm(MotherBoard product, string mainImageUrl)
+        public ProductVm(MotherBoard product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
             Format = product.Format;
             ProcessorSocket = product.ProcessorSocket;
@@ -191,15 +182,11 @@ namespace Domain.ViewModels
 
         }
         
-        public ProductVm(PowerSupply product, string mainImageUrl)
+        public ProductVm(PowerSupply product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             MaximalPower = product.MaximalPower;
             Certificate = product.Certyficate;
             PowerSupplyFormat = product.PowerSupplyFormat;
@@ -208,34 +195,26 @@ namespace Domain.ViewModels
             PowerSupplyProtectorsFeatures = product.PowerSupplyProtectorsFeatures;
         }
 
-        public ProductVm(Processor product, string mainImageUrl)
+        public ProductVm(Processor product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             Cores = product.Cores;
             Threads = product.Threads;
             Frequency = product.Frequency;
             CacheSize = product.CacheSize;
             IntegratedGpu = product.IntegratedGpu;
-            hasCoolerIncluded = product.HasCoolerIncluded;
+            CoolerIncluded = product.CoolerIncluded;
             ProcessorSocket = product.ProcessorSocket;
         }
 
         
-        public ProductVm(Ram product, string mainImageUrl)
+        public ProductVm(Ram product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             Color = product.Color;
             Frequency = product.Frequency;
             TotalSize = product.TotalSize;
@@ -244,13 +223,10 @@ namespace Domain.ViewModels
             RamType = product.RamType;
             GuarantyTime = product.GuarantyTime;
         }
-        public ProductVm(DesktopComputer product, string mainImageUrl)
+        public ProductVm(DesktopComputer product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
             Processor = product.Processor;
             Gpu = product.Gpu;
@@ -262,15 +238,11 @@ namespace Domain.ViewModels
             OperatingSystem = product.OperatingSystem;
 
         }
-        public ProductVm(Keyboard product, string mainImageUrl)
+        public ProductVm(Keyboard product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             Color = product.Color;
             Destination = product.Destination;
             SwitchType = product.SwitchType;
@@ -280,13 +252,10 @@ namespace Domain.ViewModels
             NumericKeypad = product.NumericKeypad;
             GuarantyTime = product.GuarantyTime;
         }
-        public ProductVm(Laptop product, string mainImageUrl)
+        public ProductVm(Laptop product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
             Processor = product.Processor;
             Gpu = product.Gpu;
@@ -298,32 +267,25 @@ namespace Domain.ViewModels
             BatteryCapacity = product.BatteryCapacity;
         }
 
-        public ProductVm(MonitorScreen product, string mainImageUrl)
+        public ProductVm(MonitorScreen product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            Name = product.Name;
-            ProductType = product.ProductType;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             ScreenDiagonal = product.ScreenDiagonal;
             ScreenRefreshRate = product.ScreenRefreshRate;
             ScreenType = product.ScreenType;
             BuiltInSpeakers = product.BuiltInSpeakers;
             Latency = product.Latency;
             Color = product.Color;
+            GuarantyTime = product.GuarantyTime;
         }
 
-        public ProductVm(Mouse product, string mainImageUrl)
+        public ProductVm(Mouse product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            ProductType = product.ProductType;
-            Name = product.Name;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             Destination = product.Destination;
             Lighting = product.Lighting;
             ButtonsAmount = product.ButtonsAmount;
@@ -332,15 +294,11 @@ namespace Domain.ViewModels
             Dpi = product.Dpi;
         }
 
-        public ProductVm(Printer product, string mainImageUrl)
+        public ProductVm(Printer product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            ProductType = product.ProductType;
-            Name = product.Name;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             Destination = product.Destination;
             DuplexPrinting = product.DuplexPrinting;
             PrintTechnology = product.PrintTechnology;
@@ -349,16 +307,13 @@ namespace Domain.ViewModels
             SupportedMediaFormats = product.SupportedMediaFormats;
         }
 
-        public ProductVm(Smartphone product, string mainImageUrl)
+        public ProductVm(Smartphone product, string mainImageUrl, ViewMode viewMode)
+            : this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            ProductType = product.ProductType;
-            Name = product.Name;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             BackCamera = product.BackCamera;
+            FrontCamera = product.FrontCamera;
             Resolution = product.Resolution;
             ScreenDiagonal = product.ScreenDiagonal;
             Processor = product.Processor;
@@ -366,23 +321,33 @@ namespace Domain.ViewModels
             OperatingSystem = product.OperatingSystem;
             BatteryCapacity = product.BatteryCapacity;
         }
-        public ProductVm(Televisor product, string mainImageUrl)
+        public ProductVm(Televisor product, string mainImageUrl, ViewMode viewMode)
+            :this(product, viewMode)
         {
             MainImageUrl = mainImageUrl;
-            ProductType = product.ProductType;
-            Name = product.Name;
-            AverageRate = product.AverageRate;
-            ReviewsCounter = product.Reviews.Count;
 
-            Producer = product.Producer;
             ScreenRefreshRate = product.ScreenRefreshRate;
             Resolution = product.Resolution;
             ScreenDiagonal = product.ScreenDiagonal;
             ExternalPorts = product.ExternalPorts;
             OperatingSystem = product.OperatingSystem;
+            HasSmartTv = product.HasSmartTv;
             GuarantyTime = product.GuarantyTime;
         }
         public ProductVm() { }
 
+        private ProductVm(Product product, ViewMode viewMode)
+        {
+            Id = product.Id;
+            ProductUrl = $"/products/product/{Id}";
+            Name = product.Name;
+            ProductType = product.ProductType;
+            AverageRate = product.AverageRate;
+            ReviewsCounter = product.Reviews.Count;
+            Price = product.Price;
+            Producer = product.Producer;
+            Amount = product.Amount;
+            ViewMode = viewMode;
+        }
     }
 }

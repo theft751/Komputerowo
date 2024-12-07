@@ -9,8 +9,9 @@
     <div class="mb-5">
         @if (Model.Availability == Availability.Avabile)
         {
-            <form method="post">
-                <select class="fs-4">
+            <form method="post" asp-page-handler="addToBasket">
+                <input type="hidden" name="productId" value="@Model.ProductId"/>
+                <select class="fs-4" name="amount">
                     @if (Model.ProductAmount >= 1)
                     {
                         <option value="1">1 szt</option>

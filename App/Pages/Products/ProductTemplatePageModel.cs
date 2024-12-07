@@ -12,6 +12,7 @@ using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Dynamic;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.Json;
 
 namespace App.Pages.Products
 {
@@ -202,7 +203,7 @@ namespace App.Pages.Products
         }
 
 
-        public virtual IActionResult OnGet([FromRoute] int productId = 1, [FromRoute] int pageNumber = 1)
+        public virtual IActionResult OnGet([FromRoute] int productId, [FromRoute] int pageNumber = 1)
         {
             try
             {
@@ -266,7 +267,50 @@ namespace App.Pages.Products
 
             
         }
+        public IActionResult OnPostAddToBasket(int productId, int amount)
+        {
+            List<BasketElement> basket;
 
+
+
+            try
+            {
+                basket =
+                JsonSerializer
+                .Deserialize<List<BasketElement>>(
+                    Request.Cookies["Basket"]
+                    );
+            }
+            catch
+            {
+                basket = new List<BasketElement>();
+            }
+
+            if (basket.Where(x => x.ProductId == productId).Any())
+            {
+                basket.FirstOrDefault(x => x.ProductId == productId).Amount += amount;
+            }
+            else
+            {
+                BasketElement basketElement = new BasketElement()
+                {
+                    ProductId = productId,
+                    Amount = amount
+                };
+                basket.Add(basketElement);
+            }
+
+            string basketJson = JsonSerializer.Serialize(basket);
+
+            var cookieOptions = new CookieOptions
+            {
+                Expires = DateTime.Now.AddDays(30)
+            };
+
+            Response.Cookies.Append("Basket", basketJson, cookieOptions);
+
+            return OnGet(productId);
+        }
         public ProductTemplatePageModel (AppDbContext _context)
         {
             context = _context;

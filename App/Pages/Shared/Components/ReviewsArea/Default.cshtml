@@ -179,20 +179,19 @@ else
         <div style="text-align: center">
             @if (Model.ReviewsPageAmount <= 9)
             {
-                @if (Model.ReviewsPageAmount >= 2)
+
+
+                if (Model.PageNumber == 1)
                 {
-
-                    if (Model.PageNumber == 1)
-                    {
-                        <a class="link-dark fs-5" style="font-weight: bold">1</a>
-                    }
-                    else
-                    {
-                        <a asp-page="@Context.Request.Path" asp-route-pageNumber="1" asp-route-productId="@Model.ProductId" class="link-dark fs-5">1</a>
-                    }
-                    <span>&nbsp;</span>
-
+                    <a class="link-dark fs-5" style="font-weight: bold">1</a>
                 }
+                else
+                {
+                    <a asp-page="@Context.Request.Path" asp-route-pageNumber="1" asp-route-productId="@Model.ProductId" class="link-dark fs-5">1</a>
+                }
+                <span>&nbsp;</span>
+
+
                 for (int i = 2; i <= Model.ReviewsPageAmount; i++)
                 {
                     if (Model.PageNumber == i)

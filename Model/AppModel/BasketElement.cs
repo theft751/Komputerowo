@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Domain.AppModel
 {
-    public enum ViewMode
+    public class BasketElement()
     {
-        Tiles, List, Basket
+        public int ProductId { get; set; } 
+        public int Amount { get; set; }
     }
 }

@@ -59,8 +59,8 @@ namespace DataBaseContext
                 //json strings
                 string casesJson = File.ReadAllText($"{testDataDirectoryPath}\\{casesPath}"); ;
                 string desktopComputersJson = File.ReadAllText($"{testDataDirectoryPath}\\{desktopComputersPath}"); ;
-                string processorsJson = File.ReadAllText($"{testDataDirectoryPath}\\{graphicCardsPath}");
-                string graphicCardsJson = File.ReadAllText($"{testDataDirectoryPath}\\{processorsPath}");
+                string processorsJson = File.ReadAllText($"{testDataDirectoryPath}\\{processorsPath}");
+                string graphicCardsJson = File.ReadAllText($"{testDataDirectoryPath}\\{graphicCardsPath}");
                 string motherboardJson = File.ReadAllText($"{testDataDirectoryPath}\\{motherboardsPath}");
                 string ramsJson = File.ReadAllText($"{testDataDirectoryPath}\\{ramsPath}");
                 string laptopsJson = File.ReadAllText($"{testDataDirectoryPath}\\{laptopsPath}");
