@@ -1,0 +1,12 @@
+﻿@page
+@using Domain.AppModel
+@model App.Pages.BasketModel
+@{
+}
+
+<h2 class="mb-4 fw-bold">Koszyk (@Model.ProductsAmount)</h2>
+
+@foreach (var basketElement in Model.BasketElements)
+{
+    @await Component.InvokeAsync("Product", new { id = basketElement.ProductId, viewMode = ViewMode.Basket, amountInBasket = basketElement.Amount})
+} 

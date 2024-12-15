@@ -28,6 +28,7 @@ namespace Domain.ViewModels
         public readonly int ReviewsCounter;
         public readonly int Amount;
         public readonly Availability Availability;
+        public readonly int? AmountInBasket;
 
         //Shared fields
         public readonly decimal Price; 
@@ -132,8 +133,8 @@ namespace Domain.ViewModels
         public readonly string? ExternalPorts;
         public readonly bool? HasSmartTv;
 
-        public ProductVm(Case product, string mainImageUrl, ViewMode viewMode)
-            :this(product, viewMode)
+        public ProductVm(Case product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            :this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -142,9 +143,10 @@ namespace Domain.ViewModels
             MotherBoardsFormats = product.MotherBoardFormats;
             PowerSupplyFormat = product.PowerSupplyFormat;
             CaseType = product.CaseType.ToString();
+            
         }
-        public ProductVm(DiskDrive product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(DiskDrive product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -155,8 +157,8 @@ namespace Domain.ViewModels
             DiskType = product.DiskDriveType.ToString();  
             DiskDriveInterface = product.DiskDriveInterface;
         }
-        public ProductVm(GraphicCard product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(GraphicCard product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -167,8 +169,8 @@ namespace Domain.ViewModels
             MemoryClock = product.MemoryClock;
             RayTracing = product.RayTracing;
         }
-        public ProductVm(MotherBoard product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(MotherBoard product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -182,8 +184,8 @@ namespace Domain.ViewModels
 
         }
         
-        public ProductVm(PowerSupply product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(PowerSupply product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -195,8 +197,8 @@ namespace Domain.ViewModels
             PowerSupplyProtectorsFeatures = product.PowerSupplyProtectorsFeatures;
         }
 
-        public ProductVm(Processor product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(Processor product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -210,8 +212,8 @@ namespace Domain.ViewModels
         }
 
         
-        public ProductVm(Ram product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(Ram product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -223,8 +225,8 @@ namespace Domain.ViewModels
             RamType = product.RamType;
             GuarantyTime = product.GuarantyTime;
         }
-        public ProductVm(DesktopComputer product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(DesktopComputer product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -238,8 +240,8 @@ namespace Domain.ViewModels
             OperatingSystem = product.OperatingSystem;
 
         }
-        public ProductVm(Keyboard product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(Keyboard product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -252,8 +254,8 @@ namespace Domain.ViewModels
             NumericKeypad = product.NumericKeypad;
             GuarantyTime = product.GuarantyTime;
         }
-        public ProductVm(Laptop product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(Laptop product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -267,8 +269,8 @@ namespace Domain.ViewModels
             BatteryCapacity = product.BatteryCapacity;
         }
 
-        public ProductVm(MonitorScreen product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(MonitorScreen product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -281,8 +283,8 @@ namespace Domain.ViewModels
             GuarantyTime = product.GuarantyTime;
         }
 
-        public ProductVm(Mouse product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(Mouse product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -294,8 +296,8 @@ namespace Domain.ViewModels
             Dpi = product.Dpi;
         }
 
-        public ProductVm(Printer product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(Printer product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -307,8 +309,8 @@ namespace Domain.ViewModels
             SupportedMediaFormats = product.SupportedMediaFormats;
         }
 
-        public ProductVm(Smartphone product, string mainImageUrl, ViewMode viewMode)
-            : this(product, viewMode)
+        public ProductVm(Smartphone product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            : this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -321,8 +323,8 @@ namespace Domain.ViewModels
             OperatingSystem = product.OperatingSystem;
             BatteryCapacity = product.BatteryCapacity;
         }
-        public ProductVm(Televisor product, string mainImageUrl, ViewMode viewMode)
-            :this(product, viewMode)
+        public ProductVm(Televisor product, string mainImageUrl, ViewMode viewMode, int? amountInBasket = null)
+            :this(product, viewMode, amountInBasket)
         {
             MainImageUrl = mainImageUrl;
 
@@ -336,7 +338,7 @@ namespace Domain.ViewModels
         }
         public ProductVm() { }
 
-        private ProductVm(Product product, ViewMode viewMode)
+        private ProductVm(Product product, ViewMode viewMode, int? amountInBasket)
         {
             Id = product.Id;
             ProductUrl = $"/products/product/{Id}";
@@ -348,6 +350,7 @@ namespace Domain.ViewModels
             Producer = product.Producer;
             Amount = product.Amount;
             ViewMode = viewMode;
+            AmountInBasket = ViewMode == ViewMode.Basket ? amountInBasket : null;
         }
     }
 }

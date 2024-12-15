@@ -49,3 +49,12 @@ function hideFirstShowSecond(firstId, secondId) {
     document.getElementById(firstId).hidden = true;
     document.getElementById(secondId).hidden = false;
 }
+function search() {
+    let searchText = document.getElementById("searchText").value;
+    window.location.href = "/products/search/" + searchText;
+}
+function enterSearching(event) {
+    if (event.key === "Enter") {
+        search(); // Wywołaj metodę przypisaną do przycisku
+    }
+}

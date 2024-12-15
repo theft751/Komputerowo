@@ -35,6 +35,18 @@
       "css": "star-half-alt",
       "code": 61731,
       "src": "fontawesome"
+    },
+    {
+      "uid": "1dq4tek4k8ea7zlj4kc3w83itnutaxg5",
+      "css": "cancel",
+      "code": 59398,
+      "src": "typicons"
+    },
+    {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel-1",
+      "code": 59395,
+      "src": "entypo"
     }
   ]
 }

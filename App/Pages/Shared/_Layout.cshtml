@@ -13,11 +13,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/fonts/fontello-9763c66f/css/fontello.css" />
+    <link rel="stylesheet" href="~/fonts/fontello-82b3d7a7/css/fontello.css" />
     <link rel="stylesheet" href="~/css/productView.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/App.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/loginAndRegister.css" asp-append-version="true" />
+
 </head>
 <body>
     <header class="container-fluid">
@@ -28,9 +29,11 @@
                 </div>
             </a>
                 <div id="searchArea" class="col-4">
-                    
-                    <input type="text" id="searchText">
-                    <button id="searchButton">Szukaj</button><br>
+                <input type="text" id="searchText" name="searchText" onkeydown="enterSearching(event)">
+                <button id="searchButton" onClick="search()").value">
+                            Szukaj
+                        </button>
+                            <br>
                 </div>
                 <div id="login" class="col-3">
 
@@ -65,9 +68,14 @@
                 }
 
                 </div>
+                <a
                 <div id="basket" class="col-2">
-                    <i class="demo-icon icon-basket" style="font-size:30px;"></i>
-                    <span">Koszyk</span>
+                    <a asp-page="/Basket">
+                        <span>
+                            <i class="demo-icon icon-basket" style="font-size:30px;"></i>
+                            <span">Koszyk</span>
+                        </span>
+                    </a>
                 </div>
             </div>
     </header>

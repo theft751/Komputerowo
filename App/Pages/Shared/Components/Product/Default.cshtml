@@ -1441,6 +1441,685 @@
 
         </div>
         break;
+    case ViewMode.Basket:
+        <div>
+            <div class="proudctListElement mb-2">
+                <div>
+                    <div style="display: inline-block;">
+                        <h2 style="font-size: 23px">@Model.Name</h2>
+                        <span style="color: darkgoldenrod">
+                            @if (Model.AverageRate >= 2)
+                            {
+                                <i style="cursor: pointer" class="icon-star"></i>
+                            }
+                            else if (Model.AverageRate == 1)
+                            {
+                                <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                            }
+                            else
+                            {
+                                <i style="cursor: pointer" class="icon-star-empty"></i>
+                            }
+                            @if (Model.AverageRate >= 4)
+                            {
+                                <i style="cursor: pointer" class="icon-star"></i>
+                            }
+                            else if (Model.AverageRate == 3)
+                            {
+                                <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                            }
+                            else
+                            {
+                                <i style="cursor: pointer" class="icon-star-empty"></i>
+                            }
+                            @if (Model.AverageRate >= 6)
+                            {
+                                <i style="cursor: pointer" class="icon-star"></i>
+                            }
+                            else if (Model.AverageRate == 5)
+                            {
+                                <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                            }
+                            else
+                            {
+                                <i style="cursor: pointer" class="icon-star-empty"></i>
+                            }
+                            @if (Model.AverageRate >= 8)
+                            {
+                                <i style="cursor: pointer" class="icon-star"></i>
+                            }
+                            else if (Model.AverageRate == 7)
+                            {
+                                <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                            }
+                            else
+                            {
+                                <i style="cursor: pointer" class="icon-star-empty"></i>
+                            }
+                            @if (Model.AverageRate == 10)
+                            {
+                                <i style="cursor: pointer" class="icon-star"></i>
+                            }
+                            else if (Model.AverageRate == 9)
+                            {
+                                <i style="cursor: pointer" class="icon-star-half-alt"></i>
+                            }
+                            else
+                            {
+                                <i style="cursor: pointer" class="icon-star-empty"></i>
+                            }
+                        </span>
+
+                        <span class="text-muted">(@Model.ReviewsCounter)</span>
+                        <br />
+                    </div>
+                    <div style="display: inline-block; float: right; font-size: 34px;">
+                        <span style="font-size: 34px">@Model.Price zł</span>
+                        <form method="post">
+                            <button type="submit">
+                                <i class="icon-cancel-1 text-secondary text-danger"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: inline-block">
+                        <div style="display: inline-block; float: left">
+                            <a href="@Model.ProductUrl">
+                                <img height="170" width="170" src="@Model.MainImageUrl" style="float: right" />
+                            </a>
+                        </div>
+                        <div style="display: inline-block; font-size: 15px;" class="mt-2 ms-3">
+
+                            @switch (Model.ProductType)
+                            {
+                                case ProductType.Case:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Czas gwarancji: </span>
+                                    <span>@Model.GuarantyTime miesięcy</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Kolor: </span>
+                                    <span>@Model.Color</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Formaty płyty głównej: </span>
+                                    <span>@Model.MotherBoardsFormats</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Format zasilacza: </span>
+                                    <span>@Model.PowerSupplyFormat</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ obudowy: </span>
+                                    <span>@Model.CaseType</span>
+
+                                    <br />
+                                    break;
+
+                                case ProductType.DiskDrive:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Czas gwarancji: </span>
+                                    <span>@Model.GuarantyTime miesięcy</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozmiar dysku: </span>
+                                    <span>@Model.DiskSize GB</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Prędkość odczytu: </span>
+                                    <span>@Model.ReadSpeed MB/s</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Format zasilacza: </span>
+                                    <span>@Model.WriteSpeed MB/s</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ dysku: </span>
+                                    <span>@Model.DiskType</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Interface dysku: </span>
+                                    <span>@Model.DiskDriveInterface</span>
+
+                                    break;
+
+                                case ProductType.GraphicCard:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ pamięci: </span>
+                                    <span>@Model.MemoryType</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Pamięć: </span>
+                                    <span>@Model.MemorySize GB</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Taktowanie rdzenia: </span>
+                                    <span>@Model.CoreClock</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Taktowanie pamięci: </span>
+                                    <span>@Model.MemoryClock</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">RayTracing </span>
+                                    <span>@(Model.RayTracing == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Seria kart graficznych: </span>
+                                    <span>@Model.GraphicCardSerie</span>
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Motherboard:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Format płyty głównej: </span>
+                                    <span>@Model.Format</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Gniazdo procesora: </span>
+                                    <span>@Model.ProcessorSocket</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Chipset: </span>
+                                    <span>@Model.Chipset</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Architektura procesora: </span>
+                                    <span>@Model.ProcesorArchitecture</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Wspierane rodziny procesora </span>
+                                    <span>@Model.SupportedProcessorFamilies</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Sloty pamięci RAM: </span>
+                                    <span>@Model.RamSlots</span>
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.PowerSupply:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Maksymalna moc: </span>
+                                    <span>@Model.MaximalPower W</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Certyfikat: </span>
+                                    <span>@Model.Certificate</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Chipset: </span>
+                                    <span>@Model.Chipset</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Format zasilacza: </span>
+                                    <span>@Model.PowerSupplyFormat</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Efektywność: </span>
+                                    <span>@Model.Efficiency</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Funkcje zabezpieczeń: </span>
+                                    <span>@Model.PowerSupplyProtectorsFeatures</span>
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Processor:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rdzenie: </span>
+                                    <span>@Model.Cores</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Taktowanie: </span>
+                                    <span>@Model.Frequency</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Pamieć cache: </span>
+                                    <span>@Model.CacheSize MB</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Zintegrowane GPU: </span>
+                                    <span>@(Model.IntegratedGpu == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Dołączone chłodzenie: </span>
+                                    <span>@(Model.CoolerIncluded == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Gniazdo procesora: </span>
+                                    <span>@Model.ProcessorSocket</span>
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Ram:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Częstotliwość: </span>
+                                    <span>@Model.Frequency MHz</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Łączny rozmiar: </span>
+                                    <span>@Model.TotalSize Mb</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozmiar pojedyńczej kości: </span>
+                                    <span>@Model.SizePerChips MB</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Liczba kości: </span>
+                                    <span>@Model.ChipsAmount</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ pamięci: </span>
+                                    <span>@Model.RamType</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Czas gwarancji: </span>
+                                    <span>@Model.GuarantyTime miesiące</span>
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.DesktopComputer:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Procesor: </span>
+                                    <span>@Model.Processor</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Gpu: </span>
+                                    <span>@Model.Gpu</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozmiar pamięci RAM: </span>
+                                    <span>@Model.RamSize GB</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ pamięci RAM: </span>
+                                    <span>@Model.RamType</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozmiar dysku: </span>
+                                    <span>@Model.DiskSize GB</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">System operacyjny: </span>
+                                    <span>@Model.OperatingSystem</span>
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Keyboard:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Kolor: </span>
+                                    <span>@Model.Color</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Przeznaczeni: </span>
+                                    <span>@Model.Destination</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ przełączników: </span>
+                                    <span>@Model.SwitchType</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Profil: </span>
+                                    <span>@Model.Profile</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Łączność: </span>
+                                    <span>@Model.Connectivity</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Podświetlenie: </span>
+                                    <span>@(Model.Lighting == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Laptop:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Procesor: </span>
+                                    <span>@Model.Processor</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">GPU: </span>
+                                    <span>@Model.Gpu</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozmiar pamięci RAM: </span>
+                                    <span>@Model.RamSize</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozmiar dysku: </span>
+                                    <span>@Model.DiskSize GB</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">System operacyjny: </span>
+                                    <span>@Model.OperatingSystem</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozdzielczość: </span>
+                                    <span>@Model.Resolution</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozmiar baterii: </span>
+                                    <span>@Model.BatteryCapacity</span>
+
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Monitor:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Przekątna ekranu: </span>
+                                    <span>@Model.ScreenDiagonal cali</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Częstotliwość odświerzania ekranu: </span>
+                                    <span>@Model.ScreenRefreshRate Hz</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ ekranu: </span>
+                                    <span>@Model.ScreenType</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Wbudowane głośniki: </span>
+                                    <span>@(Model.BuiltInSpeakers == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Opóźnienie: </span>
+                                    <span>@Model.Latency mn</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Czas gwarancji: </span>
+                                    <span>@Model.GuarantyTime miesięcy</span>
+
+
+                                    <br />
+
+                                    break;
+
+
+                                case ProductType.Mouse:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Przekątna ekranu: </span>
+                                    <span>@Model.ScreenDiagonal cali</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Częstotliwość odświerzania ekranu: </span>
+                                    <span>@Model.ScreenRefreshRate Hz</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Typ ekranu: </span>
+                                    <span>@Model.ScreenType</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Wbudowane głośniki: </span>
+                                    <span>@(Model.BuiltInSpeakers == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Opóźnienie: </span>
+                                    <span>@Model.Latency mn</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Czas gwarancji: </span>
+                                    <span>@Model.GuarantyTime miesięcy</span>
+
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Printer:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Przeznaczenie: </span>
+                                    <span>@Model.Destination</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Drukowanie obustronne: </span>
+                                    <span>@(Model.DuplexPrinting == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Technologia druku: </span>
+                                    <span>@Model.PrintTechnology</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Maksymalna rozdzielczość druku: </span>
+                                    <span>@Model.MaxPrintingResolution</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Obsługiwane typy nośników: </span>
+                                    <span>@Model.SupportedMediaTypes</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Obsługiwane formaty nośników: </span>
+                                    <span>@Model.SupportedMediaFormats</span>
+
+
+                                    <br />
+
+                                    break;
+
+                                case ProductType.Smartphone:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Tylnia kamera: </span>
+                                    <span>@Model.BackCamera</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Drukowanie obustronne: </span>
+                                    <span>@Model.FrontCamera</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Technologia druku: </span>
+                                    <span>@Model.ScreenDiagonal</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Maksymalna rozdzielczość druku: </span>
+                                    <span>@Model.Processor</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Obsługiwane typy nośników: </span>
+                                    <span>@Model.RamSize</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Obsługiwane formaty nośników: </span>
+                                    <span>@Model.OperatingSystem</span>
+
+
+                                    <br />
+
+                                    break;
+
+
+                                case ProductType.Televisor:
+                                    <span class=" fw-bold">Producent: </span>
+                                    <span>@Model.Producer</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Częstotliwość odświerzania ekranu: </span>
+                                    <span>@Model.ScreenRefreshRate</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Rozdzielczość: </span>
+                                    <span>@Model.Resolution</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Przekątna ekranu: </span>
+                                    <span>@Model.ScreenDiagonal</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Porty zewnętrzne: </span>
+                                    <span>@Model.ExternalPorts</span>
+
+                                    <br />
+
+                                    <span class=" fw-bold">Smart TV: </span>
+                                    <span>@(Model.HasSmartTv == true ? "Tak" : "Nie")</span>
+
+                                    <br />
+                                    if (Model.HasSmartTv == true)
+                                    {
+                                        <span class=" fw-bold">Obsługiwane formaty nośników: </span>
+                                        <span>@Model.OperatingSystem</span>
+                                    }
+
+
+                                    <br />
+
+                                    break;
+                            }
+
+                        </div>
+                    </div>
+                    <div style="float: right">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        break;
 }
 <style>
 
