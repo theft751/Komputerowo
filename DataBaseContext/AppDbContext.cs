@@ -15,7 +15,7 @@ namespace DataBaseContext
 {
     public class AppDbContext : DbContext
     {
-        
+
 
         //*************
         // Essenstials
@@ -26,10 +26,10 @@ namespace DataBaseContext
         public DbSet<Review> Reviews { get; set; }
         public DbSet<MainProductImage> MainProductImages { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderItem> OrderItem { get; set; }
+        public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<User> Users { get; set; }
-        
+        public DbSet<BankAcountNumber> BankAcountNumber { get; set;}
         //*************
         //  Products
         //*************

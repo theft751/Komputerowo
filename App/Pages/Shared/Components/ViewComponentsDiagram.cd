@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="App.Pages.Shared.Components.ImagesAreaViewComponent">
+    <Position X="14" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Shared\Components\ImagesAreaViewComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Shared.Components.LoggedUserEmailViewComponent">
+    <Position X="14" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Shared\Components\LoggedUserEmailViewComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Shared.Components.ProductHeaderViewComponent">
+    <Position X="19.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Shared\Components\ProductHeaderViewComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Shared.Components.ProductViewComponent">
+    <Position X="16.75" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Shared\Components\ProductViewComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Shared.Components.ReviewsAreaViewComponent">
+    <Position X="17.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Shared\Components\ReviewsAreaViewComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Shared.Components.AddOrEditProductViewComponent">
+    <Position X="16.5" Y="8" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Shared\Components\AddOrEditProductViewComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Shared.Components.BuyProductInProductPageViewComponent">
+    <Position X="19.75" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\Shared\Components\BuyProductInProductPageViewComponent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

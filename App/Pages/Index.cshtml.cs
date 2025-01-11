@@ -32,11 +32,9 @@ namespace App.Pages
         public int KeyboardsAmount { get; set; }
         public int PrintersAmount { get; set; }
 
-        public string testString {  get; set; }
 
         public IActionResult OnGet()
         {
-            testString = Request.Cookies["Basket"];
             //Computers
 
             DesktopComputerIds = 

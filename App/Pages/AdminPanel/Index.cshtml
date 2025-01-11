@@ -2,8 +2,10 @@
 @model App.Pages.AdminPanel.IndexModel
 @{
 }
-<div id="logOrRegForm">
+<div class="logOrRegForm">
     <div id="loginFormContent">
+        <h2>Numer konta bankowego</h2>
+        @Model.AcountNumber <button>Edytuj</button>
         <h2>Dodawanie produktów</h2>
         <form method="get" action="@Url.Page("/AdminPanel/AddOrEditCase")">
             <input type="hidden" name="handler" value="Add"/>
@@ -64,6 +66,15 @@
         <form method="get" action="@Url.Page("/AdminPanel/AddOrEditPrinter")">
             <input type="hidden" name="handler" value="Add" />
             <button type="submit" class="loginButton">Dodaj drukarkę</button>
+        </form>
+        <h2>Zamówienia</h2>
+        <form method="get" action="@Url.Page("/AdminPanel/RealisedOrders")">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Pokaż zrealizowane zamówienia</button>
+        </form>
+        <form method="get" action="@Url.Page("/AdminPanel/UnrealisedOrders")">
+            <input type="hidden" name="handler" value="Add" />
+            <button type="submit" class="loginButton">Pokaż nierzrealizowane zamówienia</button>
         </form>
     </div>
 </div>

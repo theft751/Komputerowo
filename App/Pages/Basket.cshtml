@@ -9,4 +9,10 @@
 @foreach (var basketElement in Model.BasketElements)
 {
     @await Component.InvokeAsync("Product", new { id = basketElement.ProductId, viewMode = ViewMode.Basket, amountInBasket = basketElement.Amount})
-} 
+}
+<div style="font-size: 30px;" class="mt-5">
+    <span style="font-weight: bold">Do zapłaty:</span> @Model.BasketPrice.ToString("0.#####") zł
+</div>
+<form action="/DeliveryAdress">
+<button class="narrowButton" style="font-size: 20px">Dokonaj zakupów</button>
+</form>

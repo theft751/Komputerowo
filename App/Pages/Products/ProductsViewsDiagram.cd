@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="App.Pages.Products.CaseModel">
+    <Position X="48.75" Y="21.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAFAIAAAAAQAAAAAQAA=</HashCode>
+      <FileName>Pages\Products\Case.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.DesktopComputerModel">
+    <Position X="44.5" Y="16" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAQAAAAAAQgAAAIAAAAABAAAEAAAACAgQAAMQAE=</HashCode>
+      <FileName>Pages\Products\DesktopComputer.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.DiskDriveModel">
+    <Position X="41.5" Y="21.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAQAAAIACgAAAAAQAA=</HashCode>
+      <FileName>Pages\Products\DiskDrive.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.GraphicCardModel">
+    <Position X="52" Y="16" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAEAAAAAAAAAAUAAAAAAAAEAAGAACAgAAAIQAI=</HashCode>
+      <FileName>Pages\Products\GraphicCard.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.KeyboardModel">
+    <Position X="48.5" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAAgAAAQAAAAAAAAAAAAEABAAAAAAQAA=</HashCode>
+      <FileName>Pages\Products\Keyboard.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.LaptopModel">
+    <Position X="52" Y="21" Width="2.75" />
+    <InheritanceLine Type="App.Pages.Products.ProductTemplatePageModel" FixedToPoint="true">
+      <Path>
+        <Point X="46.25" Y="10.713" />
+        <Point X="46.25" Y="11.625" />
+        <Point X="47.75" Y="11.625" />
+        <Point X="47.75" Y="20.625" />
+        <Point X="53.438" Y="20.625" />
+        <Point X="53.438" Y="21" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>EAAABAAAAAAAAAgAAAIAAAAABEAgEAAAAAAgQAAMQAA=</HashCode>
+      <FileName>Pages\Products\Laptop.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.MonitorModel">
+    <Position X="39" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAAAAAAAgAAAAAAAAAAEAgAAAAAAAAAoAAQAA=</HashCode>
+      <FileName>Pages\Products\Monitor.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.MotherBoardModel">
+    <Position X="44.75" Y="21.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAQQAAAIAACBAQAQgAAgAAAAAAAAAAQAA=</HashCode>
+      <FileName>Pages\Products\MotherBoard.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.MouseModel">
+    <Position X="38.5" Y="21.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAQAAAQAAAAAAAAAAAAEABAAAAAEQAA=</HashCode>
+      <FileName>Pages\Products\Mouse.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.PowerSupplyModel">
+    <Position X="42" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAQAAAAAAABgAAAAAAAAQACAQAA=</HashCode>
+      <FileName>Pages\Products\PowerSupply.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.PrinterModel">
+    <Position X="38.5" Y="17" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAACEAAEAAADAAAAQAI=</HashCode>
+      <FileName>Pages\Products\Printer.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.ProcessorModel">
+    <Position X="48.5" Y="15.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAIAAAAAAAQAAEAAYAAAgAAAAAEAAAAQAA=</HashCode>
+      <FileName>Pages\Products\Processor.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.ProductTemplatePageModel">
+    <Position X="45" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>kACiAAAQQQEgAAAABAABAEWKCAEQCBAAAAQAgYUQQAA=</HashCode>
+      <FileName>Pages\Products\ProductTemplatePageModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.RamModel">
+    <Position X="51.25" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAYAAAIAIAAAAAAMAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Pages\Products\Ram.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.SmartphoneModel">
+    <Position X="41.5" Y="16" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAABEACAAAAAAgAAAAAAIAAAFAgEEAAAAAAQAAEQAA=</HashCode>
+      <FileName>Pages\Products\Smartphone.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.Products.TelevisorModel">
+    <Position X="45" Y="12.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAIAAAAAAgAAAAAAAAAAEAgEAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Pages\Products\Televisor.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

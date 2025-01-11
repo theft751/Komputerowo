@@ -1,4 +1,5 @@
-﻿using Domain.AppModel;
+﻿using DataBaseContext;
+using Domain.AppModel;
 using Domain.EntityModels.Main;
 using Domain.EntityModels.Products.ComputerParts;
 using Domain.EntityModels.Products.OtherDevices;
@@ -125,6 +126,7 @@ namespace DataBaseContext
                 context.Printers.AddRange(printers);  
                 context.SaveChanges();
 
+                context.BankAcountNumber.Add(new BankAcountNumber() { Number= "12 3456 7890 1234 5678 9012 3456" });
 
                 //Adding BonusProductsImages
                 addBonusImages(context.Cases, caseImagesPath, context);
@@ -142,6 +144,8 @@ namespace DataBaseContext
                 addBonusImages(context.Mouses, mouseImagesPath, context);
                 addBonusImages(context.Keyboards, keyboardImagesPath, context);
                 addBonusImages(context.Printers, printerImagesPath, context);
+
+                
             }
         }
 
@@ -196,7 +200,7 @@ namespace DataBaseContext
             }
         }
     }
-
+    
 }
 
 

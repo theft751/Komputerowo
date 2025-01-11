@@ -19,8 +19,6 @@ namespace Domain.EntityModels.Main
         public string Street { get; set; }
         public string NumberOfBuilding { get; set; }
         public string ApartmentNumber { get; set; }
-
         public virtual User User { get; set; }
-        public int UserId {  get; set; }
     }
 }

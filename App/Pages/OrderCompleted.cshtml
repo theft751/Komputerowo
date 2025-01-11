@@ -1,0 +1,12 @@
+﻿@page
+@model App.Pages.OrderCompletedModel
+@{
+}
+<div class=" logOrRegForm">
+    <h2>Potwierdzenie złożenia zamówienia</h2>
+    Dziękujemy za zrobienie zakupów w naszym sklepie. Twoje zamówienie zostało złożone i oczekuje na realizację.
+    Gdy tylko zamówienie zostanie opłacone przystąpimy do jego kompletowania. Dane do przelewu:<br/>
+    <br/>
+    Tytuł przelewu: za zamówienie numer: @Model.OrderNumber <br />
+    Numer Konta: @Model.AcountNumber <br />
+</div>

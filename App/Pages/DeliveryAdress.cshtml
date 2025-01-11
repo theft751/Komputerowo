@@ -1,0 +1,166 @@
+﻿@page
+@model App.Pages.DeliveryAdressModel
+@{
+}
+<style>
+    input[type='radio'] {
+        height: 25px;
+        width: 25px;
+        vertical-align: middle;
+    }
+
+    table {
+        border-spacing: 20px 0px;
+    }
+</style>
+<form method="post">
+    <div>
+        <div style="display: inline-flex; gap: 60px; margin: auto">
+
+            <div class="logOrRegForm" style="width: 500px">
+                <h2><input type="radio" asp-for="defaultOrAnother" value="0" />&emsp;Domyślny adres</h2>
+                <table>
+
+                    <tr>
+                        <td style="font-weight:bold">Ulica:</td>
+                        <td>&emsp;@Model.userStreet</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight:bold">Numer budynku:</td>
+                        <td>&emsp;@Model.userNumberOfBuilding</td>
+                    </tr>
+                    @if (Model.userApartmentNumber != null || Model.userApartmentNumber != "")
+                    {
+                        <tr>
+                            <td style="font-weight:bold">Numer lokalu:</td>
+                            <td>&emsp;@Model.userApartmentNumber</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td style="font-weight:bold">Województwo:</td>
+                        <td>
+                            &emsp;
+                            @switch (((int)Model.voivodeship))
+                            {
+                                case 0:
+                                    <span>dolnośląskie</span>
+                                    break;
+                                case 1:
+                                    <span>kujawsko-pomorskie</span>
+                                    break;
+                                case 2:
+                                    <span>lubelskie</span>
+                                    break;
+                                case 3:
+                                    <span>lubuskie</span>
+                                    break;
+                                case 4:
+                                    <span>łódzkie</span>
+                                    break;
+                                case 5:
+                                    <span>małopolskie</span>
+                                    break;
+                                case 6:
+                                    <span>mazowieckie</span>
+                                    break;
+                                case 7:
+                                    <span>opolskie</span>
+                                    break;
+                                case 8:
+                                    <span>podkarpackie</span>
+                                    break;
+                                case 9:
+                                    <span>podlaskie</span>
+                                    break;
+                                case 10:
+                                    <span>pomorskie</span>
+                                    break;
+                                case 11:
+                                    <span>śląskie</span>
+                                    break;
+                                case 12:
+                                    <span>świętokrzyskie</span>
+                                    break;
+                                case 13:
+                                    <span>warmińsko_mazurskie</span>
+                                    break;
+                                case 14:
+                                    <span>wielkopolskie</span>
+                                    break;
+                                case 15:
+                                    <span>zachodniopomorskie</span>
+                                    break;
+                            }
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight:bold">Miejscowość:</td>
+                        <td>&emsp;@Model.userTown</td>
+                    </tr>
+
+                    <tr>
+                        <td style="font-weight:bold">Kod pocztowy:</td>
+                        <td>&emsp;@Model.userPostCode</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="logOrRegForm">
+
+                <h2><input type="radio" asp-for="defaultOrAnother" value="1" />&emsp;Inny adres</h2>
+                <h3>Ulica i lokal</h3>
+                <div class="inputUnit">
+                    <input asp-for="street" type="text" id="streetInput" class="loginInput" placeholder="" value="@Model.street" />
+                    <label for="streetInput" class="loginCaption">Ulica</label> <br />
+                </div>
+
+                <div class="inputUnit">
+                    <input asp-for="numberOfBuilding" type="text" id="houseNumberInput" class="loginInput" placeholder="" value="@Model.numberOfBuilding" />
+                    <label for="houseNumber" class="loginCaption">Numer budynku</label> <br />
+                </div>
+
+                <div class="inputUnit">
+                    <input asp-for="apartmentNumber" type="text" id="localNumberInput" class="loginInput" placeholder="" value="@Model.apartmentNumber" />
+                    <label for="localNumber" class="loginCaption">Numer lokalu</label> <br />
+                </div>
+                <h3>Miejscowosc</h3>
+                <div class="inputUnit">
+                    <select class="loginInput" asp-for="voivodeship">
+                        <option value="0">dolnośląskie</option>
+                        <option value="1">kujawsko-pomorskie</option>
+                        <option value="2">lubelskie</option>
+                        <option value="3">lubuskie</option>
+                        <option value="4">łódzkie</option>
+                        <option value="5">małopolskie</option>
+                        <option value="6">mazowieckie</option>
+                        <option value="7">opolskie</option>
+                        <option value="8">podkarpackie</option>
+                        <option value="9">podlaskie</option>
+                        <option value="10">pomorskie</option>
+                        <option value="11">śląskie</option>
+                        <option value="12">świętokrzyskie</option>
+                        <option value="13">warmińsko_mazurskie</option>
+                        <option value="14">wielkopolskie</option>
+                        <option value="15">zachodniopomorskie</option>
+                    </select>
+                </div>
+                <div class="inputUnit">
+                    <input asp-for="town" type="text" id="townInput" class="loginInput" placeholder="" value="@Model.town" />
+                    <label for="townInput" class="loginCaption">Miejscowosc</label> <br />
+                </div>
+                <div class="inputUnit">
+                    <input asp-for="postCode" type="text" id="postCodeInput" class="loginInput" placeholder="" value="@Model.postCode" />
+                    <label for="postCodeInput" class="loginCaption">Kod pocztowy</label> <br />
+                </div>
+
+            </div>
+
+        </div>
+        <br />
+        <br />
+        <div style="text-align:center; width: 100%">
+            <input type="submit" class="loginButton" value="Złóż zamówienie" />
+        </div>
+    </div>
+</form>

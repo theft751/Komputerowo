@@ -1,0 +1,39 @@
+﻿@page
+@model App.Pages.RealisedOrdersModel
+@{
+}
+<style>
+    table {
+        border: 3px solid black;
+    }
+</style>
+<h2>Zrealizowane zamówienia</h2>
+@if(Model.RealisedOrders.Count() == 0)
+{
+    <span style="color: gray">Wygląda na to że nie masz żadnych zrealizowanych zamówień</span>
+}
+else
+{
+    <table>
+        <tr>
+            <th>Numer zamówienia</th>
+            <th>Data złożenia zamówienia </th>
+            <th>Data realizacji</th>
+            <th>Pełny podgląd</th>
+        </tr>
+        @foreach (var order in Model.RealisedOrders)
+        {
+            <tr>
+                <td>@order.Number</td>
+                <td>@order.OrderDate </td>
+                <td>@order.RealisationDate</td>
+                <th>
+                    <form method="get" action="/Order">
+                        <input type="hidden" value="@order.Number" name="number" />
+                        <button type="submit" class="narrowButton" />
+                    </form>
+                </th>
+            </tr>
+        }
+    </table>
+}

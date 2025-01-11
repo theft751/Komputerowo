@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Domain.AppModel.BasketElement">
+    <Position X="15.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AppModel\BasketElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.AppModel.BonusImageSeedingModel">
+    <Position X="20.5" Y="5.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAEIAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>AppModel\BonusImageSeedingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.AppModel.MainImageSeedingModel">
+    <Position X="17.75" Y="5.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAEIAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>AppModel\MainImageSeedingModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.ViewModels.ProductVm">
+    <Position X="12.25" Y="5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>sCECBBAaAQAMYUwEYIYREFWAFcp2EkGcBDAlxsCMAAI=</HashCode>
+      <FileName>ViewModels\ProductVm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Domain.AppModel.OperationMode">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>AppModel\OperationMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.AppModel.SortMode">
+    <Position X="15.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAQABAAAA=</HashCode>
+      <FileName>AppModel\SortMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.AppModel.ViewMode">
+    <Position X="20.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAIAAAAAAAAAAAI=</HashCode>
+      <FileName>AppModel\ViewMode.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

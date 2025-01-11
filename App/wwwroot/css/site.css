@@ -77,8 +77,7 @@ header {
     color: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.dropdown-item {
-    color: white;
+.dropdown-item{
     border-bottom: 1px solid Silver;
     padding: 6px;
 }
@@ -96,6 +95,16 @@ dropdown-item:visited {
 .dropdown:hover .nav-link {
     color: white; /* Zmiana koloru linku przy najechaniu */
 }
+.dropdown:hover .dropdown-item {
+    color: white; /* Zmiana koloru linku przy najechaniu */
+}
+.dropdown:hover .dropdown-item:hover {
+    color: black; /* Zmiana koloru linku przy najechaniu */
+}
+    .dropdown:hover .dropdown-item:active {
+        background-color: white;
+        color: black; /* Zmiana koloru linku przy najechaniu */
+    }
 
 .navbar-nav {
     position: relative; /* Ustawienie pozycji do menu */

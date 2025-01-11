@@ -66,8 +66,7 @@ namespace App.Pages
             { 
                 if (password == repeatPassword)
                 {
-                    try
-                    {
+
                         UserAdress adress = new UserAdress();
                         adress.PostCode = postCode;
                         adress.Voivodeship = voivodeship;
@@ -82,7 +81,7 @@ namespace App.Pages
                         user.LastName = lastName;
                         user.PhoneNumber = phoneNumber;
                         user.UserType = UserType.NormalUser;
-                        user.Adress = adress;
+
 
                         //Password hashing
                         using (SHA256 sha256 = SHA256.Create())
@@ -94,14 +93,15 @@ namespace App.Pages
 
 
                         context.Users.Add(user);
+                        context.SaveChanges();
                         context.Adresses.Add(adress);
+                        user.Adress = adress;
                         context.SaveChanges();
                         return RedirectToPage("/RegisterCompleted");
-                    }
-                    catch (Exception)
-                    {
-                        return new RedirectToPageResult("/Error");
-                    }
+                    
+  
+                        //return new RedirectToPageResult("/Error");
+                    
                 }
                 else
                 {

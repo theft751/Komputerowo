@@ -71,7 +71,7 @@
                         Rozmiar pamięci karty graficznej
                     </td>
                     <td>
-                        @Model.GpuMemorySize
+                        @Model.GpuMemorySize GB
                     </td>
                 </tr>
                 <tr>
@@ -87,7 +87,7 @@
                         Rozmiar pamięci RAM
                     </td>
                     <td>
-                        @Model.RamSize
+                        @Model.RamSize GB
                     </td>
                 </tr>
                 <tr>
@@ -103,7 +103,7 @@
                         Rozmiar dysku
                     </td>
                     <td>
-                        @Model.DiskSize
+                        @Model.DiskSize GB
                     </td>
                 </tr>
                 <tr>
@@ -199,7 +199,7 @@
                 Rozmiar pamięci karty graficznej
             </td>
             <td>
-                @Model.GpuMemorySize
+                @Model.GpuMemorySize GB
             </td>
         </tr>
         <tr>
@@ -215,7 +215,7 @@
                 Rozmiar pamięci RAM
             </td>
             <td>
-                @Model.RamSize
+                @Model.RamSize GB
             </td>
         </tr>
         <tr>
@@ -252,7 +252,7 @@
         </tr>
         <tr>
             <td>
-                Moc zasilacza
+                Moc zasilacza Watów
             </td>
             <td>
                 @Model.PowerSupply
@@ -268,7 +268,6 @@
         </tr>
     </table>
 </div>
-
 <!---Display reviews-->
 @await Component.InvokeAsync(
             "ReviewsArea",

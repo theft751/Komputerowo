@@ -7,7 +7,7 @@
 @using Domain.EntityModels.Additional.ComputerParts;
 <form method="post" id="loginForm" class="logOrRegForm" enctype="multipart/form-data">
     <div id="loginFormContent">
-        <h2>Dodaj obudowe</h2>
+        <h2>@Model.OperationMode==Ope Dodaj obudowe</h2>
         @await Component.InvokeAsync("AddOrEditProduct", new { ProductPassData = Model.ProductPassData })
         <div class="inputUnit">
             <input asp-for="MotherBoardFormats" type="text" class="loginInput" placeholder="" required />

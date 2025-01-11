@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="App.Pages.LogoutModel">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\Logout.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.loginModel">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Pages\login.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.RegisterCompletedModel">
+    <Position X="11.75" Y="4.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\RegisterCompleted.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.UserSettingsPanelModel">
+    <Position X="9.25" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\UserSettingsPanel.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.EditAdressModel">
+    <Position X="6.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAgAAAAIAAAAAAIAAAAAAAgAAAAQABAAAAIA=</HashCode>
+      <FileName>Pages\EditAdress.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.EditPersonalInformationModel">
+    <Position X="11.75" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAABAAAAAAAAAAAAAAEAAAAAAAAQACAAAAAA=</HashCode>
+      <FileName>Pages\EditPersonalInformation.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="App.Pages.ChangePasswordModel">
+    <Position X="9" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAAQAAAAAABAAAAAAAEAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Pages\ChangePassword.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

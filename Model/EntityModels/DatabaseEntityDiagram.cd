@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Domain.EntityModels.Products.OtherDevices.DesktopComputer">
+    <Position X="9.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAQAAAAAAQgAAAIAAAAABAAAEAAAACAgQAAMAAE=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\DesktopComputer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.OtherDevices.Keyboard">
+    <Position X="18.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAAAAAAAAgAAAQAAAAAAAAAAAAEABAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\Keyboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.OtherDevices.Laptop">
+    <Position X="14.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAAAAAAAgAAAIAAAAABEAgEAAAAAAgQAAMAAA=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\Laptop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.OtherDevices.MonitorScreen">
+    <Position X="17.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ECAAAAAAAAAAAAgAAAAAAAAAAEAgAAAAAAAAAoAAAAA=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\MonitorScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.OtherDevices.Mouse">
+    <Position X="18.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAQAAAQAAAAAAAAAAAAEABAAAAAEAAA=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\Mouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.OtherDevices.Printer">
+    <Position X="16.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAAACEAAEAAADAAAAAAI=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\Printer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.OtherDevices.Smartphone">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAABEACAAAAAAgAAAAAAIAAAFAgEEAAAAAAQAAEAAA=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\Smartphone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.OtherDevices.Televisor">
+    <Position X="14.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAIAAAAAAgAAAAAAAAAAEAgEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Products\OtherDevices\Televisor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.ComputerParts.Case">
+    <Position X="19.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAFAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Products\ComputerParts\Case.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CaseType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.ComputerParts.DiskDrive">
+    <Position X="20.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAQAAAIACgAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Products\ComputerParts\DiskDrive.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DiskDriveType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.ComputerParts.GraphicCard">
+    <Position X="13" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAEAAAAAAAAAAUAAAAAAAAEAAGAACAgAAAIAAI=</HashCode>
+      <FileName>EntityModels\Products\ComputerParts\GraphicCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.ComputerParts.MotherBoard">
+    <Position X="12" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAQQAAAIAACBAQAQgAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Products\ComputerParts\MotherBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.ComputerParts.PowerSupply">
+    <Position X="15" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAQAAAAAAABgAAAAAAAAQACAAAA=</HashCode>
+      <FileName>EntityModels\Products\ComputerParts\PowerSupply.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.ComputerParts.Processor">
+    <Position X="11.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAIAAAAAAAQAAEAAYAAAAAAAAAEBAAAAAA=</HashCode>
+      <FileName>EntityModels\Products\ComputerParts\Processor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Products.ComputerParts.Ram">
+    <Position X="16.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAYAAAIAIAAAAAAMAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Products\ComputerParts\Ram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.BonusProductImage">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAAAAAAAAAAAAAAAAAABAACQAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Main\BonusProductImage.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.MainProductImage">
+    <Position X="17.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAABAACQAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Main\MainProductImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.Order">
+    <Position X="14.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEAAAACAAAAAAAAAAAAAgAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Main\Order.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Status" />
+      <Property Name="Adress" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.OrderAdress">
+    <Position X="17.75" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAgQAAAAAgAAAAAAAAAAAAAAAAAIAgACAAAA=</HashCode>
+      <FileName>EntityModels\Main\OrderAdress.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Voivodeship" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.OrderItem">
+    <Position X="8" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAECAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Main\OrderItem.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.Product">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gIACAMAQAQEgAAAAAAABAEWAAAAQABAAAAAAgAAAAAA=</HashCode>
+      <FileName>EntityModels\Main\Product.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ProductType" />
+      <Property Name="MainImage" />
+      <Property Name="Availability" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.Review">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAADAAAAAAAIAAAAAAAAAAgAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>EntityModels\Main\Review.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Product" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.User">
+    <Position X="13.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAEAAACAAAAAAAAAAQAAAAAgACAACAAQAAAAAIAg=</HashCode>
+      <FileName>EntityModels\Main\User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="UserType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Orders" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Domain.EntityModels.Main.UserAdress">
+    <Position X="17.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAgQAAAAAgAAAAAAAAAAAAAAAAAIAgACAAAA=</HashCode>
+      <FileName>EntityModels\Main\UserAdress.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Voivodeship" />
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Domain.EntityModels.Additional.Common.Availability">
+    <Position X="17" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>EntityModels\Additional\Common\Availability.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.EntityModels.Additional.Common.OrderStatus">
+    <Position X="14.25" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>EntityModels\Additional\Common\OrderStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.EntityModels.Additional.Common.ProductType">
+    <Position X="9" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAiAARQACAAACAAAUACQAYAAAAAAAAAAAAAACAAEAAA=</HashCode>
+      <FileName>EntityModels\Additional\Common\ProductType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.EntityModels.Additional.Common.UserType">
+    <Position X="9.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>EntityModels\Additional\Common\UserType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.EntityModels.Additional.Common.Voivodeship">
+    <Position X="20.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABBAAAAAAAMAAAAAAAAQAAAEiAEgAAEEBACAAQAAA=</HashCode>
+      <FileName>EntityModels\Additional\Common\Voivodeship.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.EntityModels.Additional.ComputerParts.CaseType">
+    <Position X="19.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAgAAAAA=</HashCode>
+      <FileName>EntityModels\Additional\ComputerParts\CaseType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Domain.EntityModels.Additional.ComputerParts.DiskDriveType">
+    <Position X="20.5" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityModels\Additional\ComputerParts\DiskDriveType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

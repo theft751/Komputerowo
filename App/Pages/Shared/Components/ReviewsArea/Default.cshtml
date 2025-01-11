@@ -101,12 +101,6 @@ else
                                 <span>&nbsp;</span>
                             }
                         }
-                        @if (Context.Session.GetInt32("isLogged") == 1)
-                        {
-                            <span>
-                                <a class="fs-6 link-secondary">Odpowiedz</a>
-                            </span>
-                        }
                     </div>
                     <dialog id="dialog-For-Review-@reviewData.Id">
                         Czy napewno chcesz usunąć opinię?<br />
@@ -181,7 +175,7 @@ else
             {
 
 
-                if (Model.PageNumber == 1)
+                if (Model.PageNumber == 1 && Model.ReviewsAmount != 0)
                 {
                     <a class="link-dark fs-5" style="font-weight: bold">1</a>
                 }

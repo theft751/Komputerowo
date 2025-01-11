@@ -17,6 +17,18 @@ namespace App.Pages
         [BindProperty]
         public string password { get; set; }
 
+        public IActionResult OnGet()
+        {
+            if (HttpContext.Session.GetInt32("isLogged") == 1)
+            {
+                return new RedirectToPageResult("/Index");
+            }
+            else
+            {
+                return Page();
+            }
+        }
+
         public IActionResult OnPost()
         {
             User FoundUser = context.Users.FirstOrDefault(x => x.Email == email);

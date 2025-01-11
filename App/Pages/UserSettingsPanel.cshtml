@@ -18,7 +18,10 @@
             </h1>
         <div style="text-align:center">
             <button onclick="location.href='@Url.Page("/ChangePassword")';" class="loginButton" type="button">Zmień hasło</button> <br />
-            <button onclick="location.href='@Url.Page("/EditAdress")';" class="loginButton" type="button">Zmień Adres</button> <br />
+            @if (HttpContext.Session.GetInt32("isUserAdmin") != 1)
+            {
+                <button onclick="location.href='@Url.Page("/EditAdress")';" class="loginButton" type="button">Zmień Adres</button> <br />
+            }
             <button onclick="location.href='@Url.Page("/EditPersonalInformation")';" class="loginButton" type="button">Zmień Dane Personalne</button> <br />
         </div>
     </<div>

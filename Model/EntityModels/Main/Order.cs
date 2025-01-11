@@ -12,7 +12,9 @@ namespace Domain.EntityModels.Main
     {
         public int Id { get; set; }
         public OrderStatus Status { get; set; }
-
+        public string Number { get; set; }
+        public DateTime OrderDate { get; set; }
+        public DateTime? RealisationDate {get; set; }
         //Navigation properties
 
         public virtual OrderAdress Adress { get; set; }

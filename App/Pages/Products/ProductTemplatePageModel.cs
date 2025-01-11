@@ -65,7 +65,7 @@ namespace App.Pages.Products
 
         public ProductType ProductType { get; set; } //dyscryminator
 
-        public int ReviewsAmount { get=> context.Reviews.Where(x=>x.UserId==ProductId).Count(); }
+        public int ReviewsAmount { get=> context.Reviews.Where(x=>x.ProductId == ProductId).Count(); }
         public int GuarantyTime { get; set; } //Months
         public string Description { get; set; }
         public decimal Price { get; set; }
