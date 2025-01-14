@@ -1,9 +1,21 @@
 ﻿@page
 @model App.Pages.OrderModel
+@using Domain.AppModel
 @{
 }
 <h2>Szczegóły zamówienia</h2>
-@if (Model.OrderStatus ==)
+@if (Model.OrderStatus == Domain.EntityModels.Additional.Common.OrderStatus.InProgress & HttpContext.Session.GetInt32("isUserAdmin") == 0)
 {
-
+    <div>
+        <h4>Dane do przelewu</h4>
+        <table>
+            <tr><td style="font-weight:bold">Do zapłaty</td><td>&emsp;@Model.Price.ToString("0.#####") zł</td></tr>
+            <tr><td style="font-weight:bold">Numer konta</td><td>&emsp;@Model.AcountNumber</td></tr>
+            <tr><td style="font-weight:bold">Tytułem</td><td>&emsp;Za zamówienie numer: @Model.OrderNumber</td></tr>
+        </table>
+    </div>
+}
+@foreach(var orderItem in Model.OrderItems)
+{
+    @await Component.InvokeAsync("Product", new { id = orderItem.ProductId, viewMode = ViewMode.Order })
 }

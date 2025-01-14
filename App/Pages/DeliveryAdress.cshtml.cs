@@ -110,6 +110,8 @@ namespace App.Pages
             }
 
             Order order = new Order();
+            order.RealisationDate = DateTime.Now;
+            order.UserId = (int)HttpContext.Session.GetInt32("LoggedUserId");
             order.Number = orderNumber;
             order.Adress = orderAdress;
             order.Status = OrderStatus.InProgress;

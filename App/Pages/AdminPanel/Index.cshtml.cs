@@ -17,5 +17,12 @@ namespace App.Pages.AdminPanel
         }
         public IndexModel(AppDbContext _context)
             : base(_context) { }
+        public IActionResult OnPost()
+        {
+            BankAcountNumber bankAcountNumber = context.BankAcountNumber.FirstOrDefault();
+            bankAcountNumber.Number = AcountNumber;
+            context.SaveChanges();
+            return OnGet();
+        }
     }
 }

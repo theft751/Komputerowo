@@ -10,8 +10,7 @@ namespace Domain.EntityModels.Main
 {
     public class BankAcountNumber
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int Id { get; set; }
         public string Number { get; set; }
     }
 }

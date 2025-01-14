@@ -23,7 +23,28 @@
                 <button onclick="location.href='@Url.Page("/EditAdress")';" class="loginButton" type="button">Zmień Adres</button> <br />
             }
             <button onclick="location.href='@Url.Page("/EditPersonalInformation")';" class="loginButton" type="button">Zmień Dane Personalne</button> <br />
+            @if (HttpContext.Session.GetInt32("isUserAdmin") != 1)
+            {
+                <button onclick="showDialog()" class="loginButton" type="button">Usuń konto</button> <br />
+            }
         </div>
     </<div>
 </div>
-        
+<dialog id="deleteDialog">
+    Czy napewno chcesz usunąć konto użytkownika?<br/>
+    <form method="post">
+        <div style="text-align:center">
+            <button type="submit" class="narrowButton">Tak</button>
+            <button type="button" onclick="closeDialog()" class="narrowButton">Nie</button>
+        </div>
+    </form>
+</dialog>
+<script>
+    const dialog = document.getElementById("deleteDialog");
+    function showDialog() {
+        dialog.showModal();
+    }
+    function closeDialog() { 
+        dialog.close();
+    }
+</script>

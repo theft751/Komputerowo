@@ -3,8 +3,8 @@
 @{
 }
 <style>
-    table {
-        border: 3px solid black;
+    table, th, td {
+        border: 1px solid black;
     }
 </style>
 <h2>Zrealizowane zamówienia</h2>
@@ -16,9 +16,9 @@ else
 {
     <table>
         <tr>
-            <th>Numer zamówienia</th>
-            <th>Data złożenia zamówienia </th>
-            <th>Data realizacji</th>
+            <th>Numer zamówienia &emsp;</th>
+            <th>Data złożenia zamówienia &emsp;</th>
+            <th>Data realizacji &emsp;</th>
             <th>Pełny podgląd</th>
         </tr>
         @foreach (var order in Model.RealisedOrders)
@@ -30,7 +30,7 @@ else
                 <th>
                     <form method="get" action="/Order">
                         <input type="hidden" value="@order.Number" name="number" />
-                        <button type="submit" class="narrowButton" />
+                        <button type="submit" class="narrowButton" >Pokaż</button>
                     </form>
                 </th>
             </tr>

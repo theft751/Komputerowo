@@ -19,6 +19,8 @@ namespace Domain.EntityModels.Main
 
         public virtual OrderAdress Adress { get; set; }
         public int AdressId { get; set; }
+        public virtual User User { get; set; }
+        public int UserId { get; set; }
 
         public virtual ICollection<OrderItem> Items { get; set; }
     }

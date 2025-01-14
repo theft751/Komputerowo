@@ -46,20 +46,30 @@
                 }
                 else
                 {
-                    // 
-                    <div id="userDropDownMenu" style="position: relative; display: inline-block;">
+                    //
+                    <div id="userDropDownMenu" style="position: relative; display: inline-block; z-index: 2;">
                         <span style="cursor: pointer">@await Component.InvokeAsync("LoggedUserEmail")</span>
                         <div id="userDropDownMenuBody" style="position: absolute; right: 0; background-color: #3F526B; ; padding: 10px; display: none;">
                             <ul style="list-style-type: none; padding: 0; margin: 0;">
+                                @if (Context.Session.GetInt32("isUserAdmin") == 1)
+                                {
+                                    <li style="border-bottom: 1px solid white; cursor: pointer">
+                                        <a style=" all:unset" asp-page="/AdminPanel/Index">Panel Administracyjny</a>
+                                    </li>
+                                }
                                 <li style="border-bottom: 1px solid white; cursor: pointer">
                                     <a style=" all:unset" asp-page="/UserSettingsPanel">Moje konto</a>
                                  </li>
-                                <li style="border-bottom: 1px solid white; cursor: pointer">
-                                    <a style=" all:unset" href="#">Zamówienia</a>
-                                </li>
-                                <li style="border-bottom: 1px solid white; cursor: pointer">
-                                    <a style=" all:unset" asp-page="/Logout">Wyloguj</a>
-                                </li>
+                                @if (Context.Session.GetInt32("isUserAdmin") == 0)
+                                {
+                                    <li style="border-bottom: 1px solid white; cursor: pointer">
+                                        <a style=" all:unset" asp-page="/Orders">Zamówienia</a>
+                                    </li>
+                                }
+                                    <li style="border-bottom: 1px solid white; cursor: pointer">
+                                        <a style=" all:unset" asp-page="/Logout">Wyloguj</a>
+                                    </li>
+
                             </ul>
                         </div>
                     </div>
@@ -79,9 +89,9 @@
                 </div>
             </div>
     </header>
-    <nav class="navbar navbar-expand-lg nav-bar p-2">
+    <nav class="navbar navbar-expand-lg nav-bar p-2" style="z-index: 1;">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <div id="navbarNav">
                 <ul class="navbar-nav">
                     <!-- Części komputerowe -->
                     <li class="dropdown">

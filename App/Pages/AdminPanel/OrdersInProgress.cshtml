@@ -1,0 +1,67 @@
+﻿@page
+@model App.Pages.AdminPanel.OrdersInProgressModel
+@{
+}
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+
+    td, th {
+        padding: 6px;
+    }
+</style>
+<h2>Zamówienia w trakcie realizacji</h2>
+@if (Model.OrdersInProgresses.Count() == 0)
+{
+    <span style="color: gray">Wygląda na to że nie ma zamówień w trakcie realizacji</span>
+}
+else
+{
+    <table>
+        <tr>
+            <th>Numer zamówienia</th>
+            <th>Data złożenia zamówienia </th>
+            <th>Pełny podgląd</th>
+            <th>Zmiana stanu zamówienia</th>
+        </tr>
+        @foreach (var order in Model.OrdersInProgresses)
+        {
+            <tr>
+                <td>@order.Number</td>
+                <td>@order.OrderDate </td>
+                <td>
+                    <form method="get" action="/Order">
+                        <input type="hidden" value="@order.Number" name="number" />
+                        <button type="submit" class="narrowButton">Pokaż</button>
+                    </form>
+                </td>
+                <td>
+                    <button class="narrowButton" onclick="showDialog(@order.Number)">Oznacz Jako zrealizowane</button>
+                </td>
+            </tr>
+            <dialog id="formDialog-@order.Number">
+                <form method="post">
+                    Czy napewno chcesz oznaczyć zamówienie nr. @order.Number<br />
+                    jako zrealizowane?<br />
+                    <div style="text-align:center">
+                        <input type="hidden" value="@order.Number" name="orderNumber" >
+                        <button class="narrowButton" type="submit">Tak</button>
+                        <button type="button" class="narrowButton" onclick="closeDialog(@order.Number)">Nie</button>
+                    </div>
+                </form>
+            </dialog>
+        }
+    </table>
+
+    <script>
+        function showDialog(number) {
+            let dialog = document.getElementById("formDialog-" + number);
+            dialog.showModal();
+        }
+        function closeDialog(number) {
+            let dialog = document.getElementById("formDialog-" + number);
+            dialog.close();
+        }
+    </script>
+}

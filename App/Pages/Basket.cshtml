@@ -5,14 +5,20 @@
 }
 
 <h2 class="mb-4 fw-bold">Koszyk (@Model.ProductsAmount)</h2>
-
-@foreach (var basketElement in Model.BasketElements)
+@if (Model.BasketElements.Count() != 0)
 {
-    @await Component.InvokeAsync("Product", new { id = basketElement.ProductId, viewMode = ViewMode.Basket, amountInBasket = basketElement.Amount})
+    @foreach (var basketElement in Model.BasketElements)
+    {
+        @await Component.InvokeAsync("Product", new { id = basketElement.ProductId, viewMode = ViewMode.Basket, amountInBasket = basketElement.Amount })
+    }
+    <div style="font-size: 30px;" class="mt-5">
+        <span style="font-weight: bold">Do zapłaty:</span> @Model.BasketPrice.ToString("0.#####") zł
+    </div>
+    <form action="/DeliveryAdress">
+        <button class="narrowButton" style="font-size: 20px">Dokonaj zakupów</button>
+    </form>
 }
-<div style="font-size: 30px;" class="mt-5">
-    <span style="font-weight: bold">Do zapłaty:</span> @Model.BasketPrice.ToString("0.#####") zł
-</div>
-<form action="/DeliveryAdress">
-<button class="narrowButton" style="font-size: 20px">Dokonaj zakupów</button>
-</form>
+else
+{
+    <span style="font-weight: gray; font-size:22px">Koszyk jest pusty</span>
+}

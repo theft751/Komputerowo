@@ -1,0 +1,252 @@
+"filename", "language", "XML", "ASP.NET Razor", "C#", "JSON", "CSS", "JavaScript", "Markdown", "HTML", "comment", "blank", "total"
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\App.csproj", "XML", 41, 0, 0, 0, 0, 0, 0, 0, 0, 10, 51
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditCase.cshtml", "ASP.NET Razor", 0, 30, 0, 0, 0, 0, 0, 0, 0, 4, 34
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditCase.cshtml.cs", "C#", 0, 0, 42, 0, 0, 0, 0, 0, 2, 11, 55
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDesktopComputer.cshtml", "ASP.NET Razor", 0, 65, 0, 0, 0, 0, 0, 0, 0, 2, 67
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDesktopComputer.cshtml.cs", "C#", 0, 0, 81, 0, 0, 0, 0, 0, 2, 22, 105
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDiskDrive.cshtml", "ASP.NET Razor", 0, 36, 0, 0, 0, 0, 0, 0, 0, 9, 45
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDiskDrive.cshtml.cs", "C#", 0, 0, 52, 0, 0, 0, 0, 0, 2, 15, 69
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditGraphicCard.cshtml", "ASP.NET Razor", 0, 57, 0, 0, 0, 0, 0, 0, 0, 15, 72
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditGraphicCard.cshtml.cs", "C#", 0, 0, 72, 0, 0, 0, 0, 0, 2, 21, 95
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditKeyboard.cshtml", "ASP.NET Razor", 0, 34, 0, 0, 0, 0, 0, 0, 0, 8, 42
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditKeyboard.cshtml.cs", "C#", 0, 0, 53, 0, 0, 0, 0, 0, 3, 16, 72
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditLaptop.cshtml", "ASP.NET Razor", 0, 60, 0, 0, 0, 0, 0, 0, 0, 14, 74
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditLaptop.cshtml.cs", "C#", 0, 0, 78, 0, 0, 0, 0, 0, 3, 22, 103
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMonitor.cshtml", "ASP.NET Razor", 0, 39, 0, 0, 0, 0, 0, 0, 0, 9, 48
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMonitor.cshtml.cs", "C#", 0, 0, 65, 0, 0, 0, 0, 0, 2, 18, 85
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMotherBoard.cshtml", "ASP.NET Razor", 0, 58, 0, 0, 0, 0, 0, 0, 0, 12, 70
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMotherBoard.cshtml.cs", "C#", 0, 0, 72, 0, 0, 0, 0, 0, 3, 20, 95
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMouse.cshtml", "ASP.NET Razor", 0, 39, 0, 0, 0, 0, 0, 0, 0, 6, 45
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMouse.cshtml.cs", "C#", 0, 0, 53, 0, 0, 0, 0, 0, 3, 17, 73
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPowerSupply.cshtml", "ASP.NET Razor", 0, 36, 0, 0, 0, 0, 0, 0, 0, 8, 44
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPowerSupply.cshtml.cs", "C#", 0, 0, 55, 0, 0, 0, 0, 0, 3, 16, 74
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPrinter.cshtml", "ASP.NET Razor", 0, 42, 0, 0, 0, 0, 0, 0, 0, 10, 52
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPrinter.cshtml.cs", "C#", 0, 0, 59, 0, 0, 0, 0, 0, 3, 19, 81
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditProcessor.cshtml", "ASP.NET Razor", 0, 44, 0, 0, 0, 0, 0, 0, 0, 11, 55
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditProcessor.cshtml.cs", "C#", 0, 0, 60, 0, 0, 0, 0, 0, 4, 17, 81
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditProductModel.cs", "C#", 0, 0, 122, 0, 0, 0, 0, 0, 0, 32, 154
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditRam.cshtml", "ASP.NET Razor", 0, 32, 0, 0, 0, 0, 0, 0, 0, 7, 39
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditRam.cshtml.cs", "C#", 0, 0, 44, 0, 0, 0, 0, 0, 3, 15, 62
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditSmartphone.cshtml", "ASP.NET Razor", 0, 67, 0, 0, 0, 0, 0, 0, 0, 15, 82
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditSmartphone.cshtml.cs", "C#", 0, 0, 81, 0, 0, 0, 0, 0, 3, 22, 106
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditTelevisor.cshtml", "ASP.NET Razor", 0, 38, 0, 0, 0, 0, 0, 0, 0, 0, 38
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditTelevisor.cshtml.cs", "C#", 0, 0, 53, 0, 0, 0, 0, 0, 3, 16, 72
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AdminPanelPageModel.cs", "C#", 0, 0, 60, 0, 0, 0, 0, 0, 0, 4, 64
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\Index.cshtml", "ASP.NET Razor", 0, 95, 0, 0, 0, 0, 0, 0, 0, 0, 95
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\Index.cshtml.cs", "C#", 0, 0, 27, 0, 0, 0, 0, 0, 0, 2, 29
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\OrdersInProgress.cshtml", "ASP.NET Razor", 0, 44, 0, 0, 0, 0, 0, 0, 0, 1, 45
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\OrdersInProgress.cshtml.cs", "C#", 0, 0, 28, 0, 0, 0, 0, 0, 0, 3, 31
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\RealisedOrders.cshtml", "ASP.NET Razor", 0, 43, 0, 0, 0, 0, 0, 0, 0, 1, 44
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\RealisedOrders.cshtml.cs", "C#", 0, 0, 29, 0, 0, 0, 0, 0, 0, 3, 32
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Basket.cshtml", "ASP.NET Razor", 0, 23, 0, 0, 0, 0, 0, 0, 0, 1, 24
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Basket.cshtml.cs", "C#", 0, 0, 82, 0, 0, 0, 0, 0, 0, 12, 94
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\ChangePassword.cshtml", "ASP.NET Razor", 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 24
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\ChangePassword.cshtml.cs", "C#", 0, 0, 78, 0, 0, 0, 0, 0, 0, 12, 90
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DataUpdatedSuccessfully.cshtml", "ASP.NET Razor", 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 13
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DataUpdatedSuccessfully.cshtml.cs", "C#", 0, 0, 11, 0, 0, 0, 0, 0, 0, 2, 13
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DeliveryAdress.cshtml", "ASP.NET Razor", 0, 155, 0, 0, 0, 0, 0, 0, 0, 11, 166
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DeliveryAdress.cshtml.cs", "C#", 0, 0, 124, 0, 0, 0, 0, 0, 0, 31, 155
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditAdress.cshtml", "ASP.NET Razor", 0, 53, 0, 0, 0, 0, 0, 0, 0, 3, 56
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditAdress.cshtml.cs", "C#", 0, 0, 73, 0, 0, 0, 0, 0, 0, 10, 83
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditPersonalInformation.cshtml", "ASP.NET Razor", 0, 22, 0, 0, 0, 0, 0, 0, 0, 0, 22
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditPersonalInformation.cshtml.cs", "C#", 0, 0, 61, 0, 0, 0, 0, 0, 0, 6, 67
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Error.cshtml", "ASP.NET Razor", 0, 7, 0, 0, 0, 0, 0, 0, 0, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Error.cshtml.cs", "C#", 0, 0, 11, 0, 0, 0, 0, 0, 0, 3, 14
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Index.cshtml", "ASP.NET Razor", 0, 113, 0, 0, 0, 0, 0, 0, 0, 9, 122
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Index.cshtml.cs", "C#", 0, 0, 117, 0, 0, 0, 0, 0, 6, 25, 148
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Login.cshtml", "ASP.NET Razor", 0, 21, 0, 0, 0, 0, 0, 0, 0, 3, 24
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Logout.cshtml", "ASP.NET Razor", 0, 5, 0, 0, 0, 0, 0, 0, 0, 1, 6
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Logout.cshtml.cs", "C#", 0, 0, 15, 0, 0, 0, 0, 0, 0, 2, 17
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Order.cshtml", "ASP.NET Razor", 0, 21, 0, 0, 0, 0, 0, 0, 0, 0, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Order.cshtml.cs", "C#", 0, 0, 62, 0, 0, 0, 0, 0, 0, 2, 64
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrderCompleted.cshtml", "ASP.NET Razor", 0, 12, 0, 0, 0, 0, 0, 0, 0, 1, 13
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrderCompleted.cshtml.cs", "C#", 0, 0, 22, 0, 0, 0, 0, 0, 0, 3, 25
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Orders.cshtml", "ASP.NET Razor", 0, 17, 0, 0, 0, 0, 0, 0, 0, 0, 17
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Orders.cshtml.cs", "C#", 0, 0, 19, 0, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrdersInProgress.cshtml", "ASP.NET Razor", 0, 40, 0, 0, 0, 0, 0, 0, 0, 0, 40
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrdersInProgress.cshtml.cs", "C#", 0, 0, 37, 0, 0, 0, 0, 0, 0, 3, 40
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\PasswordChangedSuccessfully.cshtml", "ASP.NET Razor", 0, 13, 0, 0, 0, 0, 0, 0, 0, 1, 14
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\PasswordChangedSuccessfully.cshtml.cs", "C#", 0, 0, 11, 0, 0, 0, 0, 0, 0, 2, 13
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Privacy.cshtml", "ASP.NET Razor", 0, 7, 0, 0, 0, 0, 0, 0, 0, 2, 9
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Privacy.cshtml.cs", "C#", 0, 0, 16, 0, 0, 0, 0, 0, 0, 5, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Case.cshtml", "ASP.NET Razor", 0, 178, 0, 0, 0, 0, 0, 0, 0, 9, 187
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Case.cshtml.cs", "C#", 0, 0, 32, 0, 0, 0, 0, 0, 2, 15, 49
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DesktopComputer.cshtml", "ASP.NET Razor", 0, 275, 0, 0, 0, 0, 0, 0, 0, 9, 284
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DesktopComputer.cshtml.cs", "C#", 0, 0, 45, 0, 0, 0, 0, 0, 2, 6, 53
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DiskDrive.cshtml", "ASP.NET Razor", 0, 219, 0, 0, 0, 0, 0, 0, 0, 12, 231
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DiskDrive.cshtml.cs", "C#", 0, 0, 32, 0, 0, 0, 0, 0, 2, 7, 41
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\GraphicCard.cshtml", "ASP.NET Razor", 0, 267, 0, 0, 0, 0, 0, 0, 0, 10, 277
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\GraphicCard.cshtml.cs", "C#", 0, 0, 44, 0, 0, 0, 0, 0, 2, 5, 51
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Keyboard.cshtml", "ASP.NET Razor", 0, 211, 0, 0, 0, 0, 0, 0, 0, 16, 227
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Keyboard.cshtml.cs", "C#", 0, 0, 32, 0, 0, 0, 0, 0, 2, 7, 41
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Laptop.cshtml", "ASP.NET Razor", 0, 267, 0, 0, 0, 0, 0, 0, 0, 11, 278
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Laptop.cshtml.cs", "C#", 0, 0, 44, 0, 0, 0, 0, 0, 2, 5, 51
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\List.cshtml", "ASP.NET Razor", 0, 177, 0, 0, 0, 0, 0, 0, 0, 18, 195
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\List.cshtml.cs", "C#", 0, 0, 123, 0, 0, 0, 0, 0, 0, 28, 151
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Monitor.cshtml", "ASP.NET Razor", 0, 203, 0, 0, 0, 0, 0, 0, 0, 23, 226
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Monitor.cshtml.cs", "C#", 0, 0, 34, 0, 0, 0, 0, 0, 1, 7, 42
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\MotherBoard.cshtml", "ASP.NET Razor", 0, 250, 0, 0, 0, 0, 0, 0, 0, 10, 260
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\MotherBoard.cshtml.cs", "C#", 0, 0, 41, 0, 0, 0, 0, 0, 2, 4, 47
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Mouse.cshtml", "ASP.NET Razor", 0, 226, 0, 0, 0, 0, 0, 0, 0, 11, 237
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Mouse.cshtml.cs", "C#", 0, 0, 33, 0, 0, 0, 0, 0, 2, 4, 39
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\PowerSupply.cshtml", "ASP.NET Razor", 0, 227, 0, 0, 0, 0, 0, 0, 0, 10, 237
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\PowerSupply.cshtml.cs", "C#", 0, 0, 35, 0, 0, 0, 0, 0, 2, 4, 41
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Printer.cshtml", "ASP.NET Razor", 0, 234, 0, 0, 0, 0, 0, 0, 0, 11, 245
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Printer.cshtml.cs", "C#", 0, 0, 37, 0, 0, 0, 0, 0, 2, 6, 45
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Processor.cshtml", "ASP.NET Razor", 0, 235, 0, 0, 0, 0, 0, 0, 0, 10, 245
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Processor.cshtml.cs", "C#", 0, 0, 39, 0, 0, 0, 0, 0, 2, 7, 48
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Product.cshtml", "ASP.NET Razor", 0, 4, 0, 0, 0, 0, 0, 0, 0, 1, 5
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Product.cshtml.cs", "C#", 0, 0, 69, 0, 0, 0, 0, 0, 0, 2, 71
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\ProductTemplatePageModel.cs", "C#", 0, 0, 273, 0, 0, 0, 0, 0, 5, 44, 322
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Ram.cshtml", "ASP.NET Razor", 0, 211, 0, 0, 0, 0, 0, 0, 0, 10, 221
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Ram.cshtml.cs", "C#", 0, 0, 31, 0, 0, 0, 0, 0, 0, 3, 34
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Search.cshtml", "ASP.NET Razor", 0, 163, 0, 0, 0, 0, 0, 0, 0, 13, 176
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Search.cshtml.cs", "C#", 0, 0, 122, 0, 0, 0, 0, 0, 0, 24, 146
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Smartphone.cshtml", "ASP.NET Razor", 0, 284, 0, 0, 0, 0, 0, 0, 0, 9, 293
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Smartphone.cshtml.cs", "C#", 0, 0, 47, 0, 0, 0, 0, 0, 2, 10, 59
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Televisor.cshtml", "ASP.NET Razor", 0, 233, 0, 0, 0, 0, 0, 0, 0, 10, 243
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Televisor.cshtml.cs", "C#", 0, 0, 32, 0, 0, 0, 0, 0, 2, 6, 40
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RealisedOrders.cshtml", "ASP.NET Razor", 0, 39, 0, 0, 0, 0, 0, 0, 0, 0, 39
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RealisedOrders.cshtml.cs", "C#", 0, 0, 39, 0, 0, 0, 0, 0, 0, 4, 43
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Register.cshtml", "ASP.NET Razor", 0, 116, 0, 0, 0, 0, 0, 0, 0, 7, 123
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RegisterCompleted.cshtml", "ASP.NET Razor", 0, 13, 0, 0, 0, 0, 0, 0, 0, 0, 13
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RegisterCompleted.cshtml.cs", "C#", 0, 0, 15, 0, 0, 0, 0, 0, 0, 2, 17
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\AddOrEditProductViewComponent.cs", "C#", 0, 0, 12, 0, 0, 0, 0, 0, 0, 3, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\AddOrEditProduct\Default.cshtml", "ASP.NET Razor", 0, 48, 0, 0, 0, 0, 0, 0, 3, 11, 62
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\BuyProductInProductPageViewComponent.cs", "C#", 0, 0, 16, 0, 0, 0, 0, 0, 0, 3, 19
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\BuyProductInProductPage\Default.cshtml", "ASP.NET Razor", 0, 82, 0, 0, 0, 0, 0, 0, 0, 3, 85
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ImagesAreaViewComponent.cs", "C#", 0, 0, 22, 0, 0, 0, 0, 0, 0, 5, 27
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ImagesArea\Default.cshtml", "ASP.NET Razor", 0, 9, 0, 0, 0, 0, 0, 0, 0, 1, 10
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\LoggedUserEmailViewComponent.cs", "C#", 0, 0, 25, 0, 0, 0, 0, 0, 0, 3, 28
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\LoggedUserEmail\Default.cshtml", "ASP.NET Razor", 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ProductHeaderViewComponent.cs", "C#", 0, 0, 24, 0, 0, 0, 0, 0, 0, 1, 25
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ProductHeader\Default.cshtml", "ASP.NET Razor", 0, 162, 0, 0, 0, 0, 0, 0, 0, 3, 165
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ProductViewComponent.cs", "C#", 0, 0, 105, 0, 0, 0, 0, 0, 0, 23, 128
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\Product\Default.cshtml", "ASP.NET Razor", 0, 1857, 0, 0, 0, 0, 0, 0, 0, 942, 2799
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ReviewsAreaViewComponent.cs", "C#", 0, 0, 23, 0, 0, 0, 0, 0, 0, 3, 26
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ReviewsArea\Default.cshtml", "ASP.NET Razor", 0, 296, 0, 0, 0, 0, 0, 0, 0, 17, 313
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\_Layout.cshtml", "ASP.NET Razor", 0, 147, 0, 0, 0, 0, 0, 0, 0, 13, 160
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\_Layout.cshtml.css", "CSS", 0, 0, 0, 0, 44, 0, 0, 0, 2, 10, 56
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\_ValidationScriptsPartial.cshtml", "ASP.NET Razor", 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 3
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\UserSettingsPanel.cshtml", "ASP.NET Razor", 0, 27, 0, 0, 0, 0, 0, 0, 0, 3, 30
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\UserSettingsPanel.cshtml.cs", "C#", 0, 0, 40, 0, 0, 0, 0, 0, 0, 2, 42
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\_ViewImports.cshtml", "ASP.NET Razor", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\_ViewStart.cshtml", "ASP.NET Razor", 0, 3, 0, 0, 0, 0, 0, 0, 0, 1, 4
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\login.cshtml.cs", "C#", 0, 0, 57, 0, 0, 0, 0, 0, 0, 8, 65
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\register.cshtml.cs", "C#", 0, 0, 97, 0, 0, 0, 0, 0, 2, 28, 127
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Program.cs", "C#", 0, 0, 34, 0, 0, 0, 0, 0, 3, 13, 50
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\Properties\launchSettings.json", "JSON", 0, 0, 0, 38, 0, 0, 0, 0, 0, 1, 39
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\appsettings.Development.json", "JSON", 0, 0, 0, 9, 0, 0, 0, 0, 0, 1, 10
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\appsettings.json", "JSON", 0, 0, 0, 12, 0, 0, 0, 0, 0, 2, 14
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\css\loginAndRegister.css", "CSS", 0, 0, 0, 0, 76, 0, 0, 0, 1, 15, 92
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\css\productView.css", "CSS", 0, 0, 0, 0, 116, 0, 0, 0, 0, 30, 146
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\css\site.css", "CSS", 0, 0, 0, 0, 119, 0, 0, 0, 3, 18, 140
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\config.json", "JSON", 0, 0, 0, 52, 0, 0, 0, 0, 0, 0, 52
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\animation.css", "CSS", 0, 0, 0, 0, 77, 0, 0, 0, 3, 6, 86
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-codes.css", "CSS", 0, 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-embedded.css", "CSS", 0, 0, 0, 0, 37, 0, 0, 0, 20, 10, 67
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-ie7-codes.css", "CSS", 0, 0, 0, 0, 7, 0, 0, 0, 0, 2, 9
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-ie7.css", "CSS", 0, 0, 0, 0, 13, 0, 0, 0, 3, 4, 20
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello.css", "CSS", 0, 0, 0, 0, 35, 0, 0, 0, 20, 9, 64
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\demo.html", "HTML", 0, 0, 0, 0, 0, 0, 0, 231, 1, 10, 242
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\font\fontello.svg", "XML", 18, 0, 0, 0, 0, 0, 0, 0, 0, 7, 25
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\js\productView.js", "JavaScript", 0, 0, 0, 0, 0, 84, 0, 0, 2, 25, 111
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\js\site.js", "JavaScript", 0, 0, 0, 0, 0, 47, 0, 0, 7, 6, 60
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css", "CSS", 0, 0, 0, 0, 3855, 0, 0, 0, 7, 1135, 4997
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css", "CSS", 0, 0, 0, 0, 1, 0, 0, 0, 6, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css", "CSS", 0, 0, 0, 0, 3855, 0, 0, 0, 7, 1134, 4996
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css", "CSS", 0, 0, 0, 0, 1, 0, 0, 0, 6, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css", "CSS", 0, 0, 0, 0, 347, 0, 0, 0, 16, 64, 427
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css", "CSS", 0, 0, 0, 0, 1, 0, 0, 0, 7, 0, 8
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css", "CSS", 0, 0, 0, 0, 353, 0, 0, 0, 8, 63, 424
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css", "CSS", 0, 0, 0, 0, 1, 0, 0, 0, 7, 0, 8
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css", "CSS", 0, 0, 0, 0, 3729, 0, 0, 0, 9, 1128, 4866
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css", "CSS", 0, 0, 0, 0, 1, 0, 0, 0, 6, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css", "CSS", 0, 0, 0, 0, 3725, 0, 0, 0, 7, 1125, 4857
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css", "CSS", 0, 0, 0, 0, 1, 0, 0, 0, 6, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.css", "CSS", 0, 0, 0, 0, 9453, 0, 0, 0, 27, 1741, 11221
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css", "CSS", 0, 0, 0, 0, 2, 0, 0, 0, 5, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css", "CSS", 0, 0, 0, 0, 9455, 0, 0, 0, 7, 1735, 11197
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css", "CSS", 0, 0, 0, 0, 2, 0, 0, 0, 5, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js", "JavaScript", 0, 0, 0, 0, 0, 4846, 0, 0, 584, 1351, 6781
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 0, 0, 6, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js", "JavaScript", 0, 0, 0, 0, 0, 3418, 0, 0, 495, 1065, 4978
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 0, 0, 6, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.js", "JavaScript", 0, 0, 0, 0, 0, 3457, 0, 0, 501, 1069, 5027
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 0, 0, 6, 0, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js", "JavaScript", 0, 0, 0, 0, 0, 306, 0, 0, 73, 54, 433
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 0, 0, 4, 1, 6
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\LICENSE.md", "Markdown", 0, 0, 0, 0, 0, 0, 18, 0, 0, 5, 23
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\additional-methods.js", "JavaScript", 0, 0, 0, 0, 0, 639, 0, 0, 383, 136, 1158
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\additional-methods.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 0, 0, 3, 0, 4
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\jquery.validate.js", "JavaScript", 0, 0, 0, 0, 0, 1184, 0, 0, 183, 234, 1601
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 0, 0, 3, 0, 4
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery\dist\jquery.js", "JavaScript", 0, 0, 0, 0, 0, 6906, 0, 0, 1890, 2077, 10873
+"c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery\dist\jquery.min.js", "JavaScript", 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 3
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\AppDbContext.cs", "C#", 0, 0, 120, 0, 0, 0, 0, 0, 29, 26, 175
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\DbInitializer.cs", "C#", 0, 0, 184, 0, 0, 0, 0, 0, 7, 16, 207
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Infrastructure.csproj", "XML", 25, 0, 0, 0, 0, 0, 0, 0, 0, 5, 30
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Cases.json", "JSON", 0, 0, 0, 1310, 0, 0, 0, 0, 0, 0, 1310
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\DesktopComputers.json", "JSON", 0, 0, 0, 761, 0, 0, 0, 0, 0, 1, 762
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\DiskDrives.json", "JSON", 0, 0, 0, 827, 0, 0, 0, 0, 0, 0, 827
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\GraphicCards.json", "JSON", 0, 0, 0, 968, 0, 0, 0, 0, 0, 0, 968
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Keyboards.json", "JSON", 0, 0, 0, 898, 0, 0, 0, 0, 0, 0, 898
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Laptops.json", "JSON", 0, 0, 0, 860, 0, 0, 0, 0, 0, 0, 860
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Monitors.json", "JSON", 0, 0, 0, 1277, 0, 0, 0, 0, 0, 1, 1278
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\MotherBoards.json", "JSON", 0, 0, 0, 1002, 0, 0, 0, 0, 0, 0, 1002
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Mouses.json", "JSON", 0, 0, 0, 1090, 0, 0, 0, 0, 0, 0, 1090
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\PowerSupplies.json", "JSON", 0, 0, 0, 1042, 0, 0, 0, 0, 0, 0, 1042
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Printers.json", "JSON", 0, 0, 0, 992, 0, 0, 0, 0, 0, 0, 992
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Processors.json", "JSON", 0, 0, 0, 849, 0, 0, 0, 0, 0, 0, 849
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Rams.json", "JSON", 0, 0, 0, 812, 0, 0, 0, 0, 0, 0, 812
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Smartphones.json", "JSON", 0, 0, 0, 2302, 0, 0, 0, 0, 0, 0, 2302
+"c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Televisors.json", "JSON", 0, 0, 0, 1058, 0, 0, 0, 0, 0, 0, 1058
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\BasketElement.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\BonusImageSeedingModel.cs", "C#", 0, 0, 17, 0, 0, 0, 0, 0, 0, 3, 20
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\MainImageSeedingModel.cs", "C#", 0, 0, 15, 0, 0, 0, 0, 0, 0, 2, 17
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\OperationMode.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\OrderInProgress.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\ProductPassData.cs", "C#", 0, 0, 22, 0, 0, 0, 0, 0, 0, 2, 24
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\RealisedOrder.cs", "C#", 0, 0, 14, 0, 0, 0, 0, 0, 0, 2, 16
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\ReviewData.cs", "C#", 0, 0, 7, 0, 0, 0, 0, 0, 0, 2, 9
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\SortMode.cs", "C#", 0, 0, 15, 0, 0, 0, 0, 0, 0, 2, 17
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\ViewMode.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\Domain.csproj", "XML", 10, 0, 0, 0, 0, 0, 0, 0, 0, 4, 14
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\Availability.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\OrderStatus.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\ProductType.cs", "C#", 0, 0, 26, 0, 0, 0, 0, 0, 2, 4, 32
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\UserType.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\Voivodeship.cs", "C#", 0, 0, 27, 0, 0, 0, 0, 0, 0, 2, 29
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\ComputerParts\CaseType.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\ComputerParts\Connectivity.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\ComputerParts\DiskDriveType.cs", "C#", 0, 0, 13, 0, 0, 0, 0, 0, 0, 2, 15
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\BankAcountNumber.cs", "C#", 0, 0, 15, 0, 0, 0, 0, 0, 0, 2, 17
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\BonusProductImage.cs", "C#", 0, 0, 17, 0, 0, 0, 0, 0, 1, 3, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\MainProductImage.cs", "C#", 0, 0, 17, 0, 0, 0, 0, 0, 1, 3, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\Order.cs", "C#", 0, 0, 23, 0, 0, 0, 0, 0, 1, 3, 27
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\OrderAdress.cs", "C#", 0, 0, 20, 0, 0, 0, 0, 0, 1, 4, 25
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\OrderItem.cs", "C#", 0, 0, 17, 0, 0, 0, 0, 0, 1, 4, 22
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\Product.cs", "C#", 0, 0, 41, 0, 0, 0, 0, 0, 1, 14, 56
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\Review.cs", "C#", 0, 0, 22, 0, 0, 0, 0, 0, 1, 5, 28
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\User.cs", "C#", 0, 0, 19, 0, 0, 0, 0, 0, 1, 0, 20
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\UserAdress.cs", "C#", 0, 0, 22, 0, 0, 0, 0, 0, 0, 3, 25
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\Case.cs", "C#", 0, 0, 18, 0, 0, 0, 0, 0, 0, 5, 23
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\DiskDrive.cs", "C#", 0, 0, 19, 0, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\GraphicCard.cs", "C#", 0, 0, 26, 0, 0, 0, 0, 0, 0, 2, 28
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\MotherBoard.cs", "C#", 0, 0, 22, 0, 0, 0, 0, 0, 0, 2, 24
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\PowerSupply.cs", "C#", 0, 0, 19, 0, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\Processor.cs", "C#", 0, 0, 21, 0, 0, 0, 0, 0, 0, 3, 24
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\Ram.cs", "C#", 0, 0, 21, 0, 0, 0, 0, 0, 0, 2, 23
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\DesktopComputer.cs", "C#", 0, 0, 25, 0, 0, 0, 0, 0, 0, 2, 27
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Keyboard.cs", "C#", 0, 0, 18, 0, 0, 0, 0, 0, 0, 2, 20
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Laptop.cs", "C#", 0, 0, 24, 0, 0, 0, 0, 0, 0, 2, 26
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\MonitorScreen.cs", "C#", 0, 0, 19, 0, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Mouse.cs", "C#", 0, 0, 19, 0, 0, 0, 0, 0, 0, 2, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Printer.cs", "C#", 0, 0, 21, 0, 0, 0, 0, 0, 0, 2, 23
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Smartphone.cs", "C#", 0, 0, 25, 0, 0, 0, 0, 0, 0, 7, 32
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Televisor.cs", "C#", 0, 0, 18, 0, 0, 0, 0, 0, 0, 3, 21
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\BuyProductInProductPageVm.cs", "C#", 0, 0, 8, 0, 0, 0, 0, 0, 0, 3, 11
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\ProductHeaderVm.cs", "C#", 0, 0, 4, 0, 0, 0, 0, 0, 0, 3, 7
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\ProductVm.cs", "C#", 0, 0, 295, 0, 0, 0, 0, 0, 16, 46, 357
+"c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\ReviewAreaVm.cs", "C#", 0, 0, 4, 0, 0, 0, 0, 0, 0, 4, 8
+"Total", "-", 94, 8074, 4995, 16159, 35313, 20894, 18, 231, 4485, 16608, 106871

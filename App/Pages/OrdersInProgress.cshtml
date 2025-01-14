@@ -3,8 +3,11 @@
 @{
 }
 <style>
-    table {
+    table, th, td {
         border: 3px solid black;
+    }
+    td, th{
+        padding: 6px;
     }
 </style>
 <h2>Zamówienia w trakcie realizacji</h2>
@@ -18,7 +21,6 @@ else
         <tr>
             <th>Numer zamówienia</th>
             <th>Data złożenia zamówienia </th>
-            <th>Data realizacji</th>
             <th>Pełny podgląd</th>
         </tr>
         @foreach (var order in Model.OrdersInProgresses)
@@ -29,7 +31,7 @@ else
                 <td>
                     <form method="get" action="/Order">
                         <input type="hidden" value="@order.Number" name="number"/>
-                        <button type="submit" class="narrowButton" />
+                        <button type="submit" class="narrowButton" >Pokaż</button>
                     </form>
                 </td>
             </tr>

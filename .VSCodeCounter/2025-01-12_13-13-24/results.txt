@@ -1,0 +1,334 @@
+Date : 2025-01-12 13:13:24
+Directory : c:\Users\Miłosz\source\repos\PracaInzynierska
+Total : 250 files,  85778 codes, 4485 comments, 16608 blanks, all 106871 lines
+
+Languages
++---------------+------------+------------+------------+------------+------------+
+| language      | files      | code       | comment    | blank      | total      |
++---------------+------------+------------+------------+------------+------------+
+| CSS           |         26 |     35,313 |        188 |      8,231 |     43,732 |
+| JavaScript    |         16 |     20,894 |      4,147 |      6,019 |     31,060 |
+| JSON          |         19 |     16,159 |          0 |          6 |     16,165 |
+| ASP.NET Razor |         67 |      8,074 |          3 |      1,370 |      9,447 |
+| C#            |        116 |      4,995 |        146 |        941 |      6,082 |
+| HTML          |          1 |        231 |          1 |         10 |        242 |
+| XML           |          4 |         94 |          0 |         26 |        120 |
+| Markdown      |          1 |         18 |          0 |          5 |         23 |
++---------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                           | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                              |        250 |     85,778 |      4,485 |     16,608 |    106,871 |
+| App                                                                                                                            |        184 |     68,279 |      4,423 |     16,379 |     89,081 |
+| App (Files)                                                                                                                    |          4 |         96 |          3 |         26 |        125 |
+| App\Pages                                                                                                                      |        134 |     11,663 |         86 |      2,090 |     13,839 |
+| App\Pages (Files)                                                                                                              |         42 |      1,734 |          8 |        208 |      1,950 |
+| App\Pages\AdminPanel                                                                                                           |         38 |      2,045 |         41 |        443 |      2,529 |
+| App\Pages\Products                                                                                                             |         37 |      5,009 |         32 |        397 |      5,438 |
+| App\Pages\Shared                                                                                                               |         17 |      2,875 |          5 |      1,042 |      3,922 |
+| App\Pages\Shared (Files)                                                                                                       |          3 |        193 |          2 |         24 |        219 |
+| App\Pages\Shared\Components                                                                                                    |         14 |      2,682 |          3 |      1,018 |      3,703 |
+| App\Pages\Shared\Components (Files)                                                                                            |          7 |        227 |          0 |         41 |        268 |
+| App\Pages\Shared\Components\AddOrEditProduct                                                                                   |          1 |         48 |          3 |         11 |         62 |
+| App\Pages\Shared\Components\BuyProductInProductPage                                                                            |          1 |         82 |          0 |          3 |         85 |
+| App\Pages\Shared\Components\ImagesArea                                                                                         |          1 |          9 |          0 |          1 |         10 |
+| App\Pages\Shared\Components\LoggedUserEmail                                                                                    |          1 |          1 |          0 |          0 |          1 |
+| App\Pages\Shared\Components\Product                                                                                            |          1 |      1,857 |          0 |        942 |      2,799 |
+| App\Pages\Shared\Components\ProductHeader                                                                                      |          1 |        162 |          0 |          3 |        165 |
+| App\Pages\Shared\Components\ReviewsArea                                                                                        |          1 |        296 |          0 |         17 |        313 |
+| App\Properties                                                                                                                 |          1 |         38 |          0 |          1 |         39 |
+| App\wwwroot                                                                                                                    |         45 |     56,482 |      4,334 |     14,262 |     75,078 |
+| App\wwwroot\css                                                                                                                |          3 |        311 |          4 |         63 |        378 |
+| App\wwwroot\fonts                                                                                                              |          9 |        477 |         47 |         50 |        574 |
+| App\wwwroot\fonts\fontello-82b3d7a7                                                                                            |          9 |        477 |         47 |         50 |        574 |
+| App\wwwroot\fonts\fontello-82b3d7a7 (Files)                                                                                    |          2 |        283 |          1 |         10 |        294 |
+| App\wwwroot\fonts\fontello-82b3d7a7\css                                                                                        |          6 |        176 |         46 |         33 |        255 |
+| App\wwwroot\fonts\fontello-82b3d7a7\font                                                                                       |          1 |         18 |          0 |          7 |         25 |
+| App\wwwroot\js                                                                                                                 |          2 |        131 |          9 |         31 |        171 |
+| App\wwwroot\lib                                                                                                                |         31 |     55,563 |      4,274 |     14,118 |     73,955 |
+| App\wwwroot\lib\bootstrap                                                                                                      |         22 |     46,506 |      1,734 |     11,610 |     59,850 |
+| App\wwwroot\lib\bootstrap\dist                                                                                                 |         22 |     46,506 |      1,734 |     11,610 |     59,850 |
+| App\wwwroot\lib\bootstrap\dist\css                                                                                             |         16 |     34,782 |        136 |      8,125 |     43,043 |
+| App\wwwroot\lib\bootstrap\dist\js                                                                                              |          6 |     11,724 |      1,598 |      3,485 |     16,807 |
+| App\wwwroot\lib\jquery                                                                                                         |          2 |      6,907 |      1,891 |      2,078 |     10,876 |
+| App\wwwroot\lib\jquery-validation                                                                                              |          5 |      1,843 |        572 |        375 |      2,790 |
+| App\wwwroot\lib\jquery-validation (Files)                                                                                      |          1 |         18 |          0 |          5 |         23 |
+| App\wwwroot\lib\jquery-validation-unobtrusive                                                                                  |          2 |        307 |         77 |         55 |        439 |
+| App\wwwroot\lib\jquery-validation\dist                                                                                         |          4 |      1,825 |        572 |        370 |      2,767 |
+| App\wwwroot\lib\jquery\dist                                                                                                    |          2 |      6,907 |      1,891 |      2,078 |     10,876 |
+| DataBaseContext                                                                                                                |         18 |     16,377 |         36 |         49 |     16,462 |
+| DataBaseContext (Files)                                                                                                        |          3 |        329 |         36 |         47 |        412 |
+| DataBaseContext\Testdata                                                                                                       |         15 |     16,048 |          0 |          2 |     16,050 |
+| DataBaseContext\Testdata\json                                                                                                  |         15 |     16,048 |          0 |          2 |     16,050 |
+| Model                                                                                                                          |         48 |      1,122 |         26 |        180 |      1,328 |
+| Model (Files)                                                                                                                  |          1 |         10 |          0 |          4 |         14 |
+| Model\AppModel                                                                                                                 |         10 |        142 |          0 |         21 |        163 |
+| Model\EntityModels                                                                                                             |         33 |        659 |         10 |         99 |        768 |
+| Model\EntityModels\Additional                                                                                                  |          8 |        131 |          2 |         18 |        151 |
+| Model\EntityModels\Additional\Common                                                                                           |          5 |         92 |          2 |         12 |        106 |
+| Model\EntityModels\Additional\ComputerParts                                                                                    |          3 |         39 |          0 |          6 |         45 |
+| Model\EntityModels\Main                                                                                                        |         10 |        213 |          8 |         41 |        262 |
+| Model\EntityModels\Products                                                                                                    |         15 |        315 |          0 |         40 |        355 |
+| Model\EntityModels\Products\ComputerParts                                                                                      |          7 |        146 |          0 |         18 |        164 |
+| Model\EntityModels\Products\OtherDevices                                                                                       |          8 |        169 |          0 |         22 |        191 |
+| Model\ViewModels                                                                                                               |          4 |        311 |         16 |         56 |        383 |
++--------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------------------------------------------------------+---------------+------------+------------+------------+------------+
+| filename                                                                                                                       | language      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------------------------------------------------------+---------------+------------+------------+------------+------------+
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\App.csproj                                                                   | XML           |         41 |          0 |         10 |         51 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditCase.cshtml                                        | ASP.NET Razor |         30 |          0 |          4 |         34 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditCase.cshtml.cs                                     | C#            |         42 |          2 |         11 |         55 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDesktopComputer.cshtml                             | ASP.NET Razor |         65 |          0 |          2 |         67 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDesktopComputer.cshtml.cs                          | C#            |         81 |          2 |         22 |        105 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDiskDrive.cshtml                                   | ASP.NET Razor |         36 |          0 |          9 |         45 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditDiskDrive.cshtml.cs                                | C#            |         52 |          2 |         15 |         69 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditGraphicCard.cshtml                                 | ASP.NET Razor |         57 |          0 |         15 |         72 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditGraphicCard.cshtml.cs                              | C#            |         72 |          2 |         21 |         95 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditKeyboard.cshtml                                    | ASP.NET Razor |         34 |          0 |          8 |         42 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditKeyboard.cshtml.cs                                 | C#            |         53 |          3 |         16 |         72 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditLaptop.cshtml                                      | ASP.NET Razor |         60 |          0 |         14 |         74 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditLaptop.cshtml.cs                                   | C#            |         78 |          3 |         22 |        103 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMonitor.cshtml                                     | ASP.NET Razor |         39 |          0 |          9 |         48 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMonitor.cshtml.cs                                  | C#            |         65 |          2 |         18 |         85 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMotherBoard.cshtml                                 | ASP.NET Razor |         58 |          0 |         12 |         70 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMotherBoard.cshtml.cs                              | C#            |         72 |          3 |         20 |         95 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMouse.cshtml                                       | ASP.NET Razor |         39 |          0 |          6 |         45 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditMouse.cshtml.cs                                    | C#            |         53 |          3 |         17 |         73 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPowerSupply.cshtml                                 | ASP.NET Razor |         36 |          0 |          8 |         44 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPowerSupply.cshtml.cs                              | C#            |         55 |          3 |         16 |         74 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPrinter.cshtml                                     | ASP.NET Razor |         42 |          0 |         10 |         52 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditPrinter.cshtml.cs                                  | C#            |         59 |          3 |         19 |         81 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditProcessor.cshtml                                   | ASP.NET Razor |         44 |          0 |         11 |         55 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditProcessor.cshtml.cs                                | C#            |         60 |          4 |         17 |         81 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditProductModel.cs                                    | C#            |        122 |          0 |         32 |        154 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditRam.cshtml                                         | ASP.NET Razor |         32 |          0 |          7 |         39 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditRam.cshtml.cs                                      | C#            |         44 |          3 |         15 |         62 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditSmartphone.cshtml                                  | ASP.NET Razor |         67 |          0 |         15 |         82 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditSmartphone.cshtml.cs                               | C#            |         81 |          3 |         22 |        106 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditTelevisor.cshtml                                   | ASP.NET Razor |         38 |          0 |          0 |         38 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AddOrEditTelevisor.cshtml.cs                                | C#            |         53 |          3 |         16 |         72 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\AdminPanelPageModel.cs                                      | C#            |         60 |          0 |          4 |         64 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\Index.cshtml                                                | ASP.NET Razor |         95 |          0 |          0 |         95 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\Index.cshtml.cs                                             | C#            |         27 |          0 |          2 |         29 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\OrdersInProgress.cshtml                                     | ASP.NET Razor |         44 |          0 |          1 |         45 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\OrdersInProgress.cshtml.cs                                  | C#            |         28 |          0 |          3 |         31 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\RealisedOrders.cshtml                                       | ASP.NET Razor |         43 |          0 |          1 |         44 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\AdminPanel\RealisedOrders.cshtml.cs                                    | C#            |         29 |          0 |          3 |         32 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Basket.cshtml                                                          | ASP.NET Razor |         23 |          0 |          1 |         24 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Basket.cshtml.cs                                                       | C#            |         82 |          0 |         12 |         94 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\ChangePassword.cshtml                                                  | ASP.NET Razor |         24 |          0 |          0 |         24 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\ChangePassword.cshtml.cs                                               | C#            |         78 |          0 |         12 |         90 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DataUpdatedSuccessfully.cshtml                                         | ASP.NET Razor |         13 |          0 |          0 |         13 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DataUpdatedSuccessfully.cshtml.cs                                      | C#            |         11 |          0 |          2 |         13 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DeliveryAdress.cshtml                                                  | ASP.NET Razor |        155 |          0 |         11 |        166 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\DeliveryAdress.cshtml.cs                                               | C#            |        124 |          0 |         31 |        155 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditAdress.cshtml                                                      | ASP.NET Razor |         53 |          0 |          3 |         56 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditAdress.cshtml.cs                                                   | C#            |         73 |          0 |         10 |         83 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditPersonalInformation.cshtml                                         | ASP.NET Razor |         22 |          0 |          0 |         22 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\EditPersonalInformation.cshtml.cs                                      | C#            |         61 |          0 |          6 |         67 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Error.cshtml                                                           | ASP.NET Razor |          7 |          0 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Error.cshtml.cs                                                        | C#            |         11 |          0 |          3 |         14 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Index.cshtml                                                           | ASP.NET Razor |        113 |          0 |          9 |        122 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Index.cshtml.cs                                                        | C#            |        117 |          6 |         25 |        148 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Login.cshtml                                                           | ASP.NET Razor |         21 |          0 |          3 |         24 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Logout.cshtml                                                          | ASP.NET Razor |          5 |          0 |          1 |          6 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Logout.cshtml.cs                                                       | C#            |         15 |          0 |          2 |         17 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Order.cshtml                                                           | ASP.NET Razor |         21 |          0 |          0 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Order.cshtml.cs                                                        | C#            |         62 |          0 |          2 |         64 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrderCompleted.cshtml                                                  | ASP.NET Razor |         12 |          0 |          1 |         13 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrderCompleted.cshtml.cs                                               | C#            |         22 |          0 |          3 |         25 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Orders.cshtml                                                          | ASP.NET Razor |         17 |          0 |          0 |         17 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Orders.cshtml.cs                                                       | C#            |         19 |          0 |          2 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrdersInProgress.cshtml                                                | ASP.NET Razor |         40 |          0 |          0 |         40 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\OrdersInProgress.cshtml.cs                                             | C#            |         37 |          0 |          3 |         40 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\PasswordChangedSuccessfully.cshtml                                     | ASP.NET Razor |         13 |          0 |          1 |         14 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\PasswordChangedSuccessfully.cshtml.cs                                  | C#            |         11 |          0 |          2 |         13 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Privacy.cshtml                                                         | ASP.NET Razor |          7 |          0 |          2 |          9 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Privacy.cshtml.cs                                                      | C#            |         16 |          0 |          5 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Case.cshtml                                                   | ASP.NET Razor |        178 |          0 |          9 |        187 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Case.cshtml.cs                                                | C#            |         32 |          2 |         15 |         49 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DesktopComputer.cshtml                                        | ASP.NET Razor |        275 |          0 |          9 |        284 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DesktopComputer.cshtml.cs                                     | C#            |         45 |          2 |          6 |         53 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DiskDrive.cshtml                                              | ASP.NET Razor |        219 |          0 |         12 |        231 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\DiskDrive.cshtml.cs                                           | C#            |         32 |          2 |          7 |         41 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\GraphicCard.cshtml                                            | ASP.NET Razor |        267 |          0 |         10 |        277 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\GraphicCard.cshtml.cs                                         | C#            |         44 |          2 |          5 |         51 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Keyboard.cshtml                                               | ASP.NET Razor |        211 |          0 |         16 |        227 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Keyboard.cshtml.cs                                            | C#            |         32 |          2 |          7 |         41 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Laptop.cshtml                                                 | ASP.NET Razor |        267 |          0 |         11 |        278 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Laptop.cshtml.cs                                              | C#            |         44 |          2 |          5 |         51 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\List.cshtml                                                   | ASP.NET Razor |        177 |          0 |         18 |        195 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\List.cshtml.cs                                                | C#            |        123 |          0 |         28 |        151 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Monitor.cshtml                                                | ASP.NET Razor |        203 |          0 |         23 |        226 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Monitor.cshtml.cs                                             | C#            |         34 |          1 |          7 |         42 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\MotherBoard.cshtml                                            | ASP.NET Razor |        250 |          0 |         10 |        260 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\MotherBoard.cshtml.cs                                         | C#            |         41 |          2 |          4 |         47 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Mouse.cshtml                                                  | ASP.NET Razor |        226 |          0 |         11 |        237 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Mouse.cshtml.cs                                               | C#            |         33 |          2 |          4 |         39 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\PowerSupply.cshtml                                            | ASP.NET Razor |        227 |          0 |         10 |        237 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\PowerSupply.cshtml.cs                                         | C#            |         35 |          2 |          4 |         41 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Printer.cshtml                                                | ASP.NET Razor |        234 |          0 |         11 |        245 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Printer.cshtml.cs                                             | C#            |         37 |          2 |          6 |         45 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Processor.cshtml                                              | ASP.NET Razor |        235 |          0 |         10 |        245 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Processor.cshtml.cs                                           | C#            |         39 |          2 |          7 |         48 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Product.cshtml                                                | ASP.NET Razor |          4 |          0 |          1 |          5 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Product.cshtml.cs                                             | C#            |         69 |          0 |          2 |         71 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\ProductTemplatePageModel.cs                                   | C#            |        273 |          5 |         44 |        322 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Ram.cshtml                                                    | ASP.NET Razor |        211 |          0 |         10 |        221 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Ram.cshtml.cs                                                 | C#            |         31 |          0 |          3 |         34 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Search.cshtml                                                 | ASP.NET Razor |        163 |          0 |         13 |        176 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Search.cshtml.cs                                              | C#            |        122 |          0 |         24 |        146 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Smartphone.cshtml                                             | ASP.NET Razor |        284 |          0 |          9 |        293 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Smartphone.cshtml.cs                                          | C#            |         47 |          2 |         10 |         59 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Televisor.cshtml                                              | ASP.NET Razor |        233 |          0 |         10 |        243 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Products\Televisor.cshtml.cs                                           | C#            |         32 |          2 |          6 |         40 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RealisedOrders.cshtml                                                  | ASP.NET Razor |         39 |          0 |          0 |         39 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RealisedOrders.cshtml.cs                                               | C#            |         39 |          0 |          4 |         43 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Register.cshtml                                                        | ASP.NET Razor |        116 |          0 |          7 |        123 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RegisterCompleted.cshtml                                               | ASP.NET Razor |         13 |          0 |          0 |         13 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\RegisterCompleted.cshtml.cs                                            | C#            |         15 |          0 |          2 |         17 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\AddOrEditProductViewComponent.cs                     | C#            |         12 |          0 |          3 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\AddOrEditProduct\Default.cshtml                      | ASP.NET Razor |         48 |          3 |         11 |         62 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\BuyProductInProductPageViewComponent.cs              | C#            |         16 |          0 |          3 |         19 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\BuyProductInProductPage\Default.cshtml               | ASP.NET Razor |         82 |          0 |          3 |         85 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ImagesAreaViewComponent.cs                           | C#            |         22 |          0 |          5 |         27 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ImagesArea\Default.cshtml                            | ASP.NET Razor |          9 |          0 |          1 |         10 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\LoggedUserEmailViewComponent.cs                      | C#            |         25 |          0 |          3 |         28 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\LoggedUserEmail\Default.cshtml                       | ASP.NET Razor |          1 |          0 |          0 |          1 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ProductHeaderViewComponent.cs                        | C#            |         24 |          0 |          1 |         25 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ProductHeader\Default.cshtml                         | ASP.NET Razor |        162 |          0 |          3 |        165 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ProductViewComponent.cs                              | C#            |        105 |          0 |         23 |        128 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\Product\Default.cshtml                               | ASP.NET Razor |      1,857 |          0 |        942 |      2,799 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ReviewsAreaViewComponent.cs                          | C#            |         23 |          0 |          3 |         26 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\Components\ReviewsArea\Default.cshtml                           | ASP.NET Razor |        296 |          0 |         17 |        313 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\_Layout.cshtml                                                  | ASP.NET Razor |        147 |          0 |         13 |        160 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\_Layout.cshtml.css                                              | CSS           |         44 |          2 |         10 |         56 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\Shared\_ValidationScriptsPartial.cshtml                                | ASP.NET Razor |          2 |          0 |          1 |          3 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\UserSettingsPanel.cshtml                                               | ASP.NET Razor |         27 |          0 |          3 |         30 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\UserSettingsPanel.cshtml.cs                                            | C#            |         40 |          0 |          2 |         42 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\_ViewImports.cshtml                                                    | ASP.NET Razor |          3 |          0 |          1 |          4 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\_ViewStart.cshtml                                                      | ASP.NET Razor |          3 |          0 |          1 |          4 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\login.cshtml.cs                                                        | C#            |         57 |          0 |          8 |         65 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Pages\register.cshtml.cs                                                     | C#            |         97 |          2 |         28 |        127 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Program.cs                                                                   | C#            |         34 |          3 |         13 |         50 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\Properties\launchSettings.json                                               | JSON          |         38 |          0 |          1 |         39 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\appsettings.Development.json                                                 | JSON          |          9 |          0 |          1 |         10 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\appsettings.json                                                             | JSON          |         12 |          0 |          2 |         14 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\css\loginAndRegister.css                                             | CSS           |         76 |          1 |         15 |         92 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\css\productView.css                                                  | CSS           |        116 |          0 |         30 |        146 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\css\site.css                                                         | CSS           |        119 |          3 |         18 |        140 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\config.json                                  | JSON          |         52 |          0 |          0 |         52 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\animation.css                            | CSS           |         77 |          3 |          6 |         86 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-codes.css                       | CSS           |          7 |          0 |          2 |          9 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-embedded.css                    | CSS           |         37 |         20 |         10 |         67 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-ie7-codes.css                   | CSS           |          7 |          0 |          2 |          9 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello-ie7.css                         | CSS           |         13 |          3 |          4 |         20 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\css\fontello.css                             | CSS           |         35 |         20 |          9 |         64 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\demo.html                                    | HTML          |        231 |          1 |         10 |        242 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\fonts\fontello-82b3d7a7\font\fontello.svg                            | XML           |         18 |          0 |          7 |         25 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\js\productView.js                                                    | JavaScript    |         84 |          2 |         25 |        111 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\js\site.js                                                           | JavaScript    |         47 |          7 |          6 |         60 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css                            | CSS           |      3,855 |          7 |      1,135 |      4,997 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css                        | CSS           |          1 |          6 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css                        | CSS           |      3,855 |          7 |      1,134 |      4,996 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css                    | CSS           |          1 |          6 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css                          | CSS           |        347 |         16 |         64 |        427 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css                      | CSS           |          1 |          7 |          0 |          8 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css                      | CSS           |        353 |          8 |         63 |        424 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css                  | CSS           |          1 |          7 |          0 |          8 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css                       | CSS           |      3,729 |          9 |      1,128 |      4,866 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css                   | CSS           |          1 |          6 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css                   | CSS           |      3,725 |          7 |      1,125 |      4,857 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css               | CSS           |          1 |          6 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.css                                 | CSS           |      9,453 |         27 |      1,741 |     11,221 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css                             | CSS           |          2 |          5 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css                             | CSS           |      9,455 |          7 |      1,735 |     11,197 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css                         | CSS           |          2 |          5 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js                            | JavaScript    |      4,846 |        584 |      1,351 |      6,781 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js                        | JavaScript    |          1 |          6 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js                               | JavaScript    |      3,418 |        495 |      1,065 |      4,978 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js                           | JavaScript    |          1 |          6 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.js                                   | JavaScript    |      3,457 |        501 |      1,069 |      5,027 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js                               | JavaScript    |          1 |          6 |          0 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js     | JavaScript    |        306 |         73 |         54 |        433 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js | JavaScript    |          1 |          4 |          1 |          6 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\LICENSE.md                                     | Markdown      |         18 |          0 |          5 |         23 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\additional-methods.js                     | JavaScript    |        639 |        383 |        136 |      1,158 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\additional-methods.min.js                 | JavaScript    |          1 |          3 |          0 |          4 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\jquery.validate.js                        | JavaScript    |      1,184 |        183 |        234 |      1,601 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js                    | JavaScript    |          1 |          3 |          0 |          4 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery\dist\jquery.js                                            | JavaScript    |      6,906 |      1,890 |      2,077 |     10,873 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\App\wwwroot\lib\jquery\dist\jquery.min.js                                        | JavaScript    |          1 |          1 |          1 |          3 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\AppDbContext.cs                                                  | C#            |        120 |         29 |         26 |        175 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\DbInitializer.cs                                                 | C#            |        184 |          7 |         16 |        207 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Infrastructure.csproj                                            | XML           |         25 |          0 |          5 |         30 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Cases.json                                         | JSON          |      1,310 |          0 |          0 |      1,310 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\DesktopComputers.json                              | JSON          |        761 |          0 |          1 |        762 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\DiskDrives.json                                    | JSON          |        827 |          0 |          0 |        827 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\GraphicCards.json                                  | JSON          |        968 |          0 |          0 |        968 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Keyboards.json                                     | JSON          |        898 |          0 |          0 |        898 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Laptops.json                                       | JSON          |        860 |          0 |          0 |        860 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Monitors.json                                      | JSON          |      1,277 |          0 |          1 |      1,278 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\MotherBoards.json                                  | JSON          |      1,002 |          0 |          0 |      1,002 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Mouses.json                                        | JSON          |      1,090 |          0 |          0 |      1,090 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\PowerSupplies.json                                 | JSON          |      1,042 |          0 |          0 |      1,042 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Printers.json                                      | JSON          |        992 |          0 |          0 |        992 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Processors.json                                    | JSON          |        849 |          0 |          0 |        849 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Rams.json                                          | JSON          |        812 |          0 |          0 |        812 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Smartphones.json                                   | JSON          |      2,302 |          0 |          0 |      2,302 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\DataBaseContext\Testdata\json\Televisors.json                                    | JSON          |      1,058 |          0 |          0 |      1,058 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\BasketElement.cs                                                  | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\BonusImageSeedingModel.cs                                         | C#            |         17 |          0 |          3 |         20 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\MainImageSeedingModel.cs                                          | C#            |         15 |          0 |          2 |         17 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\OperationMode.cs                                                  | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\OrderInProgress.cs                                                | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\ProductPassData.cs                                                | C#            |         22 |          0 |          2 |         24 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\RealisedOrder.cs                                                  | C#            |         14 |          0 |          2 |         16 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\ReviewData.cs                                                     | C#            |          7 |          0 |          2 |          9 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\SortMode.cs                                                       | C#            |         15 |          0 |          2 |         17 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\AppModel\ViewMode.cs                                                       | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\Domain.csproj                                                              | XML           |         10 |          0 |          4 |         14 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\Availability.cs                             | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\OrderStatus.cs                              | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\ProductType.cs                              | C#            |         26 |          2 |          4 |         32 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\UserType.cs                                 | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\Common\Voivodeship.cs                              | C#            |         27 |          0 |          2 |         29 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\ComputerParts\CaseType.cs                          | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\ComputerParts\Connectivity.cs                      | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Additional\ComputerParts\DiskDriveType.cs                     | C#            |         13 |          0 |          2 |         15 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\BankAcountNumber.cs                                      | C#            |         15 |          0 |          2 |         17 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\BonusProductImage.cs                                     | C#            |         17 |          1 |          3 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\MainProductImage.cs                                      | C#            |         17 |          1 |          3 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\Order.cs                                                 | C#            |         23 |          1 |          3 |         27 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\OrderAdress.cs                                           | C#            |         20 |          1 |          4 |         25 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\OrderItem.cs                                             | C#            |         17 |          1 |          4 |         22 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\Product.cs                                               | C#            |         41 |          1 |         14 |         56 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\Review.cs                                                | C#            |         22 |          1 |          5 |         28 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\User.cs                                                  | C#            |         19 |          1 |          0 |         20 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Main\UserAdress.cs                                            | C#            |         22 |          0 |          3 |         25 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\Case.cs                                | C#            |         18 |          0 |          5 |         23 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\DiskDrive.cs                           | C#            |         19 |          0 |          2 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\GraphicCard.cs                         | C#            |         26 |          0 |          2 |         28 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\MotherBoard.cs                         | C#            |         22 |          0 |          2 |         24 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\PowerSupply.cs                         | C#            |         19 |          0 |          2 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\Processor.cs                           | C#            |         21 |          0 |          3 |         24 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\ComputerParts\Ram.cs                                 | C#            |         21 |          0 |          2 |         23 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\DesktopComputer.cs                      | C#            |         25 |          0 |          2 |         27 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Keyboard.cs                             | C#            |         18 |          0 |          2 |         20 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Laptop.cs                               | C#            |         24 |          0 |          2 |         26 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\MonitorScreen.cs                        | C#            |         19 |          0 |          2 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Mouse.cs                                | C#            |         19 |          0 |          2 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Printer.cs                              | C#            |         21 |          0 |          2 |         23 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Smartphone.cs                           | C#            |         25 |          0 |          7 |         32 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\EntityModels\Products\OtherDevices\Televisor.cs                            | C#            |         18 |          0 |          3 |         21 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\BuyProductInProductPageVm.cs                                    | C#            |          8 |          0 |          3 |         11 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\ProductHeaderVm.cs                                              | C#            |          4 |          0 |          3 |          7 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\ProductVm.cs                                                    | C#            |        295 |         16 |         46 |        357 |
+| c:\Users\Miłosz\source\repos\PracaInzynierska\Model\ViewModels\ReviewAreaVm.cs                                                 | C#            |          4 |          0 |          4 |          8 |
+| Total                                                                                                                          |               |     85,778 |      4,485 |     16,608 |    106,871 |
++--------------------------------------------------------------------------------------------------------------------------------+---------------+------------+------------+------------+------------+

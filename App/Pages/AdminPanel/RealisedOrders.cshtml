@@ -1,0 +1,69 @@
+﻿@page
+@model App.Pages.AdminPanel.RealisedOrdersModel
+@{
+}
+<style>
+    table, th, td {
+        border: 3px solid black;
+    }
+
+    td, th {
+        padding: 6px;
+    }
+</style>
+<h2>Historia zrealizowanych zamówień</h2>
+@if (Model.RealisedOrders.Count() == 0)
+{
+    <span style="color: gray">Wygląda na to że nie masz żadnych zrealizowanych zamówień</span>
+}
+else
+{
+    <table>
+        <tr>
+            <th>Numer zamówienia &emsp;</th>
+            <th>Data złożenia zamówienia &emsp;</th>
+            <th>Data realizacji &emsp;</th>
+            <th>Pełny podgląd</th>
+            <th>Zmiana stanu zamówienia</th>
+        </tr>
+        @foreach (var order in Model.RealisedOrders)
+        {
+            <tr>
+                <td>@order.Number</td>
+                <td>@order.OrderDate </td>
+                <td>@order.RealisationDate</td>
+                <td>
+                    <form method="get" action="/Order">
+                        <input type="hidden" value="@order.Number" name="number" />
+                        <button type="submit" class="narrowButton">Pokaż</button>
+                    </form>
+                </td>
+                <td>
+                    <button class="narrowButton" onclick="showDialog(@order.Number)">Oznacz Jako niezrealizowane</button>
+                </td>
+            </tr>
+            <dialog id="formDialog-@order.Number">
+                <form method="post">
+                    Czy napewno chcesz oznaczyć zamówienie nr. @order.Number<br />
+                    jako niezrealizowane?<br/>
+                    <input type="hidden" value="@order.Number" name="orderNumber">
+                    <div style="text-align:center">
+                        <button class="narrowButton" type="submit">Tak</button>
+                        <button type="button" class="narrowButton" onclick="closeDialog(@order.Number)">Nie</button>
+                    </div>
+                </form>
+            </dialog>
+        }
+    </table>
+
+    <script>
+        function showDialog(number) {
+            let dialog = document.getElementById("formDialog-"+number);
+            dialog.showModal();
+        }
+        function closeDialog(number) {
+            let dialog = document.getElementById("formDialog-"+number);
+            dialog.close();
+        }
+    </script>
+}

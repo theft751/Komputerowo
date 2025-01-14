@@ -10,8 +10,11 @@ namespace App.Pages
     public class OrderModel : PageModel
     {
         AppDbContext context { get; set; }
-        public IEnumerable<BasketElement> orderItems { get; set; }
+        public IEnumerable<BasketElement> OrderItems { get; set; }
         public OrderStatus OrderStatus { get; set; }
+        public string OrderNumber { get; set; }
+        public string AcountNumber { get; set; }
+        public decimal Price { get; set; }
         public IActionResult OnGet(string number)
         {
             if (HttpContext.Session.GetInt32("isLogged") == 0)
@@ -23,8 +26,9 @@ namespace App.Pages
             {
                 return new RedirectToPageResult("/Error");
             }
+            OrderNumber = order.Number;
             OrderStatus = order.Status;
-            orderItems = order
+            OrderItems = order
                 .Items
                 .Select(
                     orderItem =>
@@ -34,6 +38,21 @@ namespace App.Pages
                         ProductId = orderItem.ProductId
                     }
                 );
+            AcountNumber = context.BankAcountNumber.FirstOrDefault().Number;
+            Price = OrderItems
+            .ToList()
+            .Select(
+                orderItem =>
+                context
+                .Products
+                .Where(
+                    product =>
+                    orderItem.ProductId == product.Id)
+                .Select(
+                    product =>
+                    product.Price * orderItem.Amount)
+                .FirstOrDefault())
+            .Sum();
             return Page();
 
         }
